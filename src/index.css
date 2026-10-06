@@ -1,0 +1,76 @@
+/* v3 substrate: Tailwind v4 WITHOUT preflight. The app's existing views are
+   inline-styled and must not be reset from under them — so only the theme and
+   utility layers load. New component-substrate views opt in via .sendoff-v3,
+   which carries the two preflight rules Tailwind utilities assume
+   (border-style + border-width zeroing; box-sizing is already global). */
+/* pin the layer order FIRST (what the full tailwindcss import does): base
+   must rank below utilities or the compat reset erases border-* classes */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Sendoff brand mapped onto the shadcn variable contract (single light theme
+   by design — the product has one look). Values mirror src/theme.js T. */
+:root {
+  --background: #f4f1e8;
+  --foreground: #1b1d2a;
+  --card: #ffffff;
+  --card-foreground: #1b1d2a;
+  --popover: #ffffff;
+  --popover-foreground: #1b1d2a;
+  --primary: #2547f0;
+  --primary-foreground: #ffffff;
+  --secondary: #ffc838;
+  --secondary-foreground: #1b1d2a;
+  --muted: #ece8db;
+  --muted-foreground: #5a5c6b;
+  --accent: #ffc838;
+  --accent-foreground: #1b1d2a;
+  --destructive: #ff5a3c;
+  --destructive-foreground: #ffffff;
+  --border: #1b1d2a;
+  --input: #1b1d2a;
+  --ring: #2547f0;
+  --radius: 1rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Instrument Sans", sans-serif;
+}
+
+/* preflight-compat, scoped: utilities like `border` assume these. MUST live
+   in @layer base — unlayered rules beat layered utilities, and an unlayered
+   border-width: 0 here silently erases every border-* utility. */
+@layer base {
+  .sendoff-v3,
+  .sendoff-v3 *,
+  .sendoff-v3 ::before,
+  .sendoff-v3 ::after {
+    border-style: solid;
+    border-width: 0;
+  }
+}

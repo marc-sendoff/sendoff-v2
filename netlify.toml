@@ -1,0 +1,36 @@
+# Netlify build + routing for the December relaunch.
+#
+# Vite defaults: `npm run build` emits to dist/. Everything in public/ is
+# copied in as-is, which is how /thanks.html and the icons get there.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Vite 7 needs Node 20.19+ / 22.12+. Pin it so a Netlify default bump
+  # can't change the build under us.
+  NODE_VERSION = "22"
+
+# The waitlist form redirects here after a successful post. Serving the file
+# at the clean /thanks path (200, not 301) keeps the URL the form promised.
+[[redirects]]
+  from = "/thanks"
+  to = "/thanks.html"
+  status = 200
+
+# The app holds its views in React state, not the URL, so any other path is
+# still the app. Existing files (assets, /thanks.html, the icons) are served
+# before this rule ever applies.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"

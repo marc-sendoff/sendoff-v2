@@ -1,0 +1,127 @@
+{
+ "origin": "MIA",
+ "updatedAt": "2026-08-30T06:00:00Z",
+ "crew": 4,
+ "results": [
+  {
+   "tripId": "atlanta",
+   "dest": "ATL",
+   "fareMonth": "2026-10",
+   "farePerPerson": 64,
+   "groundPerPerson": 186,
+   "totalPerPerson": 250,
+   "totalCrew": 1000,
+   "days": 2
+  },
+  {
+   "tripId": "nola",
+   "dest": "MSY",
+   "fareMonth": "2026-10",
+   "farePerPerson": 78,
+   "groundPerPerson": 212,
+   "totalPerPerson": 290,
+   "totalCrew": 1160,
+   "days": 3
+  },
+  {
+   "tripId": "dc",
+   "dest": "DCA",
+   "fareMonth": "2026-10",
+   "farePerPerson": 88,
+   "groundPerPerson": 222,
+   "totalPerPerson": 310,
+   "totalCrew": 1240,
+   "days": 3
+  },
+  {
+   "tripId": "nashville",
+   "dest": "BNA",
+   "fareMonth": "2026-11",
+   "farePerPerson": 96,
+   "groundPerPerson": 224,
+   "totalPerPerson": 320,
+   "totalCrew": 1280,
+   "days": 3
+  },
+  {
+   "tripId": "sanjuan",
+   "dest": "SJU",
+   "fareMonth": "2026-10",
+   "farePerPerson": 112,
+   "groundPerPerson": 228,
+   "totalPerPerson": 340,
+   "totalCrew": 1360,
+   "days": 3
+  },
+  {
+   "tripId": "orlando",
+   "dest": "MCO",
+   "fareMonth": "2026-10",
+   "farePerPerson": 58,
+   "groundPerPerson": 322,
+   "totalPerPerson": 380,
+   "totalCrew": 1520,
+   "days": 3
+  },
+  {
+   "tripId": "chicago",
+   "dest": "ORD",
+   "fareMonth": "2026-10",
+   "farePerPerson": 102,
+   "groundPerPerson": 288,
+   "totalPerPerson": 390,
+   "totalCrew": 1560,
+   "days": 3
+  },
+  {
+   "tripId": "cartagena",
+   "dest": "CTG",
+   "fareMonth": "2026-10",
+   "farePerPerson": 168,
+   "groundPerPerson": 262,
+   "totalPerPerson": 430,
+   "totalCrew": 1720,
+   "days": 4
+  },
+  {
+   "tripId": "mexicocity",
+   "dest": "MEX",
+   "fareMonth": "2026-11",
+   "farePerPerson": 189,
+   "groundPerPerson": 261,
+   "totalPerPerson": 450,
+   "totalCrew": 1800,
+   "days": 4
+  },
+  {
+   "tripId": "medellin",
+   "dest": "MDE",
+   "fareMonth": "2026-10",
+   "farePerPerson": 196,
+   "groundPerPerson": 264,
+   "totalPerPerson": 460,
+   "totalCrew": 1840,
+   "days": 4
+  },
+  {
+   "tripId": "tulum",
+   "dest": "CUN",
+   "fareMonth": "2026-11",
+   "farePerPerson": 154,
+   "groundPerPerson": 366,
+   "totalPerPerson": 520,
+   "totalCrew": 2080,
+   "days": 4
+  },
+  {
+   "tripId": "guatemala",
+   "dest": "GUA",
+   "fareMonth": "2026-11",
+   "farePerPerson": 212,
+   "groundPerPerson": 308,
+   "totalPerPerson": 520,
+   "totalCrew": 2080,
+   "days": 4
+  }
+ ]
+}

@@ -1,0 +1,2812 @@
+{
+ "everglades": {
+  "cost": 90,
+  "breakdown": {
+   "travel": 20,
+   "stay": 10,
+   "food": 45,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "keywest": {
+  "cost": 165,
+  "breakdown": {
+   "travel": 25,
+   "stay": 50,
+   "food": 70,
+   "fun": 20
+  },
+  "source": "drive|medium"
+ },
+ "staug": {
+  "cost": 120,
+  "breakdown": {
+   "travel": 25,
+   "stay": 25,
+   "food": 55,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "savannah": {
+  "cost": 125,
+  "breakdown": {
+   "travel": 25,
+   "stay": 25,
+   "food": 60,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "smokies": {
+  "cost": 160,
+  "breakdown": {
+   "travel": 25,
+   "stay": 40,
+   "food": 75,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "tampa": {
+  "cost": 135,
+  "breakdown": {
+   "travel": 30,
+   "stay": 25,
+   "food": 60,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "nrg": {
+  "cost": 135,
+  "breakdown": {
+   "travel": 30,
+   "stay": 20,
+   "food": 65,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "hotsprings": {
+  "cost": 155,
+  "breakdown": {
+   "travel": 30,
+   "stay": 35,
+   "food": 75,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "gulfshores": {
+  "cost": 185,
+  "breakdown": {
+   "travel": 30,
+   "stay": 50,
+   "food": 85,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "shenandoah": {
+  "cost": 100,
+  "breakdown": {
+   "travel": 30,
+   "stay": 10,
+   "food": 45,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "charleston": {
+  "cost": 145,
+  "breakdown": {
+   "travel": 35,
+   "stay": 30,
+   "food": 65,
+   "fun": 15
+  },
+  "source": "drive|medium"
+ },
+ "outerbanks": {
+  "cost": 180,
+  "breakdown": {
+   "travel": 35,
+   "stay": 50,
+   "food": 80,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "asheville": {
+  "cost": 205,
+  "breakdown": {
+   "travel": 35,
+   "stay": 55,
+   "food": 90,
+   "fun": 25
+  },
+  "source": "drive|high"
+ },
+ "atlanta": {
+  "cost": 150,
+  "breakdown": {
+   "travel": 40,
+   "stay": 25,
+   "food": 60,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "memphis": {
+  "cost": 245,
+  "breakdown": {
+   "travel": 150,
+   "stay": 20,
+   "food": 55,
+   "fun": 20
+  },
+  "source": "bench|medium"
+ },
+ "cleveland": {
+  "cost": 190,
+  "breakdown": {
+   "travel": 100,
+   "stay": 20,
+   "food": 50,
+   "fun": 20
+  },
+  "source": "bench|medium"
+ },
+ "miamibeach": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 0,
+   "stay": 30,
+   "food": 65,
+   "fun": 15
+  },
+  "source": "bench|high"
+ },
+ "nola": {
+  "cost": 335,
+  "breakdown": {
+   "travel": 145,
+   "stay": 65,
+   "food": 95,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "dc": {
+  "cost": 305,
+  "breakdown": {
+   "travel": 110,
+   "stay": 85,
+   "food": 95,
+   "fun": 15
+  },
+  "source": "bench|high"
+ },
+ "nashville": {
+  "cost": 365,
+  "breakdown": {
+   "travel": 185,
+   "stay": 50,
+   "food": 95,
+   "fun": 35
+  },
+  "source": "live|high"
+ },
+ "sanjuan": {
+  "cost": 240,
+  "breakdown": {
+   "travel": 60,
+   "stay": 65,
+   "food": 90,
+   "fun": 25
+  },
+  "source": "live|medium"
+ },
+ "austin": {
+  "cost": 290,
+  "breakdown": {
+   "travel": 120,
+   "stay": 50,
+   "food": 90,
+   "fun": 30
+  },
+  "source": "bench|high"
+ },
+ "orlando": {
+  "cost": 235,
+  "breakdown": {
+   "travel": 60,
+   "stay": 45,
+   "food": 85,
+   "fun": 45
+  },
+  "source": "bench|high"
+ },
+ "chicago": {
+  "cost": 300,
+  "breakdown": {
+   "travel": 90,
+   "stay": 85,
+   "food": 95,
+   "fun": 30
+  },
+  "source": "bench|high"
+ },
+ "nyc": {
+  "cost": 360,
+  "breakdown": {
+   "travel": 100,
+   "stay": 110,
+   "food": 115,
+   "fun": 35
+  },
+  "source": "bench|high"
+ },
+ "cartagena": {
+  "cost": 380,
+  "breakdown": {
+   "travel": 245,
+   "stay": 45,
+   "food": 60,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "mexicocity": {
+  "cost": 295,
+  "breakdown": {
+   "travel": 165,
+   "stay": 50,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "medellin": {
+  "cost": 330,
+  "breakdown": {
+   "travel": 210,
+   "stay": 40,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "toronto": {
+  "cost": 415,
+  "breakdown": {
+   "travel": 220,
+   "stay": 75,
+   "food": 90,
+   "fun": 30
+  },
+  "source": "bench|high"
+ },
+ "denver": {
+  "cost": 395,
+  "breakdown": {
+   "travel": 130,
+   "stay": 105,
+   "food": 120,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "montreal": {
+  "cost": 405,
+  "breakdown": {
+   "travel": 230,
+   "stay": 65,
+   "food": 85,
+   "fun": 25
+  },
+  "source": "bench|medium"
+ },
+ "guatemala": {
+  "cost": 420,
+  "breakdown": {
+   "travel": 300,
+   "stay": 35,
+   "food": 50,
+   "fun": 35
+  },
+  "source": "bench|high"
+ },
+ "tulum": {
+  "cost": 310,
+  "breakdown": {
+   "travel": 185,
+   "stay": 45,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "panama": {
+  "cost": 485,
+  "breakdown": {
+   "travel": 360,
+   "stay": 45,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "pvr": {
+  "cost": 550,
+  "breakdown": {
+   "travel": 420,
+   "stay": 50,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "bench|medium"
+ },
+ "la": {
+  "cost": 510,
+  "breakdown": {
+   "travel": 215,
+   "stay": 120,
+   "food": 135,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "costarica": {
+  "cost": 390,
+  "breakdown": {
+   "travel": 210,
+   "stay": 60,
+   "food": 70,
+   "fun": 50
+  },
+  "source": "live|high"
+ },
+ "vancouver": {
+  "cost": 455,
+  "breakdown": {
+   "travel": 180,
+   "stay": 115,
+   "food": 130,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "banff": {
+  "cost": 555,
+  "breakdown": {
+   "travel": 185,
+   "stay": 160,
+   "food": 150,
+   "fun": 60
+  },
+  "source": "live|high"
+ },
+ "sf": {
+  "cost": 500,
+  "breakdown": {
+   "travel": 200,
+   "stay": 115,
+   "food": 145,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "yellowstone": {
+  "cost": 520,
+  "breakdown": {
+   "travel": 320,
+   "stay": 40,
+   "food": 120,
+   "fun": 40
+  },
+  "source": "bench|high"
+ },
+ "lisbon": {
+  "cost": 680,
+  "breakdown": {
+   "travel": 420,
+   "stay": 90,
+   "food": 110,
+   "fun": 60
+  },
+  "source": "live|high"
+ },
+ "barcelona": {
+  "cost": 810,
+  "breakdown": {
+   "travel": 470,
+   "stay": 120,
+   "food": 130,
+   "fun": 90
+  },
+  "source": "live|high"
+ },
+ "iceland": {
+  "cost": 1065,
+  "breakdown": {
+   "travel": 530,
+   "stay": 200,
+   "food": 210,
+   "fun": 125
+  },
+  "source": "bench|high"
+ },
+ "berlin": {
+  "cost": 825,
+  "breakdown": {
+   "travel": 590,
+   "stay": 85,
+   "food": 95,
+   "fun": 55
+  },
+  "source": "bench|high"
+ },
+ "budapest": {
+  "cost": 805,
+  "breakdown": {
+   "travel": 625,
+   "stay": 50,
+   "food": 70,
+   "fun": 60
+  },
+  "source": "live|high"
+ },
+ "marrakech": {
+  "cost": 680,
+  "breakdown": {
+   "travel": 540,
+   "stay": 40,
+   "food": 50,
+   "fun": 50
+  },
+  "source": "live|high"
+ },
+ "amsterdam": {
+  "cost": 870,
+  "breakdown": {
+   "travel": 560,
+   "stay": 110,
+   "food": 120,
+   "fun": 80
+  },
+  "source": "live|high"
+ },
+ "prague": {
+  "cost": 615,
+  "breakdown": {
+   "travel": 430,
+   "stay": 55,
+   "food": 80,
+   "fun": 50
+  },
+  "source": "live|high"
+ },
+ "dublin": {
+  "cost": 805,
+  "breakdown": {
+   "travel": 520,
+   "stay": 105,
+   "food": 120,
+   "fun": 60
+  },
+  "source": "bench|high"
+ },
+ "london": {
+  "cost": 750,
+  "breakdown": {
+   "travel": 490,
+   "stay": 90,
+   "food": 120,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "rome": {
+  "cost": 815,
+  "breakdown": {
+   "travel": 550,
+   "stay": 90,
+   "food": 105,
+   "fun": 70
+  },
+  "source": "bench|high"
+ },
+ "edinburgh": {
+  "cost": 825,
+  "breakdown": {
+   "travel": 570,
+   "stay": 95,
+   "food": 110,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "croatia": {
+  "cost": 925,
+  "breakdown": {
+   "travel": 640,
+   "stay": 90,
+   "food": 120,
+   "fun": 75
+  },
+  "source": "bench|high"
+ },
+ "paris": {
+  "cost": 720,
+  "breakdown": {
+   "travel": 430,
+   "stay": 105,
+   "food": 120,
+   "fun": 65
+  },
+  "source": "bench|high"
+ },
+ "athens": {
+  "cost": 815,
+  "breakdown": {
+   "travel": 540,
+   "stay": 90,
+   "food": 110,
+   "fun": 75
+  },
+  "source": "live|high"
+ },
+ "nice": {
+  "cost": 770,
+  "breakdown": {
+   "travel": 515,
+   "stay": 95,
+   "food": 110,
+   "fun": 50
+  },
+  "source": "live|med"
+ },
+ "ibiza": {
+  "cost": 1060,
+  "breakdown": {
+   "travel": 650,
+   "stay": 160,
+   "food": 150,
+   "fun": 100
+  },
+  "source": "live|med"
+ },
+ "interlaken": {
+  "cost": 1450,
+  "breakdown": {
+   "travel": 925,
+   "stay": 210,
+   "food": 190,
+   "fun": 125
+  },
+  "source": "live|high"
+ },
+ "joshuatree": {
+  "cost": 100,
+  "breakdown": {
+   "travel": 25,
+   "stay": 10,
+   "food": 50,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "bigsur": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 35,
+   "stay": 15,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|medium"
+ },
+ "sandiego": {
+  "cost": 340,
+  "breakdown": {
+   "travel": 155,
+   "stay": 70,
+   "food": 90,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "sedona": {
+  "cost": 340,
+  "breakdown": {
+   "travel": 170,
+   "stay": 60,
+   "food": 85,
+   "fun": 25
+  },
+  "source": "live|medium"
+ },
+ "tahoe": {
+  "cost": 475,
+  "breakdown": {
+   "travel": 310,
+   "stay": 55,
+   "food": 85,
+   "fun": 25
+  },
+  "source": "live|medium"
+ },
+ "grandcanyon": {
+  "cost": 285,
+  "breakdown": {
+   "travel": 170,
+   "stay": 20,
+   "food": 70,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "vegas": {
+  "cost": 370,
+  "breakdown": {
+   "travel": 175,
+   "stay": 45,
+   "food": 90,
+   "fun": 60
+  },
+  "source": "live|high"
+ },
+ "portland": {
+  "cost": 335,
+  "breakdown": {
+   "travel": 155,
+   "stay": 65,
+   "food": 90,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "seattle": {
+  "cost": 405,
+  "breakdown": {
+   "travel": 190,
+   "stay": 85,
+   "food": 100,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "sanantonio": {
+  "cost": 275,
+  "breakdown": {
+   "travel": 195,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "live|high"
+ },
+ "bigbend": {
+  "cost": 145,
+  "breakdown": {
+   "travel": 40,
+   "stay": 15,
+   "food": 65,
+   "fun": 25
+  },
+  "source": "drive|high"
+ },
+ "oahu": {
+  "cost": 835,
+  "breakdown": {
+   "travel": 425,
+   "stay": 180,
+   "food": 190,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "maui": {
+  "cost": 960,
+  "breakdown": {
+   "travel": 520,
+   "stay": 190,
+   "food": 200,
+   "fun": 50
+  },
+  "source": "bench|medium"
+ },
+ "quebec": {
+  "cost": 500,
+  "breakdown": {
+   "travel": 320,
+   "stay": 65,
+   "food": 90,
+   "fun": 25
+  },
+  "source": "bench|medium"
+ },
+ "tokyo": {
+  "cost": 1320,
+  "breakdown": {
+   "travel": 920,
+   "stay": 140,
+   "food": 170,
+   "fun": 90
+  },
+  "source": "bench|high"
+ },
+ "seoul": {
+  "cost": 1200,
+  "breakdown": {
+   "travel": 950,
+   "stay": 70,
+   "food": 120,
+   "fun": 60
+  },
+  "source": "bench|high"
+ },
+ "bangkok": {
+  "cost": 715,
+  "breakdown": {
+   "travel": 505,
+   "stay": 60,
+   "food": 90,
+   "fun": 60
+  },
+  "source": "live|high"
+ },
+ "bali": {
+  "cost": 980,
+  "breakdown": {
+   "travel": 770,
+   "stay": 50,
+   "food": 90,
+   "fun": 70
+  },
+  "source": "live|high"
+ },
+ "vietnam": {
+  "cost": 1110,
+  "breakdown": {
+   "travel": 950,
+   "stay": 40,
+   "food": 70,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "istanbul": {
+  "cost": 645,
+  "breakdown": {
+   "travel": 425,
+   "stay": 60,
+   "food": 80,
+   "fun": 80
+  },
+  "source": "live|high"
+ },
+ "petra": {
+  "cost": 1185,
+  "breakdown": {
+   "travel": 900,
+   "stay": 60,
+   "food": 100,
+   "fun": 125
+  },
+  "source": "bench|med"
+ },
+ "dubai": {
+  "cost": 645,
+  "breakdown": {
+   "travel": 400,
+   "stay": 65,
+   "food": 110,
+   "fun": 70
+  },
+  "source": "live|high"
+ },
+ "capetown": {
+  "cost": 1455,
+  "breakdown": {
+   "travel": 1180,
+   "stay": 75,
+   "food": 110,
+   "fun": 90
+  },
+  "source": "bench|high"
+ },
+ "cairo": {
+  "cost": 650,
+  "breakdown": {
+   "travel": 485,
+   "stay": 35,
+   "food": 50,
+   "fun": 80
+  },
+  "source": "live|high"
+ },
+ "nassau": {
+  "cost": 305,
+  "breakdown": {
+   "travel": 105,
+   "stay": 90,
+   "food": 75,
+   "fun": 35
+  },
+  "source": "live|low"
+ },
+ "puntacana": {
+  "cost": 360,
+  "breakdown": {
+   "travel": 195,
+   "stay": 55,
+   "food": 70,
+   "fun": 40
+  },
+  "source": "live|medium"
+ },
+ "jamaica": {
+  "cost": 490,
+  "breakdown": {
+   "travel": 295,
+   "stay": 75,
+   "food": 70,
+   "fun": 50
+  },
+  "source": "live|medium"
+ },
+ "bogota": {
+  "cost": 265,
+  "breakdown": {
+   "travel": 185,
+   "stay": 25,
+   "food": 35,
+   "fun": 20
+  },
+  "source": "live|high"
+ },
+ "lima": {
+  "cost": 410,
+  "breakdown": {
+   "travel": 295,
+   "stay": 40,
+   "food": 50,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "cusco": {
+  "cost": 675,
+  "breakdown": {
+   "travel": 480,
+   "stay": 50,
+   "food": 55,
+   "fun": 90
+  },
+  "source": "bench|high"
+ },
+ "rio": {
+  "cost": 820,
+  "breakdown": {
+   "travel": 650,
+   "stay": 55,
+   "food": 70,
+   "fun": 45
+  },
+  "source": "bench|high"
+ },
+ "buenosaires": {
+  "cost": 675,
+  "breakdown": {
+   "travel": 500,
+   "stay": 65,
+   "food": 75,
+   "fun": 35
+  },
+  "source": "bench|high"
+ },
+ "beijing": {
+  "cost": 1250,
+  "breakdown": {
+   "travel": 1030,
+   "stay": 60,
+   "food": 90,
+   "fun": 70
+  },
+  "source": "bench|med"
+ },
+ "shanghai": {
+  "cost": 1255,
+  "breakdown": {
+   "travel": 1060,
+   "stay": 55,
+   "food": 80,
+   "fun": 60
+  },
+  "source": "bench|med"
+ },
+ "hongkong": {
+  "cost": 835,
+  "breakdown": {
+   "travel": 615,
+   "stay": 75,
+   "food": 95,
+   "fun": 50
+  },
+  "source": "live|high"
+ },
+ "singapore": {
+  "cost": 825,
+  "breakdown": {
+   "travel": 610,
+   "stay": 75,
+   "food": 80,
+   "fun": 60
+  },
+  "source": "live|high"
+ },
+ "palawan": {
+  "cost": 1310,
+  "breakdown": {
+   "travel": 1040,
+   "stay": 60,
+   "food": 90,
+   "fun": 120
+  },
+  "source": "bench|med"
+ },
+ "india": {
+  "cost": 950,
+  "breakdown": {
+   "travel": 800,
+   "stay": 40,
+   "food": 60,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "sydney": {
+  "cost": 1150,
+  "breakdown": {
+   "travel": 690,
+   "stay": 190,
+   "food": 180,
+   "fun": 90
+  },
+  "source": "live|high"
+ },
+ "cairns": {
+  "cost": 1780,
+  "breakdown": {
+   "travel": 1300,
+   "stay": 160,
+   "food": 170,
+   "fun": 150
+  },
+  "source": "bench|med"
+ },
+ "nairobi": {
+  "cost": 1235,
+  "breakdown": {
+   "travel": 980,
+   "stay": 75,
+   "food": 90,
+   "fun": 90
+  },
+  "source": "bench|med"
+ },
+ "munich": {
+  "cost": 980,
+  "breakdown": {
+   "travel": 720,
+   "stay": 95,
+   "food": 110,
+   "fun": 55
+  },
+  "source": "live|med"
+ },
+ "cocoa": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 25,
+   "stay": 25,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "destin": {
+  "cost": 185,
+  "breakdown": {
+   "travel": 30,
+   "stay": 55,
+   "food": 85,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "myrtle": {
+  "cost": 175,
+  "breakdown": {
+   "travel": 30,
+   "stay": 40,
+   "food": 80,
+   "fun": 25
+  },
+  "source": "drive|high"
+ },
+ "southpadre": {
+  "cost": 180,
+  "breakdown": {
+   "travel": 35,
+   "stay": 45,
+   "food": 80,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "galveston": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 25,
+   "stay": 25,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "hockinghills": {
+  "cost": 95,
+  "breakdown": {
+   "travel": 25,
+   "stay": 15,
+   "food": 45,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "mammothcave": {
+  "cost": 100,
+  "breakdown": {
+   "travel": 25,
+   "stay": 10,
+   "food": 45,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "cuyahoga": {
+  "cost": 105,
+  "breakdown": {
+   "travel": 25,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "niagara": {
+  "cost": 220,
+  "breakdown": {
+   "travel": 130,
+   "stay": 20,
+   "food": 50,
+   "fun": 20
+  },
+  "source": "live|high"
+ },
+ "philly": {
+  "cost": 235,
+  "breakdown": {
+   "travel": 125,
+   "stay": 35,
+   "food": 60,
+   "fun": 15
+  },
+  "source": "live|high"
+ },
+ "boston": {
+  "cost": 410,
+  "breakdown": {
+   "travel": 185,
+   "stay": 100,
+   "food": 100,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "acadia": {
+  "cost": 170,
+  "breakdown": {
+   "travel": 50,
+   "stay": 20,
+   "food": 75,
+   "fun": 25
+  },
+  "source": "drive|high"
+ },
+ "whitemtns": {
+  "cost": 150,
+  "breakdown": {
+   "travel": 35,
+   "stay": 30,
+   "food": 70,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "stowe": {
+  "cost": 235,
+  "breakdown": {
+   "travel": 55,
+   "stay": 70,
+   "food": 85,
+   "fun": 25
+  },
+  "source": "drive|medium"
+ },
+ "kc": {
+  "cost": 220,
+  "breakdown": {
+   "travel": 130,
+   "stay": 20,
+   "food": 55,
+   "fun": 15
+  },
+  "source": "bench|medium"
+ },
+ "zionbryce": {
+  "cost": 340,
+  "breakdown": {
+   "travel": 175,
+   "stay": 30,
+   "food": 95,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "moab": {
+  "cost": 375,
+  "breakdown": {
+   "travel": 180,
+   "stay": 50,
+   "food": 95,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "yosemite": {
+  "cost": 355,
+  "breakdown": {
+   "travel": 200,
+   "stay": 25,
+   "food": 95,
+   "fun": 35
+  },
+  "source": "live|high"
+ },
+ "santacruz": {
+  "cost": 135,
+  "breakdown": {
+   "travel": 40,
+   "stay": 30,
+   "food": 55,
+   "fun": 10
+  },
+  "source": "drive|medium"
+ },
+ "olympicnp": {
+  "cost": 340,
+  "breakdown": {
+   "travel": 190,
+   "stay": 25,
+   "food": 95,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "rushmore": {
+  "cost": 485,
+  "breakdown": {
+   "travel": 320,
+   "stay": 40,
+   "food": 95,
+   "fun": 30
+  },
+  "source": "bench|medium"
+ },
+ "parkcity": {
+  "cost": 445,
+  "breakdown": {
+   "travel": 180,
+   "stay": 105,
+   "food": 110,
+   "fun": 50
+  },
+  "source": "bench|medium"
+ },
+ "jacksonhole": {
+  "cost": 630,
+  "breakdown": {
+   "travel": 450,
+   "stay": 35,
+   "food": 105,
+   "fun": 40
+  },
+  "source": "bench|medium"
+ },
+ "cozumel": {
+  "cost": 660,
+  "breakdown": {
+   "travel": 500,
+   "stay": 55,
+   "food": 55,
+   "fun": 50
+  },
+  "source": "bench|medium"
+ },
+ "stthomas": {
+  "cost": 615,
+  "breakdown": {
+   "travel": 305,
+   "stay": 135,
+   "food": 145,
+   "fun": 30
+  },
+  "source": "live|medium"
+ },
+ "aruba": {
+  "cost": 515,
+  "breakdown": {
+   "travel": 285,
+   "stay": 100,
+   "food": 90,
+   "fun": 40
+  },
+  "source": "live|low"
+ },
+ "curacao": {
+  "cost": 500,
+  "breakdown": {
+   "travel": 265,
+   "stay": 85,
+   "food": 120,
+   "fun": 30
+  },
+  "source": "live|medium"
+ },
+ "bermuda": {
+  "cost": 635,
+  "breakdown": {
+   "travel": 350,
+   "stay": 140,
+   "food": 120,
+   "fun": 25
+  },
+  "source": "bench|low"
+ },
+ "belize": {
+  "cost": 635,
+  "breakdown": {
+   "travel": 420,
+   "stay": 80,
+   "food": 75,
+   "fun": 60
+  },
+  "source": "bench|medium"
+ },
+ "roatan": {
+  "cost": 705,
+  "breakdown": {
+   "travel": 500,
+   "stay": 70,
+   "food": 75,
+   "fun": 60
+  },
+  "source": "bench|medium"
+ },
+ "elsalvador": {
+  "cost": 315,
+  "breakdown": {
+   "travel": 185,
+   "stay": 50,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "oaxaca": {
+  "cost": 490,
+  "breakdown": {
+   "travel": 380,
+   "stay": 40,
+   "food": 45,
+   "fun": 25
+  },
+  "source": "bench|high"
+ },
+ "merida": {
+  "cost": 385,
+  "breakdown": {
+   "travel": 270,
+   "stay": 40,
+   "food": 45,
+   "fun": 30
+  },
+  "source": "bench|high"
+ },
+ "quito": {
+  "cost": 415,
+  "breakdown": {
+   "travel": 285,
+   "stay": 45,
+   "food": 50,
+   "fun": 35
+  },
+  "source": "live|high"
+ },
+ "santiago": {
+  "cost": 600,
+  "breakdown": {
+   "travel": 415,
+   "stay": 70,
+   "food": 80,
+   "fun": 35
+  },
+  "source": "live|high"
+ },
+ "madrid": {
+  "cost": 615,
+  "breakdown": {
+   "travel": 390,
+   "stay": 80,
+   "food": 95,
+   "fun": 50
+  },
+  "source": "live|med"
+ },
+ "seville": {
+  "cost": 765,
+  "breakdown": {
+   "travel": 560,
+   "stay": 65,
+   "food": 90,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "porto": {
+  "cost": 715,
+  "breakdown": {
+   "travel": 530,
+   "stay": 60,
+   "food": 80,
+   "fun": 45
+  },
+  "source": "bench|high"
+ },
+ "florence": {
+  "cost": 915,
+  "breakdown": {
+   "travel": 650,
+   "stay": 90,
+   "food": 105,
+   "fun": 70
+  },
+  "source": "bench|med"
+ },
+ "venice": {
+  "cost": 635,
+  "breakdown": {
+   "travel": 430,
+   "stay": 75,
+   "food": 90,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "amalfi": {
+  "cost": 820,
+  "breakdown": {
+   "travel": 590,
+   "stay": 70,
+   "food": 95,
+   "fun": 65
+  },
+  "source": "bench|med"
+ },
+ "malta": {
+  "cost": 690,
+  "breakdown": {
+   "travel": 460,
+   "stay": 80,
+   "food": 95,
+   "fun": 55
+  },
+  "source": "live|high"
+ },
+ "copenhagen": {
+  "cost": 785,
+  "breakdown": {
+   "travel": 470,
+   "stay": 120,
+   "food": 135,
+   "fun": 60
+  },
+  "source": "bench|high"
+ },
+ "stockholm": {
+  "cost": 790,
+  "breakdown": {
+   "travel": 490,
+   "stay": 110,
+   "food": 130,
+   "fun": 60
+  },
+  "source": "bench|high"
+ },
+ "vienna": {
+  "cost": 725,
+  "breakdown": {
+   "travel": 475,
+   "stay": 85,
+   "food": 105,
+   "fun": 60
+  },
+  "source": "live|med"
+ },
+ "krakow": {
+  "cost": 765,
+  "breakdown": {
+   "travel": 600,
+   "stay": 45,
+   "food": 70,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "dubrovnik": {
+  "cost": 875,
+  "breakdown": {
+   "travel": 610,
+   "stay": 90,
+   "food": 105,
+   "fun": 70
+  },
+  "source": "bench|high"
+ },
+ "santorini": {
+  "cost": 1010,
+  "breakdown": {
+   "travel": 700,
+   "stay": 110,
+   "food": 130,
+   "fun": 70
+  },
+  "source": "bench|high"
+ },
+ "tirana": {
+  "cost": 720,
+  "breakdown": {
+   "travel": 550,
+   "stay": 50,
+   "food": 75,
+   "fun": 45
+  },
+  "source": "bench|high"
+ },
+ "ljubljana": {
+  "cost": 865,
+  "breakdown": {
+   "travel": 650,
+   "stay": 70,
+   "food": 95,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "osaka": {
+  "cost": 1345,
+  "breakdown": {
+   "travel": 980,
+   "stay": 125,
+   "food": 170,
+   "fun": 70
+  },
+  "source": "bench|high"
+ },
+ "taipei": {
+  "cost": 1180,
+  "breakdown": {
+   "travel": 950,
+   "stay": 80,
+   "food": 100,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "kl": {
+  "cost": 1150,
+  "breakdown": {
+   "travel": 980,
+   "stay": 50,
+   "food": 70,
+   "fun": 50
+  },
+  "source": "bench|high"
+ },
+ "chiangmai": {
+  "cost": 1175,
+  "breakdown": {
+   "travel": 1000,
+   "stay": 45,
+   "food": 70,
+   "fun": 60
+  },
+  "source": "bench|high"
+ },
+ "hoian": {
+  "cost": 800,
+  "breakdown": {
+   "travel": 640,
+   "stay": 40,
+   "food": 70,
+   "fun": 50
+  },
+  "source": "live|high"
+ },
+ "siemreap": {
+  "cost": 1215,
+  "breakdown": {
+   "travel": 1050,
+   "stay": 30,
+   "food": 75,
+   "fun": 60
+  },
+  "source": "bench|medium"
+ },
+ "srilanka": {
+  "cost": 890,
+  "breakdown": {
+   "travel": 700,
+   "stay": 50,
+   "food": 90,
+   "fun": 50
+  },
+  "source": "live|high"
+ },
+ "queenstown": {
+  "cost": 1920,
+  "breakdown": {
+   "travel": 1450,
+   "stay": 150,
+   "food": 170,
+   "fun": 150
+  },
+  "source": "bench|med"
+ },
+ "zanzibar": {
+  "cost": 1420,
+  "breakdown": {
+   "travel": 1150,
+   "stay": 90,
+   "food": 90,
+   "fun": 90
+  },
+  "source": "bench|med"
+ },
+ "accra": {
+  "cost": 1140,
+  "breakdown": {
+   "travel": 950,
+   "stay": 60,
+   "food": 90,
+   "fun": 40
+  },
+  "source": "bench|medium"
+ },
+ "sanibel": {
+  "cost": 130,
+  "breakdown": {
+   "travel": 25,
+   "stay": 40,
+   "food": 55,
+   "fun": 10
+  },
+  "source": "drive|low"
+ },
+ "amelia": {
+  "cost": 125,
+  "breakdown": {
+   "travel": 30,
+   "stay": 30,
+   "food": 55,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "caladesi": {
+  "cost": 120,
+  "breakdown": {
+   "travel": 25,
+   "stay": 25,
+   "food": 50,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "apalach": {
+  "cost": 105,
+  "breakdown": {
+   "travel": 25,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "chattanooga": {
+  "cost": 115,
+  "breakdown": {
+   "travel": 30,
+   "stay": 20,
+   "food": 50,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "greenville": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 30,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "louisville": {
+  "cost": 225,
+  "breakdown": {
+   "travel": 130,
+   "stay": 20,
+   "food": 55,
+   "fun": 20
+  },
+  "source": "bench|medium"
+ },
+ "indydunes": {
+  "cost": 125,
+  "breakdown": {
+   "travel": 25,
+   "stay": 30,
+   "food": 50,
+   "fun": 20
+  },
+  "source": "drive|med"
+ },
+ "doorcounty": {
+  "cost": 180,
+  "breakdown": {
+   "travel": 35,
+   "stay": 45,
+   "food": 80,
+   "fun": 20
+  },
+  "source": "drive|medium"
+ },
+ "mackinac": {
+  "cost": 155,
+  "breakdown": {
+   "travel": 40,
+   "stay": 30,
+   "food": 55,
+   "fun": 30
+  },
+  "source": "drive|low"
+ },
+ "stlouis": {
+  "cost": 260,
+  "breakdown": {
+   "travel": 180,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "live|high"
+ },
+ "omaha": {
+  "cost": 230,
+  "breakdown": {
+   "travel": 150,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "bench|medium"
+ },
+ "boulder": {
+  "cost": 300,
+  "breakdown": {
+   "travel": 130,
+   "stay": 60,
+   "food": 90,
+   "fun": 20
+  },
+  "source": "live|high"
+ },
+ "santafe": {
+  "cost": 330,
+  "breakdown": {
+   "travel": 170,
+   "stay": 50,
+   "food": 85,
+   "fun": 25
+  },
+  "source": "bench|medium"
+ },
+ "whitesands": {
+  "cost": 255,
+  "breakdown": {
+   "travel": 180,
+   "stay": 15,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "bench|high"
+ },
+ "palodurо": {
+  "cost": 95,
+  "breakdown": {
+   "travel": 30,
+   "stay": 10,
+   "food": 45,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "marfa": {
+  "cost": 175,
+  "breakdown": {
+   "travel": 40,
+   "stay": 40,
+   "food": 80,
+   "fun": 15
+  },
+  "source": "drive|medium"
+ },
+ "oklahomacity": {
+  "cost": 230,
+  "breakdown": {
+   "travel": 150,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "bench|medium"
+ },
+ "vegasgrand": {
+  "cost": 515,
+  "breakdown": {
+   "travel": 175,
+   "stay": 90,
+   "food": 150,
+   "fun": 100
+  },
+  "source": "live|high"
+ },
+ "channelislands": {
+  "cost": 205,
+  "breakdown": {
+   "travel": 105,
+   "stay": 10,
+   "food": 50,
+   "fun": 40
+  },
+  "source": "drive|low"
+ },
+ "mtrainier": {
+  "cost": 300,
+  "breakdown": {
+   "travel": 190,
+   "stay": 15,
+   "food": 70,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "crater": {
+  "cost": 265,
+  "breakdown": {
+   "travel": 155,
+   "stay": 15,
+   "food": 70,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "redwoods": {
+  "cost": 305,
+  "breakdown": {
+   "travel": 200,
+   "stay": 20,
+   "food": 70,
+   "fun": 15
+  },
+  "source": "live|high"
+ },
+ "glacier": {
+  "cost": 490,
+  "breakdown": {
+   "travel": 300,
+   "stay": 30,
+   "food": 120,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "asheboro": {
+  "cost": 185,
+  "breakdown": {
+   "travel": 40,
+   "stay": 35,
+   "food": 95,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "newport": {
+  "cost": 155,
+  "breakdown": {
+   "travel": 40,
+   "stay": 35,
+   "food": 60,
+   "fun": 20
+  },
+  "source": "drive|medium"
+ },
+ "capecod": {
+  "cost": 205,
+  "breakdown": {
+   "travel": 50,
+   "stay": 55,
+   "food": 85,
+   "fun": 15
+  },
+  "source": "drive|medium"
+ },
+ "finger": {
+  "cost": 170,
+  "breakdown": {
+   "travel": 40,
+   "stay": 35,
+   "food": 75,
+   "fun": 20
+  },
+  "source": "drive|high"
+ },
+ "pittsburgh2": {
+  "cost": 200,
+  "breakdown": {
+   "travel": 120,
+   "stay": 20,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "bench|high"
+ },
+ "isla": {
+  "cost": 290,
+  "breakdown": {
+   "travel": 185,
+   "stay": 40,
+   "food": 40,
+   "fun": 25
+  },
+  "source": "live|medium"
+ },
+ "holbox": {
+  "cost": 340,
+  "breakdown": {
+   "travel": 185,
+   "stay": 65,
+   "food": 60,
+   "fun": 30
+  },
+  "source": "live|medium"
+ },
+ "sayulita": {
+  "cost": 555,
+  "breakdown": {
+   "travel": 420,
+   "stay": 55,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "bench|medium"
+ },
+ "bacalar": {
+  "cost": 310,
+  "breakdown": {
+   "travel": 185,
+   "stay": 45,
+   "food": 50,
+   "fun": 30
+  },
+  "source": "live|high"
+ },
+ "guanajuato": {
+  "cost": 485,
+  "breakdown": {
+   "travel": 380,
+   "stay": 40,
+   "food": 45,
+   "fun": 20
+  },
+  "source": "bench|high"
+ },
+ "sanmiguel": {
+  "cost": 500,
+  "breakdown": {
+   "travel": 380,
+   "stay": 50,
+   "food": 50,
+   "fun": 20
+  },
+  "source": "bench|medium"
+ },
+ "turks": {
+  "cost": 730,
+  "breakdown": {
+   "travel": 400,
+   "stay": 150,
+   "food": 150,
+   "fun": 30
+  },
+  "source": "bench|low"
+ },
+ "vieques": {
+  "cost": 260,
+  "breakdown": {
+   "travel": 60,
+   "stay": 80,
+   "food": 75,
+   "fun": 45
+  },
+  "source": "live|low"
+ },
+ "stjohn": {
+  "cost": 595,
+  "breakdown": {
+   "travel": 305,
+   "stay": 120,
+   "food": 145,
+   "fun": 25
+  },
+  "source": "live|low"
+ },
+ "grenada": {
+  "cost": 655,
+  "breakdown": {
+   "travel": 365,
+   "stay": 110,
+   "food": 140,
+   "fun": 40
+  },
+  "source": "live|medium"
+ },
+ "salar": {
+  "cost": 670,
+  "breakdown": {
+   "travel": 450,
+   "stay": 35,
+   "food": 45,
+   "fun": 140
+  },
+  "source": "bench|medium"
+ },
+ "lapaz": {
+  "cost": 525,
+  "breakdown": {
+   "travel": 450,
+   "stay": 25,
+   "food": 30,
+   "fun": 20
+  },
+  "source": "bench|high"
+ },
+ "medellin2": {
+  "cost": 490,
+  "breakdown": {
+   "travel": 350,
+   "stay": 50,
+   "food": 50,
+   "fun": 40
+  },
+  "source": "bench|medium"
+ },
+ "iguazu": {
+  "cost": 965,
+  "breakdown": {
+   "travel": 820,
+   "stay": 40,
+   "food": 50,
+   "fun": 55
+  },
+  "source": "bench|medium"
+ },
+ "montevideo": {
+  "cost": 650,
+  "breakdown": {
+   "travel": 460,
+   "stay": 70,
+   "food": 90,
+   "fun": 30
+  },
+  "source": "live|medium"
+ },
+ "budva": {
+  "cost": 720,
+  "breakdown": {
+   "travel": 515,
+   "stay": 65,
+   "food": 90,
+   "fun": 50
+  },
+  "source": "live|med"
+ },
+ "tallinn": {
+  "cost": 820,
+  "breakdown": {
+   "travel": 605,
+   "stay": 80,
+   "food": 90,
+   "fun": 45
+  },
+  "source": "live|high"
+ },
+ "riga": {
+  "cost": 710,
+  "breakdown": {
+   "travel": 535,
+   "stay": 60,
+   "food": 75,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "sofia": {
+  "cost": 530,
+  "breakdown": {
+   "travel": 395,
+   "stay": 40,
+   "food": 60,
+   "fun": 35
+  },
+  "source": "live|high"
+ },
+ "bucharest": {
+  "cost": 775,
+  "breakdown": {
+   "travel": 580,
+   "stay": 60,
+   "food": 85,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "warsaw": {
+  "cost": 720,
+  "breakdown": {
+   "travel": 560,
+   "stay": 50,
+   "food": 70,
+   "fun": 40
+  },
+  "source": "live|med"
+ },
+ "granada": {
+  "cost": 975,
+  "breakdown": {
+   "travel": 770,
+   "stay": 65,
+   "food": 80,
+   "fun": 60
+  },
+  "source": "live|med"
+ },
+ "canary": {
+  "cost": 870,
+  "breakdown": {
+   "travel": 580,
+   "stay": 100,
+   "food": 120,
+   "fun": 70
+  },
+  "source": "bench|med"
+ },
+ "azores": {
+  "cost": 820,
+  "breakdown": {
+   "travel": 600,
+   "stay": 70,
+   "food": 110,
+   "fun": 40
+  },
+  "source": "bench|medium"
+ },
+ "bruges": {
+  "cost": 770,
+  "breakdown": {
+   "travel": 520,
+   "stay": 95,
+   "food": 110,
+   "fun": 45
+  },
+  "source": "bench|med"
+ },
+ "hamburg": {
+  "cost": 790,
+  "breakdown": {
+   "travel": 560,
+   "stay": 85,
+   "food": 100,
+   "fun": 45
+  },
+  "source": "bench|med"
+ },
+ "nuremberg": {
+  "cost": 770,
+  "breakdown": {
+   "travel": 620,
+   "stay": 50,
+   "food": 70,
+   "fun": 30
+  },
+  "source": "bench|low"
+ },
+ "innsbruck": {
+  "cost": 945,
+  "breakdown": {
+   "travel": 670,
+   "stay": 95,
+   "food": 110,
+   "fun": 70
+  },
+  "source": "bench|low"
+ },
+ "faroe": {
+  "cost": 1280,
+  "breakdown": {
+   "travel": 900,
+   "stay": 180,
+   "food": 175,
+   "fun": 25
+  },
+  "source": "bench|low"
+ },
+ "kyivwarsaw": {
+  "cost": 655,
+  "breakdown": {
+   "travel": 490,
+   "stay": 55,
+   "food": 70,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "kyoto2": {
+  "cost": 1335,
+  "breakdown": {
+   "travel": 980,
+   "stay": 125,
+   "food": 160,
+   "fun": 70
+  },
+  "source": "bench|med"
+ },
+ "okinawa": {
+  "cost": 1010,
+  "breakdown": {
+   "travel": 720,
+   "stay": 90,
+   "food": 125,
+   "fun": 75
+  },
+  "source": "live|med"
+ },
+ "busan": {
+  "cost": 1380,
+  "breakdown": {
+   "travel": 1150,
+   "stay": 70,
+   "food": 110,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "kotakinabalu": {
+  "cost": 1310,
+  "breakdown": {
+   "travel": 1100,
+   "stay": 50,
+   "food": 70,
+   "fun": 90
+  },
+  "source": "bench|med"
+ },
+ "nepal": {
+  "cost": 1360,
+  "breakdown": {
+   "travel": 1200,
+   "stay": 40,
+   "food": 60,
+   "fun": 60
+  },
+  "source": "bench|high"
+ },
+ "maldives": {
+  "cost": 1040,
+  "breakdown": {
+   "travel": 740,
+   "stay": 100,
+   "food": 125,
+   "fun": 75
+  },
+  "source": "live|medium"
+ },
+ "laos": {
+  "cost": 1280,
+  "breakdown": {
+   "travel": 1150,
+   "stay": 30,
+   "food": 60,
+   "fun": 40
+  },
+  "source": "bench|medium"
+ },
+ "georgia": {
+  "cost": 695,
+  "breakdown": {
+   "travel": 555,
+   "stay": 40,
+   "food": 75,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "fes": {
+  "cost": 750,
+  "breakdown": {
+   "travel": 640,
+   "stay": 30,
+   "food": 40,
+   "fun": 40
+  },
+  "source": "bench|med"
+ },
+ "essaouira": {
+  "cost": 660,
+  "breakdown": {
+   "travel": 540,
+   "stay": 35,
+   "food": 45,
+   "fun": 40
+  },
+  "source": "live|low"
+ },
+ "tunisia": {
+  "cost": 870,
+  "breakdown": {
+   "travel": 710,
+   "stay": 50,
+   "food": 60,
+   "fun": 50
+  },
+  "source": "live|med"
+ },
+ "jordan2": {
+  "cost": 1085,
+  "breakdown": {
+   "travel": 900,
+   "stay": 45,
+   "food": 80,
+   "fun": 60
+  },
+  "source": "bench|med"
+ },
+ "oman": {
+  "cost": 1140,
+  "breakdown": {
+   "travel": 900,
+   "stay": 90,
+   "food": 100,
+   "fun": 50
+  },
+  "source": "bench|medium"
+ },
+ "victoria": {
+  "cost": 1545,
+  "breakdown": {
+   "travel": 1300,
+   "stay": 70,
+   "food": 100,
+   "fun": 75
+  },
+  "source": "bench|low"
+ },
+ "madagascar": {
+  "cost": 1610,
+  "breakdown": {
+   "travel": 1400,
+   "stay": 60,
+   "food": 90,
+   "fun": 60
+  },
+  "source": "bench|low"
+ },
+ "melbourne": {
+  "cost": 1135,
+  "breakdown": {
+   "travel": 730,
+   "stay": 165,
+   "food": 170,
+   "fun": 70
+  },
+  "source": "live|high"
+ },
+ "gold": {
+  "cost": 1650,
+  "breakdown": {
+   "travel": 1250,
+   "stay": 150,
+   "food": 160,
+   "fun": 90
+  },
+  "source": "bench|med"
+ },
+ "fiji": {
+  "cost": 1540,
+  "breakdown": {
+   "travel": 1250,
+   "stay": 100,
+   "food": 130,
+   "fun": 60
+  },
+  "source": "bench|medium"
+ },
+ "nzsouth": {
+  "cost": 1660,
+  "breakdown": {
+   "travel": 1250,
+   "stay": 140,
+   "food": 160,
+   "fun": 110
+  },
+  "source": "bench|med"
+ },
+ "pensacola": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 25,
+   "stay": 25,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "crystalriver": {
+  "cost": 125,
+  "breakdown": {
+   "travel": 30,
+   "stay": 20,
+   "food": 50,
+   "fun": 25
+  },
+  "source": "drive|high"
+ },
+ "dryTortugas": {
+  "cost": 375,
+  "breakdown": {
+   "travel": 270,
+   "stay": 10,
+   "food": 45,
+   "fun": 50
+  },
+  "source": "drive|low"
+ },
+ "congaree": {
+  "cost": 80,
+  "breakdown": {
+   "travel": 25,
+   "stay": 5,
+   "food": 45,
+   "fun": 5
+  },
+  "source": "drive|high"
+ },
+ "gatlinburg2": {
+  "cost": 180,
+  "breakdown": {
+   "travel": 35,
+   "stay": 40,
+   "food": 75,
+   "fun": 30
+  },
+  "source": "drive|high"
+ },
+ "redriver": {
+  "cost": 130,
+  "breakdown": {
+   "travel": 30,
+   "stay": 20,
+   "food": 65,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "talledega": {
+  "cost": 90,
+  "breakdown": {
+   "travel": 25,
+   "stay": 10,
+   "food": 45,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "buffalo": {
+  "cost": 135,
+  "breakdown": {
+   "travel": 30,
+   "stay": 15,
+   "food": 65,
+   "fun": 25
+  },
+  "source": "drive|high"
+ },
+ "deathvalley": {
+  "cost": 285,
+  "breakdown": {
+   "travel": 175,
+   "stay": 15,
+   "food": 70,
+   "fun": 25
+  },
+  "source": "live|high"
+ },
+ "pinnacles": {
+  "cost": 100,
+  "breakdown": {
+   "travel": 30,
+   "stay": 10,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "bigsky": {
+  "cost": 530,
+  "breakdown": {
+   "travel": 320,
+   "stay": 70,
+   "food": 110,
+   "fun": 30
+  },
+  "source": "bench|medium"
+ },
+ "sanjuanislands": {
+  "cost": 350,
+  "breakdown": {
+   "travel": 190,
+   "stay": 40,
+   "food": 85,
+   "fun": 35
+  },
+  "source": "live|medium"
+ },
+ "hotspringsAR2": {
+  "cost": 115,
+  "breakdown": {
+   "travel": 30,
+   "stay": 10,
+   "food": 65,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "nantucket": {
+  "cost": 280,
+  "breakdown": {
+   "travel": 65,
+   "stay": 90,
+   "food": 100,
+   "fun": 25
+  },
+  "source": "drive|low"
+ },
+ "catskills": {
+  "cost": 110,
+  "breakdown": {
+   "travel": 35,
+   "stay": 15,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "delaware": {
+  "cost": 140,
+  "breakdown": {
+   "travel": 35,
+   "stay": 20,
+   "food": 70,
+   "fun": 15
+  },
+  "source": "drive|high"
+ },
+ "harpersferry": {
+  "cost": 105,
+  "breakdown": {
+   "travel": 30,
+   "stay": 15,
+   "food": 50,
+   "fun": 10
+  },
+  "source": "drive|high"
+ },
+ "antigua": {
+  "cost": 565,
+  "breakdown": {
+   "travel": 320,
+   "stay": 95,
+   "food": 120,
+   "fun": 30
+  },
+  "source": "bench|medium"
+ },
+ "dominica": {
+  "cost": 670,
+  "breakdown": {
+   "travel": 415,
+   "stay": 90,
+   "food": 125,
+   "fun": 40
+  },
+  "source": "live|medium"
+ },
+ "nicaragua": {
+  "cost": 565,
+  "breakdown": {
+   "travel": 420,
+   "stay": 50,
+   "food": 55,
+   "fun": 40
+  },
+  "source": "bench|high"
+ },
+ "peruNorth": {
+  "cost": 470,
+  "breakdown": {
+   "travel": 295,
+   "stay": 50,
+   "food": 55,
+   "fun": 70
+  },
+  "source": "live|medium"
+ },
+ "galapagos": {
+  "cost": 1320,
+  "breakdown": {
+   "travel": 700,
+   "stay": 100,
+   "food": 130,
+   "fun": 390
+  },
+  "source": "bench|medium"
+ },
+ "kotor2": {
+  "cost": 865,
+  "breakdown": {
+   "travel": 750,
+   "stay": 35,
+   "food": 60,
+   "fun": 20
+  },
+  "source": "bench|medium"
+ },
+ "belgrade": {
+  "cost": 790,
+  "breakdown": {
+   "travel": 650,
+   "stay": 40,
+   "food": 65,
+   "fun": 35
+  },
+  "source": "live|high"
+ },
+ "naples2": {
+  "cost": 885,
+  "breakdown": {
+   "travel": 620,
+   "stay": 90,
+   "food": 110,
+   "fun": 65
+  },
+  "source": "bench|med"
+ },
+ "sardinia": {
+  "cost": 995,
+  "breakdown": {
+   "travel": 750,
+   "stay": 90,
+   "food": 125,
+   "fun": 30
+  },
+  "source": "bench|medium"
+ },
+ "corfu": {
+  "cost": 925,
+  "breakdown": {
+   "travel": 670,
+   "stay": 90,
+   "food": 110,
+   "fun": 55
+  },
+  "source": "bench|low"
+ },
+ "cappadocia": {
+  "cost": 890,
+  "breakdown": {
+   "travel": 720,
+   "stay": 45,
+   "food": 55,
+   "fun": 70
+  },
+  "source": "bench|med"
+ },
+ "pamukkale": {
+  "cost": 850,
+  "breakdown": {
+   "travel": 700,
+   "stay": 40,
+   "food": 50,
+   "fun": 60
+  },
+  "source": "bench|med"
+ },
+ "jeju": {
+  "cost": 1340,
+  "breakdown": {
+   "travel": 1100,
+   "stay": 70,
+   "food": 110,
+   "fun": 60
+  },
+  "source": "bench|med"
+ },
+ "phuquoc": {
+  "cost": 1200,
+  "breakdown": {
+   "travel": 1050,
+   "stay": 35,
+   "food": 65,
+   "fun": 50
+  },
+  "source": "bench|low"
+ },
+ "boracay": {
+  "cost": 1385,
+  "breakdown": {
+   "travel": 1200,
+   "stay": 50,
+   "food": 75,
+   "fun": 60
+  },
+  "source": "bench|low"
+ },
+ "koh": {
+  "cost": 1240,
+  "breakdown": {
+   "travel": 1020,
+   "stay": 50,
+   "food": 80,
+   "fun": 90
+  },
+  "source": "bench|med"
+ },
+ "sapa": {
+  "cost": 1080,
+  "breakdown": {
+   "travel": 950,
+   "stay": 30,
+   "food": 50,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "kandy": {
+  "cost": 840,
+  "breakdown": {
+   "travel": 700,
+   "stay": 35,
+   "food": 65,
+   "fun": 40
+  },
+  "source": "live|high"
+ },
+ "udaipur": {
+  "cost": 1090,
+  "breakdown": {
+   "travel": 950,
+   "stay": 35,
+   "food": 55,
+   "fun": 50
+  },
+  "source": "bench|med"
+ },
+ "seychelles": {
+  "cost": 1605,
+  "breakdown": {
+   "travel": 1200,
+   "stay": 175,
+   "food": 180,
+   "fun": 50
+  },
+  "source": "bench|low"
+ },
+ "rwanda": {
+  "cost": 1350,
+  "breakdown": {
+   "travel": 1150,
+   "stay": 60,
+   "food": 90,
+   "fun": 50
+  },
+  "source": "bench|medium"
+ },
+ "namibia": {
+  "cost": 1630,
+  "breakdown": {
+   "travel": 1350,
+   "stay": 90,
+   "food": 120,
+   "fun": 70
+  },
+  "source": "bench|low"
+ },
+ "tasmania": {
+  "cost": 1760,
+  "breakdown": {
+   "travel": 1400,
+   "stay": 140,
+   "food": 170,
+   "fun": 50
+  },
+  "source": "bench|low"
+ },
+ "perth": {
+  "cost": 1740,
+  "breakdown": {
+   "travel": 1350,
+   "stay": 150,
+   "food": 170,
+   "fun": 70
+  },
+  "source": "bench|med"
+ },
+ "cookislands": {
+  "cost": 1660,
+  "breakdown": {
+   "travel": 1300,
+   "stay": 140,
+   "food": 170,
+   "fun": 50
+  },
+  "source": "bench|low"
+ }
+}

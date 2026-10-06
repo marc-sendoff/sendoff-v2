@@ -1,0 +1,1289 @@
+[
+ {
+  "id": "everglades",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split (Long Pine Key ~$30/site /4) + entry split"
+ },
+ {
+  "id": "keywest",
+  "hostelNight": 48,
+  "foodDay": 35,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "resort-adjacent split: Key West motels ~$180-240/room /4; free Duval/beaches"
+ },
+ {
+  "id": "staug",
+  "hostelNight": 24,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split"
+ },
+ {
+  "id": "savannah",
+  "hostelNight": 26,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city motel-split; free squares/River St"
+ },
+ {
+  "id": "smokies",
+  "hostelNight": 20,
+  "foodDay": 25,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park-town motel-split (Gatlinburg motels $70-90/room); Smokies entry free"
+ },
+ {
+  "id": "tampa",
+  "hostelNight": 26,
+  "foodDay": 30,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city motel-split"
+ },
+ {
+  "id": "nrg",
+  "hostelNight": 10,
+  "foodDay": 22,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split; NRG entry free"
+ },
+ {
+  "id": "hotsprings",
+  "hostelNight": 18,
+  "foodDay": 25,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-town motel-split; free bathhouse row"
+ },
+ {
+  "id": "gulfshores",
+  "hostelNight": 25,
+  "foodDay": 28,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split (shoulder)"
+ },
+ {
+  "id": "shenandoah",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($30/site /4) + $30/vehicle entry split"
+ },
+ {
+  "id": "charleston",
+  "hostelNight": 30,
+  "foodDay": 32,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "mid-city motel-split, Charleston premium (NotSo Hostel ~$40 alt)"
+ },
+ {
+  "id": "outerbanks",
+  "hostelNight": 25,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split (shoulder)"
+ },
+ {
+  "id": "asheville",
+  "hostelNight": 28,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city hostel/motel-split; Blue Ridge free"
+ },
+ {
+  "id": "atlanta",
+  "hostelNight": 25,
+  "foodDay": 30,
+  "funDay": 12,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city motel/hostel-split; LIVEFARE"
+ },
+ {
+  "id": "memphis",
+  "hostelNight": 22,
+  "foodDay": 28,
+  "funDay": 10,
+  "fareRT": 150,
+  "confidence": "medium",
+  "note": "small-city motel-split; MIA-MEM low RT ~$150 (limited budget carriers)"
+ },
+ {
+  "id": "cleveland",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 10,
+  "fareRT": 100,
+  "confidence": "medium",
+  "note": "small-city motel-split; Spirit/Frontier FLL-CLE RT often <$120"
+ },
+ {
+  "id": "miamibeach",
+  "hostelNight": 30,
+  "foodDay": 32,
+  "funDay": 8,
+  "fareRT": 0,
+  "confidence": "high",
+  "note": "home city — no flight; Miami Beach hostels $25-40 dorm"
+ },
+ {
+  "id": "nola",
+  "hostelNight": 32,
+  "foodDay": 32,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city hostel (HI/India House $30-40 dorm shoulder); LIVEFARE"
+ },
+ {
+  "id": "dc",
+  "hostelNight": 42,
+  "foodDay": 32,
+  "funDay": 5,
+  "fareRT": 110,
+  "confidence": "high",
+  "note": "big-city hostel (HI DC ~$40-50); museums free; Spirit/AA MIA-DCA low RT ~$110"
+ },
+ {
+  "id": "nashville",
+  "hostelNight": 25,
+  "foodDay": 32,
+  "funDay": 12,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city motel-split (Nashville motels $80-110/room); LIVEFARE"
+ },
+ {
+  "id": "sanjuan",
+  "hostelNight": 32,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "guesthouse/hostel band San Juan; LIVEFARE"
+ },
+ {
+  "id": "austin",
+  "hostelNight": 26,
+  "foodDay": 30,
+  "funDay": 10,
+  "fareRT": 120,
+  "confidence": "high",
+  "note": "mid-city hostel/motel-split; Spirit MIA-AUS low RT ~$120"
+ },
+ {
+  "id": "orlando",
+  "hostelNight": 22,
+  "foodDay": 28,
+  "funDay": 15,
+  "fareRT": 60,
+  "confidence": "high",
+  "note": "motel-split; Spirit MIA-MCO RT often $50-80; free springs/lakes plan"
+ },
+ {
+  "id": "chicago",
+  "hostelNight": 42,
+  "foodDay": 32,
+  "funDay": 10,
+  "fareRT": 90,
+  "confidence": "high",
+  "note": "big-city hostel (HI Chicago $38-46 dorm); Spirit/Frontier low RT ~$90"
+ },
+ {
+  "id": "nyc",
+  "hostelNight": 55,
+  "foodDay": 38,
+  "funDay": 12,
+  "fareRT": 100,
+  "confidence": "high",
+  "note": "big-city hostel (HI NYC ~$50 dorm); Frontier/Spirit MIA-NYC low RT $80-120"
+ },
+ {
+  "id": "toronto",
+  "hostelNight": 38,
+  "foodDay": 30,
+  "funDay": 10,
+  "fareRT": 220,
+  "confidence": "high",
+  "note": "big-city hostel Toronto; MIA-YYZ low RT ~$170-280 (Flair lower)"
+ },
+ {
+  "id": "denver",
+  "hostelNight": 35,
+  "foodDay": 30,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city hostel (11th Ave Hostel $35 dorm); LIVEFARE"
+ },
+ {
+  "id": "montreal",
+  "hostelNight": 33,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": 230,
+  "confidence": "medium",
+  "note": "big-city hostel Montreal (~C$45 dorm); low RT ~$230 via connections"
+ },
+ {
+  "id": "la",
+  "hostelNight": 40,
+  "foodDay": 34,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "big-city hostel LA ($35-45 dorm); LIVEFARE"
+ },
+ {
+  "id": "vancouver",
+  "hostelNight": 38,
+  "foodDay": 32,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "big-city hostel (HI Vancouver ~C$50-60 dorm); LIVEFARE"
+ },
+ {
+  "id": "banff",
+  "hostelNight": 40,
+  "foodDay": 30,
+  "funDay": 12,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "HI Banff Alpine Centre dorm C$56 = ~US$41; park pass split; LIVEFARE"
+ },
+ {
+  "id": "sf",
+  "hostelNight": 38,
+  "foodDay": 36,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "big-city hostel (HI SF $33-42 dorm); LIVEFARE"
+ },
+ {
+  "id": "yellowstone",
+  "hostelNight": 10,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": 320,
+  "confidence": "high",
+  "note": "park campsite-split ($39/site /4) + entry split; MIA-BZN low RT ~$320"
+ },
+ {
+  "id": "joshuatree",
+  "hostelNight": 8,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split (~$25/site /4) + $30/vehicle entry split"
+ },
+ {
+  "id": "bigsur",
+  "hostelNight": 14,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "Big Sur campsite-split ($50-60/site /4); coast free"
+ },
+ {
+  "id": "sandiego",
+  "hostelNight": 35,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "big-city hostel San Diego ($30-40 dorm); LIVEFARE"
+ },
+ {
+  "id": "sedona",
+  "hostelNight": 30,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "resort-adjacent: Sedona premium, Cottonwood motel/camp split; LIVEFARE"
+ },
+ {
+  "id": "tahoe",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "beach/lake-town motel-split (shoulder); LIVEFARE"
+ },
+ {
+  "id": "grandcanyon",
+  "hostelNight": 9,
+  "foodDay": 24,
+  "funDay": 9,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Mather campground-split (~$25-30/site) + $35/vehicle entry split; LIVEFARE"
+ },
+ {
+  "id": "vegas",
+  "hostelNight": 22,
+  "foodDay": 30,
+  "funDay": 20,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "downtown Vegas room-split ($60-90/room /4); LIVEFARE"
+ },
+ {
+  "id": "portland",
+  "hostelNight": 32,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city hostel Portland; LIVEFARE"
+ },
+ {
+  "id": "seattle",
+  "hostelNight": 42,
+  "foodDay": 34,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "big-city hostel (Green Tortoise ~$45 dorm); LIVEFARE"
+ },
+ {
+  "id": "sanantonio",
+  "hostelNight": 22,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-city motel-split; free River Walk/missions; LIVEFARE"
+ },
+ {
+  "id": "bigbend",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Chisos Basin campsite-split ($16/site) + entry split"
+ },
+ {
+  "id": "oahu",
+  "hostelNight": 45,
+  "foodDay": 38,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Waikiki hostel dorm $40-60; beaches free; LIVEFARE"
+ },
+ {
+  "id": "maui",
+  "hostelNight": 48,
+  "foodDay": 40,
+  "funDay": 10,
+  "fareRT": 520,
+  "confidence": "medium",
+  "note": "Maui hostel dorm $45-60; MIA-OGG low RT ~$476-550 (HNL anchor $476)"
+ },
+ {
+  "id": "quebec",
+  "hostelNight": 33,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": 320,
+  "confidence": "medium",
+  "note": "big-city hostel Quebec (~C$40 dorm); low RT ~$320 (connections only)"
+ },
+ {
+  "id": "cocoa",
+  "hostelNight": 24,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split"
+ },
+ {
+  "id": "destin",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split, Destin premium (shoulder)"
+ },
+ {
+  "id": "myrtle",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split (Myrtle $60-90/room shoulder)"
+ },
+ {
+  "id": "southpadre",
+  "hostelNight": 22,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split (shoulder)"
+ },
+ {
+  "id": "galveston",
+  "hostelNight": 24,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split"
+ },
+ {
+  "id": "hockinghills",
+  "hostelNight": 14,
+  "foodDay": 22,
+  "funDay": 4,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "cabin/campsite-split; Hocking Hills free"
+ },
+ {
+  "id": "mammothcave",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split (~$25/site); cave tour $8-25 occasional"
+ },
+ {
+  "id": "cuyahoga",
+  "hostelNight": 18,
+  "foodDay": 24,
+  "funDay": 4,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "roadside motel-split (no in-park camping); park free"
+ },
+ {
+  "id": "niagara",
+  "hostelNight": 22,
+  "foodDay": 26,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-city motel-split NF-NY side; falls free; LIVEFARE"
+ },
+ {
+  "id": "philly",
+  "hostelNight": 35,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city hostel (Apple Hostels ~$35-45 dorm); LIVEFARE"
+ },
+ {
+  "id": "boston",
+  "hostelNight": 50,
+  "foodDay": 34,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "big-city hostel (HI Boston $50-60 dorm); LIVEFARE"
+ },
+ {
+  "id": "acadia",
+  "hostelNight": 9,
+  "foodDay": 25,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($30/site) + entry split"
+ },
+ {
+  "id": "whitemtns",
+  "hostelNight": 16,
+  "foodDay": 24,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "roadside motel/camp-split; hikes free"
+ },
+ {
+  "id": "stowe",
+  "hostelNight": 35,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "resort-adjacent split: Stowe premium, budget motel /4"
+ },
+ {
+  "id": "kc",
+  "hostelNight": 20,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": 130,
+  "confidence": "medium",
+  "note": "small-city motel-split; MIA-MCI low RT ~$130"
+ },
+ {
+  "id": "zionbryce",
+  "hostelNight": 10,
+  "foodDay": 24,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Watchman campsite-split ($35-45/site /4) + entries; LIVEFARE"
+ },
+ {
+  "id": "moab",
+  "hostelNight": 16,
+  "foodDay": 24,
+  "funDay": 12,
+  "fareRT": 180,
+  "confidence": "high",
+  "note": "Moab motel-split ($53-66/room) or camp; Arches+Canyonlands entries; MIA-SLC low RT ~$180"
+ },
+ {
+  "id": "yosemite",
+  "hostelNight": 9,
+  "foodDay": 24,
+  "funDay": 9,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($36/site /4) + entry split; LIVEFARE"
+ },
+ {
+  "id": "santacruz",
+  "hostelNight": 32,
+  "foodDay": 28,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "beach-town hostel/motel-split (HI Santa Cruz)"
+ },
+ {
+  "id": "olympicnp",
+  "hostelNight": 9,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split + entry split; LIVEFARE"
+ },
+ {
+  "id": "rushmore",
+  "hostelNight": 14,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": 320,
+  "confidence": "medium",
+  "note": "Badlands camp ($23/site) + Rapid City motel mix; MIA-RAP low RT ~$320 (connections)"
+ },
+ {
+  "id": "parkcity",
+  "hostelNight": 35,
+  "foodDay": 28,
+  "funDay": 12,
+  "fareRT": 180,
+  "confidence": "medium",
+  "note": "resort-adjacent split: Park City premium, or SLC base; MIA-SLC low RT ~$180"
+ },
+ {
+  "id": "jacksonhole",
+  "hostelNight": 12,
+  "foodDay": 26,
+  "funDay": 10,
+  "fareRT": 450,
+  "confidence": "medium",
+  "note": "Gros Ventre campsite-split (~$40/site) + entry; MIA-JAC low RT ~$450 (JAC pricey)"
+ },
+ {
+  "id": "stthomas",
+  "hostelNight": 45,
+  "foodDay": 36,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "island guesthouse-split, USVI premium; LIVEFARE"
+ },
+ {
+  "id": "curacao",
+  "hostelNight": 28,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "Curacao hostel dorm $20-30; LIVEFARE"
+ },
+ {
+  "id": "bermuda",
+  "hostelNight": 70,
+  "foodDay": 40,
+  "funDay": 8,
+  "fareRT": 350,
+  "confidence": "low",
+  "note": "Bermuda guesthouse-split — cheapest lodging on island is brutal; MIA-BDA low RT ~$300-400"
+ },
+ {
+  "id": "siemreap",
+  "hostelNight": 8,
+  "foodDay": 15,
+  "funDay": 12,
+  "fareRT": 1050,
+  "confidence": "medium",
+  "note": "SE Asia hostel $6-10 dorm; Angkor 3-day pass $37 spread; MIA-REP low RT ~$1000-1100 (BKK anchor $830-1000 + hop)"
+ },
+ {
+  "id": "srilanka",
+  "hostelNight": 10,
+  "foodDay": 15,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Sri Lanka hostel band; LIVEFARE"
+ },
+ {
+  "id": "accra",
+  "hostelNight": 15,
+  "foodDay": 18,
+  "funDay": 8,
+  "fareRT": 950,
+  "confidence": "medium",
+  "note": "Accra hostel/guesthouse; MIA-ACC low RT ~$900-1030 (momondo $705 deal exists)"
+ },
+ {
+  "id": "sanibel",
+  "hostelNight": 38,
+  "foodDay": 28,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "low",
+  "note": "Sanibel premium: island motel-split high even /4; causeway toll split"
+ },
+ {
+  "id": "amelia",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split"
+ },
+ {
+  "id": "caladesi",
+  "hostelNight": 24,
+  "foodDay": 26,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mainland (Dunedin) motel-split; Caladesi ferry ~$16 in fun"
+ },
+ {
+  "id": "apalach",
+  "hostelNight": 22,
+  "foodDay": 26,
+  "funDay": 4,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-town motel-split"
+ },
+ {
+  "id": "chattanooga",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-city motel-split"
+ },
+ {
+  "id": "greenville",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-city motel-split; Falls Park free"
+ },
+ {
+  "id": "louisville",
+  "hostelNight": 20,
+  "foodDay": 28,
+  "funDay": 10,
+  "fareRT": 130,
+  "confidence": "medium",
+  "note": "small-city motel-split; occasional bourbon tour; MIA-SDF low RT ~$130"
+ },
+ {
+  "id": "doorcounty",
+  "hostelNight": 22,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "small-town motel/camp-split (shoulder)"
+ },
+ {
+  "id": "mackinac",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 15,
+  "fareRT": null,
+  "confidence": "low",
+  "note": "stay mainland (St. Ignace/Mackinaw City) motel-split; ferry ~$30 RT dominates fun"
+ },
+ {
+  "id": "stlouis",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-city motel-split; Arch grounds/City Museum-lite free plan; LIVEFARE"
+ },
+ {
+  "id": "omaha",
+  "hostelNight": 18,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": 150,
+  "confidence": "medium",
+  "note": "small-city motel-split; MIA-OMA low RT ~$150"
+ },
+ {
+  "id": "boulder",
+  "hostelNight": 30,
+  "foodDay": 30,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "mid-city hostel/motel-split (Boulder premium over Denver); LIVEFARE"
+ },
+ {
+  "id": "santafe",
+  "hostelNight": 24,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": 170,
+  "confidence": "medium",
+  "note": "small-city motel-split; MIA-ABQ low RT ~$170"
+ },
+ {
+  "id": "whitesands",
+  "hostelNight": 16,
+  "foodDay": 24,
+  "funDay": 6,
+  "fareRT": 180,
+  "confidence": "high",
+  "note": "Alamogordo motel-split ($60-70/room); $15/vehicle entry split; MIA-ELP low RT ~$180"
+ },
+ {
+  "id": "palodurо",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "state-park campsite-split (~$26/site + entry)"
+ },
+ {
+  "id": "marfa",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "Marfa camp/El Cosmico or Alpine motel-split"
+ },
+ {
+  "id": "oklahomacity",
+  "hostelNight": 18,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": 150,
+  "confidence": "medium",
+  "note": "small-city motel-split; MIA-OKC low RT ~$150"
+ },
+ {
+  "id": "vegasgrand",
+  "hostelNight": 22,
+  "foodDay": 30,
+  "funDay": 20,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "downtown Vegas room-split, longer stay; LIVEFARE"
+ },
+ {
+  "id": "channelislands",
+  "hostelNight": 8,
+  "foodDay": 24,
+  "funDay": 20,
+  "fareRT": null,
+  "confidence": "low",
+  "note": "island campsite-split ($15/site) — Island Packers ferry ~$63pp RT NOT in funDay; budget-buster flag"
+ },
+ {
+  "id": "mtrainier",
+  "hostelNight": 8,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($20/site) + entry split; LIVEFARE"
+ },
+ {
+  "id": "crater",
+  "hostelNight": 8,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split + entry split; LIVEFARE"
+ },
+ {
+  "id": "redwoods",
+  "hostelNight": 9,
+  "foodDay": 24,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "state/national park campsite-split ($35/site); Redwoods entry free; LIVEFARE"
+ },
+ {
+  "id": "glacier",
+  "hostelNight": 8,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($23-40/site /4) + entry split; LIVEFARE"
+ },
+ {
+  "id": "asheboro",
+  "hostelNight": 12,
+  "foodDay": 24,
+  "funDay": 4,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "parkway campsite/motel-split; BRP free"
+ },
+ {
+  "id": "newport",
+  "hostelNight": 35,
+  "foodDay": 30,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "resort-adjacent split: Newport premium; Cliff Walk free, one mansion ticket"
+ },
+ {
+  "id": "capecod",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "beach-town motel/camp-split (shoulder)"
+ },
+ {
+  "id": "finger",
+  "hostelNight": 18,
+  "foodDay": 25,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-town motel/camp-split; state park entries"
+ },
+ {
+  "id": "pittsburgh2",
+  "hostelNight": 20,
+  "foodDay": 26,
+  "funDay": 6,
+  "fareRT": 120,
+  "confidence": "high",
+  "note": "small-city motel-split; Spirit FLL-PIT low RT ~$120"
+ },
+ {
+  "id": "turks",
+  "hostelNight": 50,
+  "foodDay": 38,
+  "funDay": 8,
+  "fareRT": 400,
+  "confidence": "low",
+  "note": "Provo guesthouse-split — cheapest on-island lodging still high; MIA-PLS low RT ~$400 (Oct avg $499)"
+ },
+ {
+  "id": "stjohn",
+  "hostelNight": 40,
+  "foodDay": 36,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "low",
+  "note": "St. John eco-tent/campground-split (Cinnamon Bay); LIVEFARE"
+ },
+ {
+  "id": "grenada",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "Grenada guesthouse band; LIVEFARE"
+ },
+ {
+  "id": "azores",
+  "hostelNight": 18,
+  "foodDay": 22,
+  "funDay": 8,
+  "fareRT": 600,
+  "confidence": "medium",
+  "note": "Azores hostel dorm $18-25; MIA-PDL low RT ~$550-650 (momondo $427 deal seen)"
+ },
+ {
+  "id": "faroe",
+  "hostelNight": 45,
+  "foodDay": 35,
+  "funDay": 5,
+  "fareRT": 900,
+  "confidence": "low",
+  "note": "Faroe guesthouse/hostel-split (~DKK350 dorm); hiking free; MIA-FAE low RT ~$865-950 via KEF/CPH"
+ },
+ {
+  "id": "maldives",
+  "hostelNight": 25,
+  "foodDay": 25,
+  "funDay": 15,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "local-island guesthouse-split (Maafushi ~$50 dbl); snorkel trips; LIVEFARE"
+ },
+ {
+  "id": "laos",
+  "hostelNight": 7,
+  "foodDay": 12,
+  "funDay": 8,
+  "fareRT": 1150,
+  "confidence": "medium",
+  "note": "Laos hostel $5-8 dorm; MIA-LPQ low RT ~$1100-1200 (BKK anchor + hop)"
+ },
+ {
+  "id": "georgia",
+  "hostelNight": 10,
+  "foodDay": 15,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Tbilisi hostel band; LIVEFARE"
+ },
+ {
+  "id": "oman",
+  "hostelNight": 22,
+  "foodDay": 20,
+  "funDay": 10,
+  "fareRT": 900,
+  "confidence": "medium",
+  "note": "Muscat budget-hotel-split (~$80/room /4); wadis free; MIA-MCT low RT ~$850-950 (Turkish/Qatar)"
+ },
+ {
+  "id": "victoria",
+  "hostelNight": 18,
+  "foodDay": 20,
+  "funDay": 15,
+  "fareRT": 1300,
+  "confidence": "low",
+  "note": "Vic Falls backpackers dorm; falls entry $50 once spread; MIA-VFA low RT ~$1250-1400 via JNB"
+ },
+ {
+  "id": "madagascar",
+  "hostelNight": 12,
+  "foodDay": 15,
+  "funDay": 10,
+  "fareRT": 1400,
+  "confidence": "low",
+  "note": "Tana guesthouse band; MIA-TNR low RT ~$1350-1500 via CDG/ADD"
+ },
+ {
+  "id": "fiji",
+  "hostelNight": 20,
+  "foodDay": 22,
+  "funDay": 10,
+  "fareRT": 1250,
+  "confidence": "medium",
+  "note": "Nadi hostel dorm $15-25; MIA-NAN low RT ~$1200-1300 via LAX (FJ)"
+ },
+ {
+  "id": "pensacola",
+  "hostelNight": 24,
+  "foodDay": 26,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "beach-town motel-split (shoulder)"
+ },
+ {
+  "id": "crystalriver",
+  "hostelNight": 22,
+  "foodDay": 26,
+  "funDay": 12,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-town motel-split; manatee swim occasional splurge"
+ },
+ {
+  "id": "dryTortugas",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 25,
+  "fareRT": null,
+  "confidence": "low",
+  "note": "Garden Key campsite-split ($15/site) — Yankee Freedom ferry ~$220pp NOT in funDay; budget-buster flag"
+ },
+ {
+  "id": "congaree",
+  "hostelNight": 5,
+  "foodDay": 22,
+  "funDay": 3,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($10/site); Congaree free"
+ },
+ {
+  "id": "gatlinburg2",
+  "hostelNight": 20,
+  "foodDay": 25,
+  "funDay": 10,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Pigeon Forge motel-split ($70-90/room); Smokies free, skip Dollywood"
+ },
+ {
+  "id": "redriver",
+  "hostelNight": 10,
+  "foodDay": 22,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Red River Gorge campsite/cabin-split; climbing/hikes free"
+ },
+ {
+  "id": "talledega",
+  "hostelNight": 12,
+  "foodDay": 22,
+  "funDay": 4,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-town motel/camp-split; canyon free"
+ },
+ {
+  "id": "buffalo",
+  "hostelNight": 8,
+  "foodDay": 22,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "river campsite-split; canoe rental split occasional"
+ },
+ {
+  "id": "deathvalley",
+  "hostelNight": 8,
+  "foodDay": 24,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($22/site) + $30/vehicle entry split; LIVEFARE"
+ },
+ {
+  "id": "pinnacles",
+  "hostelNight": 10,
+  "foodDay": 24,
+  "funDay": 6,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "park campsite-split ($37/site /4) + entry split"
+ },
+ {
+  "id": "bigsky",
+  "hostelNight": 24,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": 320,
+  "confidence": "medium",
+  "note": "Bozeman motel/hostel-split; MIA-BZN low RT ~$320"
+ },
+ {
+  "id": "sanjuanislands",
+  "hostelNight": 20,
+  "foodDay": 28,
+  "funDay": 12,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "island camp/hostel-split; walk-on ferry cheap; LIVEFARE"
+ },
+ {
+  "id": "hotspringsAR2",
+  "hostelNight": 6,
+  "foodDay": 22,
+  "funDay": 3,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "national-forest campsite-split (~$15-25/site); free"
+ },
+ {
+  "id": "nantucket",
+  "hostelNight": 45,
+  "foodDay": 34,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "low",
+  "note": "Nantucket premium: HI-style hostel/guesthouse-split; ferry ~$40 RT extra"
+ },
+ {
+  "id": "catskills",
+  "hostelNight": 16,
+  "foodDay": 25,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Catskills motel/camp-split; hikes free"
+ },
+ {
+  "id": "delaware",
+  "hostelNight": 10,
+  "foodDay": 24,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Assateague campsite-split ($30/site) + entry split"
+ },
+ {
+  "id": "harpersferry",
+  "hostelNight": 16,
+  "foodDay": 24,
+  "funDay": 5,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "small-town motel/camp-split; AT + town free"
+ },
+ {
+  "id": "antigua",
+  "hostelNight": 32,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": 320,
+  "confidence": "medium",
+  "note": "Antigua guesthouse band; MIA-ANU low RT ~$300-350 (AA/JetBlue)"
+ },
+ {
+  "id": "dominica",
+  "hostelNight": 22,
+  "foodDay": 25,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "medium",
+  "note": "Dominica guesthouse band; LIVEFARE"
+ },
+ {
+  "id": "kotor2",
+  "hostelNight": 12,
+  "foodDay": 15,
+  "funDay": 5,
+  "fareRT": 750,
+  "confidence": "medium",
+  "note": "Ohrid/Skopje hostel $10-14 dorm; MIA-SKP low RT ~$700-800 (Turkish via IST)"
+ },
+ {
+  "id": "sardinia",
+  "hostelNight": 22,
+  "foodDay": 25,
+  "funDay": 6,
+  "fareRT": 750,
+  "confidence": "medium",
+  "note": "Cagliari hostel dorm ~EUR20; MIA-CAG low RT ~$700-800 (shoulder, via hub)"
+ },
+ {
+  "id": "kandy",
+  "hostelNight": 9,
+  "foodDay": 13,
+  "funDay": 8,
+  "fareRT": null,
+  "confidence": "high",
+  "note": "Kandy hostel band; temple entries; LIVEFARE"
+ },
+ {
+  "id": "seychelles",
+  "hostelNight": 35,
+  "foodDay": 30,
+  "funDay": 8,
+  "fareRT": 1200,
+  "confidence": "low",
+  "note": "Mahe self-catering guesthouse-split (~$120-140 quad); MIA-SEZ low RT ~$1100-1300 via IST/DOH"
+ },
+ {
+  "id": "rwanda",
+  "hostelNight": 15,
+  "foodDay": 18,
+  "funDay": 10,
+  "fareRT": 1150,
+  "confidence": "medium",
+  "note": "Kigali hostel band; MIA-KGL low RT ~$1100-1200 (KGL-MIA $1368 seen, deals lower)"
+ },
+ {
+  "id": "namibia",
+  "hostelNight": 18,
+  "foodDay": 20,
+  "funDay": 12,
+  "fareRT": 1350,
+  "confidence": "low",
+  "note": "Windhoek backpackers dorm; car needed for parks; MIA-WDH low RT ~$1300-1450 via JNB/FRA"
+ },
+ {
+  "id": "tasmania",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": 1400,
+  "confidence": "low",
+  "note": "Hobart YHA dorm ~AU$40; MIA-HBA low RT ~$1350-1500 (SYD anchor $962-1300 + hop)"
+ },
+ {
+  "id": "cookislands",
+  "hostelNight": 28,
+  "foodDay": 28,
+  "funDay": 8,
+  "fareRT": 1300,
+  "confidence": "low",
+  "note": "Rarotonga backpackers dorm ~NZ$40; MIA-RAR low RT ~$1250-1400 via LAX (NZ)"
+ }
+]
