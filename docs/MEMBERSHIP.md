@@ -1,17 +1,17 @@
 # Membership model — draft of record
 
-Captured from Marc, 2026-10-11. **Not built, not scheduled.** December v1 is the
-signup page only; nothing here ships until there is a way to take money.
+From Marc, 2026-10-11, revised the same day. **Not built, not scheduled.**
+December v1 is the signup page only; nothing here ships until there is a way to
+take money.
 
 ---
 
 ## The three tiers
 
 ### Free
-- 10 trips a year
-- 30% of the catalogue restricted *(see open question 3 — this conflicts with
-  "freemium only sees 20% of trips")*
-- Upsell line on the locked trips: "only $4.99 to view more trips in your budget"
+- **3 trips.** One limit, not three — this replaces the earlier mix of
+  "20% of trips / 30% restricted / 10 a year".
+- Locked trips carry the upsell: "only $4.99 to see every trip in your budget"
 
 ### Sendoff+ — $4.99/mo or $44.99/yr
 For the impulsive. The pitch is speed: we forward deals the day they land.
@@ -23,72 +23,101 @@ For the impulsive. The pitch is speed: we forward deals the day they land.
 - **Referrals**: 1 friend = 1 month free, 2 friends = 2 months, and so on.
   8 friends = 1 gift box. 16 friends = 2 gift boxes.
 
-### Founders Club — $100, one-time, first year
+### Founders Club — $65/year, first 10 signups only
 Everything in Sendoff+, plus:
-- **Eligibility**: offered to the first 500 signups; only 100 seats exist.
-  Email signups only, and only people who did **not** use a referral code.
-- **Gift boxes**: 4 a year, one every 3 months — Sendoff-themed, seasonal
-  (hats, pens, notebooks, pins). **First year only: 6 boxes.**
-- **Box budget cap: $65 per member per year.**
-- **One event a year** with the Sendoff team — club night, dinner, banquet,
-  yacht day.
-- **Renews yearly.**
-- **Lifetime access**: refer 3 people → earn the *option to buy* lifetime
-  access, which also includes a concierge helpline.
+- **2 boxes a year**, Sendoff-themed and seasonal (hats, pens, notebooks, pins)
+- Optionally a small **birthday** send — see the budget below
+- **Lifetime option**: $150 once, never pay again
+- Renews yearly otherwise
 
 ---
 
-## Open questions — answer before any of this gets built
+## The budget, at $65 a year
 
-### 1. Founders Club loses money as written
-At $100 for year one:
+Assuming ~$9 postage and ~$2 packaging per parcel:
+
+| Boxes/yr | Shipping | Left for contents | Per box |
+|---|---|---|---|
+| **2** | $22 | $43 | **$22** |
+| 3 | $33 | $32 | $11 |
+
+**Two boxes is the right number.** $22 of contents is a real box — a decent
+embroidered hat is $12–18 on its own. At three boxes you're down to $11 each,
+which is a pin and a sticker, and it feels cheaper every time it lands.
+
+**The birthday send works if it's small.** A card and a pin is roughly $3
+including the stamp. That fits on top of two boxes. A third full box does not.
+
+Note what this budget does *not* leave room for: profit, or an event. At $65
+with two boxes you are spending essentially all of it. That's a fine decision —
+see below — but make it on purpose.
+
+### What 10 seats actually is
+10 × $65 = **$650 a year, total.** This is not a revenue line. It's a goodwill
+play: ten people who feel like owners and tell people about it. Judge it on
+whether those ten bring you members, not on margin. The upside of 10 seats is
+that the downside is capped at $650 — you can afford to be generous.
+
+---
+
+## Open questions
+
+### 1. $150 lifetime goes underwater in year 4
+At two boxes a year (~$47 all-in), a $150 lifetime member runs through the
+money like this:
 
 | | |
 |---|---|
-| Revenue per member | $100 |
-| 6 boxes, contents at the $65 cap | −$65 |
-| Shipping, 6 parcels at ~$9 | −$54 |
-| **Before the event** | **−$19** |
-| Annual event, 100 people | −$?? (a yacht day is thousands) |
+| Year 1 | $103 left |
+| Year 2 | $56 left |
+| Year 3 | $9 left |
+| Year 4 | **−$38** |
 
-The $65 cap covers *contents* but nothing has been set aside for postage, and
-year one ships six times instead of four. Every seat costs more than it earns
-before anyone has been invited anywhere.
+After that it's **−$47 every year, forever**, per lifetime member. The better
+they stick around, the more it costs you.
 
-Ways out, pick one: raise the price, drop year one to 4 boxes, make the event
-cheap (club night, not yacht day), or accept it as a marketing spend with a
-hard budget — 100 seats × $X, written down in advance.
+Three ways to fix it, in order of preference:
 
-### 2. Lifetime access is an unbounded liability
-One payment, then boxes and concierge support forever. Two fixes: define
-lifetime as *Sendoff+ features only* (no physical goods), or cap it ("lifetime"
-= 5 years). Leaving it open-ended is the kind of promise that gets expensive
-exactly when the business starts working.
+1. **Lifetime = digital only.** Sendoff+ forever, no boxes. Costs you almost
+   nothing to honour and is still a genuinely good deal.
+2. **Lifetime = boxes for 5 years**, then digital forever. Honest, and it
+   matches the money.
+3. **Keep it as written but cap the seats** — a handful of people at −$47/yr is
+   survivable; a hundred is not.
 
-### 3. Three different free-tier limits
-The spec says all of these: free users see **20%** of trips; **30%** of trips
-are restricted; free is capped at **10 trips a year**. Pick one rule and say it
-in one sentence — it has to fit on a locked card.
+What you can't do is promise physical goods forever for one payment and not
+write down what that costs.
 
-### 4. The event can't name the old team
-The draft says the yearly event is "with the sendoff founders team (me, Oz,
-Issa, etc)". They're out, and their names were removed from the site at their
-request. The perk is an event with **you**.
+### 2. The event is gone from the budget
+Earlier drafts had a yearly event (club night, dinner, yacht day). At $65 with
+two boxes there's nothing left for it. Either drop it from the promise, or make
+it something that costs you nothing — a dinner where everyone pays their own
+way is still a good night and still a story.
 
-### 5. None of this can take payment yet
+### 3. The old team can't be in the perk
+An earlier draft described the event as "with the sendoff founders team (me,
+Oz, Issa)". They're out, and their names came off the site at their request.
+The perk is an evening with **you**.
+
+### 4. Nothing can take payment yet
 There is no checkout. Stripe was never wired — the payment links in the old
-code are empty strings. Memberships need Stripe, which needs a business entity
-and a bank account on file. That is weeks of setup, not a weekend.
+code are empty strings. Stripe needs a business entity and a bank account on
+file. Weeks, not a weekend.
 
-### 6. Referrals and seats need accounts
-Counting referrals, tracking who has a seat, gating 70% of trips — all of it
-needs logins, which v1 deliberately doesn't have. The membership tiers and the
-account system are the same project; neither ships without the other.
+### 5. Referrals and seats need accounts
+Counting referrals, tracking the 10 seats, gating trips past the third — all of
+it needs logins, which v1 deliberately doesn't have. The tiers and the account
+system are one project; neither ships without the other.
 
-### 7. Physical goods make this an operations business
-Four to six shipments a year means addresses, a fulfilment partner, sales tax
-on goods, customs if anyone moves abroad, and someone to handle a box that
-arrives broken. The software is the easy half.
+### 6. Boxes make this an operations business
+Two shipments a year still means addresses, a fulfilment partner, sales tax on
+goods, and someone to handle a box that arrives broken. The software is the
+easy half.
+
+### 7. Is 3 trips enough to sell the upgrade?
+Traffic lands from Instagram, sees three trips, hits a wall. Tight limits
+create urgency, but they also have to show enough for the product to look worth
+$4.99. Worth watching once there's traffic — it's a one-line change either way.
 
 ---
 
@@ -96,7 +125,7 @@ arrives broken. The software is the easy half.
 
 1. **December**: signup page only. Build the list. *(done)*
 2. **Measure**: how many signups, which cities, how many open the emails.
-3. **Then Sendoff+ alone** — it's digital, so no shipping, no fulfilment, and
-   Stripe plus logins is the whole build.
-4. **Founders Club last.** It's the one with real-world costs, and it reads
-   better as a reward to a list that already exists than as a launch feature.
+3. **Then Sendoff+ alone** — digital, so no shipping and no fulfilment. Stripe
+   plus logins is the whole build.
+4. **Founders Club last**, offered to the first 10 on a list that already
+   exists. That's a better story than selling seats to an empty room.
