@@ -27,7 +27,8 @@ For the impulsive. The pitch is speed: we forward deals the day they land.
 Everything in Sendoff+, plus:
 - **2 boxes a year**, Sendoff-themed and seasonal (hats, pens, notebooks, pins)
 - Optionally a small **birthday** send — see the budget below
-- **Lifetime option**: $150 once, never pay again
+- **Lifetime is earned, not sold**: a Founders member who brings **3 signups**
+  unlocks the right to buy lifetime for **$150 once**, never pay again
 - Renews yearly otherwise
 
 ---
@@ -62,31 +63,27 @@ that the downside is capped at $650 — you can afford to be generous.
 
 ## Open questions
 
-### 1. $150 lifetime goes underwater in year 4
-At two boxes a year (~$47 all-in), a $150 lifetime member runs through the
-money like this:
+### 1. Lifetime is fine — because the seat cap caps it
+Earning it through 3 referrals changes the shape of this. Lifetime can only
+ever be held by a Founders member, and there are only 10 of those, so the
+worst case is bounded:
 
 | | |
 |---|---|
-| Year 1 | $103 left |
-| Year 2 | $56 left |
-| Year 3 | $9 left |
-| Year 4 | **−$38** |
+| Most lifetime members that can ever exist | **10** |
+| Upfront if all 10 take it | **$1,500** |
+| Ongoing cost (10 × $47 of boxes) | **$470/yr** |
+| Signups they had to bring first | **30** |
 
-After that it's **−$47 every year, forever**, per lifetime member. The better
-they stick around, the more it costs you.
+The $1,500 pays for the boxes through year 3. Year 4 is the first one out of
+pocket, and from then it's −$470/yr at absolute worst — against 30 signups
+that wouldn't exist otherwise. If even a handful of those 30 become Sendoff+
+yearly members, the whole thing is positive.
 
-Three ways to fix it, in order of preference:
-
-1. **Lifetime = digital only.** Sendoff+ forever, no boxes. Costs you almost
-   nothing to honour and is still a genuinely good deal.
-2. **Lifetime = boxes for 5 years**, then digital forever. Honest, and it
-   matches the money.
-3. **Keep it as written but cap the seats** — a handful of people at −$47/yr is
-   survivable; a hundred is not.
-
-What you can't do is promise physical goods forever for one payment and not
-write down what that costs.
+**The one rule that protects this: lifetime stays exclusive to Founders Club.**
+The moment it's offered to Sendoff+ referrers too, the member count is
+unbounded and so is the cost. A capped liability and an uncapped one are
+completely different promises, and they look identical on the page.
 
 ### 2. The event is gone from the budget
 Earlier drafts had a yearly event (club night, dinner, yacht day). At $65 with
