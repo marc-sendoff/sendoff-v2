@@ -98,8 +98,12 @@ The perk is an evening with **you**.
 
 ### 4. Nothing can take payment yet
 There is no checkout. Stripe was never wired — the payment links in the old
-code are empty strings. Stripe needs a business entity and a bank account on
-file. Weeks, not a weekend.
+code are empty strings.
+
+The **LLC exists as of 2026-10-13**, which was the slow part. Still needed
+before Stripe can pay out: an **EIN** (the LLC's tax number, free and same-day
+from the IRS site) and a **business bank account** in the LLC's name. Stripe
+itself is an afternoon once those two exist.
 
 ### 5. Referrals and seats need accounts
 Counting referrals, tracking the 10 seats, gating trips past the third — all of

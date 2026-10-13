@@ -24,9 +24,18 @@ const loadMotionFeatures = () => import("./motion-features.js").then((mod) => mo
 
 const FORM_NAME = "waitlist";
 
-/* Florida only, on purpose. December launches here; someone in Ohio joining
-   the list is a lead we can't serve yet. A <select> rather than a text box
-   so the answer can't be anywhere else. */
+/* The rollout, in one place. The page reads these so the dates can never
+   disagree with each other. */
+export const ROLLOUT = [
+  ["Florida", "December 20"],
+  ["Rest of the US", "January 10"],
+  ["Everywhere else", "February 15"],
+];
+
+/* Florida leads the list because Florida opens first, but the last two
+   options exist on purpose: 17 of the first 41 signups were from outside
+   Florida, and the US opens six weeks after launch. Turning those people
+   away now means rebuilding that list from scratch in January. */
 const FLORIDA_CITIES = [
   "Miami",
   "Fort Lauderdale",
@@ -48,6 +57,8 @@ const FLORIDA_CITIES = [
   "Pensacola",
   "Somewhere else in Florida",
 ];
+
+const ELSEWHERE = ["Somewhere else in the US", "Outside the US"];
 
 const encode = (data) =>
   Object.keys(data)
@@ -126,7 +137,7 @@ export default function Landing() {
               style={{ textAlign: "center", marginTop: 26 }}>
               <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.cobalt,
                 textTransform: "uppercase" }}>
-                Launching December · Miami first
+                Launching December 20 · Florida first
               </div>
               <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
                 fontSize: "clamp(29px, 7.4vw, 42px)", lineHeight: 1.14, letterSpacing: "-0.9px",
@@ -149,8 +160,23 @@ export default function Landing() {
                 Get on the list.
               </div>
               <p style={{ fontSize: 14, fontWeight: 600, opacity: 0.7, margin: "6px 0 0", lineHeight: 1.5 }}>
-                We open in December, Florida first. Leave your city and you're first through the door.
+                We open Florida first and spread out from there. Leave your city and you're first
+                through the door the day we reach you.
               </p>
+
+              {/* The dates, said plainly. Someone in Ohio can join today and know
+                  exactly when their turn is, instead of guessing or being shut out. */}
+              <div style={{ marginTop: 14, border: `2px solid ${T.ink}`, borderRadius: 12, overflow: "hidden" }}>
+                {ROLLOUT.map(([where, when], i) => (
+                  <div key={where} style={{ display: "flex", justifyContent: "space-between", gap: 12,
+                    padding: "9px 12px", fontSize: 13.5, fontWeight: 700,
+                    background: i === 0 ? T.sun : "transparent",
+                    borderTop: i ? `2px solid ${T.ink}` : "none" }}>
+                    <span>{where}</span>
+                    <span style={{ opacity: i === 0 ? 1 : 0.65 }}>{when}</span>
+                  </div>
+                ))}
+              </div>
 
               <form
                 name={FORM_NAME}
@@ -173,14 +199,19 @@ export default function Landing() {
                 <input id="wl-email" name="email" type="email" required autoComplete="email"
                   placeholder="you@email.com" value={f.email} onChange={set("email")} style={inputStyle} />
 
-                <label style={labelStyle} htmlFor="wl-city">Where in Florida?</label>
+                <label style={labelStyle} htmlFor="wl-city">Where are you?</label>
                 <select id="wl-city" name="city" required value={f.city} onChange={set("city")}
                   style={{ ...inputStyle, cursor: "pointer", color: f.city ? T.ink : "#8A8A8A",
                     backgroundImage: "linear-gradient(45deg, transparent 50%, #1B1D2A 50%), linear-gradient(135deg, #1B1D2A 50%, transparent 50%)",
                     backgroundPosition: "calc(100% - 20px) 21px, calc(100% - 14px) 21px",
                     backgroundSize: "6px 6px, 6px 6px", backgroundRepeat: "no-repeat" }}>
                   <option value="" disabled>Pick your city</option>
-                  {FLORIDA_CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                  <optgroup label="Florida — opens December 20">
+                    {FLORIDA_CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
+                  </optgroup>
+                  <optgroup label="Everywhere else — opens later">
+                    {ELSEWHERE.map((c) => <option key={c} value={c}>{c}</option>)}
+                  </optgroup>
                 </select>
 
                 {err && (
