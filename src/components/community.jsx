@@ -12,7 +12,7 @@ export const COMMUNITY_POSTS = [
     caption: "The founders' trip. The one that started Sendoff." },
   { photo: "wall/montreal-notre-dame.jpg", name: "Marc", trip: "Montreal", spent: "$375 · 3 days", handle: "",
     caption: "Notre-Dame, the Old Port, and a lot of walking." },
-  { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "$500 · 3 days", handle: "",
+  { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "$266 · 3 days", handle: "",
     caption: "Broadway at night. Live band in every bar, no cover anywhere." },
 ];
 
