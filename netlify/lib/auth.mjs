@@ -31,3 +31,19 @@ export async function setMembership(userId, fields) {
     .upsert({ user_id: userId, ...fields, updated_at: new Date().toISOString() });
   if (error) throw error;
 }
+
+/* Founders Club: the first FOUNDER_SEATS people to pay for a YEAR become
+   Founders automatically, numbered in order. Once a seat is taken it stays
+   with that account even if they later cancel (the badge is for being early,
+   not for staying), so the count never frees up. Everyone after seat 10 is a
+   regular Plus member. */
+export const FOUNDER_SEATS = Number(process.env.FOUNDER_SEATS) || 10;
+export async function claimFounderSeat(userId) {
+  const db = admin();
+  const { data: mine } = await db.from("memberships").select("founder_number").eq("user_id", userId).maybeSingle();
+  if (mine?.founder_number) return mine.founder_number;
+  const { data: taken } = await db.from("memberships").select("founder_number").not("founder_number", "is", null);
+  const used = new Set((taken ?? []).map((r) => r.founder_number));
+  for (let n = 1; n <= FOUNDER_SEATS; n++) if (!used.has(n)) return n;
+  return null; // sold out
+}
