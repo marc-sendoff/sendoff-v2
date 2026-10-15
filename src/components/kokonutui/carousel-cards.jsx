@@ -55,7 +55,7 @@ export const ExperienceCard = ({ experience, onFavorite, cardClassName }) => (
       )}
       {experience.badge && (
         <Badge
-          className="absolute top-2 left-2 rounded-md bg-white/90 px-1.5 py-0.5 font-medium text-black text-xs">
+          className="absolute top-2 left-2 rounded-full border-2 border-border bg-secondary px-2.5 py-1 font-sans text-[11px] font-extrabold tracking-[0.3px] text-secondary-foreground">
           {experience.badge}
         </Badge>
       )}
@@ -63,14 +63,14 @@ export const ExperienceCard = ({ experience, onFavorite, cardClassName }) => (
 
     <div className="flex flex-1 flex-col justify-between">
       <CardContent className="p-2 pt-3 pb-0">
-        <h3 className="font-medium text-sm tracking-tight">
+        <h3 className="font-display text-[17px] font-extrabold leading-tight tracking-[-0.3px] text-foreground">
           {experience.title}
         </h3>
-        <p className="text-muted-foreground text-xs tracking-tight">
+        <p className="mt-0.5 font-sans text-[12.5px] font-bold text-primary">
           {experience.location}
         </p>
         {experience.date && (
-          <p className="text-muted-foreground text-xs tracking-tight">
+          <p className="font-sans text-[12px] font-semibold text-foreground/70">
             {experience.date}
           </p>
         )}
@@ -84,15 +84,15 @@ export const ExperienceCard = ({ experience, onFavorite, cardClassName }) => (
           </span>
         )}
         {experience.meta && (
-          <span className="text-muted-foreground text-xs tracking-tight">
+          <span className="font-sans text-[12px] font-semibold text-foreground/70">
             {experience.meta}
           </span>
         )}
         <span className={experience.oldPrice
-          ? "ml-auto text-sm font-bold tracking-tight text-primary"
-          : "ml-auto text-xs tracking-tight"}>
+          ? "ml-auto font-display text-[18px] font-extrabold tracking-[-0.3px] text-foreground"
+          : "ml-auto font-sans text-xs font-semibold"}>
           {experience.oldPrice && (
-            <span className="mr-1 text-xs font-normal text-muted-foreground line-through">
+            <span className="mr-1.5 font-sans text-xs font-semibold text-foreground/50 line-through">
               {experience.oldPrice}
             </span>
           )}
