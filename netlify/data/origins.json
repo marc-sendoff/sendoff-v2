@@ -1,0 +1,6475 @@
+[
+ {
+  "code": "MIA",
+  "city": "Miami",
+  "country": "US"
+ },
+ {
+  "code": "MCO",
+  "city": "Orlando",
+  "country": "US"
+ },
+ {
+  "code": "TPA",
+  "city": "Tampa",
+  "country": "US"
+ },
+ {
+  "code": "JAX",
+  "city": "Jacksonville",
+  "country": "US"
+ },
+ {
+  "code": "ATL",
+  "city": "Atlanta",
+  "country": "US"
+ },
+ {
+  "code": "NYC",
+  "city": "New York",
+  "country": "US"
+ },
+ {
+  "code": "BOS",
+  "city": "Boston",
+  "country": "US"
+ },
+ {
+  "code": "PHL",
+  "city": "Philadelphia",
+  "country": "US"
+ },
+ {
+  "code": "WAS",
+  "city": "Washington DC",
+  "country": "US"
+ },
+ {
+  "code": "CHI",
+  "city": "Chicago",
+  "country": "US"
+ },
+ {
+  "code": "DTW",
+  "city": "Detroit",
+  "country": "US"
+ },
+ {
+  "code": "MSP",
+  "city": "Minneapolis",
+  "country": "US"
+ },
+ {
+  "code": "DFW",
+  "city": "Dallas",
+  "country": "US"
+ },
+ {
+  "code": "HOU",
+  "city": "Houston",
+  "country": "US"
+ },
+ {
+  "code": "AUS",
+  "city": "Austin",
+  "country": "US"
+ },
+ {
+  "code": "SAT",
+  "city": "San Antonio",
+  "country": "US"
+ },
+ {
+  "code": "PHX",
+  "city": "Phoenix",
+  "country": "US"
+ },
+ {
+  "code": "LAS",
+  "city": "Las Vegas",
+  "country": "US"
+ },
+ {
+  "code": "LAX",
+  "city": "Los Angeles",
+  "country": "US"
+ },
+ {
+  "code": "SAN",
+  "city": "San Diego",
+  "country": "US"
+ },
+ {
+  "code": "SFO",
+  "city": "San Francisco",
+  "country": "US"
+ },
+ {
+  "code": "SEA",
+  "city": "Seattle",
+  "country": "US"
+ },
+ {
+  "code": "PDX",
+  "city": "Portland",
+  "country": "US"
+ },
+ {
+  "code": "DEN",
+  "city": "Denver",
+  "country": "US"
+ },
+ {
+  "code": "SLC",
+  "city": "Salt Lake City",
+  "country": "US"
+ },
+ {
+  "code": "BNA",
+  "city": "Nashville",
+  "country": "US"
+ },
+ {
+  "code": "CLT",
+  "city": "Charlotte",
+  "country": "US"
+ },
+ {
+  "code": "RDU",
+  "city": "Raleigh",
+  "country": "US"
+ },
+ {
+  "code": "MSY",
+  "city": "New Orleans",
+  "country": "US"
+ },
+ {
+  "code": "MCI",
+  "city": "Kansas City",
+  "country": "US"
+ },
+ {
+  "code": "STL",
+  "city": "St. Louis",
+  "country": "US"
+ },
+ {
+  "code": "CMH",
+  "city": "Columbus",
+  "country": "US"
+ },
+ {
+  "code": "CLE",
+  "city": "Cleveland",
+  "country": "US"
+ },
+ {
+  "code": "PIT",
+  "city": "Pittsburgh",
+  "country": "US"
+ },
+ {
+  "code": "BWI",
+  "city": "Baltimore",
+  "country": "US"
+ },
+ {
+  "code": "IND",
+  "city": "Indianapolis",
+  "country": "US"
+ },
+ {
+  "code": "MKE",
+  "city": "Milwaukee",
+  "country": "US"
+ },
+ {
+  "code": "MEM",
+  "city": "Memphis",
+  "country": "US"
+ },
+ {
+  "code": "ABQ",
+  "city": "Albuquerque",
+  "country": "US"
+ },
+ {
+  "code": "BOI",
+  "city": "Boise",
+  "country": "US"
+ },
+ {
+  "code": "FLL",
+  "city": "Fort Lauderdale",
+  "country": "US"
+ },
+ {
+  "code": "PBI",
+  "city": "West Palm Beach",
+  "country": "US"
+ },
+ {
+  "code": "RSW",
+  "city": "Fort Myers",
+  "country": "US"
+ },
+ {
+  "code": "SRQ",
+  "city": "Sarasota",
+  "country": "US"
+ },
+ {
+  "code": "PNS",
+  "city": "Pensacola",
+  "country": "US"
+ },
+ {
+  "code": "SAV",
+  "city": "Savannah",
+  "country": "US"
+ },
+ {
+  "code": "CHS",
+  "city": "Charleston",
+  "country": "US"
+ },
+ {
+  "code": "MYR",
+  "city": "Myrtle Beach",
+  "country": "US"
+ },
+ {
+  "code": "BHM",
+  "city": "Birmingham",
+  "country": "US"
+ },
+ {
+  "code": "HSV",
+  "city": "Huntsville",
+  "country": "US"
+ },
+ {
+  "code": "TYS",
+  "city": "Knoxville",
+  "country": "US"
+ },
+ {
+  "code": "CHA",
+  "city": "Chattanooga",
+  "country": "US"
+ },
+ {
+  "code": "SDF",
+  "city": "Louisville",
+  "country": "US"
+ },
+ {
+  "code": "LEX",
+  "city": "Lexington",
+  "country": "US"
+ },
+ {
+  "code": "JAN",
+  "city": "Jackson MS",
+  "country": "US"
+ },
+ {
+  "code": "RIC",
+  "city": "Richmond",
+  "country": "US"
+ },
+ {
+  "code": "ORF",
+  "city": "Norfolk",
+  "country": "US"
+ },
+ {
+  "code": "EWR",
+  "city": "Newark",
+  "country": "US"
+ },
+ {
+  "code": "BUF",
+  "city": "Buffalo",
+  "country": "US"
+ },
+ {
+  "code": "ROC",
+  "city": "Rochester",
+  "country": "US"
+ },
+ {
+  "code": "SYR",
+  "city": "Syracuse",
+  "country": "US"
+ },
+ {
+  "code": "ALB",
+  "city": "Albany",
+  "country": "US"
+ },
+ {
+  "code": "BDL",
+  "city": "Hartford",
+  "country": "US"
+ },
+ {
+  "code": "PVD",
+  "city": "Providence",
+  "country": "US"
+ },
+ {
+  "code": "BTV",
+  "city": "Burlington VT",
+  "country": "US"
+ },
+ {
+  "code": "PWM",
+  "city": "Portland ME",
+  "country": "US"
+ },
+ {
+  "code": "CVG",
+  "city": "Cincinnati",
+  "country": "US"
+ },
+ {
+  "code": "GRR",
+  "city": "Grand Rapids",
+  "country": "US"
+ },
+ {
+  "code": "MSN",
+  "city": "Madison",
+  "country": "US"
+ },
+ {
+  "code": "OMA",
+  "city": "Omaha",
+  "country": "US"
+ },
+ {
+  "code": "DSM",
+  "city": "Des Moines",
+  "country": "US"
+ },
+ {
+  "code": "ICT",
+  "city": "Wichita",
+  "country": "US"
+ },
+ {
+  "code": "FAR",
+  "city": "Fargo",
+  "country": "US"
+ },
+ {
+  "code": "FSD",
+  "city": "Sioux Falls",
+  "country": "US"
+ },
+ {
+  "code": "RAP",
+  "city": "Rapid City",
+  "country": "US"
+ },
+ {
+  "code": "LIT",
+  "city": "Little Rock",
+  "country": "US"
+ },
+ {
+  "code": "OKC",
+  "city": "Oklahoma City",
+  "country": "US"
+ },
+ {
+  "code": "TUL",
+  "city": "Tulsa",
+  "country": "US"
+ },
+ {
+  "code": "ELP",
+  "city": "El Paso",
+  "country": "US"
+ },
+ {
+  "code": "LBB",
+  "city": "Lubbock",
+  "country": "US"
+ },
+ {
+  "code": "AMA",
+  "city": "Amarillo",
+  "country": "US"
+ },
+ {
+  "code": "SAF",
+  "city": "Santa Fe",
+  "country": "US"
+ },
+ {
+  "code": "COS",
+  "city": "Colorado Springs",
+  "country": "US"
+ },
+ {
+  "code": "TUS",
+  "city": "Tucson",
+  "country": "US"
+ },
+ {
+  "code": "BIL",
+  "city": "Billings",
+  "country": "US"
+ },
+ {
+  "code": "BZN",
+  "city": "Bozeman",
+  "country": "US"
+ },
+ {
+  "code": "MSO",
+  "city": "Missoula",
+  "country": "US"
+ },
+ {
+  "code": "JAC",
+  "city": "Jackson Hole",
+  "country": "US"
+ },
+ {
+  "code": "RNO",
+  "city": "Reno",
+  "country": "US"
+ },
+ {
+  "code": "SMF",
+  "city": "Sacramento",
+  "country": "US"
+ },
+ {
+  "code": "SJC",
+  "city": "San Jose",
+  "country": "US"
+ },
+ {
+  "code": "OAK",
+  "city": "Oakland",
+  "country": "US"
+ },
+ {
+  "code": "FAT",
+  "city": "Fresno",
+  "country": "US"
+ },
+ {
+  "code": "BUR",
+  "city": "Burbank",
+  "country": "US"
+ },
+ {
+  "code": "LGB",
+  "city": "Long Beach",
+  "country": "US"
+ },
+ {
+  "code": "ONT",
+  "city": "Ontario CA",
+  "country": "US"
+ },
+ {
+  "code": "PSP",
+  "city": "Palm Springs",
+  "country": "US"
+ },
+ {
+  "code": "SBA",
+  "city": "Santa Barbara",
+  "country": "US"
+ },
+ {
+  "code": "GEG",
+  "city": "Spokane",
+  "country": "US"
+ },
+ {
+  "code": "EUG",
+  "city": "Eugene",
+  "country": "US"
+ },
+ {
+  "code": "ANC",
+  "city": "Anchorage",
+  "country": "US"
+ },
+ {
+  "code": "HNL",
+  "city": "Honolulu",
+  "country": "US"
+ },
+ {
+  "code": "OGG",
+  "city": "Maui (Kahului)",
+  "country": "US"
+ },
+ {
+  "code": "AUH",
+  "city": "Abu Dhabi, United Arab Emirates",
+  "country": "AE",
+  "intl": true
+ },
+ {
+  "code": "AAN",
+  "city": "Al Ain, United Arab Emirates",
+  "country": "AE",
+  "intl": true
+ },
+ {
+  "code": "DXB",
+  "city": "Dubai, United Arab Emirates",
+  "country": "AE",
+  "intl": true
+ },
+ {
+  "code": "FJR",
+  "city": "Fujairah, United Arab Emirates",
+  "country": "AE",
+  "intl": true
+ },
+ {
+  "code": "RKT",
+  "city": "Ras Al Khaimah, United Arab Emirates",
+  "country": "AE",
+  "intl": true
+ },
+ {
+  "code": "SHJ",
+  "city": "Sharjah, United Arab Emirates",
+  "country": "AE",
+  "intl": true
+ },
+ {
+  "code": "HEA",
+  "city": "Herat, Afghanistan",
+  "country": "AF",
+  "intl": true
+ },
+ {
+  "code": "KBL",
+  "city": "Kabul, Afghanistan",
+  "country": "AF",
+  "intl": true
+ },
+ {
+  "code": "KDH",
+  "city": "Kandahar, Afghanistan",
+  "country": "AF",
+  "intl": true
+ },
+ {
+  "code": "MZR",
+  "city": "Mazar-i-sharif, Afghanistan",
+  "country": "AF",
+  "intl": true
+ },
+ {
+  "code": "ANU",
+  "city": "Saint John's, Antigua and Barbuda",
+  "country": "AG",
+  "intl": true
+ },
+ {
+  "code": "TIA",
+  "city": "Tirana, Albania",
+  "country": "AL",
+  "intl": true
+ },
+ {
+  "code": "LWN",
+  "city": "Gyumri, Armenia",
+  "country": "AM",
+  "intl": true
+ },
+ {
+  "code": "EVN",
+  "city": "Yerevan, Armenia",
+  "country": "AM",
+  "intl": true
+ },
+ {
+  "code": "LAD",
+  "city": "Luanda, Angola",
+  "country": "AO",
+  "intl": true
+ },
+ {
+  "code": "BUE",
+  "city": "Buenos Aires, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "CRD",
+  "city": "Comodoro Rivadavia, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "COR",
+  "city": "Cordoba, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "JUJ",
+  "city": "Jujuy, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "MDZ",
+  "city": "Mendoza, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "NQN",
+  "city": "Neuquen, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "RES",
+  "city": "Resistencia, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "RGL",
+  "city": "Rio Gallegos, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "ROS",
+  "city": "Rosario, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "SLA",
+  "city": "Salta, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "BRC",
+  "city": "San Carlos de Bariloche, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "TUC",
+  "city": "Tucuman, Argentina",
+  "country": "AR",
+  "intl": true
+ },
+ {
+  "code": "PPG",
+  "city": "Pago Pago, American Samoa",
+  "country": "AS",
+  "intl": true
+ },
+ {
+  "code": "GRZ",
+  "city": "Graz, Austria",
+  "country": "AT",
+  "intl": true
+ },
+ {
+  "code": "INN",
+  "city": "Innsbruck, Austria",
+  "country": "AT",
+  "intl": true
+ },
+ {
+  "code": "KLU",
+  "city": "Klagenfurt, Austria",
+  "country": "AT",
+  "intl": true
+ },
+ {
+  "code": "LNZ",
+  "city": "Linz, Austria",
+  "country": "AT",
+  "intl": true
+ },
+ {
+  "code": "SZG",
+  "city": "Salzburg, Austria",
+  "country": "AT",
+  "intl": true
+ },
+ {
+  "code": "VIE",
+  "city": "Vienna, Austria",
+  "country": "AT",
+  "intl": true
+ },
+ {
+  "code": "ADL",
+  "city": "Adelaide, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "BNE",
+  "city": "Brisbane, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "BME",
+  "city": "Broome, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "CNS",
+  "city": "Cairns, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "DRW",
+  "city": "Darwin, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "OOL",
+  "city": "Gold Coast, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "HBA",
+  "city": "Hobart, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "MEL",
+  "city": "Melbourne, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "NTL",
+  "city": "Newcastle, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "PER",
+  "city": "Perth, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "PHE",
+  "city": "Port Hedland, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "MCY",
+  "city": "Sunshine Coast, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "SYD",
+  "city": "Sydney, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "TWB",
+  "city": "Toowoomba, Australia",
+  "country": "AU",
+  "intl": true
+ },
+ {
+  "code": "AUA",
+  "city": "Oranjestad, Aruba",
+  "country": "AW",
+  "intl": true
+ },
+ {
+  "code": "BAK",
+  "city": "Baku, Azerbaijan",
+  "country": "AZ",
+  "intl": true
+ },
+ {
+  "code": "GNJ",
+  "city": "Ganja, Azerbaijan",
+  "country": "AZ",
+  "intl": true
+ },
+ {
+  "code": "NAJ",
+  "city": "Nakhichevan, Azerbaijan",
+  "country": "AZ",
+  "intl": true
+ },
+ {
+  "code": "BNX",
+  "city": "Banja Luka, Bosnia and Herzegovina",
+  "country": "BA",
+  "intl": true
+ },
+ {
+  "code": "OMO",
+  "city": "Mostar, Bosnia and Herzegovina",
+  "country": "BA",
+  "intl": true
+ },
+ {
+  "code": "SJJ",
+  "city": "Sarajevo, Bosnia and Herzegovina",
+  "country": "BA",
+  "intl": true
+ },
+ {
+  "code": "TZL",
+  "city": "Tuzla, Bosnia and Herzegovina",
+  "country": "BA",
+  "intl": true
+ },
+ {
+  "code": "BGI",
+  "city": "Bridgetown, Barbados",
+  "country": "BB",
+  "intl": true
+ },
+ {
+  "code": "CGP",
+  "city": "Chittagong, Bangladesh",
+  "country": "BD",
+  "intl": true
+ },
+ {
+  "code": "DAC",
+  "city": "Dhaka, Bangladesh",
+  "country": "BD",
+  "intl": true
+ },
+ {
+  "code": "ZYL",
+  "city": "Sylhet, Bangladesh",
+  "country": "BD",
+  "intl": true
+ },
+ {
+  "code": "OST",
+  "city": "Bruges, Belgium",
+  "country": "BE",
+  "intl": true
+ },
+ {
+  "code": "BRU",
+  "city": "Brussels, Belgium",
+  "country": "BE",
+  "intl": true
+ },
+ {
+  "code": "BOY",
+  "city": "Bobo Dioulasso, Burkina Faso",
+  "country": "BF",
+  "intl": true
+ },
+ {
+  "code": "OUA",
+  "city": "Ouagadougou, Burkina Faso",
+  "country": "BF",
+  "intl": true
+ },
+ {
+  "code": "BOJ",
+  "city": "Bourgas, Bulgaria",
+  "country": "BG",
+  "intl": true
+ },
+ {
+  "code": "PDV",
+  "city": "Plovdiv, Bulgaria",
+  "country": "BG",
+  "intl": true
+ },
+ {
+  "code": "SOF",
+  "city": "Sofia, Bulgaria",
+  "country": "BG",
+  "intl": true
+ },
+ {
+  "code": "VAR",
+  "city": "Varna, Bulgaria",
+  "country": "BG",
+  "intl": true
+ },
+ {
+  "code": "BAH",
+  "city": "Manama, Bahrain",
+  "country": "BH",
+  "intl": true
+ },
+ {
+  "code": "BJM",
+  "city": "Bujumbura, Burundi",
+  "country": "BI",
+  "intl": true
+ },
+ {
+  "code": "COO",
+  "city": "Cotonou, Benin",
+  "country": "BJ",
+  "intl": true
+ },
+ {
+  "code": "BDA",
+  "city": "Bermuda, Bermuda",
+  "country": "BM",
+  "intl": true
+ },
+ {
+  "code": "BWN",
+  "city": "Bandar Seri Begawan, Brunei",
+  "country": "BN",
+  "intl": true
+ },
+ {
+  "code": "CBB",
+  "city": "Cochabamba, Bolivia",
+  "country": "BO",
+  "intl": true
+ },
+ {
+  "code": "LPB",
+  "city": "La Paz, Bolivia",
+  "country": "BO",
+  "intl": true
+ },
+ {
+  "code": "ORU",
+  "city": "Oruro, Bolivia",
+  "country": "BO",
+  "intl": true
+ },
+ {
+  "code": "SRZ",
+  "city": "Santa Cruz, Bolivia",
+  "country": "BO",
+  "intl": true
+ },
+ {
+  "code": "SRE",
+  "city": "Sucre, Bolivia",
+  "country": "BO",
+  "intl": true
+ },
+ {
+  "code": "UYU",
+  "city": "Uyuni, Bolivia",
+  "country": "BO",
+  "intl": true
+ },
+ {
+  "code": "BON",
+  "city": "Kralendijk, Caribbean Netherlands",
+  "country": "BQ",
+  "intl": true
+ },
+ {
+  "code": "BEL",
+  "city": "Belem, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "BHZ",
+  "city": "Belo Horizonte, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "BVB",
+  "city": "Boa Vista, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "BSB",
+  "city": "Brasilia, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "CGB",
+  "city": "Cuiaba, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "CWB",
+  "city": "Curitiba, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "FLN",
+  "city": "Florianopolis, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "FOR",
+  "city": "Fortaleza, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "IGU",
+  "city": "Foz do Iguaçu, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "GYN",
+  "city": "Goiania, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "JPA",
+  "city": "Joao Pessoa, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "MCZ",
+  "city": "Maceio, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "MAO",
+  "city": "Manaus, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "NAT",
+  "city": "Natal, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "NVT",
+  "city": "Navegantes, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "POA",
+  "city": "Porto Alegre, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "BPS",
+  "city": "Porto Seguro, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "PVH",
+  "city": "Porto Velho, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "REC",
+  "city": "Recife, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "RBR",
+  "city": "Rio Branco, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "RIO",
+  "city": "Rio de Janeiro, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "SSA",
+  "city": "Salvador, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "SLZ",
+  "city": "São Luis, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "SAO",
+  "city": "Sao Paulo, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "VIX",
+  "city": "Vitoria, Brazil",
+  "country": "BR",
+  "intl": true
+ },
+ {
+  "code": "FPO",
+  "city": "Freeport, Bahamas",
+  "country": "BS",
+  "intl": true
+ },
+ {
+  "code": "NAS",
+  "city": "Nassau, Bahamas",
+  "country": "BS",
+  "intl": true
+ },
+ {
+  "code": "ZSA",
+  "city": "San Salvador, Bahamas",
+  "country": "BS",
+  "intl": true
+ },
+ {
+  "code": "PBH",
+  "city": "Paro, Bhutan",
+  "country": "BT",
+  "intl": true
+ },
+ {
+  "code": "FRW",
+  "city": "Francistown, Botswana",
+  "country": "BW",
+  "intl": true
+ },
+ {
+  "code": "GBE",
+  "city": "Gaborone, Botswana",
+  "country": "BW",
+  "intl": true
+ },
+ {
+  "code": "BBK",
+  "city": "Kasane, Botswana",
+  "country": "BW",
+  "intl": true
+ },
+ {
+  "code": "MUB",
+  "city": "Maun, Botswana",
+  "country": "BW",
+  "intl": true
+ },
+ {
+  "code": "BQT",
+  "city": "Brest, Belarus",
+  "country": "BY",
+  "intl": true
+ },
+ {
+  "code": "MSQ",
+  "city": "Minsk, Belarus",
+  "country": "BY",
+  "intl": true
+ },
+ {
+  "code": "BZE",
+  "city": "Belize City, Belize",
+  "country": "BZ",
+  "intl": true
+ },
+ {
+  "code": "YYC",
+  "city": "Calgary, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YEA",
+  "city": "Edmonton, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YHZ",
+  "city": "Halifax, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YLW",
+  "city": "Kelowna, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YMQ",
+  "city": "Montreal, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YOW",
+  "city": "Ottawa, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YQB",
+  "city": "Quebec, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YXE",
+  "city": "Saskatoon, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YYT",
+  "city": "St. John's, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YTO",
+  "city": "Toronto, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YVR",
+  "city": "Vancouver, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YYJ",
+  "city": "Victoria, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "YWG",
+  "city": "Winnipeg, Canada",
+  "country": "CA",
+  "intl": true
+ },
+ {
+  "code": "CCK",
+  "city": "Cocos Islands, Cocos (Keeling) Islands",
+  "country": "CC",
+  "intl": true
+ },
+ {
+  "code": "GOM",
+  "city": "Goma, Democratic Republic of the Congo",
+  "country": "CD",
+  "intl": true
+ },
+ {
+  "code": "FIH",
+  "city": "Kinshasa, Democratic Republic of the Congo",
+  "country": "CD",
+  "intl": true
+ },
+ {
+  "code": "FKI",
+  "city": "Kisangani, Democratic Republic of the Congo",
+  "country": "CD",
+  "intl": true
+ },
+ {
+  "code": "FBM",
+  "city": "Lubumbashi, Democratic Republic of the Congo",
+  "country": "CD",
+  "intl": true
+ },
+ {
+  "code": "BGF",
+  "city": "Bangui, Central African Republic",
+  "country": "CF",
+  "intl": true
+ },
+ {
+  "code": "BZV",
+  "city": "Brazzaville, Republic of the Congo",
+  "country": "CG",
+  "intl": true
+ },
+ {
+  "code": "PNR",
+  "city": "Pointe-Noire, Republic of the Congo",
+  "country": "CG",
+  "intl": true
+ },
+ {
+  "code": "EAP",
+  "city": "Basel, Switzerland",
+  "country": "CH",
+  "intl": true
+ },
+ {
+  "code": "GVA",
+  "city": "Geneva, Switzerland",
+  "country": "CH",
+  "intl": true
+ },
+ {
+  "code": "ZRH",
+  "city": "Zurich, Switzerland",
+  "country": "CH",
+  "intl": true
+ },
+ {
+  "code": "ABJ",
+  "city": "Abidjan, Ivory Coast",
+  "country": "CI",
+  "intl": true
+ },
+ {
+  "code": "RAR",
+  "city": "Rarotonga, Cook Islands",
+  "country": "CK",
+  "intl": true
+ },
+ {
+  "code": "ANF",
+  "city": "Antofagasta, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "CCP",
+  "city": "Concepcion, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "IPC",
+  "city": "Easter Island, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "IQQ",
+  "city": "Iquique, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "PMC",
+  "city": "Puerto Montt, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "PUQ",
+  "city": "Punta Arenas, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "SCL",
+  "city": "Santiago, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "ZCO",
+  "city": "Temuco, Chile",
+  "country": "CL",
+  "intl": true
+ },
+ {
+  "code": "DLA",
+  "city": "Douala, Cameroon",
+  "country": "CM",
+  "intl": true
+ },
+ {
+  "code": "GOU",
+  "city": "Garoua, Cameroon",
+  "country": "CM",
+  "intl": true
+ },
+ {
+  "code": "YAO",
+  "city": "Yaounde, Cameroon",
+  "country": "CM",
+  "intl": true
+ },
+ {
+  "code": "BAV",
+  "city": "Baotou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "BJS",
+  "city": "Beijing, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "CGQ",
+  "city": "Changchun, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "CSX",
+  "city": "Changsha, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "CTU",
+  "city": "Chengdu, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "CKG",
+  "city": "Chongqing, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "DLC",
+  "city": "Dalian, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "DAT",
+  "city": "Datong, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "DYG",
+  "city": "Dayong, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "DNH",
+  "city": "Dunhuang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "FOC",
+  "city": "Fuzhou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "CAN",
+  "city": "Guangzhou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "KWL",
+  "city": "Guilin, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "KWE",
+  "city": "Guiyang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HAK",
+  "city": "Haikou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HLD",
+  "city": "Hailar, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HGH",
+  "city": "Hangzhou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HRB",
+  "city": "Harbin, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HFE",
+  "city": "Hefei, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HET",
+  "city": "Hohhot, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HIA",
+  "city": "Huai'an, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "JGN",
+  "city": "Jiayuguan, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "TNA",
+  "city": "Jinan, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "JHG",
+  "city": "Jinghong, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "JJN",
+  "city": "Jinjiang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "KHG",
+  "city": "Kashgar (Kashi), China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "KMG",
+  "city": "Kunming, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "LHW",
+  "city": "Lanzhou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "LXA",
+  "city": "Lhasa, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "LYG",
+  "city": "Lianyungang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "LJG",
+  "city": "Lijiang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "LYA",
+  "city": "Luoyang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "KHN",
+  "city": "Nanchang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "NKG",
+  "city": "Nanjing, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "NNG",
+  "city": "Nanning, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "NGB",
+  "city": "Ningbo, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "DSN",
+  "city": "Ordos/Dongsheng, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "TAO",
+  "city": "Qingdao, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "NDG",
+  "city": "Qiqihar, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SYX",
+  "city": "Sanya, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SHA",
+  "city": "Shanghai, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SWA",
+  "city": "Shantou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SHE",
+  "city": "Shenyang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SZX",
+  "city": "Shenzhen, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SJW",
+  "city": "Shijiazhuang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "TYN",
+  "city": "Taiyuan, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "TSN",
+  "city": "Tianjin, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "TXN",
+  "city": "Tunxi, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "URC",
+  "city": "Urumqi, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "WNZ",
+  "city": "Wenzhou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "WUH",
+  "city": "Wuhan, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "WUX",
+  "city": "Wuxi, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "XMN",
+  "city": "Xiamen, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "SIA",
+  "city": "Xian, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "RKZ",
+  "city": "Xigaze/Rikaze, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "XNN",
+  "city": "Xining, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "YNZ",
+  "city": "Yancheng, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "YNT",
+  "city": "Yantai, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "INC",
+  "city": "Yinchuan, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "YIW",
+  "city": "Yiwu, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "YCU",
+  "city": "Yuncheng, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "ZHA",
+  "city": "Zhanjiang, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "CGO",
+  "city": "Zhengzhou, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "HSN",
+  "city": "Zhoushan, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "ZUH",
+  "city": "Zhuhai, China",
+  "country": "CN",
+  "intl": true
+ },
+ {
+  "code": "BAQ",
+  "city": "Barranquilla, Colombia",
+  "country": "CO",
+  "intl": true
+ },
+ {
+  "code": "BOG",
+  "city": "Bogota, Colombia",
+  "country": "CO",
+  "intl": true
+ },
+ {
+  "code": "CLO",
+  "city": "Cali, Colombia",
+  "country": "CO",
+  "intl": true
+ },
+ {
+  "code": "CTG",
+  "city": "Cartagena, Colombia",
+  "country": "CO",
+  "intl": true
+ },
+ {
+  "code": "MDE",
+  "city": "Medellin, Colombia",
+  "country": "CO",
+  "intl": true
+ },
+ {
+  "code": "ADZ",
+  "city": "San Andres Island, Colombia",
+  "country": "CO",
+  "intl": true
+ },
+ {
+  "code": "LIR",
+  "city": "Liberia, Costa Rica",
+  "country": "CR",
+  "intl": true
+ },
+ {
+  "code": "SJO",
+  "city": "San Jose, Costa Rica",
+  "country": "CR",
+  "intl": true
+ },
+ {
+  "code": "CMW",
+  "city": "Camaguey, Cuba",
+  "country": "CU",
+  "intl": true
+ },
+ {
+  "code": "HAV",
+  "city": "Havana, Cuba",
+  "country": "CU",
+  "intl": true
+ },
+ {
+  "code": "HOG",
+  "city": "Holguin, Cuba",
+  "country": "CU",
+  "intl": true
+ },
+ {
+  "code": "SNU",
+  "city": "Santa Clara, Cuba",
+  "country": "CU",
+  "intl": true
+ },
+ {
+  "code": "SCU",
+  "city": "Santiago, Cuba",
+  "country": "CU",
+  "intl": true
+ },
+ {
+  "code": "VRA",
+  "city": "Varadero, Cuba",
+  "country": "CU",
+  "intl": true
+ },
+ {
+  "code": "BVC",
+  "city": "Boa Vista, Cape Verde",
+  "country": "CV",
+  "intl": true
+ },
+ {
+  "code": "RAI",
+  "city": "Praia, Cape Verde",
+  "country": "CV",
+  "intl": true
+ },
+ {
+  "code": "SID",
+  "city": "Sal, Cape Verde",
+  "country": "CV",
+  "intl": true
+ },
+ {
+  "code": "VXE",
+  "city": "Sao Vicente, Cape Verde",
+  "country": "CV",
+  "intl": true
+ },
+ {
+  "code": "CUR",
+  "city": "Curacao, Curaçao",
+  "country": "CW",
+  "intl": true
+ },
+ {
+  "code": "LCA",
+  "city": "Larnaca, Cyprus",
+  "country": "CY",
+  "intl": true
+ },
+ {
+  "code": "PFO",
+  "city": "Paphos, Cyprus",
+  "country": "CY",
+  "intl": true
+ },
+ {
+  "code": "KLV",
+  "city": "Karlovy Vary, Czech Republic",
+  "country": "CZ",
+  "intl": true
+ },
+ {
+  "code": "OSR",
+  "city": "Ostrava, Czech Republic",
+  "country": "CZ",
+  "intl": true
+ },
+ {
+  "code": "PED",
+  "city": "Pardubice, Czech Republic",
+  "country": "CZ",
+  "intl": true
+ },
+ {
+  "code": "PRG",
+  "city": "Prague, Czech Republic",
+  "country": "CZ",
+  "intl": true
+ },
+ {
+  "code": "BER",
+  "city": "Berlin, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "BRE",
+  "city": "Bremen, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "CGN",
+  "city": "Cologne, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "DTM",
+  "city": "Dortmund, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "DRS",
+  "city": "Dresden, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "DUS",
+  "city": "Dusseldorf, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "ERF",
+  "city": "Erfurt, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "FRA",
+  "city": "Frankfurt, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "FDH",
+  "city": "Friedrichshafen, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "HAM",
+  "city": "Hamburg, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "HAJ",
+  "city": "Hannover, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "FKB",
+  "city": "Karlsruhe, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "KSF",
+  "city": "Kassel, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "LEJ",
+  "city": "Leipzig/Halle, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "FMM",
+  "city": "Memmingen, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "FMO",
+  "city": "Muenster, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "MUC",
+  "city": "Munich, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "NUE",
+  "city": "Nuremberg, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "PAD",
+  "city": "Paderborn, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "STR",
+  "city": "Stuttgart, Germany",
+  "country": "DE",
+  "intl": true
+ },
+ {
+  "code": "JIB",
+  "city": "Djibouti, Djibouti",
+  "country": "DJ",
+  "intl": true
+ },
+ {
+  "code": "AAL",
+  "city": "Aalborg, Denmark",
+  "country": "DK",
+  "intl": true
+ },
+ {
+  "code": "AAR",
+  "city": "Aarhus, Denmark",
+  "country": "DK",
+  "intl": true
+ },
+ {
+  "code": "BLL",
+  "city": "Billund, Denmark",
+  "country": "DK",
+  "intl": true
+ },
+ {
+  "code": "CPH",
+  "city": "Copenhagen, Denmark",
+  "country": "DK",
+  "intl": true
+ },
+ {
+  "code": "ODE",
+  "city": "Odense, Denmark",
+  "country": "DK",
+  "intl": true
+ },
+ {
+  "code": "LRM",
+  "city": "La Romana, Dominican Republic",
+  "country": "DO",
+  "intl": true
+ },
+ {
+  "code": "PUJ",
+  "city": "Punta Cana, Dominican Republic",
+  "country": "DO",
+  "intl": true
+ },
+ {
+  "code": "STI",
+  "city": "Santiago, Dominican Republic",
+  "country": "DO",
+  "intl": true
+ },
+ {
+  "code": "SDQ",
+  "city": "Santo Domingo, Dominican Republic",
+  "country": "DO",
+  "intl": true
+ },
+ {
+  "code": "ALG",
+  "city": "Algiers, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "AAE",
+  "city": "Annaba, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "BLJ",
+  "city": "Batna, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "BJA",
+  "city": "Bejaia, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "BSK",
+  "city": "Biskra, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "CFK",
+  "city": "Chlef, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "CZL",
+  "city": "Constantine, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "DJG",
+  "city": "Djanet, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "GJL",
+  "city": "Jijel, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "ORN",
+  "city": "Oran, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "TMR",
+  "city": "Tamanrasset, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "TLM",
+  "city": "Tlemcen, Algeria",
+  "country": "DZ",
+  "intl": true
+ },
+ {
+  "code": "ESM",
+  "city": "Esmeraldas, Ecuador",
+  "country": "EC",
+  "intl": true
+ },
+ {
+  "code": "GYE",
+  "city": "Guayaquil, Ecuador",
+  "country": "EC",
+  "intl": true
+ },
+ {
+  "code": "UIO",
+  "city": "Quito, Ecuador",
+  "country": "EC",
+  "intl": true
+ },
+ {
+  "code": "SNC",
+  "city": "Salinas, Ecuador",
+  "country": "EC",
+  "intl": true
+ },
+ {
+  "code": "TLL",
+  "city": "Tallinn, Estonia",
+  "country": "EE",
+  "intl": true
+ },
+ {
+  "code": "ALY",
+  "city": "Alexandria, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "ASW",
+  "city": "Aswan, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "ATZ",
+  "city": "Asyut, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "CAI",
+  "city": "Cairo, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "DBB",
+  "city": "Dabaa City, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "AAC",
+  "city": "El Arish, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "HRG",
+  "city": "Hurghada, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "LXR",
+  "city": "Luxor, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "RMF",
+  "city": "Marsa Alam, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "MUH",
+  "city": "Mersa Matruh, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "PSD",
+  "city": "Port Said, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "SSH",
+  "city": "Sharm el Sheikh, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "HMB",
+  "city": "Sohag, Egypt",
+  "country": "EG",
+  "intl": true
+ },
+ {
+  "code": "EUN",
+  "city": "Laayoune, Western Sahara",
+  "country": "EH",
+  "intl": true
+ },
+ {
+  "code": "ALC",
+  "city": "Alicante, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "ACE",
+  "city": "Arrecife, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "OVD",
+  "city": "Asturias, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "BCN",
+  "city": "Barcelona, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "BIO",
+  "city": "Bilbao, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "GRO",
+  "city": "Girona, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "IBZ",
+  "city": "Ibiza, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "LPA",
+  "city": "Las Palmas, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "MAD",
+  "city": "Madrid, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "AGP",
+  "city": "Malaga, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "MAH",
+  "city": "Menorca, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "RMU",
+  "city": "Murcia, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "PMI",
+  "city": "Palma, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "FUE",
+  "city": "Puerto del Rosario, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "REU",
+  "city": "Reus, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "SCQ",
+  "city": "Santiago De Compostela, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "SVQ",
+  "city": "Sevilla, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "TCI",
+  "city": "Tenerife, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "VLC",
+  "city": "Valencia, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "ZAZ",
+  "city": "Zaragoza, Spain",
+  "country": "ES",
+  "intl": true
+ },
+ {
+  "code": "ADD",
+  "city": "Addis Ababa, Ethiopia",
+  "country": "ET",
+  "intl": true
+ },
+ {
+  "code": "AWA",
+  "city": "Awassa, Ethiopia",
+  "country": "ET",
+  "intl": true
+ },
+ {
+  "code": "DIR",
+  "city": "Dire Dawa, Ethiopia",
+  "country": "ET",
+  "intl": true
+ },
+ {
+  "code": "JIJ",
+  "city": "Jijiga, Ethiopia",
+  "country": "ET",
+  "intl": true
+ },
+ {
+  "code": "HEL",
+  "city": "Helsinki, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "IVL",
+  "city": "Ivalo, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "KTT",
+  "city": "Kittila, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "KUO",
+  "city": "Kuopio, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "LPP",
+  "city": "Lappeenranta, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "OUL",
+  "city": "Oulu, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "RVN",
+  "city": "Rovaniemi, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "TMP",
+  "city": "Tampere, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "TKU",
+  "city": "Turku, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "VAA",
+  "city": "Vaasa, Finland",
+  "country": "FI",
+  "intl": true
+ },
+ {
+  "code": "NAN",
+  "city": "Nadi, Fiji",
+  "country": "FJ",
+  "intl": true
+ },
+ {
+  "code": "SUV",
+  "city": "Suva, Fiji",
+  "country": "FJ",
+  "intl": true
+ },
+ {
+  "code": "MPN",
+  "city": "Mount Pleasant, Falkland Islands",
+  "country": "FK",
+  "intl": true
+ },
+ {
+  "code": "KSA",
+  "city": "Kosrae, Micronesia",
+  "country": "FM",
+  "intl": true
+ },
+ {
+  "code": "TKK",
+  "city": "Truk, Micronesia",
+  "country": "FM",
+  "intl": true
+ },
+ {
+  "code": "YAP",
+  "city": "Yap, Micronesia",
+  "country": "FM",
+  "intl": true
+ },
+ {
+  "code": "FAE",
+  "city": "Sorvágur, Faroe Islands",
+  "country": "FO",
+  "intl": true
+ },
+ {
+  "code": "BIA",
+  "city": "Bastia, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "BOD",
+  "city": "Bordeaux, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "BES",
+  "city": "Brest, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "CFE",
+  "city": "Clermont-Ferrand, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "FSC",
+  "city": "Figari, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "LIL",
+  "city": "Lille, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "LYS",
+  "city": "Lyon, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "MRS",
+  "city": "Marseille, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "MPL",
+  "city": "Montpellier, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "NTE",
+  "city": "Nantes, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "NCE",
+  "city": "Nice, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "PAR",
+  "city": "Paris, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "SXB",
+  "city": "Strasbourg, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "TLS",
+  "city": "Toulouse, France",
+  "country": "FR",
+  "intl": true
+ },
+ {
+  "code": "LBV",
+  "city": "Libreville, Gabon",
+  "country": "GA",
+  "intl": true
+ },
+ {
+  "code": "POG",
+  "city": "Port Gentil, Gabon",
+  "country": "GA",
+  "intl": true
+ },
+ {
+  "code": "ABZ",
+  "city": "Aberdeen, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "BFS",
+  "city": "Belfast, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "BHX",
+  "city": "Birmingham, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "BRS",
+  "city": "Bristol, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "CWL",
+  "city": "Cardiff, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "EDI",
+  "city": "Edinburgh, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "GLA",
+  "city": "Glasgow, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "LBA",
+  "city": "Leeds, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "LPL",
+  "city": "Liverpool, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "LON",
+  "city": "London, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "MAN",
+  "city": "Manchester, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "NCL",
+  "city": "Newcastle, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "NQT",
+  "city": "Nottingham, United Kingdom",
+  "country": "GB",
+  "intl": true
+ },
+ {
+  "code": "GND",
+  "city": "St. George's, Grenada",
+  "country": "GD",
+  "intl": true
+ },
+ {
+  "code": "BUS",
+  "city": "Batumi, Georgia",
+  "country": "GE",
+  "intl": true
+ },
+ {
+  "code": "KUT",
+  "city": "Kutaisi, Georgia",
+  "country": "GE",
+  "intl": true
+ },
+ {
+  "code": "TBS",
+  "city": "Tbilisi, Georgia",
+  "country": "GE",
+  "intl": true
+ },
+ {
+  "code": "CAY",
+  "city": "Cayenne, French Guiana",
+  "country": "GF",
+  "intl": true
+ },
+ {
+  "code": "ACC",
+  "city": "Accra, Ghana",
+  "country": "GH",
+  "intl": true
+ },
+ {
+  "code": "KMS",
+  "city": "Kumasi, Ghana",
+  "country": "GH",
+  "intl": true
+ },
+ {
+  "code": "TML",
+  "city": "Tamale, Ghana",
+  "country": "GH",
+  "intl": true
+ },
+ {
+  "code": "GIB",
+  "city": "Gibraltar, Gibraltar",
+  "country": "GI",
+  "intl": true
+ },
+ {
+  "code": "GOH",
+  "city": "Nuuk, Greenland",
+  "country": "GL",
+  "intl": true
+ },
+ {
+  "code": "BJL",
+  "city": "Banjul, Gambia",
+  "country": "GM",
+  "intl": true
+ },
+ {
+  "code": "CKY",
+  "city": "Conakry, Guinea",
+  "country": "GN",
+  "intl": true
+ },
+ {
+  "code": "PTP",
+  "city": "Pointe-a-pitre, Guadeloupe",
+  "country": "GP",
+  "intl": true
+ },
+ {
+  "code": "BSG",
+  "city": "Bata, Equatorial Guinea",
+  "country": "GQ",
+  "intl": true
+ },
+ {
+  "code": "SSG",
+  "city": "Malabo, Equatorial Guinea",
+  "country": "GQ",
+  "intl": true
+ },
+ {
+  "code": "ATH",
+  "city": "Athens, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "CHQ",
+  "city": "Chania, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "HER",
+  "city": "Heraklion, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "KVA",
+  "city": "Kavala, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "CFU",
+  "city": "Kerkyra, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "KGS",
+  "city": "Kos, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "RHO",
+  "city": "Rhodes, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "SKG",
+  "city": "Thessaloniki, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "JTR",
+  "city": "Thira, Greece",
+  "country": "GR",
+  "intl": true
+ },
+ {
+  "code": "GUA",
+  "city": "Guatemala City, Guatemala",
+  "country": "GT",
+  "intl": true
+ },
+ {
+  "code": "GUM",
+  "city": "Hagatna, Guam",
+  "country": "GU",
+  "intl": true
+ },
+ {
+  "code": "OXB",
+  "city": "Bissau, Guinea-Bissau",
+  "country": "GW",
+  "intl": true
+ },
+ {
+  "code": "GEO",
+  "city": "Georgetown, Guyana",
+  "country": "GY",
+  "intl": true
+ },
+ {
+  "code": "HKG",
+  "city": "Hong Kong, Hong Kong",
+  "country": "HK",
+  "intl": true
+ },
+ {
+  "code": "XPL",
+  "city": "Comayagua, Honduras",
+  "country": "HN",
+  "intl": true
+ },
+ {
+  "code": "RTB",
+  "city": "Roatan, Honduras",
+  "country": "HN",
+  "intl": true
+ },
+ {
+  "code": "SAP",
+  "city": "San Pedro Sula, Honduras",
+  "country": "HN",
+  "intl": true
+ },
+ {
+  "code": "DBV",
+  "city": "Dubrovnik, Croatia",
+  "country": "HR",
+  "intl": true
+ },
+ {
+  "code": "PUY",
+  "city": "Pula, Croatia",
+  "country": "HR",
+  "intl": true
+ },
+ {
+  "code": "RJK",
+  "city": "Rijeka, Croatia",
+  "country": "HR",
+  "intl": true
+ },
+ {
+  "code": "SPU",
+  "city": "Split, Croatia",
+  "country": "HR",
+  "intl": true
+ },
+ {
+  "code": "ZAD",
+  "city": "Zadar, Croatia",
+  "country": "HR",
+  "intl": true
+ },
+ {
+  "code": "ZAG",
+  "city": "Zagreb, Croatia",
+  "country": "HR",
+  "intl": true
+ },
+ {
+  "code": "CAP",
+  "city": "Cap Haitien, Haiti",
+  "country": "HT",
+  "intl": true
+ },
+ {
+  "code": "PAP",
+  "city": "Port-au-Prince, Haiti",
+  "country": "HT",
+  "intl": true
+ },
+ {
+  "code": "BUD",
+  "city": "Budapest, Hungary",
+  "country": "HU",
+  "intl": true
+ },
+ {
+  "code": "DEB",
+  "city": "Debrecen, Hungary",
+  "country": "HU",
+  "intl": true
+ },
+ {
+  "code": "PEV",
+  "city": "Pecs, Hungary",
+  "country": "HU",
+  "intl": true
+ },
+ {
+  "code": "AMQ",
+  "city": "Ambon, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "BPN",
+  "city": "Balikpapan, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "BTJ",
+  "city": "Banda Aceh, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "BDJ",
+  "city": "Banjarmasin, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "BTH",
+  "city": "Batam, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "DPS",
+  "city": "Denpasar (Bali), Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "JKT",
+  "city": "Jakarta, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "DJJ",
+  "city": "Jayapura, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "UPG",
+  "city": "Makassar, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "MDC",
+  "city": "Manado, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "MES",
+  "city": "Medan, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "PDG",
+  "city": "Padang, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "PNK",
+  "city": "Pontianak, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "LOP",
+  "city": "Praya, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "SRG",
+  "city": "Semarang, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "SUB",
+  "city": "Surabaya, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "SOC",
+  "city": "Surakarta, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "JOG",
+  "city": "Yogyakarta, Indonesia",
+  "country": "ID",
+  "intl": true
+ },
+ {
+  "code": "ORK",
+  "city": "Cork, Ireland",
+  "country": "IE",
+  "intl": true
+ },
+ {
+  "code": "DUB",
+  "city": "Dublin, Ireland",
+  "country": "IE",
+  "intl": true
+ },
+ {
+  "code": "NOC",
+  "city": "Knock, Ireland",
+  "country": "IE",
+  "intl": true
+ },
+ {
+  "code": "SNN",
+  "city": "Shannon, Ireland",
+  "country": "IE",
+  "intl": true
+ },
+ {
+  "code": "ETM",
+  "city": "Eilat, Israel",
+  "country": "IL",
+  "intl": true
+ },
+ {
+  "code": "TLV",
+  "city": "Tel Aviv Yafo, Israel",
+  "country": "IL",
+  "intl": true
+ },
+ {
+  "code": "IOM",
+  "city": "Isle Of Man, Isle of Man",
+  "country": "IM",
+  "intl": true
+ },
+ {
+  "code": "AMD",
+  "city": "Ahmedabad, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "ATQ",
+  "city": "Amritsar, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "IXB",
+  "city": "Bagdogra, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "BLR",
+  "city": "Bengaluru, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "BHO",
+  "city": "Bhopal, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "BBI",
+  "city": "Bhubaneswar, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "IXC",
+  "city": "Chandigarh, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "MAA",
+  "city": "Chennai, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "CJB",
+  "city": "Coimbatore, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "GOI",
+  "city": "Goa, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "GAU",
+  "city": "Guwahati, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "HSS",
+  "city": "Hissar, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "HYD",
+  "city": "Hyderabad, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "IMF",
+  "city": "Imphal, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "IDR",
+  "city": "Indore, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "JAI",
+  "city": "Jaipur, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "CNN",
+  "city": "Kannur, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "COK",
+  "city": "Kochi, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "CCU",
+  "city": "Kolkata, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "CCJ",
+  "city": "Kozhikode, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "LKO",
+  "city": "Lucknow, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "IXE",
+  "city": "Mangalore, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "BOM",
+  "city": "Mumbai, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "NAG",
+  "city": "Nagpur, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "ISK",
+  "city": "Nashik, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "DEL",
+  "city": "New Delhi, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "IXZ",
+  "city": "Port Blair, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "PNQ",
+  "city": "Pune, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "RAJ",
+  "city": "Rajkot, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "SAG",
+  "city": "Shirdi, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "SXR",
+  "city": "Srinagar, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "STV",
+  "city": "Surat, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "TRV",
+  "city": "Thiruvananthapuram, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "TRZ",
+  "city": "Tiruchirappalli, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "TIR",
+  "city": "Tirupati, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "BDQ",
+  "city": "Vadodara, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "VNS",
+  "city": "Varanasi, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "VGA",
+  "city": "Vijayawada, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "VTZ",
+  "city": "Visakhapatnam, India",
+  "country": "IN",
+  "intl": true
+ },
+ {
+  "code": "NJF",
+  "city": "Al-Najaf, Iraq",
+  "country": "IQ",
+  "intl": true
+ },
+ {
+  "code": "BGW",
+  "city": "Baghdad, Iraq",
+  "country": "IQ",
+  "intl": true
+ },
+ {
+  "code": "BSR",
+  "city": "Basra, Iraq",
+  "country": "IQ",
+  "intl": true
+ },
+ {
+  "code": "EBL",
+  "city": "Erbil, Iraq",
+  "country": "IQ",
+  "intl": true
+ },
+ {
+  "code": "KIK",
+  "city": "Kirkuk, Iraq",
+  "country": "IQ",
+  "intl": true
+ },
+ {
+  "code": "ABD",
+  "city": "Abadan, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "AWZ",
+  "city": "Ahvaz, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "BND",
+  "city": "Bandar Abbas, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "XBJ",
+  "city": "Birjand, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "IFN",
+  "city": "Esfahan, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "PYK",
+  "city": "Karaj, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "KER",
+  "city": "Kerman, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "KIH",
+  "city": "Kish, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "MHD",
+  "city": "Mashhad, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "GSM",
+  "city": "Qeshm, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "SYZ",
+  "city": "Shiraz, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "TBZ",
+  "city": "Tabriz, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "THR",
+  "city": "Tehran, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "ZAH",
+  "city": "Zahedan, Iran",
+  "country": "IR",
+  "intl": true
+ },
+ {
+  "code": "AEY",
+  "city": "Akureyri, Iceland",
+  "country": "IS",
+  "intl": true
+ },
+ {
+  "code": "REK",
+  "city": "Reykjavik, Iceland",
+  "country": "IS",
+  "intl": true
+ },
+ {
+  "code": "BRI",
+  "city": "Bari, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "BLQ",
+  "city": "Bologna, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "BDS",
+  "city": "Brindisi, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "CAG",
+  "city": "Cagliari, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "CTA",
+  "city": "Catania, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "FLR",
+  "city": "Florence, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "GOA",
+  "city": "Genoa, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "SUF",
+  "city": "Lamezia Terme, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "MIL",
+  "city": "Milan, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "NAP",
+  "city": "Naples, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "OLB",
+  "city": "Olbia, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "PMO",
+  "city": "Palermo, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "PEG",
+  "city": "Perugia, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "PSR",
+  "city": "Pescara, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "PSA",
+  "city": "Pisa, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "RMI",
+  "city": "Rimini, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "ROM",
+  "city": "Rome, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "TRS",
+  "city": "Trieste, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "TRN",
+  "city": "Turin, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "VCE",
+  "city": "Venice, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "VRN",
+  "city": "Verona, Italy",
+  "country": "IT",
+  "intl": true
+ },
+ {
+  "code": "KIN",
+  "city": "Kingston, Jamaica",
+  "country": "JM",
+  "intl": true
+ },
+ {
+  "code": "MBJ",
+  "city": "Montego Bay, Jamaica",
+  "country": "JM",
+  "intl": true
+ },
+ {
+  "code": "AMM",
+  "city": "Amman, Jordan",
+  "country": "JO",
+  "intl": true
+ },
+ {
+  "code": "AQJ",
+  "city": "Aqaba, Jordan",
+  "country": "JO",
+  "intl": true
+ },
+ {
+  "code": "AOJ",
+  "city": "Aomori, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "FUK",
+  "city": "Fukuoka, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "HKD",
+  "city": "Hakodate, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "HIJ",
+  "city": "Hiroshima, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "IBR",
+  "city": "Ibaraki, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KOJ",
+  "city": "Kagoshima, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KKJ",
+  "city": "Kitakyushu, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KCZ",
+  "city": "Kochi, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KMQ",
+  "city": "Komatsu, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KMJ",
+  "city": "Kumamoto, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "MYJ",
+  "city": "Matsuyama, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KMI",
+  "city": "Miyazaki, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "NGS",
+  "city": "Nagasaki, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "NGO",
+  "city": "Nagoya, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "KIJ",
+  "city": "Niigata, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "OKJ",
+  "city": "Okayama, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "OKA",
+  "city": "Okinawa, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "OSA",
+  "city": "Osaka, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "HSG",
+  "city": "Saga, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "SPK",
+  "city": "Sapporo, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "SDJ",
+  "city": "Sendai, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "FSZ",
+  "city": "Shizuoka, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "TAK",
+  "city": "Takamatsu, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "TKS",
+  "city": "Tokushima, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "TYO",
+  "city": "Tokyo, Japan",
+  "country": "JP",
+  "intl": true
+ },
+ {
+  "code": "EDL",
+  "city": "Eldoret, Kenya",
+  "country": "KE",
+  "intl": true
+ },
+ {
+  "code": "KIS",
+  "city": "Kisumu, Kenya",
+  "country": "KE",
+  "intl": true
+ },
+ {
+  "code": "MBA",
+  "city": "Mombasa, Kenya",
+  "country": "KE",
+  "intl": true
+ },
+ {
+  "code": "NBO",
+  "city": "Nairobi, Kenya",
+  "country": "KE",
+  "intl": true
+ },
+ {
+  "code": "BSZ",
+  "city": "Bishkek, Kyrgyzstan",
+  "country": "KG",
+  "intl": true
+ },
+ {
+  "code": "OSS",
+  "city": "Osh, Kyrgyzstan",
+  "country": "KG",
+  "intl": true
+ },
+ {
+  "code": "IKU",
+  "city": "Tamchy, Kyrgyzstan",
+  "country": "KG",
+  "intl": true
+ },
+ {
+  "code": "PNH",
+  "city": "Phnom Penh, Cambodia",
+  "country": "KH",
+  "intl": true
+ },
+ {
+  "code": "SAI",
+  "city": "Siem Reap, Cambodia",
+  "country": "KH",
+  "intl": true
+ },
+ {
+  "code": "KOS",
+  "city": "Sihanoukville, Cambodia",
+  "country": "KH",
+  "intl": true
+ },
+ {
+  "code": "CXI",
+  "city": "Christmas Island, Kiribati",
+  "country": "KI",
+  "intl": true
+ },
+ {
+  "code": "TRW",
+  "city": "Tarawa, Kiribati",
+  "country": "KI",
+  "intl": true
+ },
+ {
+  "code": "HAH",
+  "city": "Moroni, Comoros",
+  "country": "KM",
+  "intl": true
+ },
+ {
+  "code": "SKB",
+  "city": "Basseterre, Saint Kitts and Nevis",
+  "country": "KN",
+  "intl": true
+ },
+ {
+  "code": "FNJ",
+  "city": "Pyongyang, North Korea",
+  "country": "KP",
+  "intl": true
+ },
+ {
+  "code": "PUS",
+  "city": "Busan, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "CJJ",
+  "city": "Cheongju, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "TAE",
+  "city": "Daegu, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "CJU",
+  "city": "Jeju, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "MWX",
+  "city": "Muan, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "SEL",
+  "city": "Seoul, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "YNY",
+  "city": "Yangyang, South Korea",
+  "country": "KR",
+  "intl": true
+ },
+ {
+  "code": "KWI",
+  "city": "Kuwait City, Kuwait",
+  "country": "KW",
+  "intl": true
+ },
+ {
+  "code": "GCM",
+  "city": "Georgetown, Cayman Islands",
+  "country": "KY",
+  "intl": true
+ },
+ {
+  "code": "SCO",
+  "city": "Aktau, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "AKX",
+  "city": "Aktobe, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "ALA",
+  "city": "Almaty, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "NQZ",
+  "city": "Astana, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "GUW",
+  "city": "Atyrau, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "BXY",
+  "city": "Baikonur, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "KGF",
+  "city": "Karagandy, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "KOV",
+  "city": "Kokshetau, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "KSN",
+  "city": "Kostanay, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "KZO",
+  "city": "Kzyl-Orda, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "URA",
+  "city": "Oral, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "UKK",
+  "city": "Oskemen, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "PWQ",
+  "city": "Pavlodar, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "PPK",
+  "city": "Petropavl, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "PLX",
+  "city": "Semey, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "CIT",
+  "city": "Shymkent, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "DMB",
+  "city": "Taraz, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "HSA",
+  "city": "Turkistan, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "DZN",
+  "city": "Zhezqazghan, Kazakhstan",
+  "country": "KZ",
+  "intl": true
+ },
+ {
+  "code": "LPQ",
+  "city": "Luang Prabang, Laos",
+  "country": "LA",
+  "intl": true
+ },
+ {
+  "code": "PKZ",
+  "city": "Pakse, Laos",
+  "country": "LA",
+  "intl": true
+ },
+ {
+  "code": "VTE",
+  "city": "Vientiane, Laos",
+  "country": "LA",
+  "intl": true
+ },
+ {
+  "code": "BEY",
+  "city": "Beirut, Lebanon",
+  "country": "LB",
+  "intl": true
+ },
+ {
+  "code": "SLU",
+  "city": "Castries, Saint Lucia",
+  "country": "LC",
+  "intl": true
+ },
+ {
+  "code": "CMB",
+  "city": "Colombo, Sri Lanka",
+  "country": "LK",
+  "intl": true
+ },
+ {
+  "code": "JAF",
+  "city": "Jaffna, Sri Lanka",
+  "country": "LK",
+  "intl": true
+ },
+ {
+  "code": "MLW",
+  "city": "Monrovia, Liberia",
+  "country": "LR",
+  "intl": true
+ },
+ {
+  "code": "MSU",
+  "city": "Maseru, Lesotho",
+  "country": "LS",
+  "intl": true
+ },
+ {
+  "code": "KUN",
+  "city": "Kaunas, Lithuania",
+  "country": "LT",
+  "intl": true
+ },
+ {
+  "code": "PLQ",
+  "city": "Palanga, Lithuania",
+  "country": "LT",
+  "intl": true
+ },
+ {
+  "code": "VNO",
+  "city": "Vilnius, Lithuania",
+  "country": "LT",
+  "intl": true
+ },
+ {
+  "code": "LUX",
+  "city": "Luxembourg, Luxembourg",
+  "country": "LU",
+  "intl": true
+ },
+ {
+  "code": "RIX",
+  "city": "Riga, Latvia",
+  "country": "LV",
+  "intl": true
+ },
+ {
+  "code": "LAQ",
+  "city": "Al Bayda, Libya",
+  "country": "LY",
+  "intl": true
+ },
+ {
+  "code": "BEN",
+  "city": "Benghazi, Libya",
+  "country": "LY",
+  "intl": true
+ },
+ {
+  "code": "MJI",
+  "city": "Tripoli, Libya",
+  "country": "LY",
+  "intl": true
+ },
+ {
+  "code": "AGA",
+  "city": "Agadir, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "CMN",
+  "city": "Casablanca, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "VIL",
+  "city": "Dakhla, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "FEZ",
+  "city": "Fez, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "RAK",
+  "city": "Marrakech, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "NDR",
+  "city": "Nador, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "OZZ",
+  "city": "Ouarzazate, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "OUD",
+  "city": "Oujda, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "RBA",
+  "city": "Rabat, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "TNG",
+  "city": "Tangier, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "TTU",
+  "city": "Tetuan, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "OZG",
+  "city": "Zagora, Morocco",
+  "country": "MA",
+  "intl": true
+ },
+ {
+  "code": "RMO",
+  "city": "Chisinau, Moldova",
+  "country": "MD",
+  "intl": true
+ },
+ {
+  "code": "TGD",
+  "city": "Podgorica, Montenegro",
+  "country": "ME",
+  "intl": true
+ },
+ {
+  "code": "TNR",
+  "city": "Antananarivo, Madagascar",
+  "country": "MG",
+  "intl": true
+ },
+ {
+  "code": "MJN",
+  "city": "Mahajanga, Madagascar",
+  "country": "MG",
+  "intl": true
+ },
+ {
+  "code": "NOS",
+  "city": "Nossi-Be, Madagascar",
+  "country": "MG",
+  "intl": true
+ },
+ {
+  "code": "TMM",
+  "city": "Toamasina, Madagascar",
+  "country": "MG",
+  "intl": true
+ },
+ {
+  "code": "MAJ",
+  "city": "Majuro, Marshall Islands",
+  "country": "MH",
+  "intl": true
+ },
+ {
+  "code": "OHD",
+  "city": "Ohrid, North Macedonia",
+  "country": "MK",
+  "intl": true
+ },
+ {
+  "code": "SKP",
+  "city": "Skopje, North Macedonia",
+  "country": "MK",
+  "intl": true
+ },
+ {
+  "code": "BKO",
+  "city": "Bamako, Mali",
+  "country": "ML",
+  "intl": true
+ },
+ {
+  "code": "TOM",
+  "city": "Tombouctou, Mali",
+  "country": "ML",
+  "intl": true
+ },
+ {
+  "code": "MDL",
+  "city": "Mandalay, Myanmar",
+  "country": "MM",
+  "intl": true
+ },
+ {
+  "code": "NYT",
+  "city": "Naypyidaw, Myanmar",
+  "country": "MM",
+  "intl": true
+ },
+ {
+  "code": "RGN",
+  "city": "Yangon, Myanmar",
+  "country": "MM",
+  "intl": true
+ },
+ {
+  "code": "UBN",
+  "city": "Ulaanbaatar, Mongolia",
+  "country": "MN",
+  "intl": true
+ },
+ {
+  "code": "MFM",
+  "city": "Macau, Macau",
+  "country": "MO",
+  "intl": true
+ },
+ {
+  "code": "ROP",
+  "city": "Rota, Northern Mariana Islands",
+  "country": "MP",
+  "intl": true
+ },
+ {
+  "code": "FDF",
+  "city": "Fort-de-France, Martinique",
+  "country": "MQ",
+  "intl": true
+ },
+ {
+  "code": "NDB",
+  "city": "Nouadhibou, Mauritania",
+  "country": "MR",
+  "intl": true
+ },
+ {
+  "code": "NKC",
+  "city": "Nouakchott, Mauritania",
+  "country": "MR",
+  "intl": true
+ },
+ {
+  "code": "MNI",
+  "city": "Montserrat, Montserrat",
+  "country": "MS",
+  "intl": true
+ },
+ {
+  "code": "MLA",
+  "city": "Malta, Malta",
+  "country": "MT",
+  "intl": true
+ },
+ {
+  "code": "MRU",
+  "city": "Mauritius, Mauritius",
+  "country": "MU",
+  "intl": true
+ },
+ {
+  "code": "GAN",
+  "city": "Gan Island, Maldives",
+  "country": "MV",
+  "intl": true
+ },
+ {
+  "code": "HAQ",
+  "city": "Hanimaadhoo, Maldives",
+  "country": "MV",
+  "intl": true
+ },
+ {
+  "code": "MLE",
+  "city": "Male, Maldives",
+  "country": "MV",
+  "intl": true
+ },
+ {
+  "code": "BLZ",
+  "city": "Blantyre, Malawi",
+  "country": "MW",
+  "intl": true
+ },
+ {
+  "code": "LLW",
+  "city": "Lilongwe, Malawi",
+  "country": "MW",
+  "intl": true
+ },
+ {
+  "code": "ACA",
+  "city": "Acapulco, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "AGU",
+  "city": "Aguascalientes, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "CUN",
+  "city": "Cancun, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "CUU",
+  "city": "Chihuahua, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "CJS",
+  "city": "Ciudad Juarez, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "CZM",
+  "city": "Cozumel, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "CUL",
+  "city": "Culiacan, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "GDL",
+  "city": "Guadalajara, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "HMO",
+  "city": "Hermosillo, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "HUX",
+  "city": "Huatulco, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "ZIH",
+  "city": "Ixtapa, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "BJX",
+  "city": "Leon/Guanajuato, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "LTO",
+  "city": "Loreto, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "MZT",
+  "city": "Mazatlan, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "MID",
+  "city": "Merida, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "MEX",
+  "city": "Mexico City, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "MTY",
+  "city": "Monterrey, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "MLM",
+  "city": "Morelia, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "OAX",
+  "city": "Oaxaca, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "PBC",
+  "city": "Puebla, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "PVR",
+  "city": "Puerto Vallarta, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "QRO",
+  "city": "Queretaro, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "SJD",
+  "city": "San Jose Del Cabo, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "TIJ",
+  "city": "Tijuana, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "TQO",
+  "city": "Tulum, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "VER",
+  "city": "Veracruz, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "VSA",
+  "city": "Villahermosa, Mexico",
+  "country": "MX",
+  "intl": true
+ },
+ {
+  "code": "IPH",
+  "city": "Ipoh, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "JHB",
+  "city": "Johor Bahru, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "BKI",
+  "city": "Kota-Kinabalu, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "KUL",
+  "city": "Kuala Lumpur, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "KCH",
+  "city": "Kuching, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "LGK",
+  "city": "Langkawi, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "PEN",
+  "city": "Penang, Malaysia",
+  "country": "MY",
+  "intl": true
+ },
+ {
+  "code": "BEW",
+  "city": "Beira, Mozambique",
+  "country": "MZ",
+  "intl": true
+ },
+ {
+  "code": "MPM",
+  "city": "Maputo, Mozambique",
+  "country": "MZ",
+  "intl": true
+ },
+ {
+  "code": "APL",
+  "city": "Nampula, Mozambique",
+  "country": "MZ",
+  "intl": true
+ },
+ {
+  "code": "TET",
+  "city": "Tete, Mozambique",
+  "country": "MZ",
+  "intl": true
+ },
+ {
+  "code": "WVB",
+  "city": "Walvis Bay, Namibia",
+  "country": "NA",
+  "intl": true
+ },
+ {
+  "code": "WDH",
+  "city": "Windhoek, Namibia",
+  "country": "NA",
+  "intl": true
+ },
+ {
+  "code": "NOU",
+  "city": "Noumea, New Caledonia",
+  "country": "NC",
+  "intl": true
+ },
+ {
+  "code": "NIM",
+  "city": "Niamey, Niger",
+  "country": "NE",
+  "intl": true
+ },
+ {
+  "code": "ABV",
+  "city": "Abuja, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "ABB",
+  "city": "Asaba, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "BCU",
+  "city": "Bauchi, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "ENU",
+  "city": "Enugu, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "ILR",
+  "city": "Ilorin, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "KAD",
+  "city": "Kaduna, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "KAN",
+  "city": "Kano, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "LOS",
+  "city": "Lagos, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "MIU",
+  "city": "Maiduguri, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "PHC",
+  "city": "Port Harcourt, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "SKO",
+  "city": "Sokoto, Nigeria",
+  "country": "NG",
+  "intl": true
+ },
+ {
+  "code": "MGA",
+  "city": "Managua, Nicaragua",
+  "country": "NI",
+  "intl": true
+ },
+ {
+  "code": "AMS",
+  "city": "Amsterdam, Netherlands",
+  "country": "NL",
+  "intl": true
+ },
+ {
+  "code": "EIN",
+  "city": "Eindhoven, Netherlands",
+  "country": "NL",
+  "intl": true
+ },
+ {
+  "code": "GRQ",
+  "city": "Groningen, Netherlands",
+  "country": "NL",
+  "intl": true
+ },
+ {
+  "code": "MST",
+  "city": "Maastricht, Netherlands",
+  "country": "NL",
+  "intl": true
+ },
+ {
+  "code": "RTM",
+  "city": "Rotterdam, Netherlands",
+  "country": "NL",
+  "intl": true
+ },
+ {
+  "code": "AES",
+  "city": "Aalesund, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "BGO",
+  "city": "Bergen, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "BOO",
+  "city": "Bodo, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "EVE",
+  "city": "Harstad-Narvik, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "KRS",
+  "city": "Kristiansand, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "OSL",
+  "city": "Oslo, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "SVG",
+  "city": "Stavanger, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "TOS",
+  "city": "Tromso, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "TRD",
+  "city": "Trondheim, Norway",
+  "country": "NO",
+  "intl": true
+ },
+ {
+  "code": "BWA",
+  "city": "Bhairawa, Nepal",
+  "country": "NP",
+  "intl": true
+ },
+ {
+  "code": "KTM",
+  "city": "Kathmandu, Nepal",
+  "country": "NP",
+  "intl": true
+ },
+ {
+  "code": "ECN",
+  "city": "Ercan, Northern Cyprus",
+  "country": "NY",
+  "intl": true
+ },
+ {
+  "code": "AKL",
+  "city": "Auckland, New Zealand",
+  "country": "NZ",
+  "intl": true
+ },
+ {
+  "code": "CHC",
+  "city": "Christchurch, New Zealand",
+  "country": "NZ",
+  "intl": true
+ },
+ {
+  "code": "ZQN",
+  "city": "Queenstown, New Zealand",
+  "country": "NZ",
+  "intl": true
+ },
+ {
+  "code": "WLG",
+  "city": "Wellington, New Zealand",
+  "country": "NZ",
+  "intl": true
+ },
+ {
+  "code": "JNJ",
+  "city": "Duqm, Oman",
+  "country": "OM",
+  "intl": true
+ },
+ {
+  "code": "MCT",
+  "city": "Muscat, Oman",
+  "country": "OM",
+  "intl": true
+ },
+ {
+  "code": "SLL",
+  "city": "Salalah, Oman",
+  "country": "OM",
+  "intl": true
+ },
+ {
+  "code": "OHS",
+  "city": "Sohar, Oman",
+  "country": "OM",
+  "intl": true
+ },
+ {
+  "code": "PTY",
+  "city": "Panama City, Panama",
+  "country": "PA",
+  "intl": true
+ },
+ {
+  "code": "AQP",
+  "city": "Arequipa, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "CIX",
+  "city": "Chiclayo, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "CUZ",
+  "city": "Cusco, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "IQT",
+  "city": "Iquitos, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "JUL",
+  "city": "Juliaca, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "LIM",
+  "city": "Lima, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "PCL",
+  "city": "Pucallpa, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "TRU",
+  "city": "Trujillo, Peru",
+  "country": "PE",
+  "intl": true
+ },
+ {
+  "code": "PPT",
+  "city": "Papeete, French Polynesia",
+  "country": "PF",
+  "intl": true
+ },
+ {
+  "code": "LAE",
+  "city": "Lae, Papua New Guinea",
+  "country": "PG",
+  "intl": true
+ },
+ {
+  "code": "POM",
+  "city": "Port Moresby, Papua New Guinea",
+  "country": "PG",
+  "intl": true
+ },
+ {
+  "code": "BCD",
+  "city": "Bacolod, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "CGY",
+  "city": "Cagayan De Oro, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "CEB",
+  "city": "Cebu City, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "CRK",
+  "city": "City of Angeles, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "DVO",
+  "city": "Davao City, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "GES",
+  "city": "General Santos, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "ILO",
+  "city": "Iloilo, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "KLO",
+  "city": "Kalibo, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "LAO",
+  "city": "Laoag, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "DRP",
+  "city": "Legazpi, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "MNL",
+  "city": "Manila, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "PPS",
+  "city": "Puerto Princesa, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "SFS",
+  "city": "Subic Bay, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "TAG",
+  "city": "Tagbilaran, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "ZAM",
+  "city": "Zamboanga, Philippines",
+  "country": "PH",
+  "intl": true
+ },
+ {
+  "code": "LYP",
+  "city": "Faisalabad, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "GWD",
+  "city": "Gwadar, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "ISB",
+  "city": "Islamabad, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "KHI",
+  "city": "Karachi, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "LHE",
+  "city": "Lahore, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "MUX",
+  "city": "Multan, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "PEW",
+  "city": "Peshawar, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "UET",
+  "city": "Quetta, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "SKT",
+  "city": "Sialkot, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "KDU",
+  "city": "Skardu, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "TUK",
+  "city": "Turbat, Pakistan",
+  "country": "PK",
+  "intl": true
+ },
+ {
+  "code": "GDN",
+  "city": "Gdansk, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "KTW",
+  "city": "Katowice, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "KRK",
+  "city": "Krakow, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "LCJ",
+  "city": "Lodz, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "POZ",
+  "city": "Poznan, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "RZE",
+  "city": "Rzeszow, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "LUZ",
+  "city": "Swidnik, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "SZZ",
+  "city": "Szczecin, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "WAW",
+  "city": "Warsaw, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "WRO",
+  "city": "Wroclaw, Poland",
+  "country": "PL",
+  "intl": true
+ },
+ {
+  "code": "SJU",
+  "city": "San Juan, Puerto Rico",
+  "country": "PR",
+  "intl": true
+ },
+ {
+  "code": "FAO",
+  "city": "Faro, Portugal",
+  "country": "PT",
+  "intl": true
+ },
+ {
+  "code": "FNC",
+  "city": "Funchal, Portugal",
+  "country": "PT",
+  "intl": true
+ },
+ {
+  "code": "LIS",
+  "city": "Lisbon, Portugal",
+  "country": "PT",
+  "intl": true
+ },
+ {
+  "code": "PDL",
+  "city": "Ponta Delgada, Portugal",
+  "country": "PT",
+  "intl": true
+ },
+ {
+  "code": "OPO",
+  "city": "Porto, Portugal",
+  "country": "PT",
+  "intl": true
+ },
+ {
+  "code": "ROR",
+  "city": "Koror, Palau",
+  "country": "PW",
+  "intl": true
+ },
+ {
+  "code": "ASU",
+  "city": "Asuncion, Paraguay",
+  "country": "PY",
+  "intl": true
+ },
+ {
+  "code": "AGT",
+  "city": "Ciudad Del Este, Paraguay",
+  "country": "PY",
+  "intl": true
+ },
+ {
+  "code": "ENO",
+  "city": "Encarnacion, Paraguay",
+  "country": "PY",
+  "intl": true
+ },
+ {
+  "code": "DOH",
+  "city": "Doha, Qatar",
+  "country": "QA",
+  "intl": true
+ },
+ {
+  "code": "RUN",
+  "city": "Saint-Denis, Réunion",
+  "country": "RE",
+  "intl": true
+ },
+ {
+  "code": "ZSE",
+  "city": "St Pierre de la Reunion, Réunion",
+  "country": "RE",
+  "intl": true
+ },
+ {
+  "code": "BCM",
+  "city": "Bacau, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "GHV",
+  "city": "Brasov, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "BUH",
+  "city": "Bucharest, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "CLJ",
+  "city": "Cluj-Napoca, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "CND",
+  "city": "Constanta, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "CRA",
+  "city": "Craiova, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "IAS",
+  "city": "Iasi, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "OMR",
+  "city": "Oradea, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "SBZ",
+  "city": "Sibiu, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "SCV",
+  "city": "Suceava, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "TSR",
+  "city": "Timisoara, Romania",
+  "country": "RO",
+  "intl": true
+ },
+ {
+  "code": "BEG",
+  "city": "Belgrade, Serbia",
+  "country": "RS",
+  "intl": true
+ },
+ {
+  "code": "INI",
+  "city": "Nis, Serbia",
+  "country": "RS",
+  "intl": true
+ },
+ {
+  "code": "ABA",
+  "city": "Abakan, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "AER",
+  "city": "Adler/Sochi, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "ASF",
+  "city": "Astrakhan, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "BAX",
+  "city": "Barnaul, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "CEK",
+  "city": "Chelyabinsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "HTA",
+  "city": "Chita, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "GRV",
+  "city": "Groznyy, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "IKT",
+  "city": "Irkutsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KGD",
+  "city": "Kaliningrad, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KZN",
+  "city": "Kazan, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KEJ",
+  "city": "Kemerovo, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KRR",
+  "city": "Krasnodar, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KJA",
+  "city": "Krasnoyarsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "MQF",
+  "city": "Magnitogorsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "MCX",
+  "city": "Makhachkala, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "MRV",
+  "city": "Mineralnye Vody, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "MOW",
+  "city": "Moscow, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "MMK",
+  "city": "Murmansk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "NJC",
+  "city": "Nizhnevartovsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "GOJ",
+  "city": "Nizhniy Novgorod, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "NSK",
+  "city": "Norilsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "OVB",
+  "city": "Novosibirsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "OMS",
+  "city": "Omsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "PEE",
+  "city": "Perm, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "PKC",
+  "city": "Petropavlovsk-Kamchatsky, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "LED",
+  "city": "Saint Petersburg, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KUF",
+  "city": "Samara, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "SKX",
+  "city": "Saransk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "RTW",
+  "city": "Saratov, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "SGC",
+  "city": "Surgut, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "TOF",
+  "city": "Tomsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "TJM",
+  "city": "Tyumen, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "UFA",
+  "city": "Ufa, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "UUD",
+  "city": "Ulan-Ude, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "VVO",
+  "city": "Vladivostok, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "VOG",
+  "city": "Volgograd, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "YKS",
+  "city": "Yakutsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "IAR",
+  "city": "Yaroslavl, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "SVX",
+  "city": "Yekaterinburg, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "UUS",
+  "city": "Yuzhno-Sakhalinsk, Russia",
+  "country": "RU",
+  "intl": true
+ },
+ {
+  "code": "KGL",
+  "city": "Kigali, Rwanda",
+  "country": "RW",
+  "intl": true
+ },
+ {
+  "code": "AHB",
+  "city": "Abha, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "ULH",
+  "city": "Al Ula, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "ELQ",
+  "city": "Buraydah, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "DMM",
+  "city": "Dammam, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "HAS",
+  "city": "Hail, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "HOF",
+  "city": "Hofuf, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "JED",
+  "city": "Jeddah, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "MED",
+  "city": "Medina, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "NUM",
+  "city": "Neom, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "AQI",
+  "city": "Qaisumah, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "RUH",
+  "city": "Riyadh, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "AJF",
+  "city": "Sakaka, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "TUU",
+  "city": "Tabuk, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "TIF",
+  "city": "Taif, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "YNB",
+  "city": "Yanbu, Saudi Arabia",
+  "country": "SA",
+  "intl": true
+ },
+ {
+  "code": "HIR",
+  "city": "Honiara, Solomon Islands",
+  "country": "SB",
+  "intl": true
+ },
+ {
+  "code": "SEZ",
+  "city": "Mahe, Seychelles",
+  "country": "SC",
+  "intl": true
+ },
+ {
+  "code": "KRT",
+  "city": "Khartoum, Sudan",
+  "country": "SD",
+  "intl": true
+ },
+ {
+  "code": "PZU",
+  "city": "Port Sudan, Sudan",
+  "country": "SD",
+  "intl": true
+ },
+ {
+  "code": "GOT",
+  "city": "Gothenburg, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "KRN",
+  "city": "Kiruna, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "LPI",
+  "city": "Linkoping, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "LLA",
+  "city": "Lulea, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "MMA",
+  "city": "Malmo, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "SCR",
+  "city": "Sälen, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "STO",
+  "city": "Stockholm, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "UME",
+  "city": "Umea, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "VBY",
+  "city": "Visby, Sweden",
+  "country": "SE",
+  "intl": true
+ },
+ {
+  "code": "SIN",
+  "city": "Singapore, Singapore",
+  "country": "SG",
+  "intl": true
+ },
+ {
+  "code": "LJU",
+  "city": "Ljubljana, Slovenia",
+  "country": "SI",
+  "intl": true
+ },
+ {
+  "code": "BTS",
+  "city": "Bratislava, Slovakia",
+  "country": "SK",
+  "intl": true
+ },
+ {
+  "code": "FNA",
+  "city": "Freetown, Sierra Leone",
+  "country": "SL",
+  "intl": true
+ },
+ {
+  "code": "DKR",
+  "city": "Dakar, Senegal",
+  "country": "SN",
+  "intl": true
+ },
+ {
+  "code": "BSA",
+  "city": "Bossaso, Somalia",
+  "country": "SO",
+  "intl": true
+ },
+ {
+  "code": "HGA",
+  "city": "Hargeisa, Somalia",
+  "country": "SO",
+  "intl": true
+ },
+ {
+  "code": "MGQ",
+  "city": "Mogadishu, Somalia",
+  "country": "SO",
+  "intl": true
+ },
+ {
+  "code": "PBM",
+  "city": "Paramaribo, Suriname",
+  "country": "SR",
+  "intl": true
+ },
+ {
+  "code": "JUB",
+  "city": "Juba, South Sudan",
+  "country": "SS",
+  "intl": true
+ },
+ {
+  "code": "TMS",
+  "city": "Sao Tome Island, São Tomé and Príncipe",
+  "country": "ST",
+  "intl": true
+ },
+ {
+  "code": "SAL",
+  "city": "San Salvador, El Salvador",
+  "country": "SV",
+  "intl": true
+ },
+ {
+  "code": "SXM",
+  "city": "Sint Maarten, Sint Maarten",
+  "country": "SX",
+  "intl": true
+ },
+ {
+  "code": "ALP",
+  "city": "Aleppo, Syria",
+  "country": "SY",
+  "intl": true
+ },
+ {
+  "code": "DAM",
+  "city": "Damascus, Syria",
+  "country": "SY",
+  "intl": true
+ },
+ {
+  "code": "MTS",
+  "city": "Manzini, Eswatini",
+  "country": "SZ",
+  "intl": true
+ },
+ {
+  "code": "PLS",
+  "city": "Providenciales, Turks and Caicos Islands",
+  "country": "TC",
+  "intl": true
+ },
+ {
+  "code": "NDJ",
+  "city": "N'Djamena, Chad",
+  "country": "TD",
+  "intl": true
+ },
+ {
+  "code": "LFW",
+  "city": "Lome, Togo",
+  "country": "TG",
+  "intl": true
+ },
+ {
+  "code": "BKK",
+  "city": "Bangkok, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "CNX",
+  "city": "Chiang Mai, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "CEI",
+  "city": "Chiang Rai, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "HDY",
+  "city": "Hat Yai, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "USM",
+  "city": "Koh Samui, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "KBV",
+  "city": "Krabi, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "UTP",
+  "city": "Pattaya, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "HKT",
+  "city": "Phuket, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "UTH",
+  "city": "Udon Thani, Thailand",
+  "country": "TH",
+  "intl": true
+ },
+ {
+  "code": "DYU",
+  "city": "Dushanbe, Tajikistan",
+  "country": "TJ",
+  "intl": true
+ },
+ {
+  "code": "LBD",
+  "city": "Khujand, Tajikistan",
+  "country": "TJ",
+  "intl": true
+ },
+ {
+  "code": "TJU",
+  "city": "Kulyab, Tajikistan",
+  "country": "TJ",
+  "intl": true
+ },
+ {
+  "code": "KQT",
+  "city": "Kurgon-Tyube (Bokhtar), Tajikistan",
+  "country": "TJ",
+  "intl": true
+ },
+ {
+  "code": "DIL",
+  "city": "Dili, East Timor",
+  "country": "TL",
+  "intl": true
+ },
+ {
+  "code": "OEC",
+  "city": "Ocussi, East Timor",
+  "country": "TL",
+  "intl": true
+ },
+ {
+  "code": "ASB",
+  "city": "Ashgabat, Turkmenistan",
+  "country": "TM",
+  "intl": true
+ },
+ {
+  "code": "TAZ",
+  "city": "Dashoguz, Turkmenistan",
+  "country": "TM",
+  "intl": true
+ },
+ {
+  "code": "CRZ",
+  "city": "Turkmenabad, Turkmenistan",
+  "country": "TM",
+  "intl": true
+ },
+ {
+  "code": "DJE",
+  "city": "Djerba, Tunisia",
+  "country": "TN",
+  "intl": true
+ },
+ {
+  "code": "TUN",
+  "city": "Tunis, Tunisia",
+  "country": "TN",
+  "intl": true
+ },
+ {
+  "code": "TBU",
+  "city": "Nuku'alofa, Tonga",
+  "country": "TO",
+  "intl": true
+ },
+ {
+  "code": "VAV",
+  "city": "Vava'u, Tonga",
+  "country": "TO",
+  "intl": true
+ },
+ {
+  "code": "ANK",
+  "city": "Ankara, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "AYT",
+  "city": "Antalya, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "BJV",
+  "city": "Bodrum, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "DLM",
+  "city": "Dalaman, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "EDO",
+  "city": "Edremit, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "ESK",
+  "city": "Eskisehir, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "GZT",
+  "city": "Gaziantep, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "GNY",
+  "city": "Golgen, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "IST",
+  "city": "Istanbul, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "IZM",
+  "city": "Izmir, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "ASR",
+  "city": "Kayseri, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "KYA",
+  "city": "Konya, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "COV",
+  "city": "Mersin, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "NAV",
+  "city": "Nevsehir, Turkiye",
+  "country": "TR",
+  "intl": true
+ },
+ {
+  "code": "POS",
+  "city": "Port Of Spain, Trinidad and Tobago",
+  "country": "TT",
+  "intl": true
+ },
+ {
+  "code": "TAB",
+  "city": "Tobago, Trinidad and Tobago",
+  "country": "TT",
+  "intl": true
+ },
+ {
+  "code": "HUN",
+  "city": "Hualien, Taiwan",
+  "country": "TW",
+  "intl": true
+ },
+ {
+  "code": "KHH",
+  "city": "Kaohsiung, Taiwan",
+  "country": "TW",
+  "intl": true
+ },
+ {
+  "code": "MZG",
+  "city": "Makung, Taiwan",
+  "country": "TW",
+  "intl": true
+ },
+ {
+  "code": "RMQ",
+  "city": "Taichung, Taiwan",
+  "country": "TW",
+  "intl": true
+ },
+ {
+  "code": "TNN",
+  "city": "Tainan, Taiwan",
+  "country": "TW",
+  "intl": true
+ },
+ {
+  "code": "TPE",
+  "city": "Taipei, Taiwan",
+  "country": "TW",
+  "intl": true
+ },
+ {
+  "code": "DAR",
+  "city": "Dar Es Salaam, Tanzania",
+  "country": "TZ",
+  "intl": true
+ },
+ {
+  "code": "JRO",
+  "city": "Kilimanjaro, Tanzania",
+  "country": "TZ",
+  "intl": true
+ },
+ {
+  "code": "MWZ",
+  "city": "Mwanza, Tanzania",
+  "country": "TZ",
+  "intl": true
+ },
+ {
+  "code": "ZNZ",
+  "city": "Zanzibar, Tanzania",
+  "country": "TZ",
+  "intl": true
+ },
+ {
+  "code": "EBB",
+  "city": "Entebbe, Uganda",
+  "country": "UG",
+  "intl": true
+ },
+ {
+  "code": "MVD",
+  "city": "Montevideo, Uruguay",
+  "country": "UY",
+  "intl": true
+ },
+ {
+  "code": "BHK",
+  "city": "Bukhara, Uzbekistan",
+  "country": "UZ",
+  "intl": true
+ },
+ {
+  "code": "NMA",
+  "city": "Namangan, Uzbekistan",
+  "country": "UZ",
+  "intl": true
+ },
+ {
+  "code": "NCU",
+  "city": "Nukus, Uzbekistan",
+  "country": "UZ",
+  "intl": true
+ },
+ {
+  "code": "SKD",
+  "city": "Samarkand, Uzbekistan",
+  "country": "UZ",
+  "intl": true
+ },
+ {
+  "code": "TAS",
+  "city": "Tashkent, Uzbekistan",
+  "country": "UZ",
+  "intl": true
+ },
+ {
+  "code": "UGC",
+  "city": "Urgench, Uzbekistan",
+  "country": "UZ",
+  "intl": true
+ },
+ {
+  "code": "SVD",
+  "city": "St Vincent, Saint Vincent and the Grenadines",
+  "country": "VC",
+  "intl": true
+ },
+ {
+  "code": "BLA",
+  "city": "Barcelona, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "BRM",
+  "city": "Barquisimeto, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "CCS",
+  "city": "Caracas, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "MAR",
+  "city": "Maracaibo, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "PMV",
+  "city": "Porlamar, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "PZO",
+  "city": "Puerto Ordaz, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "VLN",
+  "city": "Valencia, Venezuela",
+  "country": "VE",
+  "intl": true
+ },
+ {
+  "code": "EIS",
+  "city": "Beef Island, British Virgin Islands",
+  "country": "VG",
+  "intl": true
+ },
+ {
+  "code": "STT",
+  "city": "Saint Thomas, U.S. Virgin Islands",
+  "country": "VI",
+  "intl": true
+ },
+ {
+  "code": "VCA",
+  "city": "Can Tho, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "DAD",
+  "city": "Da Nang, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "HPH",
+  "city": "Haiphong, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "HAN",
+  "city": "Hanoi, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "SGN",
+  "city": "Ho Chi Minh City, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "NHA",
+  "city": "Nha Trang, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "PHH",
+  "city": "Phan Thiet, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "PQC",
+  "city": "Phu Quoc, Vietnam",
+  "country": "VN",
+  "intl": true
+ },
+ {
+  "code": "VLI",
+  "city": "Port Vila, Vanuatu",
+  "country": "VU",
+  "intl": true
+ },
+ {
+  "code": "WLS",
+  "city": "Wallis Island, Wallis and Futuna",
+  "country": "WF",
+  "intl": true
+ },
+ {
+  "code": "APW",
+  "city": "Apia, Samoa",
+  "country": "WS",
+  "intl": true
+ },
+ {
+  "code": "PRN",
+  "city": "Pristina, Kosovo",
+  "country": "XK",
+  "intl": true
+ },
+ {
+  "code": "ADE",
+  "city": "Aden, Yemen",
+  "country": "YE",
+  "intl": true
+ },
+ {
+  "code": "RIY",
+  "city": "Mukalla, Yemen",
+  "country": "YE",
+  "intl": true
+ },
+ {
+  "code": "SAH",
+  "city": "Sanaa, Yemen",
+  "country": "YE",
+  "intl": true
+ },
+ {
+  "code": "GXF",
+  "city": "Seiyun, Yemen",
+  "country": "YE",
+  "intl": true
+ },
+ {
+  "code": "DZA",
+  "city": "Mamoudzou, Mayotte",
+  "country": "YT",
+  "intl": true
+ },
+ {
+  "code": "BFN",
+  "city": "Bloemfontein, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "CPT",
+  "city": "Cape Town, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "DUR",
+  "city": "Durban, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "ELS",
+  "city": "East London, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "GRJ",
+  "city": "George, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "JNB",
+  "city": "Johannesburg, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "KIM",
+  "city": "Kimberley, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "NLP",
+  "city": "Nelspruit, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "PTG",
+  "city": "Polokwane, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "PLZ",
+  "city": "Port Elizabeth, South Africa",
+  "country": "ZA",
+  "intl": true
+ },
+ {
+  "code": "LVI",
+  "city": "Livingstone, Zambia",
+  "country": "ZM",
+  "intl": true
+ },
+ {
+  "code": "LUN",
+  "city": "Lusaka, Zambia",
+  "country": "ZM",
+  "intl": true
+ },
+ {
+  "code": "MFU",
+  "city": "Mfuwe, Zambia",
+  "country": "ZM",
+  "intl": true
+ },
+ {
+  "code": "NLA",
+  "city": "Ndola, Zambia",
+  "country": "ZM",
+  "intl": true
+ },
+ {
+  "code": "BUQ",
+  "city": "Bulawayo, Zimbabwe",
+  "country": "ZW",
+  "intl": true
+ },
+ {
+  "code": "HRE",
+  "city": "Harare, Zimbabwe",
+  "country": "ZW",
+  "intl": true
+ },
+ {
+  "code": "VFA",
+  "city": "Victoria Falls, Zimbabwe",
+  "country": "ZW",
+  "intl": true
+ }
+]

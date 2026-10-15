@@ -1,16 +1,16 @@
 #!/usr/bin/env node
-// Dumps the trip snapshot the gate service works from: the fields the crew
+// Dumps the trip snapshot the Netlify functions work from: the fields the crew
 // digest matcher needs (id, name, tag, cost-per-person, days, vibes) plus the
 // fields the cheapest-total ranker needs (fly, ground, driveOnly), from
-// src/data/trips.js to gate/data/trips-snapshot.json — so the service never
+// src/data/trips.js to netlify/data/trips-snapshot.json — so the service never
 // imports the app bundle.
 //
 // Regenerate after any catalog change:  npm run export:trips
 // (also runs automatically as `prebuild` before `npm run build`)
 //
-// The output is COMMITTED — the gate container image copies gate/data/ and
-// the scripts read it relative to their own file, never from the runtime
-// DATA_DIR volume (/data), which holds mutable signup state.
+// The output is COMMITTED — netlify.toml ships netlify/data/ with the functions and
+// they read it relative to their own file; runtime state (the fares) lives in
+// Netlify Blobs, never in the repo.
 //
 // ON `cost` vs `ground` — read this before using either number:
 //   `cost` is the curated ALL-IN per-person budget for the trip. It already
@@ -70,8 +70,8 @@ if (origins.length < 50) {
   process.exit(1);
 }
 
-mkdirSync("gate/data", { recursive: true });
-writeFileSync("gate/data/origins.json", JSON.stringify(origins, null, 1) + "\n");
-writeFileSync("gate/data/trips-snapshot.json", JSON.stringify(snapshot, null, 1) + "\n");
-console.log(`exported ${snapshot.length} trips (${flyable} flyable) to gate/data/trips-snapshot.json`);
-console.log(`exported ${origins.length} origin metros to gate/data/origins.json`);
+mkdirSync("netlify/data", { recursive: true });
+writeFileSync("netlify/data/origins.json", JSON.stringify(origins, null, 1) + "\n");
+writeFileSync("netlify/data/trips-snapshot.json", JSON.stringify(snapshot, null, 1) + "\n");
+console.log(`exported ${snapshot.length} trips (${flyable} flyable) to netlify/data/trips-snapshot.json`);
+console.log(`exported ${origins.length} origin metros to netlify/data/origins.json`);

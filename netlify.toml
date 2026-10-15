@@ -7,6 +7,13 @@
   command = "npm run build"
   publish = "dist"
 
+[functions]
+  # Serverless bits: the fare puller (scheduled) and the /api/* lookups it
+  # feeds. Each function reads the trips snapshot + origins from netlify/data
+  # at cold start, so those files ship with the bundle.
+  directory = "netlify/functions"
+  included_files = ["netlify/data/*.json", "netlify/lib/*"]
+
 [build.environment]
   # Vite 7 needs Node 20.19+ / 22.12+. Pin it so a Netlify default bump
   # can't change the build under us.

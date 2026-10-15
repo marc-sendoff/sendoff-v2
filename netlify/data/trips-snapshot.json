@@ -1,0 +1,4041 @@
+[
+ {
+  "id": "everglades",
+  "name": "Everglades NP",
+  "tag": "Gators for gas money",
+  "cost": 90,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 70,
+  "stay": 10
+ },
+ {
+  "id": "keywest",
+  "name": "Key West",
+  "tag": "The zero-planning send",
+  "cost": 165,
+  "days": 2,
+  "vibes": [
+   "road",
+   "beach"
+  ],
+  "driveOnly": true,
+  "ground": 140,
+  "stay": 50
+ },
+ {
+  "id": "staug",
+  "name": "St. Augustine",
+  "tag": "Oldest city, youngest crowd",
+  "cost": 120,
+  "days": 2,
+  "vibes": [
+   "road",
+   "culture",
+   "beach"
+  ],
+  "driveOnly": true,
+  "ground": 95,
+  "stay": 25
+ },
+ {
+  "id": "savannah",
+  "name": "Savannah, GA",
+  "tag": "The aesthetic weekend",
+  "cost": 125,
+  "days": 2,
+  "vibes": [
+   "road",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 100,
+  "stay": 25
+ },
+ {
+  "id": "smokies",
+  "name": "Great Smoky Mountains",
+  "tag": "The nature reset",
+  "cost": 160,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 135,
+  "stay": 40
+ },
+ {
+  "id": "tampa",
+  "name": "Tampa + Clearwater",
+  "tag": "Gulf water, city night",
+  "cost": 135,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 25
+ },
+ {
+  "id": "nrg",
+  "name": "New River Gorge",
+  "tag": "America's newest national park",
+  "cost": 135,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 20
+ },
+ {
+  "id": "hotsprings",
+  "name": "Hot Springs, AR",
+  "tag": "Spa town on a ramen budget",
+  "cost": 155,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 125,
+  "stay": 35
+ },
+ {
+  "id": "gulfshores",
+  "name": "Gulf Shores, AL",
+  "tag": "White sand, no Florida prices",
+  "cost": 185,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 155,
+  "stay": 50
+ },
+ {
+  "id": "shenandoah",
+  "name": "Shenandoah NP",
+  "tag": "Skyline Drive golden hour",
+  "cost": 100,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 70,
+  "stay": 10
+ },
+ {
+  "id": "charleston",
+  "name": "Charleston, SC",
+  "tag": "Pastel streets + shrimp and grits",
+  "cost": 145,
+  "days": 2,
+  "vibes": [
+   "road",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 110,
+  "stay": 30
+ },
+ {
+  "id": "outerbanks",
+  "name": "Outer Banks, NC",
+  "tag": "The show, but real",
+  "cost": 180,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 145,
+  "stay": 50
+ },
+ {
+  "id": "asheville",
+  "name": "Asheville, NC",
+  "tag": "Mountains + a real food scene",
+  "cost": 205,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 170,
+  "stay": 55
+ },
+ {
+  "id": "atlanta",
+  "name": "Atlanta",
+  "tag": "The South's capital of everything",
+  "cost": 150,
+  "days": 2,
+  "vibes": [
+   "party",
+   "culture"
+  ],
+  "fly": "ATL",
+  "ground": 110,
+  "stay": 25
+ },
+ {
+  "id": "memphis",
+  "name": "Memphis + Graceland",
+  "tag": "Elvis, BBQ, and the birthplace of rock",
+  "cost": 245,
+  "days": 2,
+  "vibes": [
+   "music",
+   "road",
+   "culture"
+  ],
+  "fly": "MEM",
+  "ground": 95,
+  "stay": 20
+ },
+ {
+  "id": "cleveland",
+  "name": "Cleveland",
+  "tag": "Rock & Roll Hall of Fame run",
+  "cost": 190,
+  "days": 2,
+  "vibes": [
+   "music",
+   "culture"
+  ],
+  "fly": "CLE",
+  "ground": 90,
+  "stay": 20
+ },
+ {
+  "id": "miamibeach",
+  "name": "Miami Beach",
+  "tag": "The classic for a reason",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "MIA",
+  "ground": 110,
+  "stay": 30
+ },
+ {
+  "id": "nola",
+  "name": "New Orleans",
+  "tag": "The classic first send",
+  "cost": 335,
+  "days": 3,
+  "vibes": [
+   "party",
+   "music",
+   "road"
+  ],
+  "fly": "MSY",
+  "ground": 190,
+  "stay": 65
+ },
+ {
+  "id": "dc",
+  "name": "Washington DC",
+  "tag": "The free museum capital of Earth",
+  "cost": 305,
+  "days": 3,
+  "vibes": [
+   "culture"
+  ],
+  "fly": "DCA",
+  "ground": 195,
+  "stay": 85
+ },
+ {
+  "id": "nashville",
+  "name": "Nashville",
+  "tag": "Broadway with the group chat",
+  "cost": 365,
+  "days": 3,
+  "vibes": [
+   "party",
+   "music"
+  ],
+  "fly": "BNA",
+  "ground": 180,
+  "stay": 50
+ },
+ {
+  "id": "sanjuan",
+  "name": "San Juan, PR",
+  "tag": "International vibes, no passport",
+  "cost": 240,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party",
+   "intl"
+  ],
+  "fly": "SJU",
+  "ground": 180,
+  "stay": 65
+ },
+ {
+  "id": "austin",
+  "name": "Austin",
+  "tag": "Live music capital, verified",
+  "cost": 290,
+  "days": 3,
+  "vibes": [
+   "music",
+   "party"
+  ],
+  "fly": "AUS",
+  "ground": 170,
+  "stay": 50
+ },
+ {
+  "id": "orlando",
+  "name": "Orlando",
+  "tag": "Theme park run (the smart way)",
+  "cost": 235,
+  "days": 3,
+  "vibes": [
+   "party",
+   "road"
+  ],
+  "fly": "MCO",
+  "ground": 175,
+  "stay": 45
+ },
+ {
+  "id": "chicago",
+  "name": "Chicago",
+  "tag": "Big city, deep dish, deep blues",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "music",
+   "party"
+  ],
+  "fly": "ORD",
+  "ground": 210,
+  "stay": 85
+ },
+ {
+  "id": "nyc",
+  "name": "New York City",
+  "tag": "The everything trip",
+  "cost": 360,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "party",
+   "music"
+  ],
+  "fly": "JFK",
+  "ground": 260,
+  "stay": 110
+ },
+ {
+  "id": "cartagena",
+  "name": "Cartagena, Colombia",
+  "tag": "Your money goes 3x further",
+  "cost": 380,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "CTG",
+  "ground": 135,
+  "stay": 45
+ },
+ {
+  "id": "mexicocity",
+  "name": "Mexico City",
+  "tag": "Museum count: 150+. Taco count: infinite",
+  "cost": 295,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "MEX",
+  "ground": 130,
+  "stay": 50
+ },
+ {
+  "id": "medellin",
+  "name": "Medellín, Colombia",
+  "tag": "Digital nomad prices, group trip energy",
+  "cost": 330,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party"
+  ],
+  "fly": "MDE",
+  "ground": 120,
+  "stay": 40
+ },
+ {
+  "id": "toronto",
+  "name": "Toronto",
+  "tag": "The easiest international flex",
+  "cost": 415,
+  "days": 3,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "YYZ",
+  "ground": 195,
+  "stay": 75
+ },
+ {
+  "id": "denver",
+  "name": "Denver + Rockies",
+  "tag": "Big mountain energy",
+  "cost": 395,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "DEN",
+  "ground": 265,
+  "stay": 105
+ },
+ {
+  "id": "montreal",
+  "name": "Montreal",
+  "tag": "Europe without the airfare",
+  "cost": 405,
+  "days": 3,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "YUL",
+  "ground": 175,
+  "stay": 65
+ },
+ {
+  "id": "guatemala",
+  "name": "Antigua, Guatemala",
+  "tag": "Volcanoes on a shoestring",
+  "cost": 420,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "GUA",
+  "ground": 120,
+  "stay": 35
+ },
+ {
+  "id": "tulum",
+  "name": "Cancún → Tulum",
+  "tag": "The spring break heavyweight",
+  "cost": 310,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "party",
+   "intl"
+  ],
+  "fly": "CUN",
+  "ground": 125,
+  "stay": 45
+ },
+ {
+  "id": "panama",
+  "name": "Panama City, PA",
+  "tag": "Two oceans, one trip",
+  "cost": 485,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "PTY",
+  "ground": 125,
+  "stay": 45
+ },
+ {
+  "id": "pvr",
+  "name": "Puerto Vallarta",
+  "tag": "Pacific sunsets, peso prices",
+  "cost": 550,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl",
+   "party"
+  ],
+  "fly": "PVR",
+  "ground": 130,
+  "stay": 50
+ },
+ {
+  "id": "la",
+  "name": "Los Angeles",
+  "tag": "Run the whole map",
+  "cost": 510,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "party",
+   "culture"
+  ],
+  "fly": "LAX",
+  "ground": 295,
+  "stay": 120
+ },
+ {
+  "id": "costarica",
+  "name": "Costa Rica",
+  "tag": "Pura vida starter pack",
+  "cost": 390,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "SJO",
+  "ground": 180,
+  "stay": 60
+ },
+ {
+  "id": "vancouver",
+  "name": "Vancouver",
+  "tag": "Mountains meet ocean meet sushi",
+  "cost": 455,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "YVR",
+  "ground": 275,
+  "stay": 115
+ },
+ {
+  "id": "banff",
+  "name": "Banff, Canada",
+  "tag": "The lake that broke Instagram",
+  "cost": 555,
+  "days": 5,
+  "vibes": [
+   "nature",
+   "intl"
+  ],
+  "fly": "YYC",
+  "ground": 370,
+  "stay": 160
+ },
+ {
+  "id": "sf",
+  "name": "San Francisco",
+  "tag": "Fog, hills, and the perfect bridge",
+  "cost": 500,
+  "days": 4,
+  "vibes": [
+   "culture",
+   "nature"
+  ],
+  "fly": "SFO",
+  "ground": 300,
+  "stay": 115
+ },
+ {
+  "id": "yellowstone",
+  "name": "Yellowstone",
+  "tag": "The OG national park",
+  "cost": 520,
+  "days": 5,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "BZN",
+  "ground": 200,
+  "stay": 40
+ },
+ {
+  "id": "lisbon",
+  "name": "Lisbon",
+  "tag": "Europe's best-value capital",
+  "cost": 680,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "party"
+  ],
+  "fly": "LIS",
+  "ground": 260,
+  "stay": 90
+ },
+ {
+  "id": "barcelona",
+  "name": "Barcelona",
+  "tag": "Gaudí, beach, repeat",
+  "cost": 810,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "party",
+   "beach",
+   "culture"
+  ],
+  "fly": "BCN",
+  "ground": 340,
+  "stay": 120
+ },
+ {
+  "id": "iceland",
+  "name": "Iceland",
+  "tag": "Another planet, 6hr flight",
+  "cost": 1065,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "KEF",
+  "ground": 535,
+  "stay": 200
+ },
+ {
+  "id": "berlin",
+  "name": "Berlin",
+  "tag": "Techno capital of planet Earth",
+  "cost": 825,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "music",
+   "culture"
+  ],
+  "fly": "BER",
+  "ground": 235,
+  "stay": 85
+ },
+ {
+  "id": "budapest",
+  "name": "Budapest",
+  "tag": "Thermal baths + ruin bars",
+  "cost": 805,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "BUD",
+  "ground": 180,
+  "stay": 50
+ },
+ {
+  "id": "marrakech",
+  "name": "Marrakech",
+  "tag": "The sensory overload send",
+  "cost": 680,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "RAK",
+  "ground": 140,
+  "stay": 40
+ },
+ {
+  "id": "amsterdam",
+  "name": "Amsterdam",
+  "tag": "Canals, bikes, Van Gogh",
+  "cost": 870,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "AMS",
+  "ground": 310,
+  "stay": 110
+ },
+ {
+  "id": "prague",
+  "name": "Prague",
+  "tag": "A fairytale with $2 beer",
+  "cost": 615,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "PRG",
+  "ground": 185,
+  "stay": 55
+ },
+ {
+  "id": "dublin",
+  "name": "Dublin",
+  "tag": "Trad music + the perfect pint",
+  "cost": 805,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "music"
+  ],
+  "fly": "DUB",
+  "ground": 285,
+  "stay": 105
+ },
+ {
+  "id": "london",
+  "name": "London",
+  "tag": "The Abbey Road pilgrimage",
+  "cost": 750,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "music"
+  ],
+  "fly": "LHR",
+  "ground": 260,
+  "stay": 90
+ },
+ {
+  "id": "rome",
+  "name": "Rome",
+  "tag": "2,000 years of main character energy",
+  "cost": 815,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "FCO",
+  "ground": 265,
+  "stay": 90
+ },
+ {
+  "id": "edinburgh",
+  "name": "Edinburgh",
+  "tag": "Castles, crags, and ceilidhs",
+  "cost": 825,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "EDI",
+  "ground": 255,
+  "stay": 95
+ },
+ {
+  "id": "croatia",
+  "name": "Split, Croatia",
+  "tag": "Island-hopping HQ",
+  "cost": 925,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "SPU",
+  "ground": 285,
+  "stay": 90
+ },
+ {
+  "id": "paris",
+  "name": "Paris",
+  "tag": "The Louvre and everything after",
+  "cost": 720,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "CDG",
+  "ground": 290,
+  "stay": 105
+ },
+ {
+  "id": "athens",
+  "name": "Athens + Islands",
+  "tag": "Ancient ruins, aegean blue",
+  "cost": 815,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "beach"
+  ],
+  "fly": "ATH",
+  "ground": 275,
+  "stay": 90
+ },
+ {
+  "id": "nice",
+  "name": "Nice + French Riviera",
+  "tag": "Budget kids in a yacht world",
+  "cost": 770,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach"
+  ],
+  "fly": "NCE",
+  "ground": 255,
+  "stay": 95
+ },
+ {
+  "id": "ibiza",
+  "name": "Ibiza",
+  "tag": "The final boss",
+  "cost": 1060,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "party",
+   "beach",
+   "music"
+  ],
+  "fly": "IBZ",
+  "ground": 410,
+  "stay": 160
+ },
+ {
+  "id": "interlaken",
+  "name": "Interlaken",
+  "tag": "Adrenaline HQ of the Alps",
+  "cost": 1450,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "ZRH",
+  "ground": 525,
+  "stay": 210
+ },
+ {
+  "id": "joshuatree",
+  "name": "Joshua Tree",
+  "tag": "Desert stars + boulder scrambles",
+  "cost": 100,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 10
+ },
+ {
+  "id": "bigsur",
+  "name": "Big Sur",
+  "tag": "The best drive in America",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 15
+ },
+ {
+  "id": "sandiego",
+  "name": "San Diego",
+  "tag": "The chillest city in America",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "road",
+   "party"
+  ],
+  "fly": "SAN",
+  "ground": 185,
+  "stay": 70
+ },
+ {
+  "id": "sedona",
+  "name": "Sedona",
+  "tag": "Red rocks + alleged vortexes",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "PHX",
+  "ground": 170,
+  "stay": 60
+ },
+ {
+  "id": "tahoe",
+  "name": "Lake Tahoe",
+  "tag": "Alpine lake, all four seasons",
+  "cost": 475,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "RNO",
+  "ground": 165,
+  "stay": 55
+ },
+ {
+  "id": "grandcanyon",
+  "name": "Grand Canyon",
+  "tag": "The one you owe yourself",
+  "cost": 285,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "PHX",
+  "ground": 115,
+  "stay": 20
+ },
+ {
+  "id": "vegas",
+  "name": "Las Vegas",
+  "tag": "You know exactly what this is",
+  "cost": 370,
+  "days": 3,
+  "vibes": [
+   "party"
+  ],
+  "fly": "LAS",
+  "ground": 195,
+  "stay": 45
+ },
+ {
+  "id": "portland",
+  "name": "Portland",
+  "tag": "Food carts + waterfalls",
+  "cost": 335,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "nature"
+  ],
+  "fly": "PDX",
+  "ground": 180,
+  "stay": 65
+ },
+ {
+  "id": "seattle",
+  "name": "Seattle",
+  "tag": "Grunge roots + mountain views",
+  "cost": 405,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "music",
+   "nature"
+  ],
+  "fly": "SEA",
+  "ground": 215,
+  "stay": 85
+ },
+ {
+  "id": "sanantonio",
+  "name": "San Antonio",
+  "tag": "River Walk + real Tex-Mex",
+  "cost": 275,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "SAT",
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "bigbend",
+  "name": "Big Bend NP",
+  "tag": "Texas-sized wilderness",
+  "cost": 145,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 15
+ },
+ {
+  "id": "oahu",
+  "name": "Oahu, Hawaii",
+  "tag": "The all-timer",
+  "cost": 835,
+  "days": 5,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "HNL",
+  "ground": 410,
+  "stay": 180
+ },
+ {
+  "id": "maui",
+  "name": "Maui, Hawaii",
+  "tag": "Road to Hana + a volcano sunrise",
+  "cost": 960,
+  "days": 5,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "OGG",
+  "ground": 440,
+  "stay": 190
+ },
+ {
+  "id": "quebec",
+  "name": "Québec City",
+  "tag": "Europe, 90-minute flight",
+  "cost": 500,
+  "days": 3,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "YQB",
+  "ground": 180,
+  "stay": 65
+ },
+ {
+  "id": "tokyo",
+  "name": "Tokyo",
+  "tag": "The trip that rewires your brain",
+  "cost": 1320,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "HND",
+  "ground": 400,
+  "stay": 140
+ },
+ {
+  "id": "seoul",
+  "name": "Seoul",
+  "tag": "K-everything HQ",
+  "cost": 1200,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "music"
+  ],
+  "fly": "ICN",
+  "ground": 250,
+  "stay": 70
+ },
+ {
+  "id": "bangkok",
+  "name": "Bangkok + Islands",
+  "tag": "The backpacker rite of passage",
+  "cost": 715,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "party",
+   "beach"
+  ],
+  "fly": "BKK",
+  "ground": 210,
+  "stay": 60
+ },
+ {
+  "id": "bali",
+  "name": "Bali",
+  "tag": "The gap-year fantasy, on a budget",
+  "cost": 980,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "DPS",
+  "ground": 210,
+  "stay": 50
+ },
+ {
+  "id": "vietnam",
+  "name": "Hanoi + Ha Long Bay",
+  "tag": "Most trip per dollar on Earth",
+  "cost": 1110,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "HAN",
+  "ground": 160,
+  "stay": 40
+ },
+ {
+  "id": "istanbul",
+  "name": "Istanbul",
+  "tag": "Two continents, one city",
+  "cost": 645,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "IST",
+  "ground": 220,
+  "stay": 60
+ },
+ {
+  "id": "petra",
+  "name": "Petra + Wadi Rum",
+  "tag": "Indiana Jones was filmed here",
+  "cost": 1185,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "AMM",
+  "ground": 285,
+  "stay": 60
+ },
+ {
+  "id": "dubai",
+  "name": "Dubai",
+  "tag": "The future, with a beach",
+  "cost": 645,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "beach"
+  ],
+  "fly": "DXB",
+  "ground": 245,
+  "stay": 65
+ },
+ {
+  "id": "capetown",
+  "name": "Cape Town",
+  "tag": "Mountains, oceans, penguins",
+  "cost": 1455,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "CPT",
+  "ground": 275,
+  "stay": 75
+ },
+ {
+  "id": "cairo",
+  "name": "Cairo + Pyramids",
+  "tag": "The oldest bucket-list item",
+  "cost": 650,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "CAI",
+  "ground": 165,
+  "stay": 35
+ },
+ {
+  "id": "nassau",
+  "name": "Nassau, Bahamas",
+  "tag": "A different country by lunchtime",
+  "cost": 305,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "NAS",
+  "ground": 200,
+  "stay": 90
+ },
+ {
+  "id": "puntacana",
+  "name": "Punta Cana, DR",
+  "tag": "Resort strip, hostel prices nearby",
+  "cost": 360,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "party",
+   "intl"
+  ],
+  "fly": "PUJ",
+  "ground": 165,
+  "stay": 55
+ },
+ {
+  "id": "jamaica",
+  "name": "Montego Bay, Jamaica",
+  "tag": "Reggae's home turf",
+  "cost": 490,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl",
+   "music"
+  ],
+  "fly": "MBJ",
+  "ground": 195,
+  "stay": 75
+ },
+ {
+  "id": "bogota",
+  "name": "Bogotá, Colombia",
+  "tag": "Street art + salsa at altitude",
+  "cost": 265,
+  "days": 3,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "BOG",
+  "ground": 80,
+  "stay": 25
+ },
+ {
+  "id": "lima",
+  "name": "Lima, Peru",
+  "tag": "Food capital of the Americas",
+  "cost": 410,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "LIM",
+  "ground": 115,
+  "stay": 40
+ },
+ {
+  "id": "cusco",
+  "name": "Cusco + Machu Picchu",
+  "tag": "The wonder is real",
+  "cost": 675,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "CUZ",
+  "ground": 195,
+  "stay": 50
+ },
+ {
+  "id": "rio",
+  "name": "Rio de Janeiro",
+  "tag": "The most beautiful city on Earth",
+  "cost": 820,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "GIG",
+  "ground": 170,
+  "stay": 55
+ },
+ {
+  "id": "buenosaires",
+  "name": "Buenos Aires",
+  "tag": "Steak, tango, 4am energy",
+  "cost": 675,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "party"
+  ],
+  "fly": "EZE",
+  "ground": 175,
+  "stay": 65
+ },
+ {
+  "id": "beijing",
+  "name": "Beijing + Great Wall",
+  "tag": "The wall. THE wall.",
+  "cost": 1250,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "PEK",
+  "ground": 220,
+  "stay": 60
+ },
+ {
+  "id": "shanghai",
+  "name": "Shanghai",
+  "tag": "Blade Runner with dumplings",
+  "cost": 1255,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "PVG",
+  "ground": 195,
+  "stay": 55
+ },
+ {
+  "id": "hongkong",
+  "name": "Hong Kong",
+  "tag": "Skyline of skylines",
+  "cost": 835,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "HKG",
+  "ground": 220,
+  "stay": 75
+ },
+ {
+  "id": "singapore",
+  "name": "Singapore",
+  "tag": "Hawker food heaven",
+  "cost": 825,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "SIN",
+  "ground": 215,
+  "stay": 75
+ },
+ {
+  "id": "palawan",
+  "name": "Palawan, Philippines",
+  "tag": "The best island on Earth (official)",
+  "cost": 1310,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "MNL",
+  "ground": 270,
+  "stay": 60
+ },
+ {
+  "id": "india",
+  "name": "Delhi + Taj Mahal",
+  "tag": "Sensory maximum, wallet minimum",
+  "cost": 950,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "DEL",
+  "ground": 150,
+  "stay": 40
+ },
+ {
+  "id": "sydney",
+  "name": "Sydney",
+  "tag": "The harbour life",
+  "cost": 1150,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "SYD",
+  "ground": 460,
+  "stay": 190
+ },
+ {
+  "id": "cairns",
+  "name": "Cairns + Great Barrier Reef",
+  "tag": "The reef, before it's gone",
+  "cost": 1780,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "CNS",
+  "ground": 480,
+  "stay": 160
+ },
+ {
+  "id": "nairobi",
+  "name": "Kenya Safari",
+  "tag": "The lion king, live",
+  "cost": 1235,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "NBO",
+  "ground": 255,
+  "stay": 75
+ },
+ {
+  "id": "munich",
+  "name": "Munich + Oktoberfest",
+  "tag": "The world's biggest party (in season)",
+  "cost": 980,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "MUC",
+  "ground": 260,
+  "stay": 95
+ },
+ {
+  "id": "cocoa",
+  "name": "Cocoa Beach",
+  "tag": "Space coast surf day",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 85,
+  "stay": 25
+ },
+ {
+  "id": "destin",
+  "name": "Destin, FL",
+  "tag": "The Emerald Coast",
+  "cost": 185,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 155,
+  "stay": 55
+ },
+ {
+  "id": "myrtle",
+  "name": "Myrtle Beach",
+  "tag": "The chaotic-good beach week",
+  "cost": 175,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 145,
+  "stay": 40
+ },
+ {
+  "id": "southpadre",
+  "name": "South Padre Island",
+  "tag": "Texas spring break HQ",
+  "cost": 180,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 145,
+  "stay": 45
+ },
+ {
+  "id": "galveston",
+  "name": "Galveston",
+  "tag": "Houston's beach escape",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 85,
+  "stay": 25
+ },
+ {
+  "id": "hockinghills",
+  "name": "Hocking Hills, OH",
+  "tag": "Midwest's secret canyons",
+  "cost": 95,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 70,
+  "stay": 15
+ },
+ {
+  "id": "mammothcave",
+  "name": "Mammoth Cave, KY",
+  "tag": "Longest cave on Earth",
+  "cost": 100,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 10
+ },
+ {
+  "id": "cuyahoga",
+  "name": "Cuyahoga Valley",
+  "tag": "The park between two cities",
+  "cost": 105,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "niagara",
+  "name": "Niagara Falls",
+  "tag": "The classic wonder run",
+  "cost": 220,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "BUF",
+  "ground": 90,
+  "stay": 20
+ },
+ {
+  "id": "philly",
+  "name": "Philadelphia",
+  "tag": "Cheesesteaks + the founding flex",
+  "cost": 235,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "PHL",
+  "ground": 110,
+  "stay": 35
+ },
+ {
+  "id": "boston",
+  "name": "Boston",
+  "tag": "Walkable history + college energy",
+  "cost": 410,
+  "days": 3,
+  "vibes": [
+   "culture"
+  ],
+  "fly": "BOS",
+  "ground": 225,
+  "stay": 100
+ },
+ {
+  "id": "acadia",
+  "name": "Acadia NP, Maine",
+  "tag": "First sunrise in America",
+  "cost": 170,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 120,
+  "stay": 20
+ },
+ {
+  "id": "whitemtns",
+  "name": "White Mountains, NH",
+  "tag": "The Northeast's big hikes",
+  "cost": 150,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 115,
+  "stay": 30
+ },
+ {
+  "id": "stowe",
+  "name": "Stowe, Vermont",
+  "tag": "Ski trip (or leaf trip) done right",
+  "cost": 235,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 180,
+  "stay": 70
+ },
+ {
+  "id": "kc",
+  "name": "Kansas City",
+  "tag": "BBQ pilgrimage + jazz roots",
+  "cost": 220,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "music"
+  ],
+  "fly": "MCI",
+  "ground": 90,
+  "stay": 20
+ },
+ {
+  "id": "zionbryce",
+  "name": "Zion + Bryce",
+  "tag": "Utah's greatest hits",
+  "cost": 340,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "LAS",
+  "ground": 165,
+  "stay": 30
+ },
+ {
+  "id": "moab",
+  "name": "Moab: Arches + Canyonlands",
+  "tag": "Mars, with a brewery",
+  "cost": 375,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "SLC",
+  "ground": 195,
+  "stay": 50
+ },
+ {
+  "id": "yosemite",
+  "name": "Yosemite",
+  "tag": "The cathedral of parks",
+  "cost": 355,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "SFO",
+  "ground": 155,
+  "stay": 25
+ },
+ {
+  "id": "santacruz",
+  "name": "Santa Cruz",
+  "tag": "Boardwalk + surf town classic",
+  "cost": 135,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 95,
+  "stay": 30
+ },
+ {
+  "id": "olympicnp",
+  "name": "Olympic NP",
+  "tag": "Three parks in one",
+  "cost": 340,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "SEA",
+  "ground": 150,
+  "stay": 25
+ },
+ {
+  "id": "rushmore",
+  "name": "Black Hills + Badlands",
+  "tag": "The great American road trip bit",
+  "cost": 485,
+  "days": 4,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "RAP",
+  "ground": 165,
+  "stay": 40
+ },
+ {
+  "id": "parkcity",
+  "name": "Park City, Utah",
+  "tag": "Big-mountain ski split",
+  "cost": 445,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "SLC",
+  "ground": 265,
+  "stay": 105
+ },
+ {
+  "id": "jacksonhole",
+  "name": "Jackson + Grand Teton",
+  "tag": "The dramatic one",
+  "cost": 630,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "JAC",
+  "ground": 180,
+  "stay": 35
+ },
+ {
+  "id": "cozumel",
+  "name": "Cozumel",
+  "tag": "Reef diving for beginners",
+  "cost": 660,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "CZM",
+  "ground": 160,
+  "stay": 55
+ },
+ {
+  "id": "stthomas",
+  "name": "St. Thomas, USVI",
+  "tag": "Caribbean, US passport rules",
+  "cost": 615,
+  "days": 4,
+  "vibes": [
+   "beach"
+  ],
+  "fly": "STT",
+  "ground": 310,
+  "stay": 135
+ },
+ {
+  "id": "aruba",
+  "name": "Aruba",
+  "tag": "Guaranteed weather",
+  "cost": 515,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "AUA",
+  "ground": 230,
+  "stay": 100
+ },
+ {
+  "id": "curacao",
+  "name": "Curaçao",
+  "tag": "The colorful one",
+  "cost": 500,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "CUR",
+  "ground": 235,
+  "stay": 85
+ },
+ {
+  "id": "bermuda",
+  "name": "Bermuda",
+  "tag": "Pink sand, 2-hr flight",
+  "cost": 635,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "BDA",
+  "ground": 285,
+  "stay": 140
+ },
+ {
+  "id": "belize",
+  "name": "Caye Caulker, Belize",
+  "tag": "Go slow (it's the law)",
+  "cost": 635,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "BZE",
+  "ground": 215,
+  "stay": 80
+ },
+ {
+  "id": "roatan",
+  "name": "Roatán, Honduras",
+  "tag": "Cheapest dive cert on Earth",
+  "cost": 705,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "RTB",
+  "ground": 205,
+  "stay": 70
+ },
+ {
+  "id": "elsalvador",
+  "name": "El Tunco, El Salvador",
+  "tag": "Surf country on $30/day",
+  "cost": 315,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "SAL",
+  "ground": 130,
+  "stay": 50
+ },
+ {
+  "id": "oaxaca",
+  "name": "Oaxaca",
+  "tag": "Mexico's food soul",
+  "cost": 490,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "OAX",
+  "ground": 110,
+  "stay": 40
+ },
+ {
+  "id": "merida",
+  "name": "Mérida + Cenotes",
+  "tag": "Yucatán without the crowds",
+  "cost": 385,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "beach"
+  ],
+  "fly": "MID",
+  "ground": 115,
+  "stay": 40
+ },
+ {
+  "id": "quito",
+  "name": "Quito + Andes",
+  "tag": "Middle of the world",
+  "cost": 415,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "UIO",
+  "ground": 130,
+  "stay": 45
+ },
+ {
+  "id": "santiago",
+  "name": "Santiago, Chile",
+  "tag": "Andes on the skyline",
+  "cost": 600,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "SCL",
+  "ground": 185,
+  "stay": 70
+ },
+ {
+  "id": "madrid",
+  "name": "Madrid",
+  "tag": "The city that never sleeps (actually)",
+  "cost": 615,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "party"
+  ],
+  "fly": "MAD",
+  "ground": 225,
+  "stay": 80
+ },
+ {
+  "id": "seville",
+  "name": "Seville",
+  "tag": "Spain's prettiest city, fight me",
+  "cost": 765,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "SVQ",
+  "ground": 205,
+  "stay": 65
+ },
+ {
+  "id": "porto",
+  "name": "Porto",
+  "tag": "Lisbon's cooler older sibling",
+  "cost": 715,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "OPO",
+  "ground": 185,
+  "stay": 60
+ },
+ {
+  "id": "florence",
+  "name": "Florence + Tuscany",
+  "tag": "The Renaissance speedrun",
+  "cost": 915,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "FLR",
+  "ground": 265,
+  "stay": 90
+ },
+ {
+  "id": "venice",
+  "name": "Venice",
+  "tag": "Get lost on purpose",
+  "cost": 635,
+  "days": 3,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "VCE",
+  "ground": 205,
+  "stay": 75
+ },
+ {
+  "id": "amalfi",
+  "name": "Naples + Amalfi",
+  "tag": "Pizza's birthplace + THE coast",
+  "cost": 820,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "NAP",
+  "ground": 230,
+  "stay": 70
+ },
+ {
+  "id": "malta",
+  "name": "Malta",
+  "tag": "The Mediterranean cheat code",
+  "cost": 690,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "MLA",
+  "ground": 230,
+  "stay": 80
+ },
+ {
+  "id": "copenhagen",
+  "name": "Copenhagen",
+  "tag": "The happiest city sampler",
+  "cost": 785,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "CPH",
+  "ground": 315,
+  "stay": 120
+ },
+ {
+  "id": "stockholm",
+  "name": "Stockholm",
+  "tag": "14 islands, one city",
+  "cost": 790,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "ARN",
+  "ground": 300,
+  "stay": 110
+ },
+ {
+  "id": "vienna",
+  "name": "Vienna",
+  "tag": "Palaces + €4 sausage majesty",
+  "cost": 725,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "VIE",
+  "ground": 250,
+  "stay": 85
+ },
+ {
+  "id": "krakow",
+  "name": "Kraków",
+  "tag": "Europe's best-value old town",
+  "cost": 765,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "party"
+  ],
+  "fly": "KRK",
+  "ground": 165,
+  "stay": 45
+ },
+ {
+  "id": "dubrovnik",
+  "name": "Dubrovnik",
+  "tag": "King's Landing, literally",
+  "cost": 875,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "DBV",
+  "ground": 265,
+  "stay": 90
+ },
+ {
+  "id": "santorini",
+  "name": "Santorini + Mykonos",
+  "tag": "The Greek island double",
+  "cost": 1010,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "JTR",
+  "ground": 310,
+  "stay": 110
+ },
+ {
+  "id": "tirana",
+  "name": "Albanian Riviera",
+  "tag": "The Mediterranean before prices",
+  "cost": 720,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "TIA",
+  "ground": 170,
+  "stay": 50
+ },
+ {
+  "id": "ljubljana",
+  "name": "Ljubljana + Lake Bled",
+  "tag": "Fairy tale, budget edition",
+  "cost": 865,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "LJU",
+  "ground": 215,
+  "stay": 70
+ },
+ {
+  "id": "osaka",
+  "name": "Osaka + Kyoto",
+  "tag": "Japan's flavor + soul combo",
+  "cost": 1345,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "KIX",
+  "ground": 365,
+  "stay": 125
+ },
+ {
+  "id": "taipei",
+  "name": "Taipei",
+  "tag": "Night market heaven",
+  "cost": 1180,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "TPE",
+  "ground": 230,
+  "stay": 80
+ },
+ {
+  "id": "kl",
+  "name": "Kuala Lumpur",
+  "tag": "Three cuisines, one city",
+  "cost": 1150,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "KUL",
+  "ground": 170,
+  "stay": 50
+ },
+ {
+  "id": "chiangmai",
+  "name": "Chiang Mai",
+  "tag": "Temples, jungles, $1 noodles",
+  "cost": 1175,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "CNX",
+  "ground": 175,
+  "stay": 45
+ },
+ {
+  "id": "hoian",
+  "name": "Đà Nẵng + Hội An",
+  "tag": "Lanterns + the best beach food",
+  "cost": 800,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "DAD",
+  "ground": 160,
+  "stay": 40
+ },
+ {
+  "id": "siemreap",
+  "name": "Angkor Wat, Cambodia",
+  "tag": "Sunrise over the temple of temples",
+  "cost": 1215,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "REP",
+  "ground": 165,
+  "stay": 30
+ },
+ {
+  "id": "srilanka",
+  "name": "Sri Lanka",
+  "tag": "The teardrop island runs it all",
+  "cost": 890,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "CMB",
+  "ground": 190,
+  "stay": 50
+ },
+ {
+  "id": "queenstown",
+  "name": "Queenstown, NZ",
+  "tag": "Adventure capital of Earth",
+  "cost": 1920,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "ZQN",
+  "ground": 470,
+  "stay": 150
+ },
+ {
+  "id": "zanzibar",
+  "name": "Zanzibar",
+  "tag": "Spice island, postcard water",
+  "cost": 1420,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach"
+  ],
+  "fly": "ZNZ",
+  "ground": 270,
+  "stay": 90
+ },
+ {
+  "id": "accra",
+  "name": "Accra, Ghana",
+  "tag": "West Africa's most welcoming door",
+  "cost": 1140,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "beach"
+  ],
+  "fly": "ACC",
+  "ground": 190,
+  "stay": 60
+ },
+ {
+  "id": "sanibel",
+  "name": "Sanibel Island",
+  "tag": "Shelling capital of America",
+  "cost": 130,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 40
+ },
+ {
+  "id": "amelia",
+  "name": "Amelia Island",
+  "tag": "Old Florida, no crowds",
+  "cost": 125,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 95,
+  "stay": 30
+ },
+ {
+  "id": "caladesi",
+  "name": "Caladesi Island",
+  "tag": "Ferry to an empty beach",
+  "cost": 120,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 95,
+  "stay": 25
+ },
+ {
+  "id": "apalach",
+  "name": "Apalachicola",
+  "tag": "Oysters and old Florida",
+  "cost": 105,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "chattanooga",
+  "name": "Chattanooga",
+  "tag": "Outdoor city on a river",
+  "cost": 115,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 85,
+  "stay": 20
+ },
+ {
+  "id": "greenville",
+  "name": "Greenville, SC",
+  "tag": "Waterfall in the middle of town",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "louisville",
+  "name": "Louisville",
+  "tag": "Bourbon trail starter",
+  "cost": 225,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road",
+   "party"
+  ],
+  "fly": "SDF",
+  "ground": 95,
+  "stay": 20
+ },
+ {
+  "id": "indydunes",
+  "name": "Indiana Dunes",
+  "tag": "Lake Michigan beach park",
+  "cost": 125,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road",
+   "beach"
+  ],
+  "driveOnly": true,
+  "ground": 100,
+  "stay": 30
+ },
+ {
+  "id": "doorcounty",
+  "name": "Door County, WI",
+  "tag": "Midwest's coastal escape",
+  "cost": 180,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road",
+   "beach"
+  ],
+  "driveOnly": true,
+  "ground": 145,
+  "stay": 45
+ },
+ {
+  "id": "mackinac",
+  "name": "Mackinac Island",
+  "tag": "No cars allowed, anywhere",
+  "cost": 155,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 115,
+  "stay": 30
+ },
+ {
+  "id": "stlouis",
+  "name": "St. Louis",
+  "tag": "Free museums + the Arch",
+  "cost": 260,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "STL",
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "omaha",
+  "name": "Omaha",
+  "tag": "Underrated zoo city",
+  "cost": 230,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "OMA",
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "boulder",
+  "name": "Boulder",
+  "tag": "Flatirons and trail town energy",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "culture"
+  ],
+  "fly": "DEN",
+  "ground": 170,
+  "stay": 60
+ },
+ {
+  "id": "santafe",
+  "name": "Santa Fe",
+  "tag": "Adobe, art, green chile",
+  "cost": 330,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "nature"
+  ],
+  "fly": "ABQ",
+  "ground": 160,
+  "stay": 50
+ },
+ {
+  "id": "whitesands",
+  "name": "White Sands NP",
+  "tag": "Sled down a gypsum desert",
+  "cost": 255,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "ELP",
+  "ground": 75,
+  "stay": 15
+ },
+ {
+  "id": "palodurо",
+  "name": "Palo Duro Canyon",
+  "tag": "Texas's Grand Canyon",
+  "cost": 95,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 65,
+  "stay": 10
+ },
+ {
+  "id": "marfa",
+  "name": "Marfa, TX",
+  "tag": "Art in the middle of nowhere",
+  "cost": 175,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "road",
+   "nature"
+  ],
+  "driveOnly": true,
+  "ground": 135,
+  "stay": 40
+ },
+ {
+  "id": "oklahomacity",
+  "name": "Oklahoma City",
+  "tag": "Boathouse district + BBQ",
+  "cost": 230,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "OKC",
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "vegasgrand",
+  "name": "Vegas + Zion + Grand Canyon",
+  "tag": "Three parks, one flight",
+  "cost": 515,
+  "days": 5,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "LAS",
+  "ground": 340,
+  "stay": 90
+ },
+ {
+  "id": "channelislands",
+  "name": "Channel Islands NP",
+  "tag": "California's Galápagos",
+  "cost": 205,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "beach"
+  ],
+  "driveOnly": true,
+  "ground": 100,
+  "stay": 10
+ },
+ {
+  "id": "mtrainier",
+  "name": "Mount Rainier",
+  "tag": "Wildflowers under a volcano",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "SEA",
+  "ground": 110,
+  "stay": 15
+ },
+ {
+  "id": "crater",
+  "name": "Crater Lake",
+  "tag": "Deepest, bluest lake in America",
+  "cost": 265,
+  "days": 3,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "PDX",
+  "ground": 110,
+  "stay": 15
+ },
+ {
+  "id": "redwoods",
+  "name": "Redwood National Park",
+  "tag": "Stand under the tallest trees alive",
+  "cost": 305,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "SFO",
+  "ground": 105,
+  "stay": 20
+ },
+ {
+  "id": "glacier",
+  "name": "Glacier National Park",
+  "tag": "Going-to-the-Sun Road",
+  "cost": 490,
+  "days": 5,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "FCA",
+  "ground": 190,
+  "stay": 30
+ },
+ {
+  "id": "asheboro",
+  "name": "Blue Ridge Parkway Run",
+  "tag": "469 miles of overlooks",
+  "cost": 185,
+  "days": 4,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 145,
+  "stay": 35
+ },
+ {
+  "id": "newport",
+  "name": "Newport, RI",
+  "tag": "Cliff walk past the mansions",
+  "cost": 155,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 115,
+  "stay": 35
+ },
+ {
+  "id": "capecod",
+  "name": "Cape Cod",
+  "tag": "Dunes, lobster rolls, bike trails",
+  "cost": 205,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 155,
+  "stay": 55
+ },
+ {
+  "id": "finger",
+  "name": "Finger Lakes",
+  "tag": "Gorges and cheap wine",
+  "cost": 170,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 130,
+  "stay": 35
+ },
+ {
+  "id": "pittsburgh2",
+  "name": "Pittsburgh",
+  "tag": "Bridges, inclines, cheap everything",
+  "cost": 200,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "PIT",
+  "ground": 80,
+  "stay": 20
+ },
+ {
+  "id": "isla",
+  "name": "Isla Mujeres",
+  "tag": "Golf cart island off Cancún",
+  "cost": 290,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "CUN",
+  "ground": 105,
+  "stay": 40
+ },
+ {
+  "id": "holbox",
+  "name": "Isla Holbox",
+  "tag": "No cars, whale sharks, hammocks",
+  "cost": 340,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl",
+   "nature"
+  ],
+  "fly": "CUN",
+  "ground": 155,
+  "stay": 65
+ },
+ {
+  "id": "sayulita",
+  "name": "Sayulita",
+  "tag": "Surf town with a paint job",
+  "cost": 555,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl",
+   "party"
+  ],
+  "fly": "PVR",
+  "ground": 135,
+  "stay": 55
+ },
+ {
+  "id": "bacalar",
+  "name": "Bacalar",
+  "tag": "Lagoon of seven colors",
+  "cost": 310,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl",
+   "nature"
+  ],
+  "fly": "CUN",
+  "ground": 125,
+  "stay": 45
+ },
+ {
+  "id": "guanajuato",
+  "name": "Guanajuato",
+  "tag": "A city painted every color",
+  "cost": 485,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "BJX",
+  "ground": 105,
+  "stay": 40
+ },
+ {
+  "id": "sanmiguel",
+  "name": "San Miguel de Allende",
+  "tag": "The prettiest town in Mexico",
+  "cost": 500,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "BJX",
+  "ground": 120,
+  "stay": 50
+ },
+ {
+  "id": "turks",
+  "name": "Turks & Caicos",
+  "tag": "Grace Bay, the actual best beach",
+  "cost": 730,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "PLS",
+  "ground": 330,
+  "stay": 150
+ },
+ {
+  "id": "vieques",
+  "name": "Vieques, PR",
+  "tag": "Bioluminescent bay, wild horses",
+  "cost": 260,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "SJU",
+  "ground": 200,
+  "stay": 80
+ },
+ {
+  "id": "stjohn",
+  "name": "St. John, USVI",
+  "tag": "Two-thirds national park",
+  "cost": 595,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "STT",
+  "ground": 290,
+  "stay": 120
+ },
+ {
+  "id": "grenada",
+  "name": "Grenada",
+  "tag": "Spice island, underwater sculptures",
+  "cost": 655,
+  "days": 5,
+  "vibes": [
+   "beach",
+   "intl",
+   "nature"
+  ],
+  "fly": "GND",
+  "ground": 290,
+  "stay": 110
+ },
+ {
+  "id": "salar",
+  "name": "Uyuni Salt Flats",
+  "tag": "The world's biggest mirror",
+  "cost": 670,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "LPB",
+  "ground": 220,
+  "stay": 35
+ },
+ {
+  "id": "lapaz",
+  "name": "La Paz, Bolivia",
+  "tag": "Cable cars over a canyon city",
+  "cost": 525,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "LPB",
+  "ground": 75,
+  "stay": 25
+ },
+ {
+  "id": "medellin2",
+  "name": "Salento + Coffee Region",
+  "tag": "Wax palms and cowboy towns",
+  "cost": 490,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "PEI",
+  "ground": 140,
+  "stay": 50
+ },
+ {
+  "id": "iguazu",
+  "name": "Iguazú Falls",
+  "tag": "275 waterfalls in one place",
+  "cost": 965,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "IGR",
+  "ground": 145,
+  "stay": 40
+ },
+ {
+  "id": "montevideo",
+  "name": "Montevideo + Punta",
+  "tag": "Uruguay's easy coast",
+  "cost": 650,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "MVD",
+  "ground": 190,
+  "stay": 70
+ },
+ {
+  "id": "budva",
+  "name": "Montenegro Coast",
+  "tag": "The Adriatic without the price",
+  "cost": 720,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "TIV",
+  "ground": 205,
+  "stay": 65
+ },
+ {
+  "id": "tallinn",
+  "name": "Tallinn, Estonia",
+  "tag": "Medieval old town, modern prices",
+  "cost": 820,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "TLL",
+  "ground": 215,
+  "stay": 80
+ },
+ {
+  "id": "riga",
+  "name": "Riga, Latvia",
+  "tag": "Art nouveau + €2 beers",
+  "cost": 710,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "party"
+  ],
+  "fly": "RIX",
+  "ground": 175,
+  "stay": 60
+ },
+ {
+  "id": "sofia",
+  "name": "Sofia, Bulgaria",
+  "tag": "Cheapest capital in Europe",
+  "cost": 530,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "SOF",
+  "ground": 135,
+  "stay": 40
+ },
+ {
+  "id": "bucharest",
+  "name": "Bucharest + Transylvania",
+  "tag": "Castles and communist palaces",
+  "cost": 775,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "OTP",
+  "ground": 195,
+  "stay": 60
+ },
+ {
+  "id": "warsaw",
+  "name": "Warsaw",
+  "tag": "Rebuilt from nothing",
+  "cost": 720,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "WAW",
+  "ground": 160,
+  "stay": 50
+ },
+ {
+  "id": "granada",
+  "name": "Granada, Spain",
+  "tag": "Alhambra + free tapas",
+  "cost": 975,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "AGP",
+  "ground": 205,
+  "stay": 65
+ },
+ {
+  "id": "canary",
+  "name": "Tenerife, Canary Islands",
+  "tag": "Volcano above the clouds",
+  "cost": 870,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "TFS",
+  "ground": 290,
+  "stay": 100
+ },
+ {
+  "id": "azores",
+  "name": "Azores, Portugal",
+  "tag": "Green craters mid-Atlantic",
+  "cost": 820,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "PDL",
+  "ground": 220,
+  "stay": 70
+ },
+ {
+  "id": "bruges",
+  "name": "Bruges + Brussels",
+  "tag": "Canals, waffles, 1,000 beers",
+  "cost": 770,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "BRU",
+  "ground": 250,
+  "stay": 95
+ },
+ {
+  "id": "hamburg",
+  "name": "Hamburg",
+  "tag": "Harbor city, huge nightlife",
+  "cost": 790,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "HAM",
+  "ground": 230,
+  "stay": 85
+ },
+ {
+  "id": "nuremberg",
+  "name": "Nuremberg",
+  "tag": "Bavaria without Munich prices",
+  "cost": 770,
+  "days": 3,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "NUE",
+  "ground": 150,
+  "stay": 50
+ },
+ {
+  "id": "innsbruck",
+  "name": "Innsbruck",
+  "tag": "Alps at the end of the street",
+  "cost": 945,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "INN",
+  "ground": 275,
+  "stay": 95
+ },
+ {
+  "id": "faroe",
+  "name": "Faroe Islands",
+  "tag": "Cliffs, sheep, zero crowds",
+  "cost": 1280,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "FAE",
+  "ground": 380,
+  "stay": 180
+ },
+ {
+  "id": "kyivwarsaw",
+  "name": "Vilnius, Lithuania",
+  "tag": "Baroque old town, tiny prices",
+  "cost": 655,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "VNO",
+  "ground": 165,
+  "stay": 55
+ },
+ {
+  "id": "kyoto2",
+  "name": "Kanazawa + Japanese Alps",
+  "tag": "Japan beyond the big cities",
+  "cost": 1335,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "KIX",
+  "ground": 355,
+  "stay": 125
+ },
+ {
+  "id": "okinawa",
+  "name": "Okinawa",
+  "tag": "Japan's tropical islands",
+  "cost": 1010,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "OKA",
+  "ground": 290,
+  "stay": 90
+ },
+ {
+  "id": "busan",
+  "name": "Busan, South Korea",
+  "tag": "Beach city with mountain temples",
+  "cost": 1380,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "PUS",
+  "ground": 230,
+  "stay": 70
+ },
+ {
+  "id": "kotakinabalu",
+  "name": "Borneo (Sabah)",
+  "tag": "Orangutans and jungle rivers",
+  "cost": 1310,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "BKI",
+  "ground": 210,
+  "stay": 50
+ },
+ {
+  "id": "nepal",
+  "name": "Kathmandu + Himalaya Trek",
+  "tag": "Mountains that don't fit in frame",
+  "cost": 1360,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "KTM",
+  "ground": 160,
+  "stay": 40
+ },
+ {
+  "id": "maldives",
+  "name": "Maldives (local islands)",
+  "tag": "Yes, on a budget",
+  "cost": 1040,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach"
+  ],
+  "fly": "MLE",
+  "ground": 300,
+  "stay": 100
+ },
+ {
+  "id": "laos",
+  "name": "Luang Prabang, Laos",
+  "tag": "Slowest, calmest trip on the list",
+  "cost": 1280,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "LPQ",
+  "ground": 130,
+  "stay": 30
+ },
+ {
+  "id": "georgia",
+  "name": "Tbilisi, Georgia",
+  "tag": "Wine, mountains, absurd value",
+  "cost": 695,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "TBS",
+  "ground": 140,
+  "stay": 40
+ },
+ {
+  "id": "fes",
+  "name": "Fes, Morocco",
+  "tag": "The world's largest car-free city",
+  "cost": 750,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "FEZ",
+  "ground": 110,
+  "stay": 30
+ },
+ {
+  "id": "essaouira",
+  "name": "Essaouira, Morocco",
+  "tag": "Windy Atlantic medina",
+  "cost": 660,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "RAK",
+  "ground": 120,
+  "stay": 35
+ },
+ {
+  "id": "tunisia",
+  "name": "Tunis + Sahara",
+  "tag": "Roman ruins to desert dunes",
+  "cost": 870,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "TUN",
+  "ground": 160,
+  "stay": 50
+ },
+ {
+  "id": "jordan2",
+  "name": "Dead Sea + Amman",
+  "tag": "Float at the lowest point on Earth",
+  "cost": 1085,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "AMM",
+  "ground": 185,
+  "stay": 45
+ },
+ {
+  "id": "oman",
+  "name": "Oman",
+  "tag": "Wadis, forts, empty desert",
+  "cost": 1140,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "MCT",
+  "ground": 240,
+  "stay": 90
+ },
+ {
+  "id": "victoria",
+  "name": "Victoria Falls",
+  "tag": "The smoke that thunders",
+  "cost": 1545,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "VFA",
+  "ground": 245,
+  "stay": 70
+ },
+ {
+  "id": "madagascar",
+  "name": "Madagascar",
+  "tag": "Lemurs and baobab avenues",
+  "cost": 1610,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "TNR",
+  "ground": 210,
+  "stay": 60
+ },
+ {
+  "id": "melbourne",
+  "name": "Melbourne",
+  "tag": "Coffee, laneways, road trip start",
+  "cost": 1135,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture",
+   "beach"
+  ],
+  "fly": "MEL",
+  "ground": 405,
+  "stay": 165
+ },
+ {
+  "id": "gold",
+  "name": "Gold Coast + Byron Bay",
+  "tag": "Surf coast run",
+  "cost": 1650,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "OOL",
+  "ground": 400,
+  "stay": 150
+ },
+ {
+  "id": "fiji",
+  "name": "Fiji",
+  "tag": "Island hopping on a backpacker boat",
+  "cost": 1540,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "NAN",
+  "ground": 290,
+  "stay": 100
+ },
+ {
+  "id": "nzsouth",
+  "name": "New Zealand South Island Loop",
+  "tag": "The full road trip",
+  "cost": 1660,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "CHC",
+  "ground": 410,
+  "stay": 140
+ },
+ {
+  "id": "pensacola",
+  "name": "Pensacola Beach",
+  "tag": "Whitest sand in America",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 85,
+  "stay": 25
+ },
+ {
+  "id": "crystalriver",
+  "name": "Crystal River",
+  "tag": "Swim with manatees",
+  "cost": 125,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 95,
+  "stay": 20
+ },
+ {
+  "id": "dryTortugas",
+  "name": "Dry Tortugas NP",
+  "tag": "A fort 70 miles out to sea",
+  "cost": 375,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "beach"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 10
+ },
+ {
+  "id": "congaree",
+  "name": "Congaree NP",
+  "tag": "Fireflies that blink in sync",
+  "cost": 80,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 55,
+  "stay": 5
+ },
+ {
+  "id": "gatlinburg2",
+  "name": "Ober + Pigeon Forge",
+  "tag": "Smokies with a theme park",
+  "cost": 180,
+  "days": 3,
+  "vibes": [
+   "road",
+   "nature"
+  ],
+  "driveOnly": true,
+  "ground": 145,
+  "stay": 40
+ },
+ {
+  "id": "redriver",
+  "name": "Red River Gorge, KY",
+  "tag": "Climbing capital of the East",
+  "cost": 130,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 100,
+  "stay": 20
+ },
+ {
+  "id": "talledega",
+  "name": "Cheaha + Little River Canyon",
+  "tag": "Alabama's mountain corner",
+  "cost": 90,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 65,
+  "stay": 10
+ },
+ {
+  "id": "buffalo",
+  "name": "Buffalo River, Arkansas",
+  "tag": "First national river in the US",
+  "cost": 135,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 15
+ },
+ {
+  "id": "deathvalley",
+  "name": "Death Valley",
+  "tag": "Lowest, hottest, emptiest",
+  "cost": 285,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "LAS",
+  "ground": 110,
+  "stay": 15
+ },
+ {
+  "id": "pinnacles",
+  "name": "Pinnacles NP",
+  "tag": "Condors and talus caves",
+  "cost": 100,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 70,
+  "stay": 10
+ },
+ {
+  "id": "bigsky",
+  "name": "Bozeman + Big Sky",
+  "tag": "Montana without the crowds",
+  "cost": 530,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "BZN",
+  "ground": 210,
+  "stay": 70
+ },
+ {
+  "id": "sanjuanislands",
+  "name": "San Juan Islands, WA",
+  "tag": "Orcas from the shore",
+  "cost": 350,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "beach"
+  ],
+  "fly": "SEA",
+  "ground": 160,
+  "stay": 40
+ },
+ {
+  "id": "hotspringsAR2",
+  "name": "Ouachita + Hot Springs Loop",
+  "tag": "Lakes, quartz, and thermal baths",
+  "cost": 115,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 85,
+  "stay": 10
+ },
+ {
+  "id": "nantucket",
+  "name": "Nantucket",
+  "tag": "Cobblestones and gray shingles",
+  "cost": 280,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "culture"
+  ],
+  "driveOnly": true,
+  "ground": 215,
+  "stay": 90
+ },
+ {
+  "id": "catskills",
+  "name": "The Catskills",
+  "tag": "Swimming holes 2 hours from NYC",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 15
+ },
+ {
+  "id": "delaware",
+  "name": "Rehoboth + Assateague",
+  "tag": "Wild horses on the beach",
+  "cost": 140,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 105,
+  "stay": 20
+ },
+ {
+  "id": "harpersferry",
+  "name": "Harpers Ferry + Shenandoah River",
+  "tag": "History plus whitewater",
+  "cost": 105,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "culture",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 15
+ },
+ {
+  "id": "antigua",
+  "name": "Antigua, Caribbean",
+  "tag": "365 beaches, one per day",
+  "cost": 565,
+  "days": 4,
+  "vibes": [
+   "beach",
+   "intl"
+  ],
+  "fly": "ANU",
+  "ground": 245,
+  "stay": 95
+ },
+ {
+  "id": "dominica",
+  "name": "Dominica",
+  "tag": "The nature island",
+  "cost": 670,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "DOM",
+  "ground": 255,
+  "stay": 90
+ },
+ {
+  "id": "nicaragua",
+  "name": "Nicaragua: Granada + Ometepe",
+  "tag": "Volcano island on a lake",
+  "cost": 565,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "MGA",
+  "ground": 145,
+  "stay": 50
+ },
+ {
+  "id": "peruNorth",
+  "name": "Huaraz, Peru",
+  "tag": "Turquoise lakes at 15,000 ft",
+  "cost": 470,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "LIM",
+  "ground": 175,
+  "stay": 50
+ },
+ {
+  "id": "galapagos",
+  "name": "Galápagos (land-based)",
+  "tag": "Wildlife with zero fear of you",
+  "cost": 1320,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "GPS",
+  "ground": 620,
+  "stay": 100
+ },
+ {
+  "id": "kotor2",
+  "name": "Ohrid, North Macedonia",
+  "tag": "Ancient lake town nobody knows",
+  "cost": 865,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "culture",
+   "beach"
+  ],
+  "fly": "SKP",
+  "ground": 115,
+  "stay": 35
+ },
+ {
+  "id": "belgrade",
+  "name": "Belgrade, Serbia",
+  "tag": "River party boats till sunrise",
+  "cost": 790,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "party",
+   "culture"
+  ],
+  "fly": "BEG",
+  "ground": 140,
+  "stay": 40
+ },
+ {
+  "id": "naples2",
+  "name": "Puglia, Italy",
+  "tag": "Trulli houses and empty coast",
+  "cost": 885,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "culture"
+  ],
+  "fly": "BRI",
+  "ground": 265,
+  "stay": 90
+ },
+ {
+  "id": "sardinia",
+  "name": "Sardinia",
+  "tag": "Caribbean water, Italian food",
+  "cost": 995,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach"
+  ],
+  "fly": "CAG",
+  "ground": 245,
+  "stay": 90
+ },
+ {
+  "id": "corfu",
+  "name": "Corfu, Greece",
+  "tag": "Ionian island, Venetian town",
+  "cost": 925,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "CFU",
+  "ground": 255,
+  "stay": 90
+ },
+ {
+  "id": "cappadocia",
+  "name": "Cappadocia, Turkey",
+  "tag": "Balloons over fairy chimneys",
+  "cost": 890,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "ASR",
+  "ground": 170,
+  "stay": 45
+ },
+ {
+  "id": "pamukkale",
+  "name": "Pamukkale + Ephesus",
+  "tag": "White terraces and Roman ruins",
+  "cost": 850,
+  "days": 4,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "ADB",
+  "ground": 150,
+  "stay": 40
+ },
+ {
+  "id": "jeju",
+  "name": "Jeju Island, South Korea",
+  "tag": "Volcanic island, coastal trails",
+  "cost": 1340,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "beach"
+  ],
+  "fly": "CJU",
+  "ground": 240,
+  "stay": 70
+ },
+ {
+  "id": "phuquoc",
+  "name": "Phu Quoc, Vietnam",
+  "tag": "Island beaches, mainland prices",
+  "cost": 1200,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach"
+  ],
+  "fly": "PQC",
+  "ground": 150,
+  "stay": 35
+ },
+ {
+  "id": "boracay",
+  "name": "Boracay, Philippines",
+  "tag": "White Beach and sunset sails",
+  "cost": 1385,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "MPH",
+  "ground": 185,
+  "stay": 50
+ },
+ {
+  "id": "koh",
+  "name": "Koh Phi Phi + Railay",
+  "tag": "Limestone cliffs over green water",
+  "cost": 1240,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "party"
+  ],
+  "fly": "KBV",
+  "ground": 220,
+  "stay": 50
+ },
+ {
+  "id": "sapa",
+  "name": "Sapa, Vietnam",
+  "tag": "Rice terraces to the horizon",
+  "cost": 1080,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "HAN",
+  "ground": 130,
+  "stay": 30
+ },
+ {
+  "id": "kandy",
+  "name": "Kandy + Sigiriya, Sri Lanka",
+  "tag": "Rock fortress and hill temples",
+  "cost": 840,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "culture",
+   "nature"
+  ],
+  "fly": "CMB",
+  "ground": 140,
+  "stay": 35
+ },
+ {
+  "id": "udaipur",
+  "name": "Rajasthan: Udaipur + Jodhpur",
+  "tag": "Lake palaces and a blue city",
+  "cost": 1090,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "culture"
+  ],
+  "fly": "UDR",
+  "ground": 140,
+  "stay": 35
+ },
+ {
+  "id": "seychelles",
+  "name": "Seychelles",
+  "tag": "Granite boulders and pink sand",
+  "cost": 1605,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "SEZ",
+  "ground": 405,
+  "stay": 175
+ },
+ {
+  "id": "rwanda",
+  "name": "Rwanda: Kigali + Lake Kivu",
+  "tag": "Cleanest city in Africa",
+  "cost": 1350,
+  "days": 5,
+  "vibes": [
+   "intl",
+   "nature",
+   "culture"
+  ],
+  "fly": "KGL",
+  "ground": 200,
+  "stay": 60
+ },
+ {
+  "id": "namibia",
+  "name": "Namibia: Sossusvlei",
+  "tag": "The tallest dunes on Earth",
+  "cost": 1630,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "WDH",
+  "ground": 280,
+  "stay": 90
+ },
+ {
+  "id": "tasmania",
+  "name": "Tasmania",
+  "tag": "Wilderness at the end of the world",
+  "cost": 1760,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "nature"
+  ],
+  "fly": "HBA",
+  "ground": 360,
+  "stay": 140
+ },
+ {
+  "id": "perth",
+  "name": "Perth + Rottnest",
+  "tag": "Quokkas and the Indian Ocean",
+  "cost": 1740,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach",
+   "nature"
+  ],
+  "fly": "PER",
+  "ground": 390,
+  "stay": 150
+ },
+ {
+  "id": "cookislands",
+  "name": "Cook Islands",
+  "tag": "Lagoon, scooters, no crowds",
+  "cost": 1660,
+  "days": 6,
+  "vibes": [
+   "intl",
+   "beach"
+  ],
+  "fly": "RAR",
+  "ground": 360,
+  "stay": 140
+ }
+]
