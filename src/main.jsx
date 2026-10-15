@@ -1,10 +1,28 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import Landing from "./Landing.jsx";
 import "./index.css";
 import "./analytics.js";
 
 /* Until December the site is the signup page and nothing else.
-   To open the full app: import Sendoff from "./App.jsx" and render that
-   instead. App.jsx and every component it uses are still here, untouched. */
-ReactDOM.createRoot(document.getElementById("root")).render(<Landing />);
+
+   /preview is the one exception: it renders the full app so Marc can see the
+   trips, prices and booking flow on the live domain without putting them in
+   front of visitors. The app is lazy-loaded so the landing page's bundle
+   doesn't carry all 281 trips. The route is unlisted and told not to index;
+   switching the whole site over in December is still just rendering
+   <Sendoff /> here instead of <Landing />. */
+const Sendoff = lazy(() => import("./App.jsx"));
+const PREVIEW = window.location.pathname.replace(/\/+$/, "") === "/preview";
+
+if (PREVIEW) {
+  const m = document.createElement("meta");
+  m.name = "robots"; m.content = "noindex, nofollow";
+  document.head.appendChild(m);
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  PREVIEW
+    ? <Suspense fallback={null}><Sendoff /></Suspense>
+    : <Landing />
+);

@@ -13,13 +13,16 @@ take money.
   "20% of trips / 30% restricted / 10 a year".
 - Locked trips carry the upsell: "only $4.99 to see every trip in your budget"
 
-### Sendoff+ — $4.99/mo or $44.99/yr
+### Sendoff+ — $4.99/mo or $40/yr
+
+> **Decided 2026-10-15:** $4.99 a month or $40 up front for the year. Student
+> discount is **5%** with a student email (was 20% in the first draft).
 For the impulsive. The pitch is speed: we forward deals the day they land.
 - Unlimited trips
 - Live fares and deal drops, pushed same-day (e.g. "AA $29.99 NYC→Dallas this week")
 - Live price calendar — real prices, peak dates
 - Discounted eSIMs for international trips
-- **Student discount**: 20% off monthly or yearly with a student email
+- **Student discount**: 5% off monthly or yearly with a student email
 - **Referrals**: 1 friend = 1 month free, 2 friends = 2 months, and so on.
   8 friends = 1 gift box. 16 friends = 2 gift boxes.
 
