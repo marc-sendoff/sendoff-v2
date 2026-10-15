@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { m } from "motion/react";
 import { T, R, SH, SPRING } from "../theme.js";
 import { TRIPS } from "../data/trips.js";
-import { STRIPE, PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown } from "../data/config.js";
+import { PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown } from "../data/config.js";
+import { senderSince } from "../lib/account.js";
 import LiveFare from "./LiveFare.jsx";
 import { AIRPORTS } from "../data/trips.js";
 import StayBlock from "./StayBlock.jsx";
@@ -93,26 +94,112 @@ function SendPoints() {
 
 /* ---------- Sendoff+ membership ---------- */
 
-export function PlusModal({ origin, onJoin, onClose }) {
-  const [plan, setPlan] = useState("mo");
+const isStudentEmail = (e) => /\.edu(\.[a-z]{2,})?$|\.ac\.[a-z]{2,}$/i.test(String(e || "").trim());
+const INPUT = {
+  width: "100%", fontFamily: "'Instrument Sans', sans-serif", fontWeight: 600, fontSize: 16,
+  padding: "13px 14px", border: `2px solid ${T.ink}`, borderRadius: 12, background: T.white, color: T.ink,
+};
+const BIG_BTN = (on) => ({
+  width: "100%", background: on ? T.cobalt : "#B9C0D9", color: T.white, border: `2px solid ${T.ink}`,
+  borderRadius: 14, boxShadow: on ? `4px 4px 0 ${T.ink}` : "none", padding: "14px",
+  fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, cursor: on ? "pointer" : "not-allowed",
+});
+
+/* Sign in: email in, link out. No passwords anywhere. */
+function SignInBlock({ acct, title = "Sign in to continue", sub }) {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [state, setState] = useState("idle"); // idle | sending | sent | failed
+  const [err, setErr] = useState("");
+  const ok = email.includes("@");
+  const send = async () => {
+    if (!ok || state === "sending") return;
+    setState("sending"); setErr("");
+    try { await acct.signIn(email, name); setState("sent"); }
+    catch (e) { setErr(e.message || "Couldn't send the link."); setState("failed"); }
+  };
+  if (state === "sent") {
+    return (
+      <div style={{ marginTop: 16, background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 14, padding: "16px 18px", textAlign: "center" }}>
+        <div style={{ fontSize: 26 }}>📬</div>
+        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, marginTop: 4 }}>Check your email</div>
+        <div style={{ fontSize: 13, fontWeight: 600, opacity: 0.75, marginTop: 4 }}>
+          We sent a sign-in link to <strong>{email.trim()}</strong>. Tap it and you're in. Check spam if it's slow.
+        </div>
+      </div>
+    );
+  }
+  return (
+    <>
+      <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, marginTop: 16 }}>{title}</div>
+      {sub && <div style={{ fontSize: 13, fontWeight: 600, opacity: 0.7, marginTop: 3, lineHeight: 1.45 }}>{sub}</div>}
+      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="your name" style={{ ...INPUT, marginTop: 12 }} />
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} onKeyDown={(e) => e.key === "Enter" && send()}
+        placeholder="your email" style={{ ...INPUT, marginTop: 8 }} />
+      <button onClick={send} disabled={!ok || state === "sending"} style={{ ...BIG_BTN(ok), marginTop: 10 }}>
+        {state === "sending" ? "Sending…" : "Email me a sign-in link →"}
+      </button>
+      <div style={{ fontSize: 11, fontWeight: 600, opacity: 0.55, marginTop: 8, textAlign: "center" }}>
+        {err || "No password. The link signs you in on this device."}
+      </div>
+    </>
+  );
+}
+
+export function SignInModal({ acct, onClose }) {
+  return (
+    <ModalShell onClose={onClose} maxWidth={380}>
+      <div style={{ padding: "24px 22px 26px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24, lineHeight: 1.2 }}>
+            Make it yours
+          </div>
+          <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
+            style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink }}>×</m.button>
+        </div>
+        <p style={{ fontSize: 14, fontWeight: 600, opacity: 0.72, marginTop: 8, lineHeight: 1.5, marginBottom: 0 }}>
+          Free. Saves your city, your crew and the sends you've done, on every device.
+        </p>
+        <SignInBlock acct={acct} title="" />
+      </div>
+    </ModalShell>
+  );
+}
+
+export function PlusModal({ origin, acct, onClose, onUnlocked }) {
+  const [plan, setPlan] = useState("yr");
   const [code, setCode] = useState("");
-  const [codeName, setCodeName] = useState("");
   const [codeErr, setCodeErr] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState("");
+  const user = acct?.user;
+  const student = isStudentEmail(user?.email);
+
+  const checkout = async () => {
+    if (busy) return;
+    setBusy(true); setErr("");
+    try {
+      const r = await fetch("/api/checkout", {
+        method: "POST", headers: { "Content-Type": "application/json", ...acct.authHeaders() },
+        body: JSON.stringify({ plan: plan === "yr" ? "year" : "month" }),
+      });
+      const j = await r.json().catch(() => ({}));
+      if (r.ok && j.url) { window.location.assign(j.url); return; }
+      setErr(r.status === 503 ? "Checkout isn't switched on yet. Use an access code, or check back soon." : (j.error || "Couldn't start checkout."));
+    } catch { setErr("Couldn't reach checkout. Try again in a moment."); }
+    setBusy(false);
+  };
   const tryCode = async () => {
-    /* the code lives server-side only (gate service /api/plus-code) — the
-       bundle carries no secret and wrong guesses are throttled per IP */
+    /* the code lives server-side only (/api/plus-code): the bundle carries no
+       secret and wrong guesses are throttled per IP */
     try {
       const r = await fetch("/api/plus-code", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: "POST", headers: { "Content-Type": "application/json", ...acct.authHeaders() },
         body: JSON.stringify({ code: code.trim() }),
       });
       const j = await r.json().catch(() => ({}));
-      if (r.ok && j.ok) { setCodeErr(""); onJoin(codeName.trim()); }
-      /* a throttled visitor typing the RIGHT code must not be told it's wrong */
+      if (r.ok && j.ok) { setCodeErr(""); await acct.refresh(); onUnlocked(); }
       else if (r.status === 429) setCodeErr("Too many tries — wait a few minutes, then try again.");
-      /* 503 = no code configured server-side — not the visitor's fault */
       else if (r.status === 503) setCodeErr("Codes aren't working right now — try again later.");
       else setCodeErr("That code isn't right — check it and try again.");
     } catch {
@@ -120,19 +207,7 @@ export function PlusModal({ origin, onJoin, onClose }) {
     }
   };
   const codeBad = codeErr !== "";
-  const [state, setState] = useState("idle"); // idle | sending | done | failed
-  const live = STRIPE.monthly || STRIPE.yearly;
-  const isCollege = /\.edu(\.[a-z]{2,})?$|\.ac\.[a-z]{2,}$/i.test(email.trim());
-  const notify = async () => {
-    if (!email.includes("@")) return;
-    setState("sending");
-    const ok = await sendRequest("Sendoff+ Waitlist", {
-      name: codeName.trim() || "(not given)",
-      email, city: origin, interested_plan: plan === "yr" ? "Yearly $34.99" : "Monthly $3.99",
-      college_email: isCollege ? "YES — first month free" : "no",
-    });
-    setState(ok ? "done" : "failed");
-  };
+
   return (
     <ModalShell onClose={onClose} maxWidth={420} zIndex={120}>
         <div style={{ background: T.ink, color: T.paper, padding: "22px 22px 18px", borderRadius: "20px 20px 0 0", position: "relative" }}>
@@ -141,15 +216,9 @@ export function PlusModal({ origin, onJoin, onClose }) {
               border: `2px solid ${T.paper}`, background: "transparent", color: T.paper, fontWeight: 800, cursor: "pointer" }}>✕</m.button>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 28 }}>
             SENDOFF<span style={{ color: T.sun }}>+</span>
-            {!(STRIPE.monthly || STRIPE.yearly) && (
-              <span style={{ fontSize: 11, fontWeight: 800, background: T.sun, color: T.ink,
-                borderRadius: 999, padding: "4px 10px", marginLeft: 10, verticalAlign: "middle", letterSpacing: 1 }}>
-                COMING SOON
-              </span>
-            )}
           </div>
           <div style={{ fontSize: 14, fontWeight: 600, opacity: 0.85, marginTop: 4 }}>
-            The deals find you. Priced for broke legends.
+            Every trip, every deal, the day it lands.
           </div>
         </div>
         <div style={{ padding: "18px 22px 24px" }}>
@@ -165,7 +234,7 @@ export function PlusModal({ origin, onJoin, onClose }) {
             </div>
           ))}
           <div style={{ display: "flex", gap: 10, marginTop: 14 }}>
-            {[["mo", "$3.99", "/month"], ["yr", "$34.99", "/year · save 27%"]].map(([id, price, per]) => (
+            {[["mo", "$4.99", "/month"], ["yr", "$40", "/year · save 33%"]].map(([id, price, per]) => (
               <m.button key={id} onClick={() => setPlan(id)} whileTap={{ scale: 0.97 }} transition={SPRING}
                 style={{ flex: 1, background: plan === id ? T.sun : T.white, border: `2px solid ${T.ink}`,
                   borderRadius: 14, boxShadow: plan === id ? SH.card : "none", padding: "12px 8px",
@@ -175,60 +244,22 @@ export function PlusModal({ origin, onJoin, onClose }) {
               </m.button>
             ))}
           </div>
-          {live ? (
-            <>
-              <button onClick={() => window.open(plan === "yr" ? STRIPE.yearly : STRIPE.monthly, "_blank", "noopener")}
-                style={{ width: "100%", marginTop: 14, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
-                  borderRadius: 14, boxShadow: `4px 4px 0 ${T.ink}`, padding: "14px",
-                  fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, cursor: "pointer" }}>
-                Start my free week →
-              </button>
-              <div style={{ fontSize: 11, fontWeight: 600, opacity: 0.5, marginTop: 8, textAlign: "center" }}>
-                Secure checkout by Stripe · cancel anytime
-              </div>
-            </>
-          ) : state === "done" ? (
-            <div style={{ marginTop: 16, background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 14,
-              padding: "16px 18px", textAlign: "center" }}>
-              <div style={{ fontSize: 26 }}>🛫</div>
-              <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, marginTop: 4 }}>
-                You're on the list!
-              </div>
-              <div style={{ fontSize: 13, fontWeight: 600, opacity: 0.75, marginTop: 4 }}>
-                {isCollege
-                  ? "We'll email you the moment Sendoff+ drops — with your free first month attached. 🎓"
-                  : "We'll email you the moment Sendoff+ drops — with founder pricing locked in."}
-              </div>
-            </div>
+
+          {!user ? (
+            <SignInBlock acct={acct} title="Sign in to get Sendoff+" sub="Plus lives on your account, so it works on your phone and your laptop." />
           ) : (
             <>
-              <input value={codeName} onChange={(e) => setCodeName(e.target.value)}
-                placeholder="your name"
-                style={{ width: "100%", marginTop: 16, fontFamily: "'Instrument Sans', sans-serif", fontWeight: 600,
-                  fontSize: 16, padding: "13px 14px", border: `2px solid ${T.ink}`, borderRadius: 12, background: T.white, color: T.ink }} />
-              <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && notify()}
-                placeholder="your email"
-                style={{ width: "100%", marginTop: 8, fontFamily: "'Instrument Sans', sans-serif", fontWeight: 600,
-                  fontSize: 16, padding: "13px 14px", border: `2px solid ${T.ink}`, borderRadius: 12, background: T.white, color: T.ink }} />
-              <button onClick={notify} disabled={state === "sending" || !email.includes("@")}
-                style={{ width: "100%", marginTop: 10, background: email.includes("@") ? T.cobalt : "#B9C0D9",
-                  color: T.white, border: `2px solid ${T.ink}`, borderRadius: 14,
-                  boxShadow: email.includes("@") ? `4px 4px 0 ${T.ink}` : "none", padding: "14px",
-                  fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
-                  cursor: email.includes("@") ? "pointer" : "not-allowed" }}>
-                {state === "sending" ? "Sending…" : "Notify me when it drops →"}
+              <button onClick={checkout} disabled={busy} style={{ ...BIG_BTN(!busy), marginTop: 14 }}>
+                {busy ? "Opening checkout…" : `Get Sendoff+ · ${plan === "yr" ? "$40/year" : "$4.99/month"} →`}
               </button>
-              {isCollege && (
+              {student && (
                 <div style={{ marginTop: 8, background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 10,
                   padding: "8px 12px", fontSize: 12.5, fontWeight: 800 }}>
-                  🎓 College email spotted — your first month is on us.
+                  🎓 Student email spotted — 5% off, applied at checkout.
                 </div>
               )}
               <div style={{ fontSize: 11, fontWeight: 600, opacity: 0.55, marginTop: 8, textAlign: "center" }}>
-                {state === "failed"
-                  ? "Couldn't send — try again in a moment."
-                  : "🎓 Sign up with a college email = first month free."}
+                {err || "Secure checkout by Stripe · cancel anytime"}
               </div>
 
               {/* access code unlock */}
@@ -239,14 +270,8 @@ export function PlusModal({ origin, onJoin, onClose }) {
               </div>
               <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.cobalt,
                 textTransform: "uppercase", marginBottom: 8 }}>
-                Unlock Sendoff+ with an access code
+                Got an access code?
               </div>
-              <input value={codeName} onChange={(e) => setCodeName(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && tryCode()}
-                placeholder="Your name"
-                style={{ width: "100%", marginBottom: 8, fontFamily: "'Instrument Sans', sans-serif", fontWeight: 600,
-                  fontSize: 16, padding: "12px 14px", border: `2px solid ${T.ink}`, borderRadius: 12,
-                  background: T.white, color: T.ink }} />
               <div style={{ display: "flex", gap: 8 }}>
                 <input value={code} onChange={(e) => { setCode(e.target.value); setCodeErr(""); }}
                   onKeyDown={(e) => e.key === "Enter" && tryCode()}
@@ -262,9 +287,7 @@ export function PlusModal({ origin, onJoin, onClose }) {
                 </button>
               </div>
               {codeBad && (
-                <div style={{ fontSize: 12, fontWeight: 700, color: T.poppy, marginTop: 7 }}>
-                  {codeErr}
-                </div>
+                <div style={{ fontSize: 12, fontWeight: 700, color: T.poppy, marginTop: 7 }}>{codeErr}</div>
               )}
             </>
           )}
@@ -456,143 +479,110 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
 }
 
 /* ---------- free account: just a name + email ---------- */
-export function AccountModal({ origin, onSave, onClose }) {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [state, setState] = useState("idle");
-  const ready = name.trim() && email.includes("@");
-  const submit = async () => {
-    if (!ready) return;
-    setState("sending");
-    await sendRequest("New Sendoff signup", { name: name.trim(), email: email.trim(), city: origin });
-    onSave({ name: name.trim(), email: email.trim(), joined: new Date().toISOString().slice(0, 10) });
+/* ---------- the profile card ---------- */
+export function ProfileModal({ acct, opened, origin, onClose, onGetPlus }) {
+  const { user, profile, membership, isMember, done, saved, spent } = acct;
+  const [name, setName] = useState(profile?.name || "");
+  useEffect(() => { setName(profile?.name || ""); }, [profile?.name]);
+  const since = senderSince(profile, user);
+  const initial = (name.trim()[0] || user?.email?.[0] || "✦").toUpperCase();
+  const founder = membership?.plan === "founder";
+  const badge = founder ? `✦ Founder${membership.founder_number ? ` #${membership.founder_number}` : ""}` : isMember ? "✦ Sendoff+" : "Member";
+  const saveName = () => { if ((profile?.name || "") !== name.trim()) acct.saveProfile({ name: name.trim() }); };
+  const nice = (iso) => iso ? new Date(iso).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" }) : "";
+  const [portalBusy, setPortalBusy] = useState(false);
+  const portal = async () => {
+    setPortalBusy(true);
+    try {
+      const r = await fetch("/api/portal", { method: "POST", headers: acct.authHeaders() });
+      const j = await r.json().catch(() => ({}));
+      if (j.url) { window.location.assign(j.url); return; }
+    } catch { /* fall through */ }
+    setPortalBusy(false);
   };
-  const input = {
-    width: "100%", fontFamily: "'Instrument Sans', sans-serif", fontWeight: 600, fontSize: 16,
-    padding: "13px 14px", border: `2px solid ${T.ink}`, borderRadius: 12, background: T.white, color: T.ink,
-  };
-  return (
-    <ModalShell onClose={onClose} maxWidth={380}>
-      <div style={{ padding: "24px 22px 26px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24, lineHeight: 1.2 }}>
-            Make it yours
-          </div>
-          <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
-            style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink }}>×</m.button>
-        </div>
-        <p style={{ fontSize: 14, fontWeight: 600, opacity: 0.72, marginTop: 8, lineHeight: 1.5 }}>
-          Free. Saves your city and crew, and we'll send you the good trips when they drop.
-        </p>
-        <input value={name} onChange={(e) => setName(e.target.value)} placeholder="your name"
-          style={{ ...input, marginTop: 16 }} />
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && submit()} placeholder="your email"
-          style={{ ...input, marginTop: 8 }} />
-        <m.button onClick={submit} disabled={!ready || state === "sending"}
-          whileTap={ready ? { scale: 0.98 } : undefined} transition={SPRING}
-          style={{ width: "100%", marginTop: 12, background: ready ? T.cobalt : "#B9C0D9", color: T.white,
-            border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: ready ? SH.card : "none",
-            padding: "14px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
-            cursor: ready ? "pointer" : "not-allowed" }}>
-          {state === "sending" ? "Creating…" : "Create my profile →"}
-        </m.button>
-        <div style={{ fontSize: 11, fontWeight: 600, opacity: 0.5, marginTop: 10, textAlign: "center" }}>
-          No password, no spam. Sendoff+ is the paid tier — this isn't it.
-        </div>
-      </div>
-    </ModalShell>
-  );
-}
-
-/* ---------- Sendoff+ member profile ---------- */
-export function ProfileModal({ profile, setProfile, account, setAccount, member, opened, done, origin, onClose, onSignOut, onGetPlus, writeStore }) {
-  const [name, setName] = useState(account.name || profile.name || "");
-  const joinedSrc = account.joined || profile.joined;
-  const joinedDate = joinedSrc ? new Date(joinedSrc + "T12:00:00") : new Date();
-  const year = joinedDate.getFullYear();
-  const daysIn = Math.max(1, Math.round((Date.now() - joinedDate.getTime()) / 86400000));
-  const initial = (name.trim()[0] || "✦").toUpperCase();
-  const save = (v) => {
-    setName(v);
-    const nextProfile = { ...profile, name: v };
-    setProfile(nextProfile);
-    writeStore("sendoff_profile", nextProfile);
-    const nextAccount = { ...account, name: v };
-    setAccount(nextAccount);
-    writeStore("sendoff_account", nextAccount);
-  };
+  const stats = [
+    [done.length, done.length === 1 ? "send done" : "sends done"],
+    [saved.length, "saved"],
+    spent > 0 ? [fmt(spent), "spent on sends"] : [opened, "sends opened"],
+  ];
   return (
     <ModalShell onClose={onClose} maxWidth={420}>
       <div style={{ padding: "22px 22px 26px" }}>
 
         {/* header */}
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-          <div style={{ width: 58, height: 58, borderRadius: "50%", background: T.ink, color: T.sun,
+          <div style={{ width: 58, height: 58, borderRadius: "50%", background: isMember ? T.ink : T.sun, color: isMember ? T.sun : T.ink,
             border: `2px solid ${T.ink}`, display: "flex", alignItems: "center", justifyContent: "center",
             fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 26, flexShrink: 0 }}>
             {initial}
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <input value={name} onChange={(e) => save(e.target.value)} placeholder="Add your name"
+            <input value={name} onChange={(e) => setName(e.target.value)} onBlur={saveName}
+              onKeyDown={(e) => e.key === "Enter" && e.target.blur()} placeholder="Add your name"
               style={{ width: "100%", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 21,
                 border: "none", background: "transparent", color: T.ink, padding: 0, outline: "none" }} />
             <div style={{ fontSize: 12.5, fontWeight: 700, opacity: 0.6, marginTop: 2, overflow: "hidden", textOverflow: "ellipsis" }}>
-              {account.email || "no email yet"}
+              {user?.email}
             </div>
             <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.5, marginTop: 1 }}>
-              Member since {year} · {origin}
+              Sender since {since} · {origin}
             </div>
           </div>
           <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
             style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink, lineHeight: 1 }}>×</m.button>
         </div>
 
-        {/* plus badge */}
-        {member ? (
-          <div style={{ marginTop: 16, background: T.ink, color: T.sun, borderRadius: 14, padding: "12px 16px",
-            display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17 }}>
-              SENDOFF<span style={{ color: T.sun }}>+</span> ACTIVE
-            </span>
-            <span style={{ fontSize: 11.5, fontWeight: 700, opacity: 0.75 }}>✦ founder member</span>
+        {/* membership */}
+        {isMember ? (
+          <div style={{ marginTop: 16, background: T.ink, color: T.sun, borderRadius: 14, padding: "12px 16px" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17 }}>{badge.toUpperCase()}</span>
+              <span style={{ fontSize: 11.5, fontWeight: 700, opacity: 0.75 }}>
+                {membership?.source === "stripe"
+                  ? (membership.cancel_at_period_end ? `ends ${nice(membership.current_period_end)}` : `renews ${nice(membership.current_period_end)}`)
+                  : membership?.source === "code" ? "access code" : "active"}
+              </span>
+            </div>
+            {membership?.source === "stripe" && (
+              <button onClick={portal} disabled={portalBusy}
+                style={{ marginTop: 10, background: "transparent", color: T.paper, border: `2px solid ${T.paper}`, borderRadius: 10,
+                  padding: "7px 12px", fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 12.5, cursor: "pointer" }}>
+                {portalBusy ? "Opening…" : "Manage billing"}
+              </button>
+            )}
           </div>
         ) : (
           <m.button onClick={onGetPlus} whileTap={{ scale: 0.98 }} transition={SPRING}
             style={{ width: "100%", marginTop: 16, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
               borderRadius: 14, boxShadow: SH.card, padding: "13px",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15.5, cursor: "pointer" }}>
-            Get Sendoff+ → deal alerts + exclusive drops
+            Get Sendoff+ → every trip + deal drops
           </m.button>
         )}
 
-        {/* stats — tiles pop in one after another */}
+        {/* stats */}
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginTop: 14 }}>
-          {[[daysIn, daysIn === 1 ? "day in" : "days in"], [done.length, "sends done"], [opened, "sends opened"]].map(([n, label], i) => (
+          {stats.map(([n, label], i) => (
             <m.div key={label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
               transition={{ ...SPRING, delay: 0.06 + i * 0.06 }}
-              style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14,
-                padding: "12px 8px", textAlign: "center" }}>
+              style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "12px 8px", textAlign: "center" }}>
               <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22 }}>{n}</div>
               <div style={{ fontSize: 11, fontWeight: 700, opacity: 0.6, marginTop: 2 }}>{label}</div>
             </m.div>
           ))}
         </div>
 
-        <SendPoints />
-
-        {/* perks */}
         {done.length > 0 && (
           <>
             <SectionLabel>Sends you've done</SectionLabel>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
-              {done.map((id) => {
-                const t = TRIPS.find((x) => x.id === id);
+              {done.map((row) => {
+                const t = TRIPS.find((x) => x.id === row.trip_id);
                 if (!t) return null;
                 return (
-                  <span key={id} style={{ background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 999,
+                  <span key={row.trip_id} style={{ background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 999,
                     padding: "6px 12px", fontSize: 12.5, fontWeight: 800 }}>
-                    {t.img} {t.name}
+                    {t.img} {t.name}{row.spent ? ` · ${fmt(row.spent)}` : ""}
                   </span>
                 );
               })}
@@ -600,7 +590,7 @@ export function ProfileModal({ profile, setProfile, account, setAccount, member,
           </>
         )}
 
-        <SectionLabel>{member ? "Your perks" : "What Sendoff+ adds"}</SectionLabel>
+        <SectionLabel>{isMember ? "Your perks" : "What Sendoff+ adds"}</SectionLabel>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {PLUS_PERKS.map(([e, title, sub]) => (
             <div key={title} style={{ display: "flex", gap: 11, alignItems: "flex-start",
@@ -610,21 +600,17 @@ export function ProfileModal({ profile, setProfile, account, setAccount, member,
                 <div style={{ fontWeight: 800, fontSize: 13.5 }}>{title}</div>
                 <div style={{ fontSize: 12, fontWeight: 600, opacity: 0.7, marginTop: 1 }}>{sub}</div>
               </div>
-              <span style={{ marginLeft: "auto", fontSize: 12, fontWeight: 800, color: member ? T.cobalt : T.ink, opacity: member ? 1 : 0.35 }}>
-                {member ? "ON" : "＋"}
+              <span style={{ marginLeft: "auto", fontSize: 12, fontWeight: 800, color: isMember ? T.cobalt : T.ink, opacity: isMember ? 1 : 0.35 }}>
+                {isMember ? "ON" : "＋"}
               </span>
             </div>
           ))}
         </div>
 
-        <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 16, lineHeight: 1.5 }}>
-          Deal alerts go out by email while Sendoff+ is in beta. Reply to any alert and a human answers.
-        </div>
-
-        <m.button onClick={onSignOut} whileTap={{ scale: 0.98 }} transition={SPRING}
+        <m.button onClick={async () => { await acct.signOut(); onClose(); }} whileTap={{ scale: 0.98 }} transition={SPRING}
           style={{ marginTop: 16, width: "100%", background: T.white, border: `2px solid ${T.ink}`, borderRadius: 12,
             padding: "11px", fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 13.5, cursor: "pointer", color: T.ink }}>
-          {member ? "Sign out of Sendoff+" : "Sign out"}
+          Sign out
         </m.button>
       </div>
     </ModalShell>

@@ -8,6 +8,7 @@ import { WORLD_CITIES } from "./data/cities.js";
 import { getCheapest } from "./utils/cheapest.js";
 import CheapestRail from "./components/browse/CheapestRail.jsx";
 import { fmt, miles, modeLabel, sendRequest, setCurrency } from "./data/config.js";
+import { useAccount } from "./lib/account.js";
 
 /* Display currency per origin: world origins carry theirs; the curated US
    list is USD. Rates come from /api/rates (USD base, refreshed nightly). */
@@ -59,8 +60,8 @@ const About = lazy(() => import("./components/About.jsx"));
 const SpinSend = lazy(() => import("./components/SpinSend.jsx"));
 const modalsImport = () => import("./components/modals.jsx");
 const PlusModal = lazy(() => modalsImport().then((m) => ({ default: m.PlusModal })));
+const SignInModal = lazy(() => modalsImport().then((m) => ({ default: m.SignInModal })));
 const Detail = lazy(() => modalsImport().then((m) => ({ default: m.Detail })));
-const AccountModal = lazy(() => modalsImport().then((m) => ({ default: m.AccountModal })));
 const ProfileModal = lazy(() => modalsImport().then((m) => ({ default: m.ProfileModal })));
 
 const lazyFallback = (
@@ -115,22 +116,20 @@ export default function Sendoff() {
   };
   const writeStore = (k, v) => { try { window.localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
-  const [member, setMember] = useState(() => readStore("sendoff_member", false));
-  const [account, setAccount] = useState(() => readStore("sendoff_account", { name: "", email: "", joined: "" }));
+  /* who's signed in, their membership, their trips — all from the account
+     layer (src/lib/account.js). Signed out = free tier, nothing saved. The
+     old browser-only member flag is gone on purpose: Plus lives on accounts. */
+  const acct = useAccount();
+  const member = acct.isMember;
   const [showAccount, setShowAccount] = useState(false);
-  const [profile, setProfile] = useState(() => readStore("sendoff_profile", { name: "", joined: "" }));
   const [opened, setOpened] = useState(() => readStore("sendoff_opened", 0));
-  const [doneTrips, setDoneTrips] = useState(() => readStore("sendoff_done", []));
+  const doneTrips = useMemo(() => acct.done.map((t) => t.trip_id), [acct.done]);
   const markDone = (t) => {
-    setDoneTrips((list) => {
-      if (list.includes(t.id)) return list;
-      const next = [...list, t.id];
-      writeStore("sendoff_done", next);
-      return next;
-    });
+    if (!acct.user) { setShowAccount(true); return; } // done-sends live on the account
+    acct.setTrip(t.id, "done");
     sendRequest("Trip completed 🎉", {
-      traveler: account.name || profile.name || "(anonymous)",
-      email: account.email || "(no email)",
+      traveler: acct.profile?.name || "(anonymous)",
+      email: acct.user.email || "(no email)",
       trip: t.name,
       trip_cost: fmt(t.cost) + "/person",
       from_city: origin,
@@ -148,27 +147,14 @@ export default function Sendoff() {
     try {
       const r = await fetch("/api/spins/book", {
         method: "POST", headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ tripId: t.id, name: account.name || profile.name || "" }),
+        body: JSON.stringify({ tripId: t.id, name: acct.profile?.name || "" }),
       });
       const b = await r.json().catch(() => ({}));
       return r.ok && b.ok ? b.awarded : 0;
     } catch { return 0; }
   };
-  const joinPlus = (nameFromCode) => {
-    const joined = new Date().toISOString().slice(0, 10);
-    setMember(true);
-    setProfile((p) => {
-      const next = {
-        name: (nameFromCode && nameFromCode.trim()) || p.name || "",
-        joined: p.joined || joined,
-      };
-      writeStore("sendoff_profile", next);
-      return next;
-    });
-    writeStore("sendoff_member", true);
-    setShowPlus(false);
-    setShowProfile(true);
-  };
+  /* Plus just got unlocked (code or checkout): close the pitch, show the card */
+  const onUnlocked = () => { setShowPlus(false); setShowProfile(true); };
 
   const originCoords = CITIES[origin] || CITIES[Object.keys(CITIES).find((c) => c.toLowerCase() === origin.toLowerCase())] || null;
   const dates = { out: dateOut, back: dateBack };
@@ -316,13 +302,14 @@ export default function Sendoff() {
               boxShadow: `3px 3px 0 ${T.ink}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
             {member ? "✦ SENDOFF+" : "GET SENDOFF+"}
           </button>
-          <button onClick={() => (account.email ? setShowProfile(true) : setShowAccount(true))}
-            title={account.email ? "Your profile" : "Sign up"}
-            style={{ width: 42, height: 42, borderRadius: "50%", background: account.email ? T.sun : T.white,
+          {/* signed in: your initial, opens the profile card. Signed out: a plus, opens sign-in. */}
+          <button onClick={() => (acct.user ? setShowProfile(true) : setShowAccount(true))}
+            title={acct.user ? "Your profile" : "Sign in"}
+            style={{ width: 42, height: 42, borderRadius: "50%", background: acct.user ? T.sun : T.white,
               border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.ink}`, cursor: "pointer",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink,
               display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            {account.name ? account.name.trim()[0].toUpperCase() : "＋"}
+            {acct.user ? ((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase() : "＋"}
           </button>
         </div>
       </header>
@@ -529,34 +516,12 @@ export default function Sendoff() {
         member={member} isDone={doneTrips.includes(detail.id)} onMarkDone={markDone}
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
-      {showPlus && <PlusModal origin={origin} onJoin={joinPlus} onClose={() => setShowPlus(false)} />}
-      {showAccount && (
-        <AccountModal origin={origin} onClose={() => setShowAccount(false)}
-          onSave={(acct) => {
-            setAccount(acct); writeStore("sendoff_account", acct);
-            setProfile((p) => {
-              const next = { name: acct.name, joined: p.joined || acct.joined };
-              writeStore("sendoff_profile", next); return next;
-            });
-            setShowAccount(false); setShowProfile(true);
-          }} />
-      )}
-      {showProfile && (
-        <ProfileModal
-          profile={profile} setProfile={setProfile}
-          account={account} setAccount={setAccount}
-          member={member} opened={opened} done={doneTrips} origin={origin}
-          writeStore={writeStore}
+      {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
+      {showAccount && <SignInModal acct={acct} onClose={() => setShowAccount(false)} />}
+      {showProfile && acct.user && (
+        <ProfileModal acct={acct} opened={opened} origin={origin}
           onClose={() => setShowProfile(false)}
-          onGetPlus={() => { setShowProfile(false); setShowPlus(true); }}
-          onSignOut={() => {
-            setMember(false); setShowProfile(false);
-            setAccount({ name: "", email: "", joined: "" });
-            writeStore("sendoff_member", false);
-            writeStore("sendoff_account", { name: "", email: "", joined: "" });
-            setDoneTrips([]); writeStore("sendoff_done", []);
-          }}
-        />
+          onGetPlus={() => { setShowProfile(false); setShowPlus(true); }} />
       )}
       </Suspense>
 

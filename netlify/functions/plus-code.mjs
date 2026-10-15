@@ -5,6 +5,7 @@
    Wrong guesses are throttled per IP (in-memory, per function instance:
    good enough to stop a casual brute force, not a security boundary). */
 import { json } from "../lib/tp.mjs";
+import { userFromRequest, setMembership } from "../lib/auth.mjs";
 
 const MAX_FAILS = 8;
 const WINDOW_MS = 10 * 60 * 1000;
@@ -29,7 +30,19 @@ export default async (req, context) => {
   try { code = String((await req.json())?.code ?? "").trim(); } catch { return json({ ok: false, error: "bad request" }, 400); }
   if (code && same(code.toLowerCase(), secret.toLowerCase())) {
     fails.delete(ip);
-    return json({ ok: true });
+    /* Signed in: the code grants Plus on the account itself, so it follows
+       them to every device. Signed out: just confirms the code (the old
+       browser-only unlock) so nothing breaks before accounts roll out. */
+    const user = await userFromRequest(req);
+    if (user) {
+      try {
+        await setMembership(user.id, { plan: "plus", source: "code", interval: null, current_period_end: null, cancel_at_period_end: false });
+      } catch (err) {
+        console.error(`plus-code: could not save membership: ${err.message}`);
+        return json({ ok: false, error: "could not save" }, 500);
+      }
+    }
+    return json({ ok: true, saved: Boolean(user) });
   }
   fails.set(ip, f && f.resetAt > now ? { n: f.n + 1, resetAt: f.resetAt } : { n: 1, resetAt: now + WINDOW_MS });
   return json({ ok: false, error: "wrong code" }, 401);
