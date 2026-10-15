@@ -445,7 +445,7 @@ export default function Sendoff() {
             </div>
             <m.button onClick={() => setShowPlus(true)} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}
               transition={SPRING}
-              style={{ marginTop: 14, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
+              style={{ marginTop: 14, background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
                 borderRadius: 14, boxShadow: `3px 3px 0 ${T.shadow}`, padding: "13px 22px",
                 fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15.5, cursor: "pointer" }}>
               Unlock with Sendoff+ →

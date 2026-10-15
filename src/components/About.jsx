@@ -96,7 +96,7 @@ export default function About({ setView }) {
 
       <m.button onClick={() => { setView("trips"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
         whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING}
-        style={{ width: "100%", marginTop: 24, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
+        style={{ width: "100%", marginTop: 24, background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
           borderRadius: R.card, boxShadow: SH.card, padding: "15px",
           fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, cursor: "pointer" }}>
         Find your send →

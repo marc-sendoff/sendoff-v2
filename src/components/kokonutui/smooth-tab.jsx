@@ -69,7 +69,7 @@ export default function SmoothTab({
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 "truncate",
                 isSelected
-                  ? "text-white"
+                  ? "text-primary-foreground"
                   : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
               )}
               id={`tab-${item.id}`}

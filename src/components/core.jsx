@@ -80,7 +80,7 @@ export function OriginSlot({ origin, setOrigin, open, setOpen }) {
               ))}
           </div>
           <button onClick={() => commit(draft)}
-            style={{ marginTop: 8, width: "100%", background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
+            style={{ marginTop: 8, width: "100%", background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
               borderRadius: 10, padding: "7px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>
             Set home base
           </button>
@@ -112,7 +112,7 @@ export function CrewSlot({ friends, setFriends, open, setOpen, goBigSend }) {
           ))}
           <div style={{ height: 2, background: T.ink, opacity: 0.12, margin: "6px 4px" }} />
           <button onClick={() => { setOpen(null); goBigSend(); }}
-            style={{ display: "block", width: "100%", textAlign: "left", background: T.cobalt, color: T.white,
+            style={{ display: "block", width: "100%", textAlign: "left", background: T.cobalt, color: T.onCobalt,
               border: "none", borderRadius: 9, padding: "10px 12px", fontFamily: "'Instrument Sans', sans-serif",
               fontWeight: 800, fontSize: 14.5, cursor: "pointer" }}>
             8+ of us 🎉 <span style={{ fontWeight: 600, opacity: 0.85 }}>→ The Big Send</span>

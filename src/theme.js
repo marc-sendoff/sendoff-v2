@@ -5,6 +5,7 @@ export const T = {
      text on an ink fill, a soft tinted fill for chips, a muted surface */
   onAccent: "#1B1D2A", onInk: "#FFC838", tint: "#E8F5EC", muted: "#ECE8DB", mutedFg: "#5A5C6B",
   shadow: "#1B1D2A", // the hard offset shadow under cards; ink on the cream site
+  onCobalt: "#FFFFFF", // text on a cobalt fill (buttons, active pills)
 };
 
 /* ---- themes: a Founders Club perk. Every component reads colours off T at
@@ -12,15 +13,15 @@ export const T = {
    few derived recipes below, and re-render. `original` is the site. ---- */
 export const THEMES = {
   original: { label: "Original", paper: "#F4F1E8", ink: "#1B1D2A", cobalt: "#2547F0", sun: "#FFC838", poppy: "#FF5A3C", white: "#FFFFFF",
-              onAccent: "#1B1D2A", onInk: "#FFC838", tint: "#E8F5EC", muted: "#ECE8DB", mutedFg: "#5A5C6B", shadow: "#1B1D2A" },
+              onAccent: "#1B1D2A", onInk: "#FFC838", tint: "#E8F5EC", muted: "#ECE8DB", mutedFg: "#5A5C6B", shadow: "#1B1D2A", onCobalt: "#FFFFFF" },
   /* Founders Black: near-black, ivory type, hot yellow where the site is
      usually cobalt. Cards charcoal with ivory borders; shadows sink into the dark. */
   black:    { label: "Founders Black", paper: "#0B0B0D", ink: "#F1EADB", cobalt: "#F5B700", sun: "#F5B700", poppy: "#FF7A5C", white: "#16161B",
-              onAccent: "#0B0B0D", onInk: "#0B0B0D", tint: "rgba(245,183,0,0.14)", muted: "#1E1E25", mutedFg: "#A9A395", shadow: "#000000" },
+              onAccent: "#0B0B0D", onInk: "#0B0B0D", tint: "rgba(245,183,0,0.14)", muted: "#1E1E25", mutedFg: "#A9A395", shadow: "#000000", onCobalt: "#0B0B0D" },
   /* Cobalt: the site's blue as the page itself. White cards, navy type so it
      stays readable, hot yellow for the accents, navy shadows. */
   blue:     { label: "Cobalt", paper: "#3558FF", ink: "#0B1540", cobalt: "#FFB800", sun: "#FFB800", poppy: "#FF6A4A", white: "#FFFFFF",
-              onAccent: "#0B1540", onInk: "#FFB800", tint: "#FFF3C2", muted: "#2A48D6", mutedFg: "#DCE3FF", shadow: "#0B1540" },
+              onAccent: "#0B1540", onInk: "#FFB800", tint: "#FFF3C2", muted: "#E8ECFF", mutedFg: "#3F4A8A", shadow: "#0B1540", onCobalt: "#0B1540" },
 };
 export const DEFAULT_THEME = "original";
 export function applyTheme(name) {
@@ -35,7 +36,7 @@ export function applyTheme(name) {
     /* the Tailwind-built pieces (trip cards, rails) read these */
     const v = {
       background: T.paper, foreground: T.ink, card: T.white, "card-foreground": T.ink, popover: T.white, "popover-foreground": T.ink,
-      primary: T.cobalt, "primary-foreground": T.onAccent, secondary: T.sun, "secondary-foreground": T.onAccent,
+      primary: T.cobalt, "primary-foreground": T.onCobalt, secondary: T.sun, "secondary-foreground": T.onAccent,
       muted: T.muted, "muted-foreground": T.mutedFg, accent: T.sun, "accent-foreground": T.onAccent,
       border: T.ink, input: T.ink, ring: T.cobalt,
     };

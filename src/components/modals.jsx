@@ -577,7 +577,7 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeNa
           </div>
         ) : (
           <m.button onClick={onGetPlus} whileTap={{ scale: 0.98 }} transition={SPRING}
-            style={{ width: "100%", marginTop: 16, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
+            style={{ width: "100%", marginTop: 16, background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
               borderRadius: 14, boxShadow: SH.card, padding: "13px",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15.5, cursor: "pointer" }}>
             Get Sendoff+ → every trip + deal drops

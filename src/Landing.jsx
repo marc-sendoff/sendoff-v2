@@ -220,7 +220,7 @@ export default function Landing() {
 
                 <m.button type="submit" disabled={sending}
                   whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }}
-                  style={{ width: "100%", marginTop: 22, background: T.cobalt, color: T.white,
+                  style={{ width: "100%", marginTop: 22, background: T.cobalt, color: T.onCobalt,
                     border: `2px solid ${T.ink}`, borderRadius: R.card, boxShadow: SH.card, padding: "15px",
                     fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17,
                     cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1 }}>

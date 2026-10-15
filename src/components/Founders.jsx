@@ -65,7 +65,7 @@ export default function Founders({ acct, onJoin }) {
         </div>
       ) : (
         <m.button onClick={onJoin} whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING}
-          style={{ width: "100%", marginTop: 24, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
+          style={{ width: "100%", marginTop: 24, background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
             borderRadius: R.card, boxShadow: SH.card, padding: "16px", fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 800, fontSize: 17, cursor: "pointer" }}>
           {data?.left === 0 ? "Get Sendoff+ yearly · $40" : "Take a seat · $40 a year →"}
