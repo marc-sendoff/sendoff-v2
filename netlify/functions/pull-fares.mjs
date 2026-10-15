@@ -3,7 +3,7 @@
    (Florida first, then the big US cities), so the whole set turns over every
    few hours and no single run comes near the function timeout.
 
-   Per origin: two "sweep" calls per month (origin + unique=true returns the
+   Per origin (the one with the oldest pull): two "sweep" calls per month (origin + unique=true returns the
    cheapest fare to many destinations at once), then pairwise backfill for the
    destinations the sweep missed, until the time budget is spent. The result
    is merged over the previous pull so a thin night never blanks a city, and
@@ -108,18 +108,26 @@ async function pullRates(store) {
   }
 }
 
+/* Which origin is next: the one whose pull is oldest (never pulled counts as
+   oldest, list order breaks ties). Better than a round-robin counter because
+   a failed night gets retried first instead of waiting a full rotation. */
+async function nextOrigin(store, list) {
+  let pick = null, oldest = Infinity;
+  for (const code of list) {
+    const doc = await store.get(`fares/${code}`, { type: "json" }).catch(() => null);
+    const at = Date.parse(doc?.updatedAt ?? "") || 0;
+    if (at < oldest) { oldest = at; pick = code; }
+  }
+  return pick ?? list[0];
+}
+
 export default async (req) => {
   const store = getStore("fares");
   const list = ORIGINS.slice(0, ORIGINS_N).map((o) => o.code);
   const url = new URL(req.url);
   const forced = url.searchParams.get("origin")?.toUpperCase();
-  let origin = forced && /^[A-Z]{3}$/.test(forced) ? forced : null;
-  if (!origin) {
-    const cursor = Number((await store.get("cursor").catch(() => null)) ?? 0) || 0;
-    origin = list[cursor % list.length];
-    await store.set("cursor", String((cursor + 1) % list.length));
-    if (cursor % list.length === 0) await pullRates(store);
-  }
+  const origin = forced && /^[A-Z]{3}$/.test(forced) ? forced : await nextOrigin(store, list);
+  if (origin === list[0]) await pullRates(store);
   const result = await pullOrigin(origin, store);
   console.log(JSON.stringify(result));
   return new Response(JSON.stringify(result), { headers: { "Content-Type": "application/json" } });
