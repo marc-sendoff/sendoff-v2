@@ -154,13 +154,13 @@ export function SignInModal({ acct, onClose }) {
       <div style={{ padding: "24px 22px 26px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24, lineHeight: 1.2 }}>
-            Make it yours
+            Sign in to Sendoff
           </div>
           <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
             style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink }}>×</m.button>
         </div>
         <p style={{ fontSize: 14, fontWeight: 600, opacity: 0.72, marginTop: 8, lineHeight: 1.5, marginBottom: 0 }}>
-          Free. Saves your city, your crew and the sends you've done, on every device.
+          New here? Same door. We email you a link, no password. Your city, your crew and your sends follow you to every device.
         </p>
         <SignInBlock acct={acct} title="" />
       </div>

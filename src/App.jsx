@@ -9,6 +9,7 @@ import { getCheapest } from "./utils/cheapest.js";
 import CheapestRail from "./components/browse/CheapestRail.jsx";
 import { fmt, miles, modeLabel, sendRequest, setCurrency } from "./data/config.js";
 import { useAccount } from "./lib/account.js";
+import { User } from "lucide-react";
 
 /* Display currency per origin: world origins carry theirs; the curated US
    list is USD. Rates come from /api/rates (USD base, refreshed nightly). */
@@ -320,7 +321,7 @@ export default function Sendoff() {
               border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.ink}`, cursor: "pointer",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink,
               display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            {acct.user ? ((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase() : "＋"}
+            {acct.user ? ((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase() : <User size={20} strokeWidth={2.6} aria-label="Sign in" />}
           </button>
         </div>
       </header>
