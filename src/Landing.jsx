@@ -27,9 +27,9 @@ const FORM_NAME = "waitlist";
 /* The rollout, in one place. The page reads these so the dates can never
    disagree with each other. */
 export const ROLLOUT = [
-  ["Florida", "December 20"],
-  ["Rest of the US", "January 10"],
-  ["Everywhere else", "February 15"],
+  ["Florida", "November 1"],
+  ["Rest of the US", "November 15"],
+  ["Everywhere else", "December 10"],
 ];
 
 /* Florida leads the list because Florida opens first, but the last two
@@ -137,7 +137,7 @@ export default function Landing() {
               style={{ textAlign: "center", marginTop: 26 }}>
               <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.cobalt,
                 textTransform: "uppercase" }}>
-                Launching December 20 · Florida first
+                Launching November 1 · Florida first
               </div>
               <h1 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
                 fontSize: "clamp(29px, 7.4vw, 42px)", lineHeight: 1.14, letterSpacing: "-0.9px",
@@ -206,7 +206,7 @@ export default function Landing() {
                     backgroundPosition: "calc(100% - 20px) 21px, calc(100% - 14px) 21px",
                     backgroundSize: "6px 6px, 6px 6px", backgroundRepeat: "no-repeat" }}>
                   <option value="" disabled>Pick your city</option>
-                  <optgroup label="Florida — opens December 20">
+                  <optgroup label="Florida — opens November 1">
                     {FLORIDA_CITIES.map((c) => <option key={c} value={c}>{c}</option>)}
                   </optgroup>
                   <optgroup label="Everywhere else — opens later">

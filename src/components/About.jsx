@@ -61,8 +61,8 @@ export default function About({ setView }) {
             didn't work out.
           </p>
           <p style={{ margin: 0 }}>
-            Sendoff launches December 20, Florida first, then the rest of the US in January and
-            everywhere else in February.{" "}
+            Sendoff launches November 1, Florida first, then the rest of the US on November 15 and
+            everywhere else on December 10.{" "}
             <strong style={{ color: T.cobalt }}>Go while you're young.</strong>
           </p>
         </div>

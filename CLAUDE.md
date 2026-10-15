@@ -8,8 +8,8 @@ Tagline: "Go while you're young."
 
 - **One founder: Marc.** The original four-person team split in October 2026. The
   site was shut down for three days and relaunched solo.
-- **Relaunch: December 2026, Miami first.** Everything on the site says
-  "Launching December".
+- **Launch: Florida November 1 2026, rest of the US November 15, everywhere
+  else December 10.** (Moved up from Dec 20 / Jan 10 / Feb 15 on Oct 15.)
 - Marketing channel: Instagram (mobile traffic dominates).
 - Revenue: Travelpayouts affiliate links.
 

@@ -70,14 +70,14 @@ export default function Waitlist({ origin }) {
           borderRadius: 20, boxShadow: SH.big, padding: "22px 24px" }}>
         <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.sun,
           textTransform: "uppercase" }}>
-          Launching December · Miami first
+          Launching November 1 · Florida first
         </div>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
           fontSize: "clamp(23px, 5vw, 32px)", lineHeight: 1.2, letterSpacing: "-0.5px", marginTop: 8 }}>
           Get on the list.
         </div>
         <p style={{ fontSize: 14.5, fontWeight: 600, opacity: 0.8, marginTop: 8, lineHeight: 1.5, maxWidth: 560 }}>
-          Sendoff opens in December, starting with Miami. Leave your city and you're first through
+          Sendoff opens November 1, starting with Florida. Leave your city and you're first through
           the door when it does.
         </p>
 
