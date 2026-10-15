@@ -1,5 +1,28 @@
 /* ============ DESIGN TOKENS ============ */
 export const T = { paper: "#F4F1E8", ink: "#1B1D2A", cobalt: "#2547F0", sun: "#FFC838", poppy: "#FF5A3C", white: "#FFFFFF" };
+
+/* ---- themes: a Founders Club perk. Every component reads colours off T at
+   render time, so switching is: copy the theme's colours onto T, refresh the
+   few derived recipes below, and re-render. `original` is the site. ---- */
+export const THEMES = {
+  original: { label: "Original", paper: "#F4F1E8", ink: "#1B1D2A", cobalt: "#2547F0", sun: "#FFC838", poppy: "#FF5A3C", white: "#FFFFFF" },
+  black:    { label: "Founders Black", paper: "#0F1014", ink: "#F4F1E8", cobalt: "#FFC838", sun: "#4A66F6", poppy: "#FF5A3C", white: "#1B1D2A" },
+  blue:     { label: "Cobalt", paper: "#1E3BD6", ink: "#F4F1E8", cobalt: "#FFC838", sun: "#FFC838", poppy: "#FF8A6B", white: "#1631B8" },
+};
+export const DEFAULT_THEME = "original";
+export function applyTheme(name) {
+  const th = THEMES[name] || THEMES[DEFAULT_THEME];
+  const { label, ...colors } = th;
+  Object.assign(T, colors);
+  SH.card = `4px 4px 0 ${T.ink}`; SH.pop = `4px 4px 0 ${T.ink}`; SH.big = `6px 6px 0 ${T.ink}`;
+  Object.assign(surface, { background: T.white, border: `2px solid ${T.ink}`, boxShadow: SH.card, color: T.ink });
+  slotStyle.color = T.cobalt; slotStyle.borderBottom = `4px solid ${T.sun}`;
+  if (typeof document !== "undefined") {
+    document.body.style.background = T.paper; document.body.style.color = T.ink;
+    document.documentElement.style.setProperty("--background", T.paper);
+  }
+  return name in THEMES ? name : DEFAULT_THEME;
+}
 export const PALETTE = ["#FFC838","#9BD3AE","#8FD8E8","#FFB088","#F9E285","#E8A0BF","#C9E4A5","#7EE0D0","#B8A9E8","#A5D8C5","#FF9ECF","#AFC8E8"];
 
 export const VIBES = [

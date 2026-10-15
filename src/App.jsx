@@ -1,7 +1,7 @@
 import React, { useState, useMemo, Suspense, lazy } from "react";
 import { LazyMotion, MotionConfig, m } from "motion/react";
 const loadMotionFeatures = () => import("./motion-features.js").then((mod) => mod.default);
-import { T, VIBES, SH, SPRING } from "./theme.js";
+import { T, VIBES, SH, SPRING, applyTheme, DEFAULT_THEME } from "./theme.js";
 import { CITIES, TRIPS, AIRPORTS } from "./data/trips.js";
 import { priceAll } from "./data/pricing.js";
 import { WORLD_CITIES } from "./data/cities.js";
@@ -61,6 +61,7 @@ const SpinSend = lazy(() => import("./components/SpinSend.jsx"));
 const modalsImport = () => import("./components/modals.jsx");
 const PlusModal = lazy(() => modalsImport().then((m) => ({ default: m.PlusModal })));
 const SignInModal = lazy(() => modalsImport().then((m) => ({ default: m.SignInModal })));
+const Founders = lazy(() => import("./components/Founders.jsx"));
 const Detail = lazy(() => modalsImport().then((m) => ({ default: m.Detail })));
 const ProfileModal = lazy(() => modalsImport().then((m) => ({ default: m.ProfileModal })));
 
@@ -155,6 +156,15 @@ export default function Sendoff() {
   };
   /* Plus just got unlocked (code or checkout): close the pitch, show the card */
   const onUnlocked = () => { setShowPlus(false); setShowProfile(true); };
+  /* Founders pick a look; it lives on their profile. Everyone else sees the
+     original. Changing it re-renders the tree with the new tokens. */
+  const [themeName, setThemeName] = useState(DEFAULT_THEME);
+  const isFounder = acct.membership?.plan === "founder";
+  React.useEffect(() => {
+    const want = isFounder && acct.profile?.theme ? acct.profile.theme : DEFAULT_THEME;
+    setThemeName(applyTheme(want));
+  }, [isFounder, acct.profile?.theme]);
+  const pickTheme = (name) => { setThemeName(applyTheme(name)); acct.saveProfile({ theme: name }); };
 
   const originCoords = CITIES[origin] || CITIES[Object.keys(CITIES).find((c) => c.toLowerCase() === origin.toLowerCase())] || null;
   const dates = { out: dateOut, back: dateBack };
@@ -269,6 +279,7 @@ export default function Sendoff() {
     <LazyMotion features={loadMotionFeatures} strict>
     <MotionConfig reducedMotion="user">
     <div onClick={() => openSlot && setOpenSlot(null)}
+      key={themeName}
       style={{ minHeight: "100vh", background: T.paper, color: T.ink, fontFamily: "'Instrument Sans', sans-serif",
         paddingBottom: gated && view === "trips" ? 116 : 60 }}>
       <style>{`
@@ -320,7 +331,7 @@ export default function Sendoff() {
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["spin", "SPIN-SEND 🎡"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["community", "COMMUNITY 📸"], ["about", "OUR STORY"]].map(([id, label]) => (
+        {[["trips", "THE TRIPS"], ["spin", "SPIN-SEND 🎡"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
           <button key={id} onClick={() => setView(id)} className="sendoff-tab"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13,
               padding: "9px 16px", borderRadius: 999,
@@ -342,6 +353,7 @@ export default function Sendoff() {
         {view === "big" && <BigSend origin={origin} />}
         {view === "community" && <Community origin={origin} />}
         {view === "about" && <About setView={setView} />}
+        {view === "founders" && <Founders acct={acct} onJoin={() => setShowPlus(true)} />}
       </Suspense>
 
       {view === "trips" && (<>
@@ -519,7 +531,7 @@ export default function Sendoff() {
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
       {showAccount && <SignInModal acct={acct} onClose={() => setShowAccount(false)} />}
       {showProfile && acct.user && (
-        <ProfileModal acct={acct} opened={opened} origin={origin}
+        <ProfileModal acct={acct} opened={opened} origin={origin} themeName={themeName} onTheme={pickTheme}
           onClose={() => setShowProfile(false)}
           onGetPlus={() => { setShowProfile(false); setShowPlus(true); }} />
       )}

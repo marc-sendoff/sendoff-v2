@@ -4,6 +4,8 @@ import { T, R, SH, SPRING } from "../theme.js";
 import { TRIPS } from "../data/trips.js";
 import { PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown } from "../data/config.js";
 import { senderSince } from "../lib/account.js";
+import { THEMES } from "../theme.js";
+import { useFounders, SeatCounter } from "./Founders.jsx";
 import LiveFare from "./LiveFare.jsx";
 import { AIRPORTS } from "../data/trips.js";
 import StayBlock from "./StayBlock.jsx";
@@ -168,6 +170,7 @@ export function SignInModal({ acct, onClose }) {
 
 export function PlusModal({ origin, acct, onClose, onUnlocked }) {
   const [plan, setPlan] = useState("yr");
+  const founders = useFounders();
   const [code, setCode] = useState("");
   const [codeErr, setCodeErr] = useState("");
   const [busy, setBusy] = useState(false);
@@ -245,6 +248,12 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
             ))}
           </div>
 
+          {founders && founders.left > 0 && (
+            <div style={{ marginTop: 10, fontSize: 12.5, fontWeight: 700, opacity: 0.8, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+              <SeatCounter data={founders} />
+              <span>Go yearly and you're a Founder: numbered seat, spring box, your own look.</span>
+            </div>
+          )}
           {!user ? (
             <SignInBlock acct={acct} title="Sign in to get Sendoff+" sub="Plus lives on your account, so it works on your phone and your laptop." />
           ) : (
@@ -480,7 +489,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
 
 /* ---------- free account: just a name + email ---------- */
 /* ---------- the profile card ---------- */
-export function ProfileModal({ acct, opened, origin, onClose, onGetPlus }) {
+export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeName, onTheme }) {
   const { user, profile, membership, isMember, done, saved, spent } = acct;
   const [name, setName] = useState(profile?.name || "");
   useEffect(() => { setName(profile?.name || ""); }, [profile?.name]);
@@ -558,6 +567,24 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus }) {
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15.5, cursor: "pointer" }}>
             Get Sendoff+ → every trip + deal drops
           </m.button>
+        )}
+
+        {/* Founders pick the app's look */}
+        {founder && onTheme && (
+          <>
+            <SectionLabel>Your look</SectionLabel>
+            <div style={{ display: "flex", gap: 8 }}>
+              {Object.entries(THEMES).map(([id, th]) => (
+                <button key={id} onClick={() => onTheme(id)}
+                  style={{ flex: 1, background: th.paper, color: th.ink, border: `${themeName === id ? 3 : 2}px solid ${T.ink}`, borderRadius: 12,
+                    padding: "10px 8px", cursor: "pointer", boxShadow: themeName === id ? SH.card : "none",
+                    fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 12.5 }}>
+                  <div style={{ height: 8, borderRadius: 999, background: th.cobalt, marginBottom: 6 }} />
+                  {th.label}{themeName === id ? " ✓" : ""}
+                </button>
+              ))}
+            </div>
+          </>
         )}
 
         {/* stats */}
