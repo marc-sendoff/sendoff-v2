@@ -8,9 +8,12 @@ import { sendRequest, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../data/config.js"
    photo: paste any image link. Leave "" for a placeholder tile.
    ============================================================ */
 export const COMMUNITY_POSTS = [
-  { photo: "wall/smoky-mountains.jpg", name: "Marc", trip: "Great Smoky Mountains", spent: "", handle: "", caption: "" },
-  { photo: "wall/montreal-notre-dame.jpg", name: "Marc", trip: "Montreal", spent: "", handle: "", caption: "" },
-  { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "", handle: "", caption: "" },
+  { photo: "wall/smoky-mountains.jpg", name: "Marc", trip: "Great Smoky Mountains", spent: "$180 · 2 days", handle: "",
+    caption: "The founders' trip. The one that started Sendoff." },
+  { photo: "wall/montreal-notre-dame.jpg", name: "Marc", trip: "Montreal", spent: "$375 · 3 days", handle: "",
+    caption: "Notre-Dame, the Old Port, and a lot of walking." },
+  { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "$500 · 3 days", handle: "",
+    caption: "Broadway at night. Live band in every bar, no cover anywhere." },
 ];
 
 export const COMMUNITY_COMMENTS = [
