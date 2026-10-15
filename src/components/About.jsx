@@ -10,16 +10,15 @@ export default function About({ setView }) {
       <m.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={SPRING}
         style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
           fontSize: "clamp(28px, 6.5vw, 44px)", lineHeight: 1.15, letterSpacing: "-0.8px" }}>
-        Four of us. One couch.<br />
+        One couch. Four hundred bucks.<br />
         <span style={{ color: T.cobalt, borderBottom: `6px solid ${T.sun}` }}>Nowhere to go.</span>
       </m.div>
 
       <m.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ ...SPRING, delay: 0.05 }}
         style={{ marginTop: 20, fontSize: 16, fontWeight: 600, lineHeight: 1.65, opacity: 0.85 }}>
         <p style={{ margin: "0 0 14px" }}>
-          Sendoff started on a Thursday night. Me and three friends were on the
-          couch, all of us saying the same thing: we should go somewhere this weekend. Nobody could
-          say where.
+          Sendoff started on a Thursday night. A few of us were on the couch, all saying the same
+          thing: we should go somewhere this weekend. Nobody could say where.
         </p>
         <p style={{ margin: "0 0 14px" }}>
           So we did what everyone does — opened the travel sites. Every one of them asked the same
@@ -32,15 +31,16 @@ export default function About({ setView }) {
         </p>
         <p style={{ margin: "0 0 14px" }}>
           So I built the thing we actually needed. You tell Sendoff your city, your budget and your
-          crew — and it tells you where you can go. Real prices, real plans, the hacks that make it
+          crew, and it tells you where you can go. Real prices, real plans, the hacks that make it
           affordable, and the links to book it. Backwards from every other travel site, which is
           exactly the point.
         </p>
       </m.div>
 
-      {/* The honest part. The relaunch note — one founder, December, Miami.
+      {/* The honest part. The relaunch note: one founder, December, Florida.
           Set apart from the origin story above because it is the turn, not a
-          footnote: the shutdown and the comeback in Marc's own words. */}
+          footnote. No former teammates are named, by their request and by
+          Marc's choice; the story is his. */}
       <m.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ ...SPRING, delay: 0.08 }}
         style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 20,
           boxShadow: SH.big, padding: "22px 24px", marginTop: 28 }}>
@@ -50,17 +50,19 @@ export default function About({ setView }) {
         </div>
         <div style={{ marginTop: 14, fontSize: 16, fontWeight: 600, lineHeight: 1.65, opacity: 0.85 }}>
           <p style={{ margin: "0 0 14px" }}>
-            We started building this as four friends. It didn't survive as four friends — and for
-            three days in October, Sendoff was shut down for good. Then the messages came in, and
-            the truth got obvious: the idea never failed. It never even got the chance to. The team
-            broke; the mission didn't.
+            Sendoff started as a group project. I had the idea and I did the building. The others
+            had the enthusiasm but not the hours, and an idea doesn't ship on enthusiasm. By
+            October it had stalled, and for three days Sendoff was shut down for good.
           </p>
           <p style={{ margin: "0 0 14px" }}>
-            So I rebuilt it alone. One founder, carrying it properly this time — because I'm not
-            going to let something stupid destroy a passion.
+            Then the messages came in from people who'd signed up, and the truth got obvious: the
+            idea never failed. It never got the chance to. So I took it on myself. One founder, one
+            group chat, and a lot of late nights. I'm not letting a good idea die because a team
+            didn't work out.
           </p>
           <p style={{ margin: 0 }}>
-            Sendoff launches this December, starting with Miami. The board's lit.{" "}
+            Sendoff launches December 20, Florida first, then the rest of the US in January and
+            everywhere else in February.{" "}
             <strong style={{ color: T.cobalt }}>Go while you're young.</strong>
           </p>
         </div>
@@ -86,8 +88,8 @@ export default function About({ setView }) {
       </m.div>
 
       <div style={{ marginTop: 26, fontSize: 15, fontWeight: 600, lineHeight: 1.6, opacity: 0.8 }}>
-        Sendoff is run by one person and a group chat, out of Miami. If something's broken, or you
-        want a trip we don't have yet, email{" "}
+        Sendoff is run by one person and a group chat, out of South Florida. If something's broken,
+        or you want a trip we don't have yet, email{" "}
         <a href={`mailto:${CUSTOM_CONTACT_EMAIL}`} style={{ color: T.cobalt, fontWeight: 800 }}>{CUSTOM_CONTACT_EMAIL}</a>{" "}
         or DM <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" style={{ color: T.cobalt, fontWeight: 800 }}>@{INSTAGRAM_HANDLE}</a> on Instagram — a real person answers.
       </div>
