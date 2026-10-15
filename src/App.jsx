@@ -530,7 +530,7 @@ export default function Sendoff() {
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
-      {showAccount && <SignInModal acct={acct} onClose={() => setShowAccount(false)} />}
+      {showAccount && <SignInModal acct={acct} origin={origin} onClose={() => setShowAccount(false)} />}
       {showProfile && acct.user && (
         <ProfileModal acct={acct} opened={opened} origin={origin} themeName={themeName} onTheme={pickTheme}
           onClose={() => setShowProfile(false)}

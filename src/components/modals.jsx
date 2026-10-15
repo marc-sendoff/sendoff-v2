@@ -107,22 +107,26 @@ const BIG_BTN = (on) => ({
   fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, cursor: on ? "pointer" : "not-allowed",
 });
 
-/* Sign in: email in, link out. No passwords anywhere. */
-function SignInBlock({ acct, title = "Sign in to continue", sub }) {
+/* Sign in / sign up: email in, link out. No passwords anywhere. "signup"
+   asks for name and city too; both ride along on the link and land on the
+   profile the moment the account exists. */
+function SignInBlock({ acct, mode = "login", origin = "", title, sub }) {
   const [name, setName] = useState("");
+  const [city, setCity] = useState(origin || "");
   const [email, setEmail] = useState("");
   const [state, setState] = useState("idle"); // idle | sending | sent | failed
   const [err, setErr] = useState("");
-  const ok = email.includes("@");
+  const signup = mode === "signup";
+  const ok = email.includes("@") && (!signup || name.trim());
   const send = async () => {
     if (!ok || state === "sending") return;
     setState("sending"); setErr("");
-    try { await acct.signIn(email, name); setState("sent"); }
+    try { await acct.signIn(email, signup ? name : "", signup ? city : ""); setState("sent"); }
     catch (e) { setErr(e.message || "Couldn't send the link."); setState("failed"); }
   };
   if (state === "sent") {
     return (
-      <div style={{ marginTop: 16, background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 14, padding: "16px 18px", textAlign: "center" }}>
+      <div style={{ marginTop: 16, background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 14, padding: "16px 18px", textAlign: "center", color: "#1B1D2A" }}>
         <div style={{ fontSize: 26 }}>📬</div>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, marginTop: 4 }}>Check your email</div>
         <div style={{ fontSize: 13, fontWeight: 600, opacity: 0.75, marginTop: 4 }}>
@@ -133,13 +137,18 @@ function SignInBlock({ acct, title = "Sign in to continue", sub }) {
   }
   return (
     <>
-      <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, marginTop: 16 }}>{title}</div>
-      {sub && <div style={{ fontSize: 13, fontWeight: 600, opacity: 0.7, marginTop: 3, lineHeight: 1.45 }}>{sub}</div>}
-      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="your name" style={{ ...INPUT, marginTop: 12 }} />
+      {title && <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 16 }}>{title}</div>}
+      {sub && <div style={{ fontSize: 13.5, fontWeight: 600, opacity: 0.7, marginTop: 4, lineHeight: 1.45 }}>{sub}</div>}
+      {signup && (
+        <>
+          <input value={name} onChange={(e) => setName(e.target.value)} placeholder="your name" style={{ ...INPUT, marginTop: 14 }} />
+          <input value={city} onChange={(e) => setCity(e.target.value)} placeholder="the city you're in" style={{ ...INPUT, marginTop: 8 }} />
+        </>
+      )}
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} onKeyDown={(e) => e.key === "Enter" && send()}
-        placeholder="your email" style={{ ...INPUT, marginTop: 8 }} />
+        placeholder="your email" style={{ ...INPUT, marginTop: signup ? 8 : 14 }} />
       <button onClick={send} disabled={!ok || state === "sending"} style={{ ...BIG_BTN(ok), marginTop: 10 }}>
-        {state === "sending" ? "Sending…" : "Email me a sign-in link →"}
+        {state === "sending" ? "Sending…" : signup ? "Create my account →" : "Email me a sign-in link →"}
       </button>
       <div style={{ fontSize: 11, fontWeight: 600, opacity: 0.55, marginTop: 8, textAlign: "center" }}>
         {err || "No password. The link signs you in on this device."}
@@ -148,21 +157,27 @@ function SignInBlock({ acct, title = "Sign in to continue", sub }) {
   );
 }
 
-export function SignInModal({ acct, onClose }) {
+export function SignInModal({ acct, origin, onClose }) {
+  const [mode, setMode] = useState("login");
   return (
     <ModalShell onClose={onClose} maxWidth={380}>
-      <div style={{ padding: "24px 22px 26px" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24, lineHeight: 1.2 }}>
-            Sign in to Sendoff
+      <div style={{ padding: "22px 22px 26px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10 }}>
+          <div style={{ display: "flex", gap: 6, background: T.white, border: `2px solid ${T.ink}`, borderRadius: 999, padding: 4 }}>
+            {[["login", "Log in"], ["signup", "Sign up"]].map(([id, label]) => (
+              <button key={id} onClick={() => setMode(id)}
+                style={{ background: mode === id ? T.ink : "transparent", color: mode === id ? T.paper : T.ink, border: "none",
+                  borderRadius: 999, padding: "8px 16px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13.5, cursor: "pointer" }}>
+                {label}
+              </button>
+            ))}
           </div>
           <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
             style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink }}>×</m.button>
         </div>
-        <p style={{ fontSize: 14, fontWeight: 600, opacity: 0.72, marginTop: 8, lineHeight: 1.5, marginBottom: 0 }}>
-          New here? Same door. We email you a link, no password. Your city, your crew and your sends follow you to every device.
-        </p>
-        <SignInBlock acct={acct} title="" />
+        {mode === "login"
+          ? <SignInBlock key="login" acct={acct} mode="login" title="Welcome back." sub="Pop your email in and we'll send you a link." />
+          : <SignInBlock key="signup" acct={acct} mode="signup" origin={origin} title="New here?" sub="Free. Your city, your crew and the sends you've done, saved on every device." />}
       </div>
     </ModalShell>
   );
@@ -255,7 +270,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
             </div>
           )}
           {!user ? (
-            <SignInBlock acct={acct} title="Sign in to get Sendoff+" sub="Plus lives on your account, so it works on your phone and your laptop." />
+            <SignInBlock acct={acct} mode="signup" origin={origin} title="Sign in to get Sendoff+" sub="Plus lives on your account, so it works on your phone and your laptop. Already have one? Just use the same email." />
           ) : (
             <>
               <button onClick={checkout} disabled={busy} style={{ ...BIG_BTN(!busy), marginTop: 14 }}>

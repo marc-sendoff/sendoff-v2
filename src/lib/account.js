@@ -47,12 +47,15 @@ export function useAccount() {
     return Date.parse(m.current_period_end) > Date.now();
   }, [data.membership]);
 
-  const signIn = useCallback(async (email, name = "") => {
+  const signIn = useCallback(async (email, name = "", city = "") => {
     if (!supabase) throw new Error("Accounts aren't switched on yet.");
     const redirect = `${window.location.origin}${window.location.pathname}`;
+    const data = {};
+    if (name.trim()) data.name = name.trim();
+    if (city.trim()) data.city = city.trim();
     const { error } = await supabase.auth.signInWithOtp({
       email: email.trim(),
-      options: { emailRedirectTo: redirect, data: name ? { name: name.trim() } : undefined },
+      options: { emailRedirectTo: redirect, data: Object.keys(data).length ? data : undefined },
     });
     if (error) throw error;
   }, []);

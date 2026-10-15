@@ -15,9 +15,11 @@ create table if not exists public.profiles (
   city        text,
   budget      integer,
   crew        integer,
+  theme       text,                          -- Founders pick a look: original | black | blue
   created_at  timestamptz not null default now(),
   updated_at  timestamptz not null default now()
 );
+alter table public.profiles add column if not exists theme text;
 alter table public.profiles enable row level security;
 drop policy if exists "profiles: owner reads" on public.profiles;
 create policy "profiles: owner reads" on public.profiles for select using (auth.uid() = id);
@@ -28,8 +30,8 @@ create policy "profiles: owner updates" on public.profiles for update using (aut
 create or replace function public.handle_new_user() returns trigger
 language plpgsql security definer set search_path = public as $$
 begin
-  insert into public.profiles (id, email, name)
-  values (new.id, new.email, coalesce(new.raw_user_meta_data->>'name', ''))
+  insert into public.profiles (id, email, name, city)
+  values (new.id, new.email, coalesce(new.raw_user_meta_data->>'name', ''), nullif(new.raw_user_meta_data->>'city', ''))
   on conflict (id) do nothing;
   return new;
 end $$;
