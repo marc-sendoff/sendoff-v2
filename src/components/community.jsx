@@ -8,9 +8,9 @@ import { sendRequest, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../data/config.js"
    photo: paste any image link. Leave "" for a placeholder tile.
    ============================================================ */
 export const COMMUNITY_POSTS = [
+  { photo: "wall/smoky-mountains.jpg", name: "Marc", trip: "Great Smoky Mountains", spent: "", handle: "", caption: "" },
   { photo: "wall/montreal-notre-dame.jpg", name: "Marc", trip: "Montreal", spent: "", handle: "", caption: "" },
-  { photo: "", name: "", trip: "", spent: "", handle: "", caption: "" },
-  { photo: "", name: "", trip: "", spent: "", handle: "", caption: "" },
+  { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "", handle: "", caption: "" },
 ];
 
 export const COMMUNITY_COMMENTS = [
