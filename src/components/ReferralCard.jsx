@@ -31,7 +31,7 @@ export default function ReferralCard() {
   return (
     <section style={{ maxWidth: 960, margin: "14px auto 0", padding: "0 20px" }}>
       <div style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 16,
-        boxShadow: `4px 4px 0 ${T.ink}`, padding: "14px 16px", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
+        boxShadow: `4px 4px 0 ${T.shadow}`, padding: "14px 16px", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16 }}>
           🎟️ Bring your crew
         </div>

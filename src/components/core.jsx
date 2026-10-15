@@ -34,7 +34,7 @@ export function Slot({ value, display, options, format, onPick, open, setOpen, i
       {open === id && (
         <m.span {...popIn} onClick={(e) => e.stopPropagation()}
           style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, zIndex: 30, display: "flex", gap: 6,
-            background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14, padding: 8, boxShadow: `4px 4px 0 ${T.ink}` }}>
+            background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14, padding: 8, boxShadow: `4px 4px 0 ${T.shadow}` }}>
           {options.map((o) => (
             <button key={o} onClick={() => { onPick(o); setOpen(null); }}
               style={{ fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: 14, padding: "6px 10px",
@@ -59,7 +59,7 @@ export function OriginSlot({ origin, setOrigin, open, setOpen }) {
       {open === "origin" && (
         <m.span {...popIn} onClick={(e) => e.stopPropagation()}
           style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, zIndex: 30, background: T.white,
-            border: `2px solid ${T.ink}`, borderRadius: 14, padding: 10, boxShadow: `4px 4px 0 ${T.ink}`, width: 240 }}>
+            border: `2px solid ${T.ink}`, borderRadius: 14, padding: 10, boxShadow: `4px 4px 0 ${T.shadow}`, width: 240 }}>
           <input autoFocus value={draft}
             onChange={(e) => setDraft(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && commit(draft)}
@@ -100,7 +100,7 @@ export function CrewSlot({ friends, setFriends, open, setOpen, goBigSend }) {
       {open === "f" && (
         <m.span {...popIn} onClick={(e) => e.stopPropagation()}
           style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, zIndex: 30, background: T.white,
-            border: `2px solid ${T.ink}`, borderRadius: 14, padding: 8, boxShadow: `4px 4px 0 ${T.ink}`,
+            border: `2px solid ${T.ink}`, borderRadius: 14, padding: 8, boxShadow: `4px 4px 0 ${T.shadow}`,
             minWidth: 210, display: "block" }}>
           {FRIENDS.map((n) => (
             <button key={n} onClick={() => { setFriends(n); setOpen(null); }}
@@ -139,7 +139,7 @@ export function BudgetSlot({ budget, setBudget, open, setOpen }) {
       {open === "b" && (
         <m.span {...popIn} onClick={(e) => e.stopPropagation()}
           style={{ position: "absolute", top: "calc(100% + 8px)", left: 0, zIndex: 30, background: T.white,
-            border: `2px solid ${T.ink}`, borderRadius: 14, padding: 14, boxShadow: `4px 4px 0 ${T.ink}`, width: 290 }}>
+            border: `2px solid ${T.ink}`, borderRadius: 14, padding: 14, boxShadow: `4px 4px 0 ${T.shadow}`, width: 290 }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
             <button onClick={() => nudge(-BUDGET_STEP)} style={stepBtn} aria-label="Less">−</button>
             <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 26, color: T.cobalt }}>
@@ -284,7 +284,7 @@ export function WorldProgress({ done, onOpenFirst }) {
   return (
     <section style={{ maxWidth: 960, margin: "20px auto 0", padding: "0 20px" }}>
       <div style={{ background: T.ink, color: T.paper, border: `2px solid ${T.ink}`, borderRadius: 20,
-        boxShadow: `5px 5px 0 ${T.ink}`, padding: "20px 22px" }}>
+        boxShadow: `5px 5px 0 ${T.shadow}`, padding: "20px 22px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12, flexWrap: "wrap" }}>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18 }}>
             YOUR WORLD, COMPLETED

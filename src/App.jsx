@@ -311,14 +311,14 @@ export default function Sendoff() {
           <button onClick={() => (member ? setShowProfile(true) : setShowPlus(true))}
             style={{ fontSize: 14, fontWeight: 800, background: member ? T.ink : T.cobalt, color: member ? T.sun : T.white,
               border: `2px solid ${T.ink}`, borderRadius: 999, padding: "10px 18px", cursor: "pointer",
-              boxShadow: `3px 3px 0 ${T.ink}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
+              boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
             {member ? "✦ SENDOFF+" : "GET SENDOFF+"}
           </button>
           {/* signed in: your initial, opens the profile card. Signed out: a plus, opens sign-in. */}
           <button onClick={() => (acct.user ? setShowProfile(true) : setShowAccount(true))}
             title={acct.user ? "Your profile" : "Sign in"}
             style={{ width: 42, height: 42, borderRadius: "50%", background: acct.user ? T.sun : T.white,
-              border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.ink}`, cursor: "pointer",
+              border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink,
               display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
             {acct.user ? ((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase() : <User size={20} strokeWidth={2.6} aria-label="Sign in" />}
@@ -412,7 +412,7 @@ export default function Sendoff() {
         </div>
         {durationRelaxed && tripDays && (
           <div style={{ background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 12,
-            boxShadow: `3px 3px 0 ${T.ink}`, padding: "11px 14px", fontSize: 13.5, fontWeight: 700, marginBottom: 16 }}>
+            boxShadow: `3px 3px 0 ${T.shadow}`, padding: "11px 14px", fontSize: 13.5, fontWeight: 700, marginBottom: 16 }}>
             Your dates give you {tripDays} days — our longest sends run about a week, so here are the longest first.
             Want the full {tripDays}-day plan built for you?{" "}
             <button onClick={() => setView("custom")}
@@ -436,7 +436,7 @@ export default function Sendoff() {
             after it. Members keep the plain "show 10 more" pager. */}
         {gated ? (
           <div style={{ margin: "26px auto 0", background: T.sun, color: T.onAccent, border: `2px solid ${T.ink}`,
-            borderRadius: 18, boxShadow: `5px 5px 0 ${T.ink}`, padding: "22px 20px", textAlign: "center" }}>
+            borderRadius: 18, boxShadow: `5px 5px 0 ${T.shadow}`, padding: "22px 20px", textAlign: "center" }}>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 23 }}>
               {lockedCount} more {lockedCount === 1 ? "send" : "sends"} in your budget 🔒
             </div>
@@ -446,7 +446,7 @@ export default function Sendoff() {
             <m.button onClick={() => setShowPlus(true)} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}
               transition={SPRING}
               style={{ marginTop: 14, background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`,
-                borderRadius: 14, boxShadow: `3px 3px 0 ${T.ink}`, padding: "13px 22px",
+                borderRadius: 14, boxShadow: `3px 3px 0 ${T.shadow}`, padding: "13px 22px",
                 fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15.5, cursor: "pointer" }}>
               Unlock with Sendoff+ →
             </m.button>
@@ -498,7 +498,7 @@ export default function Sendoff() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: 14 }}>
           <m.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING} onClick={() => { setView("custom"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             style={{ textAlign: "left", background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 16,
-              boxShadow: `4px 4px 0 ${T.ink}`, padding: "14px 16px", cursor: "pointer", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
+              boxShadow: `4px 4px 0 ${T.shadow}`, padding: "14px 16px", cursor: "pointer", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16 }}>
               ✨ Can't find your send?
             </div>
@@ -509,7 +509,7 @@ export default function Sendoff() {
           <m.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING}
             onClick={() => { setView("big"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
             style={{ textAlign: "left", background: T.white, border: `2px solid ${T.ink}`, borderRadius: 16,
-              boxShadow: `4px 4px 0 ${T.ink}`, padding: "14px 16px", cursor: "pointer", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
+              boxShadow: `4px 4px 0 ${T.shadow}`, padding: "14px 16px", cursor: "pointer", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16 }}>
               🎉 Rolling 8+ deep?
             </div>

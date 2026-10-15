@@ -4,6 +4,7 @@ export const T = {
   /* derived roles so dark themes stay readable: text on a sun/cobalt fill,
      text on an ink fill, a soft tinted fill for chips, a muted surface */
   onAccent: "#1B1D2A", onInk: "#FFC838", tint: "#E8F5EC", muted: "#ECE8DB", mutedFg: "#5A5C6B",
+  shadow: "#1B1D2A", // the hard offset shadow under cards; ink on the cream site
 };
 
 /* ---- themes: a Founders Club perk. Every component reads colours off T at
@@ -11,21 +12,22 @@ export const T = {
    few derived recipes below, and re-render. `original` is the site. ---- */
 export const THEMES = {
   original: { label: "Original", paper: "#F4F1E8", ink: "#1B1D2A", cobalt: "#2547F0", sun: "#FFC838", poppy: "#FF5A3C", white: "#FFFFFF",
-              onAccent: "#1B1D2A", onInk: "#FFC838", tint: "#E8F5EC", muted: "#ECE8DB", mutedFg: "#5A5C6B" },
+              onAccent: "#1B1D2A", onInk: "#FFC838", tint: "#E8F5EC", muted: "#ECE8DB", mutedFg: "#5A5C6B", shadow: "#1B1D2A" },
   /* Founders Black: near-black, ivory type, hot yellow where the site is
-     usually cobalt. Cards go charcoal with ivory borders. */
+     usually cobalt. Cards charcoal with ivory borders; shadows sink into the dark. */
   black:    { label: "Founders Black", paper: "#0B0B0D", ink: "#F1EADB", cobalt: "#F5B700", sun: "#F5B700", poppy: "#FF7A5C", white: "#16161B",
-              onAccent: "#0B0B0D", onInk: "#0B0B0D", tint: "rgba(245,183,0,0.14)", muted: "#1E1E25", mutedFg: "#A9A395" },
-  /* Cobalt: deep navy rather than electric blue, so it's calm to read. */
-  blue:     { label: "Cobalt", paper: "#0F1B4D", ink: "#F4F1E8", cobalt: "#FFC838", sun: "#FFC838", poppy: "#FF8A6B", white: "#182866",
-              onAccent: "#0F1B4D", onInk: "#0F1B4D", tint: "rgba(255,255,255,0.10)", muted: "#223379", mutedFg: "#B9C3E8" },
+              onAccent: "#0B0B0D", onInk: "#0B0B0D", tint: "rgba(245,183,0,0.14)", muted: "#1E1E25", mutedFg: "#A9A395", shadow: "#000000" },
+  /* Cobalt: the site's blue as the page itself. White cards, navy type so it
+     stays readable, hot yellow for the accents, navy shadows. */
+  blue:     { label: "Cobalt", paper: "#3558FF", ink: "#0B1540", cobalt: "#FFB800", sun: "#FFB800", poppy: "#FF6A4A", white: "#FFFFFF",
+              onAccent: "#0B1540", onInk: "#FFB800", tint: "#FFF3C2", muted: "#2A48D6", mutedFg: "#DCE3FF", shadow: "#0B1540" },
 };
 export const DEFAULT_THEME = "original";
 export function applyTheme(name) {
   const th = THEMES[name] || THEMES[DEFAULT_THEME];
   const { label, ...colors } = th;
   Object.assign(T, colors);
-  SH.card = `4px 4px 0 ${T.ink}`; SH.pop = `4px 4px 0 ${T.ink}`; SH.big = `6px 6px 0 ${T.ink}`;
+  SH.card = `4px 4px 0 ${T.shadow}`; SH.pop = `4px 4px 0 ${T.shadow}`; SH.big = `6px 6px 0 ${T.shadow}`;
   Object.assign(surface, { background: T.white, border: `2px solid ${T.ink}`, boxShadow: SH.card, color: T.ink });
   slotStyle.color = T.cobalt; slotStyle.borderBottom = `4px solid ${T.sun}`;
   if (typeof document !== "undefined") {
@@ -67,7 +69,7 @@ export const slotStyle = {
 /* ---- shared surface recipe (v2 views): one radius/border/shadow language
    so every card on the page agrees. Cards get SH.card, floating panels SH.pop. ---- */
 export const R = { card: 16, panel: 14, pill: 999 };
-export const SH = { card: `4px 4px 0 ${T.ink}`, pop: `4px 4px 0 ${T.ink}`, big: `6px 6px 0 ${T.ink}` };
+export const SH = { card: `4px 4px 0 ${T.shadow}`, pop: `4px 4px 0 ${T.shadow}`, big: `6px 6px 0 ${T.shadow}` };
 export const surface = {
   background: T.white, border: `2px solid ${T.ink}`, borderRadius: R.card, boxShadow: SH.card, color: T.ink,
 };

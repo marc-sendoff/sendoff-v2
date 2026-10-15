@@ -103,7 +103,7 @@ const INPUT = {
 };
 const BIG_BTN = (on) => ({
   width: "100%", background: on ? T.cobalt : "#B9C0D9", color: T.white, border: `2px solid ${T.ink}`,
-  borderRadius: 14, boxShadow: on ? `4px 4px 0 ${T.ink}` : "none", padding: "14px",
+  borderRadius: 14, boxShadow: on ? `4px 4px 0 ${T.shadow}` : "none", padding: "14px",
   fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, cursor: on ? "pointer" : "not-allowed",
 });
 
@@ -306,7 +306,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
                 <button onClick={tryCode}
                   style={{ background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 12, padding: "0 18px",
                     fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15,
-                    cursor: "pointer", color: T.ink, boxShadow: `3px 3px 0 ${T.ink}` }}>
+                    cursor: "pointer", color: T.ink, boxShadow: `3px 3px 0 ${T.shadow}` }}>
                   Unlock
                 </button>
               </div>

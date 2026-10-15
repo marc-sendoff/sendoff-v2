@@ -19,7 +19,7 @@ const PERKS = [
 
 const card = {
   background: T.white, border: `2px solid ${T.ink}`, borderRadius: 18,
-  boxShadow: `5px 5px 0 ${T.ink}`, padding: "18px 20px",
+  boxShadow: `5px 5px 0 ${T.shadow}`, padding: "18px 20px",
 };
 
 export default function FoundersClub() {
@@ -145,7 +145,7 @@ export default function FoundersClub() {
               whileHover={sending ? undefined : { y: -2 }} whileTap={sending ? undefined : { scale: 0.97 }}
               transition={SPRING}
               style={{ marginTop: 14, background: sending ? "#B9C0D9" : T.cobalt, color: T.white,
-                border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: sending ? "none" : `3px 3px 0 ${T.ink}`,
+                border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: sending ? "none" : `3px 3px 0 ${T.shadow}`,
                 padding: "13px 22px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
                 fontSize: 15.5, cursor: sending ? "not-allowed" : "pointer" }}>
               {sending ? "Sending…" : "Request a seat →"}

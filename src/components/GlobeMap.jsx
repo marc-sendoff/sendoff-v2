@@ -367,7 +367,7 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
   const btn = {
     width: 54, height: 54, borderRadius: 14, border: `2px solid ${T.ink}`, background: T.white,
     fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24, cursor: "pointer",
-    boxShadow: `2px 2px 0 ${T.ink}`, color: T.ink, lineHeight: 1, touchAction: "manipulation",
+    boxShadow: `2px 2px 0 ${T.shadow}`, color: T.ink, lineHeight: 1, touchAction: "manipulation",
   };
 
   /* live tie-in to the filters above: how many pins are lit right now */

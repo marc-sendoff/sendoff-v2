@@ -72,7 +72,7 @@ export default function TravelMap({ trips = TRIPS, origin, originCoords, budget,
   const btn = {
     width: 40, height: 40, borderRadius: 12, border: `2px solid ${T.ink}`, background: T.white,
     fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18, cursor: "pointer",
-    boxShadow: `2px 2px 0 ${T.ink}`, color: T.ink, lineHeight: 1,
+    boxShadow: `2px 2px 0 ${T.shadow}`, color: T.ink, lineHeight: 1,
   };
 
   return (
@@ -81,7 +81,7 @@ export default function TravelMap({ trips = TRIPS, origin, originCoords, budget,
         <h2 style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 26, letterSpacing: "-0.5px" }}>TRAVEL MAP 🗺️</h2>
         <span style={{ fontSize: 13, fontWeight: 700, opacity: 0.6 }}>every send on Earth, from {origin}</span>
       </div>
-      <div style={{ position: "relative", background: T.white, border: `2px solid ${T.ink}`, borderRadius: 20, boxShadow: `5px 5px 0 ${T.ink}`, overflow: "hidden" }}>
+      <div style={{ position: "relative", background: T.white, border: `2px solid ${T.ink}`, borderRadius: 20, boxShadow: `5px 5px 0 ${T.shadow}`, overflow: "hidden" }}>
         {/* zoom controls */}
         <div style={{ position: "absolute", top: 12, right: 12, zIndex: 5, display: "flex", flexDirection: "column", gap: 8 }}>
           <button onClick={() => zoomTo(z * 1.5)} style={btn} aria-label="Zoom in">+</button>

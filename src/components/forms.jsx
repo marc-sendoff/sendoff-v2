@@ -57,7 +57,7 @@ export function CustomSendoff({ origin }) {
 
       {!sent ? (
         <div style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 20,
-          boxShadow: `5px 5px 0 ${T.ink}`, padding: "20px 22px 24px", marginTop: 20 }}>
+          boxShadow: `5px 5px 0 ${T.shadow}`, padding: "20px 22px 24px", marginTop: 20 }}>
           <label style={labelStyle}>YOUR NAME</label>
           <input style={inputStyle} value={f.name} onChange={set("name")} placeholder="Alex" />
           <label style={labelStyle}>BEST WAY TO REACH YOU (IG / TEXT / EMAIL)</label>
@@ -89,7 +89,7 @@ export function CustomSendoff({ origin }) {
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 18, flexWrap: "wrap" }}>
             <button onClick={submit} disabled={!ready || sending}
               style={{ flex: 1, minWidth: 220, background: (ready && !sending) ? T.cobalt : "#B9C0D9", color: T.white,
-                border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: (ready && !sending) ? `4px 4px 0 ${T.ink}` : "none",
+                border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: (ready && !sending) ? `4px 4px 0 ${T.shadow}` : "none",
                 padding: "14px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
                 cursor: (ready && !sending) ? "pointer" : "not-allowed" }}>
               {sending ? "Sending…" : "Request my Sendoff →"}
@@ -104,7 +104,7 @@ export function CustomSendoff({ origin }) {
         </div>
       ) : (
         <div style={{ background: failed ? "#FFF4E5" : T.tint, border: `2px solid ${T.ink}`, borderRadius: 20,
-          boxShadow: `5px 5px 0 ${T.ink}`, padding: "24px 22px", marginTop: 20 }}>
+          boxShadow: `5px 5px 0 ${T.shadow}`, padding: "24px 22px", marginTop: 20 }}>
           <div style={{ fontSize: 30 }}>{failed ? "📋" : "🛫"}</div>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 6 }}>
             {failed ? "Almost — one more step" : "Request sent!"}
@@ -191,7 +191,7 @@ export function BigSend({ origin }) {
 
       {!sent ? (
         <div style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 20,
-          boxShadow: `5px 5px 0 ${T.ink}`, padding: "20px 22px 24px", marginTop: 20 }}>
+          boxShadow: `5px 5px 0 ${T.shadow}`, padding: "20px 22px 24px", marginTop: 20 }}>
           <label style={labelStyle}>YOUR NAME</label>
           <input style={inputStyle} value={f.name} onChange={set("name")} placeholder="Alex" />
           <label style={labelStyle}>BEST WAY TO REACH YOU (IG / TEXT / EMAIL)</label>
@@ -223,7 +223,7 @@ export function BigSend({ origin }) {
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginTop: 18, flexWrap: "wrap" }}>
             <button onClick={submit} disabled={!ready || sending}
               style={{ flex: 1, minWidth: 220, background: (ready && !sending) ? T.cobalt : "#B9C0D9", color: T.white,
-                border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: (ready && !sending) ? `4px 4px 0 ${T.ink}` : "none",
+                border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: (ready && !sending) ? `4px 4px 0 ${T.shadow}` : "none",
                 padding: "14px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
                 cursor: (ready && !sending) ? "pointer" : "not-allowed" }}>
               {sending ? "Sending…" : "Request The Big Send →"}
@@ -243,7 +243,7 @@ export function BigSend({ origin }) {
         </div>
       ) : (
         <div style={{ background: failed ? "#FFF4E5" : T.tint, border: `2px solid ${T.ink}`, borderRadius: 20,
-          boxShadow: `5px 5px 0 ${T.ink}`, padding: "24px 22px", marginTop: 20 }}>
+          boxShadow: `5px 5px 0 ${T.shadow}`, padding: "24px 22px", marginTop: 20 }}>
           <div style={{ fontSize: 30 }}>{failed ? "📋" : "🎉"}</div>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 6 }}>
             {failed ? "Almost — one more step" : "Request sent!"}
@@ -318,7 +318,7 @@ export function SendoffCrew({ origin }) {
       </p>
 
       <div style={{ background: T.ink, color: T.paper, border: `2px solid ${T.ink}`, borderRadius: 18,
-        boxShadow: `5px 5px 0 ${T.ink}`, padding: "18px 20px", marginTop: 18 }}>
+        boxShadow: `5px 5px 0 ${T.shadow}`, padding: "18px 20px", marginTop: 18 }}>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.sun }}>
           HOW WE KEEP IT SAFE
         </div>
@@ -340,7 +340,7 @@ export function SendoffCrew({ origin }) {
 
       {!sent ? (
         <div style={{ background: T.white, border: `2px solid ${T.ink}`, borderRadius: 20,
-          boxShadow: `5px 5px 0 ${T.ink}`, padding: "20px 22px 24px", marginTop: 20 }}>
+          boxShadow: `5px 5px 0 ${T.shadow}`, padding: "20px 22px 24px", marginTop: 20 }}>
           <label style={labelStyle}>YOUR NAME</label>
           <input style={inputStyle} value={f.name} onChange={set("name")} placeholder="Alex" />
           <label style={labelStyle}>INSTAGRAM OR EMAIL (how we reach you)</label>
@@ -373,7 +373,7 @@ export function SendoffCrew({ origin }) {
 
           <button onClick={submit} disabled={!ready || sending}
             style={{ width: "100%", marginTop: 18, background: (ready && !sending) ? T.cobalt : "#B9C0D9", color: T.white,
-              border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: (ready && !sending) ? `4px 4px 0 ${T.ink}` : "none",
+              border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: (ready && !sending) ? `4px 4px 0 ${T.shadow}` : "none",
               padding: "14px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
               cursor: (ready && !sending) ? "pointer" : "not-allowed" }}>
             {sending ? "Sending…" : "Apply for a crew →"}
@@ -384,7 +384,7 @@ export function SendoffCrew({ origin }) {
         </div>
       ) : (
         <div style={{ background: failed ? "#FFF4E5" : T.tint, border: `2px solid ${T.ink}`, borderRadius: 20,
-          boxShadow: `5px 5px 0 ${T.ink}`, padding: "24px 22px", marginTop: 20 }}>
+          boxShadow: `5px 5px 0 ${T.shadow}`, padding: "24px 22px", marginTop: 20 }}>
           <div style={{ fontSize: 30 }}>{failed ? "📋" : "🤝"}</div>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 6 }}>
             {failed ? "Almost — one more step" : "Application in!"}

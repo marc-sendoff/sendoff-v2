@@ -81,7 +81,7 @@ export default function WelcomeSplash() {
           </m.h1>
 
           <div style={{ display: "inline-block", background: T.sun, border: `2px solid ${T.ink}`,
-            borderRadius: 999, boxShadow: `4px 4px 0 ${T.ink}`, padding: "10px 22px",
+            borderRadius: 999, boxShadow: `4px 4px 0 ${T.shadow}`, padding: "10px 22px",
             fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: "clamp(15px, 3vw, 19px)" }}>
             Go while you're young ✈️
           </div>
