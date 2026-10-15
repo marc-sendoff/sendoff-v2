@@ -73,4 +73,10 @@
     border-style: solid;
     border-width: 0;
   }
+  /* the card is a <button>: kill the browser's default grey face and padding,
+     which blended into the cream site but showed as a pale box on dark looks */
+  .sendoff-v3 {
+    background: transparent;
+    padding: 0;
+  }
 }
