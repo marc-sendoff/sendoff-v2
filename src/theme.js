@@ -6,7 +6,9 @@ export const T = { paper: "#F4F1E8", ink: "#1B1D2A", cobalt: "#2547F0", sun: "#F
    few derived recipes below, and re-render. `original` is the site. ---- */
 export const THEMES = {
   original: { label: "Original", paper: "#F4F1E8", ink: "#1B1D2A", cobalt: "#2547F0", sun: "#FFC838", poppy: "#FF5A3C", white: "#FFFFFF" },
-  black:    { label: "Founders Black", paper: "#0F1014", ink: "#F4F1E8", cobalt: "#FFC838", sun: "#4A66F6", poppy: "#FF5A3C", white: "#1B1D2A" },
+  /* Founders Black: near-black, warm ivory type, champagne gold where the
+     site is usually cobalt or sun. Less neon, more members-lounge. */
+  black:    { label: "Founders Black", paper: "#0A0A0C", ink: "#EDE6D3", cobalt: "#D4B46A", sun: "#D4B46A", poppy: "#FF8466", white: "#15151A" },
   blue:     { label: "Cobalt", paper: "#1E3BD6", ink: "#F4F1E8", cobalt: "#FFC838", sun: "#FFC838", poppy: "#FF8A6B", white: "#1631B8" },
 };
 export const DEFAULT_THEME = "original";
