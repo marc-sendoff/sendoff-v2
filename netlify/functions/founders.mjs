@@ -14,7 +14,9 @@ export default async () => {
     const byId = new Map((profiles ?? []).map((p) => [p.id, p]));
     rows = (mem ?? []).map((m) => {
       const p = byId.get(m.user_id) || {};
-      return { number: m.founder_number, name: String(p.name || "").trim().split(/\s+/)[0] || "Founder", city: p.city || null };
+      const first = String(p.name || "").trim().split(/\s+/)[0];
+      const name = first ? first[0].toUpperCase() + first.slice(1) : "Founder";
+      return { number: m.founder_number, name, city: p.city || null };
     });
   } catch (err) {
     console.error(`founders: ${err.message}`);
