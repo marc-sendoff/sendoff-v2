@@ -1,4 +1,4 @@
-/* The fare refresh. Runs every 15 minutes and refreshes ONE origin per run,
+/* The fare refresh. Runs every hour and refreshes ONE origin per run,
    rotating through the first ORIGINS_N metros in netlify/data/origins.json
    (Florida first, then the big US cities), so the whole set turns over every
    few hours and no single run comes near the function timeout.
@@ -133,4 +133,4 @@ export default async (req) => {
   return new Response(JSON.stringify(result), { headers: { "Content-Type": "application/json" } });
 };
 
-export const config = { schedule: "*/15 * * * *" };
+export const config = { schedule: "0 * * * *" };
