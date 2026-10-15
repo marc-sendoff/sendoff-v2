@@ -23,7 +23,7 @@ export default function LiveFare({ originCode, dest, dates }) {
   if (!fare) return null;
   const nice = (iso) => new Date(iso + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
   return (
-    <div style={{ background: "#EEF3FF", border: `2px solid ${T.ink}`, borderRadius: 12, padding: "10px 13px",
+    <div style={{ background: T.tint, border: `2px solid ${T.ink}`, borderRadius: 12, padding: "10px 13px",
       fontSize: 13.5, fontWeight: 700, marginTop: 12 }}>
       ✈️ {fare.exact ? "Flights for your dates" : "Cheapest recent fare that month"}: {fmt(fare.price)} round trip per person
       {!fare.exact && fare.out && fare.back && (

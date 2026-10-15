@@ -160,7 +160,7 @@ export function Community({ origin }) {
           </div>
         ) : (
           <m.div initial={{ opacity: 0, scale: 0.97 }} animate={{ opacity: 1, scale: 1 }} transition={SPRING}
-            style={{ background: "#E8F5EC", color: T.ink, borderRadius: 14, padding: "18px", marginTop: 14 }}>
+            style={{ background: T.tint, color: T.ink, borderRadius: 14, padding: "18px", marginTop: 14 }}>
             <div style={{ fontSize: 26 }} aria-hidden="true">📸</div>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18, marginTop: 4 }}>
               Got it — now send the photo

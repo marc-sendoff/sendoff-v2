@@ -21,7 +21,7 @@ export default function StayBlock({ trip, friends, dates }) {
       </div>
       <m.a href={url} target="_blank" rel="noopener noreferrer"
         whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING}
-        style={{ background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
+        style={{ background: T.sun, color: T.onAccent, border: `2px solid ${T.ink}`,
           borderRadius: 14, boxShadow: SH.card, padding: "12px 13px", textDecoration: "none", display: "block" }}>
         <span style={{ fontSize: 20 }}>🛏️</span>
         <span style={{ display: "block", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15, marginTop: 4 }}>

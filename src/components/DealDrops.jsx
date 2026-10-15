@@ -70,7 +70,7 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
         <div style={{ fontSize: 12.5, fontWeight: 600, opacity: 0.75, marginTop: 3 }}>
           Members get texted the moment fares from {origin} drop. $3.99/mo.
         </div>
-        <div style={{ marginTop: 10, background: T.sun, color: T.ink, borderRadius: 10, padding: "8px 12px",
+        <div style={{ marginTop: 10, background: T.sun, color: T.onAccent, borderRadius: 10, padding: "8px 12px",
           fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13, display: "inline-block" }}>
           Unlock Sendoff+ →
         </div>
@@ -79,7 +79,7 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
   ) : (
     <div className="w-[200px] flex-none snap-start">
       <div className="h-[320px]"
-        style={{ background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 12,
+        style={{ background: T.tint, border: `2px solid ${T.ink}`, borderRadius: 12,
           padding: "14px 16px", fontFamily: "'Instrument Sans', sans-serif", display: "flex",
           flexDirection: "column", justifyContent: "center" }}>
         <div style={{ fontSize: 20 }}>✅</div>

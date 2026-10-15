@@ -59,7 +59,7 @@ export default function Founders({ acct, onJoin }) {
       </m.div>
 
       {isFounder ? (
-        <div style={{ marginTop: 24, background: T.ink, color: T.sun, borderRadius: 20, padding: "20px 22px", border: `2px solid ${T.ink}`, boxShadow: SH.big }}>
+        <div style={{ marginTop: 24, background: T.ink, color: T.onInk, borderRadius: 20, padding: "20px 22px", border: `2px solid ${T.ink}`, boxShadow: SH.big }}>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24 }}>You're Founder #{mine}.</div>
           <div style={{ fontSize: 14, fontWeight: 600, opacity: 0.85, marginTop: 6 }}>Pick your look from your profile card (tap your initial, top right).</div>
         </div>

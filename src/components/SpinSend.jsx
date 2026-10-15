@@ -454,7 +454,7 @@ export default function SpinSend({ trips, origin, friends, budget, onPick }) {
               <button onClick={() => { const r = result; closeResult(); onPick?.(r.trip, { fromWheel: true, bonus: r.bonus }); }}
                 style={{ flex: 1, fontFamily: brico, fontWeight: 800, fontSize: 15, padding: "14px 8px",
                   minHeight: 50, borderRadius: 14, border: `2px solid ${T.ink}`, background: T.sun,
-                  color: T.ink, cursor: "pointer", boxShadow: SH.card }}>
+                  color: T.onAccent, cursor: "pointer", boxShadow: SH.card }}>
                 SEND IT →
               </button>
             </div>

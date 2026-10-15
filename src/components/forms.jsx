@@ -103,7 +103,7 @@ export function CustomSendoff({ origin }) {
           </div>
         </div>
       ) : (
-        <div style={{ background: failed ? "#FFF4E5" : "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 20,
+        <div style={{ background: failed ? "#FFF4E5" : T.tint, border: `2px solid ${T.ink}`, borderRadius: 20,
           boxShadow: `5px 5px 0 ${T.ink}`, padding: "24px 22px", marginTop: 20 }}>
           <div style={{ fontSize: 30 }}>{failed ? "📋" : "🛫"}</div>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 6 }}>
@@ -242,7 +242,7 @@ export function BigSend({ origin }) {
           </div>
         </div>
       ) : (
-        <div style={{ background: failed ? "#FFF4E5" : "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 20,
+        <div style={{ background: failed ? "#FFF4E5" : T.tint, border: `2px solid ${T.ink}`, borderRadius: 20,
           boxShadow: `5px 5px 0 ${T.ink}`, padding: "24px 22px", marginTop: 20 }}>
           <div style={{ fontSize: 30 }}>{failed ? "📋" : "🎉"}</div>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 6 }}>
@@ -383,7 +383,7 @@ export function SendoffCrew({ origin }) {
           </div>
         </div>
       ) : (
-        <div style={{ background: failed ? "#FFF4E5" : "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 20,
+        <div style={{ background: failed ? "#FFF4E5" : T.tint, border: `2px solid ${T.ink}`, borderRadius: 20,
           boxShadow: `5px 5px 0 ${T.ink}`, padding: "24px 22px", marginTop: 20 }}>
           <div style={{ fontSize: 30 }}>{failed ? "📋" : "🤝"}</div>
           <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 22, marginTop: 6 }}>

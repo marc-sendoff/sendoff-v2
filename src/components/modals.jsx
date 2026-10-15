@@ -126,7 +126,7 @@ function SignInBlock({ acct, mode = "login", origin = "", title, sub }) {
   };
   if (state === "sent") {
     return (
-      <div style={{ marginTop: 16, background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 14, padding: "16px 18px", textAlign: "center", color: "#1B1D2A" }}>
+      <div style={{ marginTop: 16, background: T.tint, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "16px 18px", textAlign: "center", color: "#1B1D2A" }}>
         <div style={{ fontSize: 26 }}>📬</div>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, marginTop: 4 }}>Check your email</div>
         <div style={{ fontSize: 13, fontWeight: 600, opacity: 0.75, marginTop: 4 }}>
@@ -438,7 +438,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
               boxShadow: SH.card, padding: "10px 13px", fontSize: 13.5, fontWeight: 600, marginBottom: 10 }}>💸 {h}</div>
           ))}
           {member ? (
-            <div style={{ background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 12,
+            <div style={{ background: T.tint, border: `2px solid ${T.ink}`, borderRadius: 12,
               padding: "10px 13px", fontSize: 13.5, fontWeight: 700, marginBottom: 10 }}>
               ✦ Price-drop alert ON — we'll text you when {origin} → {trip.name.split(",")[0]} fares dip.
             </div>
@@ -452,7 +452,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
           )}
           <SectionLabel>Book it — searches pre-filled for your crew</SectionLabel>
           {wheelBonus > 0 && (
-            <div style={{ background: banked ? "#E8F5EC" : T.sun, border: `2px solid ${T.ink}`, borderRadius: 12,
+            <div style={{ background: banked ? T.tint : T.sun, border: `2px solid ${T.ink}`, borderRadius: 12,
               padding: "10px 13px", fontSize: 13.5, fontWeight: 700, marginBottom: 10 }}>
               {banked
                 ? `✅ +${banked} Send Points banked. The wheel called it, you answered.`
@@ -486,7 +486,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
           </div>
           <m.button onClick={() => !isDone && onMarkDone(trip)} disabled={isDone}
             whileTap={isDone ? undefined : { scale: 0.98 }} transition={SPRING}
-            style={{ width: "100%", marginTop: 10, background: isDone ? "#E8F5EC" : T.white,
+            style={{ width: "100%", marginTop: 10, background: isDone ? T.tint : T.white,
               color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 14,
               boxShadow: isDone ? "none" : SH.card, padding: "13px",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15,
@@ -558,7 +558,7 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeNa
 
         {/* membership */}
         {isMember ? (
-          <div style={{ marginTop: 16, background: T.ink, color: T.sun, borderRadius: 14, padding: "12px 16px" }}>
+          <div style={{ marginTop: 16, background: T.ink, color: T.onInk, borderRadius: 14, padding: "12px 16px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17 }}>{badge.toUpperCase()}</span>
               <span style={{ fontSize: 11.5, fontWeight: 700, opacity: 0.75 }}>
@@ -622,7 +622,7 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeNa
                 const t = TRIPS.find((x) => x.id === row.trip_id);
                 if (!t) return null;
                 return (
-                  <span key={row.trip_id} style={{ background: "#E8F5EC", border: `2px solid ${T.ink}`, borderRadius: 999,
+                  <span key={row.trip_id} style={{ background: T.tint, border: `2px solid ${T.ink}`, borderRadius: 999,
                     padding: "6px 12px", fontSize: 12.5, fontWeight: 800 }}>
                     {t.img} {t.name}{row.spent ? ` · ${fmt(row.spent)}` : ""}
                   </span>

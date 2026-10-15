@@ -435,7 +435,7 @@ export default function Sendoff() {
         {/* Free accounts get the ask at the end of the blur, with nothing dead
             after it. Members keep the plain "show 10 more" pager. */}
         {gated ? (
-          <div style={{ margin: "26px auto 0", background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
+          <div style={{ margin: "26px auto 0", background: T.sun, color: T.onAccent, border: `2px solid ${T.ink}`,
             borderRadius: 18, boxShadow: `5px 5px 0 ${T.ink}`, padding: "22px 20px", textAlign: "center" }}>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 23 }}>
               {lockedCount} more {lockedCount === 1 ? "send" : "sends"} in your budget 🔒
@@ -553,7 +553,7 @@ export default function Sendoff() {
             </span>
           </span>
           <button onClick={() => setShowPlus(true)}
-            style={{ border: `2px solid ${T.ink}`, borderRadius: 999, background: T.sun, color: T.ink,
+            style={{ border: `2px solid ${T.ink}`, borderRadius: 999, background: T.sun, color: T.onAccent,
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13.5,
               padding: "10px 16px", cursor: "pointer", whiteSpace: "nowrap", flexShrink: 0 }}>
             Unlock →
