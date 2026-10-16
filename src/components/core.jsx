@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { m } from "motion/react";
 import { T, slotStyle, crewLabel, FRIENDS, BUDGET_MIN, BUDGET_MAX, BUDGET_STEP, R, SH, SPRING } from "../theme.js";
+import { openCities, isOpen, opensOn, niceDate } from "../data/rollout.js";
 import { CITIES, TRIPS } from "../data/trips.js";
 import { fmt } from "../data/config.js";
 import { priceTag } from "../data/pricing.js";
@@ -50,7 +51,14 @@ export function Slot({ value, display, options, format, onPick, open, setOpen, i
 
 export function OriginSlot({ origin, setOrigin, open, setOpen }) {
   const [draft, setDraft] = useState(origin);
-  const commit = (v) => { const c = v.trim(); if (c) setOrigin(c); setOpen(null); };
+  const [closed, setClosed] = useState(null); // a city that isn't open yet
+  /* Rollout gate: only cities whose stage has opened can be a home base. A
+     typed city that matches a closed one shows when it opens instead. */
+  const commit = (v) => {
+    const c = v.trim(); if (!c) { setOpen(null); return; }
+    if (!isOpen(c)) { setClosed(c); return; }
+    setClosed(null); setOrigin(c); setOpen(null);
+  };
   return (
     <span style={{ position: "relative", display: "inline-block" }}>
       <button onClick={(e) => { e.stopPropagation(); setDraft(origin); setOpen(open === "origin" ? null : "origin"); }} style={slotStyle}>
@@ -68,7 +76,7 @@ export function OriginSlot({ origin, setOrigin, open, setOpen }) {
             style={{ width: "100%", fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: 16,
               padding: "8px 10px", border: `2px solid ${T.ink}`, borderRadius: 10, background: T.paper }} />
           <div style={{ maxHeight: 220, overflowY: "auto", marginTop: 8 }}>
-            {Object.keys(CITIES)
+            {openCities()
               .filter((c) => c.toLowerCase().includes(draft.trim().toLowerCase()))
               .map((c) => (
                 <button key={c} onClick={() => commit(c)}
@@ -79,6 +87,12 @@ export function OriginSlot({ origin, setOrigin, open, setOpen }) {
                 </button>
               ))}
           </div>
+          {closed && (
+            <div style={{ marginTop: 8, background: T.sun, color: T.onAccent, border: `2px solid ${T.ink}`, borderRadius: 10,
+              padding: "8px 10px", fontSize: 12.5, fontWeight: 700, lineHeight: 1.4 }}>
+              {closed} opens {niceDate(opensOn(closed).opens)}. Florida's first, you're next.
+            </div>
+          )}
           <button onClick={() => commit(draft)}
             style={{ marginTop: 8, width: "100%", background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
               borderRadius: 10, padding: "7px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13, cursor: "pointer" }}>

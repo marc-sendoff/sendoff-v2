@@ -12,6 +12,8 @@ export const CITIES = {
   Milwaukee: [43.04, -87.91], Memphis: [35.15, -90.05], Albuquerque: [35.08, -106.65], Boise: [43.62, -116.2],
   // — Florida & Southeast
   "Fort Lauderdale": [26.12, -80.14], "West Palm Beach": [26.71, -80.05], "Fort Myers": [26.64, -81.87],
+  "Boca Raton": [26.37, -80.13], Tallahassee: [30.44, -84.28], Gainesville: [29.65, -82.32], "Daytona Beach": [29.21, -81.02],
+  "Key West": [24.56, -81.78], "St. Petersburg": [27.77, -82.64], Naples: [26.14, -81.79], Melbourne: [28.08, -80.61],
   Sarasota: [27.34, -82.53], Pensacola: [30.42, -87.22], Savannah: [32.08, -81.09], Charleston: [32.78, -79.93],
   "Myrtle Beach": [33.69, -78.89], Birmingham: [33.52, -86.81], Huntsville: [34.73, -86.59],
   Knoxville: [35.96, -83.92], Chattanooga: [35.05, -85.31], Louisville: [38.25, -85.76], Lexington: [38.04, -84.5],
