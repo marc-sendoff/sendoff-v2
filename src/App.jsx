@@ -20,6 +20,7 @@ import { VibeRail } from "./components/browse/VibeRail.jsx";
 import { SearchSortBar } from "./components/browse/SearchSortBar.jsx";
 import DealDrops from "./components/DealDrops.jsx";
 import WelcomeSplash from "./components/WelcomeSplash.jsx";
+import InstallNudge from "./components/InstallNudge.jsx";
 import ReferralCard from "./components/ReferralCard.jsx";
 import Waitlist from "./components/Waitlist.jsx";
 
@@ -304,6 +305,7 @@ export default function Sendoff() {
 
       {/* one-per-session launch splash — overlays everything, never gates the app's render */}
       <WelcomeSplash />
+      <InstallNudge />
 
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "18px 20px", maxWidth: 960, margin: "0 auto" }}>
         <Logo />

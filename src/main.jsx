@@ -4,6 +4,12 @@ import Landing from "./Landing.jsx";
 import "./index.css";
 import "./analytics.js";
 
+/* Installable: the service worker caches the shell + seen photos so the
+   home-screen version opens instantly. Only on the real site, never in dev. */
+if ("serviceWorker" in navigator && import.meta.env.PROD) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
+}
+
 /* Until December the site is the signup page and nothing else.
 
    /preview is the one exception: it renders the full app so Marc can see the
