@@ -49,7 +49,7 @@ export function Slot({ value, display, options, format, onPick, open, setOpen, i
   );
 }
 
-export function OriginSlot({ origin, setOrigin, open, setOpen }) {
+export function OriginSlot({ origin, setOrigin, open, setOpen, onAskForCity }) {
   const [draft, setDraft] = useState(origin);
   const [closed, setClosed] = useState(null); // a city that isn't open yet
   /* Rollout gate: only cities whose stage has opened can be a home base. A
@@ -91,6 +91,16 @@ export function OriginSlot({ origin, setOrigin, open, setOpen }) {
             <div style={{ marginTop: 8, background: T.sun, color: T.onAccent, border: `2px solid ${T.ink}`, borderRadius: 10,
               padding: "8px 10px", fontSize: 12.5, fontWeight: 700, lineHeight: 1.4 }}>
               {closed} opens {niceDate(opensOn(closed).opens)}. Florida's first, you're next.
+              {/* Once the site is live, a closed city is a signup rather than a
+                  dead end: hand it to the list further down the page. */}
+              {onAskForCity && (
+                <button onClick={() => onAskForCity(closed)}
+                  style={{ display: "block", marginTop: 6, background: "none", border: "none", padding: 0,
+                    color: T.ink, fontFamily: "inherit", fontWeight: 800, fontSize: 12.5,
+                    textDecoration: "underline", cursor: "pointer" }}>
+                  Email me the day it opens →
+                </button>
+              )}
             </div>
           )}
           <button onClick={() => commit(draft)}

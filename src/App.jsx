@@ -23,6 +23,7 @@ import WelcomeSplash from "./components/WelcomeSplash.jsx";
 import InstallNudge from "./components/InstallNudge.jsx";
 import ReferralCard from "./components/ReferralCard.jsx";
 import Waitlist from "./components/Waitlist.jsx";
+import { hasLaunched, currentStage } from "./data/rollout.js";
 
 /* Load the brand fonts from the app itself, so every build renders
    identically no matter what the surrounding page contains. */
@@ -85,6 +86,18 @@ export default function Sendoff() {
   const [sortBy, setSortBy] = useState("high");
   const [visible, setVisible] = useState(6);
   const [view, setView] = useState("trips");
+  /* Nov 1 onwards the app IS the site (see main.jsx). It changes two things in
+     here: where the signup list sits, and that a closed city has somewhere to
+     go — picking one scrolls down to the list with the city filled in. */
+  const launched = hasLaunched();
+  const [waitCity, setWaitCity] = useState("");
+  const askForCity = (city) => {
+    setWaitCity(city);
+    setOpenSlot(null);
+    requestAnimationFrame(() => {
+      document.getElementById("get-on-the-list")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  };
   /* Currency: convert every fmt() at render into the origin's currency. Until
      rates arrive (or if they never do) everything stays USD, unconverted. */
   const [rates, setRates] = useState(null);
@@ -363,7 +376,8 @@ export default function Sendoff() {
       <section style={{ maxWidth: 960, margin: "0 auto", padding: "26px 20px 8px" }}>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
           fontSize: "clamp(27px, 6vw, 44px)", lineHeight: 1.32, letterSpacing: "-0.5px", maxWidth: 760 }}>
-          I'm in <OriginSlot origin={origin} setOrigin={setOrigin} open={openSlot} setOpen={setOpenSlot} /> with{" "}
+          I'm in <OriginSlot origin={origin} setOrigin={setOrigin} open={openSlot} setOpen={setOpenSlot}
+            onAskForCity={launched && currentStage() !== "world" ? askForCity : undefined} /> with{" "}
           <BudgetSlot budget={budget} setBudget={setBudget} open={openSlot} setOpen={setOpenSlot} /> and{" "}
           <CrewSlot friends={friends} setFriends={setFriends} open={openSlot} setOpen={setOpenSlot}
             goBigSend={() => { setView("big"); window.scrollTo({ top: 0, behavior: "smooth" }); }} />.
@@ -385,9 +399,11 @@ export default function Sendoff() {
         )}
       </section>
 
-      {/* Pre-launch: the list is the one thing we ask for, so it sits directly
-          under the hero rather than at the bottom of the page. */}
-      <Waitlist origin={origin} />
+      {/* Pre-launch the list is the one thing we ask for, so it sits directly
+          under the hero. Once Sendoff is open it moves below the trips: the
+          trips are the product, and the list is only for the people whose city
+          hasn't opened yet. */}
+      {!launched && <Waitlist origin={origin} />}
 
       <DealDrops origin={origin} member={member} onOpenTrip={setDetail} onJoin={() => setShowPlus(true)} />
 
@@ -521,6 +537,13 @@ export default function Sendoff() {
           </m.button>
         </div>
       </section>
+
+      {/* Launched: the ask sits here, under the trips, and only while there are
+          still cities to open. From Dec 10 everything is open and the sign-in
+          on the account takes over from the list. */}
+      {launched && currentStage() !== "world" && (
+        <Waitlist origin={origin} launched city={waitCity} />
+      )}
 
       {/* your referral link — renders only when the gate service knows this browser */}
       <ReferralCard />

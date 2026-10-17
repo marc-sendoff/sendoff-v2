@@ -51,3 +51,24 @@ export function openCities(stage = currentStage()) {
   if (stage === "us") return Object.keys(CITIES).filter((c) => !WORLD_SET.has(c.toLowerCase()));
   return Object.keys(CITIES);
 }
+
+/* ============ LAUNCH SWITCH ============
+   Nov 1 is the day the app stops being a hidden preview and becomes the site.
+   Until then sendofftrips.com is the signup page; from then on it is the app
+   (main.jsx reads this). It flips on its own at midnight — no deploy needed on
+   launch day — and ?launch=1 shows the launched site early, which is how Marc
+   previews it. ?rollout=us|world implies a launched site too. */
+export const LAUNCH = STAGES[0].opens;
+
+/* The date on its own, ignoring any preview switches: has launch day arrived? */
+export const launchDayPassed = (now = new Date()) => now.toISOString().slice(0, 10) >= LAUNCH;
+
+export function hasLaunched(now = new Date()) {
+  if (typeof window !== "undefined") {
+    const q = new URLSearchParams(window.location.search);
+    if (q.get("launch") === "1") return true;
+    if (q.get("launch") === "0") return false;   // and this shows the pre-launch page after Nov 1
+    if (q.get("rollout")) return true;
+  }
+  return launchDayPassed(now);
+}

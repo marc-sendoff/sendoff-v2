@@ -2,6 +2,19 @@ import React, { useState } from "react";
 import { m } from "motion/react";
 import { T, R, SH, SPRING } from "../theme.js";
 import { CITIES } from "../data/trips.js";
+import { STAGES, currentStage, niceDate } from "../data/rollout.js";
+
+/* Where the rollout has got to, said in a line: what's open now, what's next. */
+const OPEN_NOW = { florida: "Open in Florida", us: "Open across the US", world: "Open worldwide" };
+function stageLabels() {
+  const stage = currentStage();
+  const i = STAGES.findIndex((s) => s.id === stage);
+  const next = STAGES[i + 1];
+  return {
+    openLabel: OPEN_NOW[stage] || OPEN_NOW.florida,
+    nextLabel: next ? `${next.label} opens ${niceDate(next.opens)}` : "everywhere is open",
+  };
+}
 
 /* ============================================================
    WAITLIST — the December launch list.
@@ -26,8 +39,12 @@ const encode = (data) =>
     .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
     .join("&");
 
-export default function Waitlist({ origin }) {
-  const [f, setF] = useState({ name: "", email: "", city: origin || "" });
+export default function Waitlist({ origin, launched = false, city }) {
+  const [f, setF] = useState({ name: "", email: "", city: city || origin || "" });
+  /* A closed city picked in the origin slot scrolls down to here and fills
+     itself in, so nobody retypes the city they just told us. */
+  React.useEffect(() => { if (city) setF((prev) => ({ ...prev, city })); }, [city]);
+  const { openLabel, nextLabel } = stageLabels();
   const [sending, setSending] = useState(false);
   const [err, setErr] = useState("");
   const set = (k) => (e) => setF((prev) => ({ ...prev, [k]: e.target.value }));
@@ -64,21 +81,22 @@ export default function Waitlist({ origin }) {
   };
 
   return (
-    <section style={{ maxWidth: 960, margin: "0 auto", padding: "8px 20px 0" }}>
+    <section id="get-on-the-list" style={{ maxWidth: 960, margin: "0 auto", padding: launched ? "28px 20px 8px" : "8px 20px 0", scrollMarginTop: 20 }}>
       <m.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={SPRING}
         style={{ background: T.ink, color: T.paper, border: `2px solid ${T.ink}`,
           borderRadius: 20, boxShadow: SH.big, padding: "22px 24px" }}>
         <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.sun,
           textTransform: "uppercase" }}>
-          Launching November 1 · Florida first
+          {launched ? `${openLabel} · ${nextLabel}` : "Launching November 1 · Florida first"}
         </div>
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
           fontSize: "clamp(23px, 5vw, 32px)", lineHeight: 1.2, letterSpacing: "-0.5px", marginTop: 8 }}>
-          Get on the list.
+          {launched ? "Not your city yet?" : "Get on the list."}
         </div>
         <p style={{ fontSize: 14.5, fontWeight: 600, opacity: 0.8, marginTop: 8, lineHeight: 1.5, maxWidth: 560 }}>
-          Sendoff opens November 1, starting with Florida. Leave your city and you're first through
-          the door when it does.
+          {launched
+            ? "Browse every trip now — you just can't set your home base until Sendoff reaches you. Leave your city and you get one email the day it opens there."
+            : "Sendoff opens November 1, starting with Florida. Leave your city and you're first through the door when it does."}
         </p>
 
         <form
@@ -122,7 +140,7 @@ export default function Waitlist({ origin }) {
               border: `2px solid ${T.ink}`, borderRadius: R.card, boxShadow: SH.card, padding: "15px",
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17,
               cursor: sending ? "default" : "pointer", opacity: sending ? 0.7 : 1 }}>
-            {sending ? "Sending…" : "Save my spot →"}
+            {sending ? "Sending…" : launched ? "Tell me when it opens →" : "Save my spot →"}
           </m.button>
         </form>
       </m.div>
