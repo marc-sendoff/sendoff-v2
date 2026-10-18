@@ -178,6 +178,13 @@ export function SignInModal({ acct, origin, onClose }) {
           <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
             style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink }}>×</m.button>
         </div>
+        {GIVEAWAY_OPEN && mode === "signup" && (
+          <a href="/giveaway" target="_blank" rel="noopener noreferrer"
+            style={{ display: "block", margin: "0 0 12px", background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
+              borderRadius: 12, padding: "9px 12px", fontSize: 13, fontWeight: 800, textDecoration: "none", lineHeight: 1.35 }}>
+            🎁 Launch week: sign up by Nov 8 and you're in the draw for a send for two. Rules →
+          </a>
+        )}
         {mode === "login"
           ? <SignInBlock key="login" acct={acct} mode="login" title="Welcome back." sub="Pop your email in and we'll send you a link." />
           : <SignInBlock key="signup" acct={acct} mode="signup" origin={origin} title="New here?" sub="Free. Your city, your crew and the sends you've done, saved on every device." />}
@@ -247,7 +254,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
             <a href="/giveaway" target="_blank" rel="noopener noreferrer"
               style={{ display: "block", marginTop: 12, background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
                 borderRadius: 12, padding: "9px 12px", fontSize: 13, fontWeight: 800, textDecoration: "none", lineHeight: 1.35 }}>
-              🎁 Launch week: join Sendoff+ by Nov 8 and you're in the draw for a send for two. Rules →
+              🎁 Launch week: every account made by Nov 8 is in the draw for a send for two. Rules →
             </a>
           )}
         </div>
