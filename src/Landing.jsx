@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { LazyMotion, MotionConfig, m } from "motion/react";
 import { T, R, SH, SPRING } from "./theme.js";
 
@@ -76,6 +76,52 @@ function Plane({ size = 74 }) {
   );
 }
 
+/* ============ THE CLOCK ============
+   A live countdown to the Florida launch: midnight, November 1, Florida time.
+   Ticks every second. The date is written here rather than imported from
+   data/rollout.js because that module drags the whole city list into this
+   page's bundle (see the note at the top); if the launch date ever moves,
+   change it in both places. */
+const LAUNCH_AT = new Date("2026-11-01T00:00:00-04:00").getTime();
+
+function parts(ms) {
+  const s = Math.max(0, Math.floor(ms / 1000));
+  return [
+    ["days", Math.floor(s / 86400)],
+    ["hrs", Math.floor((s % 86400) / 3600)],
+    ["min", Math.floor((s % 3600) / 60)],
+    ["sec", s % 60],
+  ];
+}
+
+function Countdown() {
+  const [left, setLeft] = useState(() => LAUNCH_AT - Date.now());
+  useEffect(() => {
+    const id = setInterval(() => setLeft(LAUNCH_AT - Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  if (left <= 0) return null;   // launch day: main.jsx renders the app instead anyway
+  return (
+    <div role="timer" aria-label="Time until Sendoff opens in Florida"
+      style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8, marginTop: 20 }}>
+      {parts(left).map(([label, n]) => (
+        <div key={label} style={{ background: T.ink, color: T.paper, border: `2px solid ${T.ink}`,
+          borderRadius: 14, boxShadow: `3px 3px 0 ${T.cobalt}`, padding: "12px 4px 10px", textAlign: "center" }}>
+          <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
+            fontSize: "clamp(28px, 8vw, 40px)", lineHeight: 1, letterSpacing: "-1px",
+            fontVariantNumeric: "tabular-nums", color: label === "days" ? T.sun : T.paper }}>
+            {String(n).padStart(2, "0")}
+          </div>
+          <div style={{ fontSize: 10.5, fontWeight: 800, letterSpacing: 1.2, textTransform: "uppercase",
+            marginTop: 6, opacity: 0.7 }}>
+            {label}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Landing() {
   const [f, setF] = useState({ name: "", email: "", city: "" });
   const [sending, setSending] = useState(false);
@@ -150,6 +196,7 @@ export default function Landing() {
                 Tell us your city, your budget and your crew — Sendoff tells you where you can go.
                 Real prices, real plans, the links to book it.
               </p>
+              <Countdown />
             </m.div>
 
             <m.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ ...SPRING, delay: 0.1 }}
