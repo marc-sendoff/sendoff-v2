@@ -224,6 +224,25 @@ export default function Sendoff() {
     [originCoords, friends, liveRows]
   );
 
+  /* ---------- the free three ----------
+     A free visitor gets the same three sends however they sort, filter or
+     search: the three best for their city, budget and crew. Before this the
+     wall showed the first five of *whatever was on screen*, so every sort,
+     vibe and search unlocked a different five — most of the catalogue for
+     anyone patient. Sort and search still work; they just reorder a grid
+     where the same three are open and the rest are blurred. */
+  const FREE_COUNT = 3;
+  const freeIds = useMemo(() => {
+    const dist = (t) => (originCoords ? miles(originCoords[0], originCoords[1], t.lat, t.lon) : 0);
+    const pool = priced.filter((t) => {
+      if (t.cost > budget * 1.15) return false;
+      if (t.driveOnly && originCoords && dist(t) / 62 > 18) return false;
+      return true;
+    });
+    pool.sort((a, b) => (a.cost + dist(a) * 0.06) - (b.cost + dist(b) * 0.06));
+    return new Set(pool.slice(0, FREE_COUNT).map((t) => t.id));
+  }, [priced, budget, originCoords]);
+
   const { results, durationRelaxed } = useMemo(() => {
     const q = query.trim().toLowerCase();
     const searching = q.length > 0;
@@ -280,14 +299,20 @@ export default function Sendoff() {
   );
 
   /* ---------- the freemium lock ----------
-     Free accounts see FREE_VISIBLE sends outright plus TEASE blurred ones, then
-     the ask. A search is never gated: if someone types a trip name they get to
-     see whether it exists, otherwise search feels broken rather than paywalled. */
-  const FREE_VISIBLE = 5;
-  const TEASE = 3;
-  const gated = !member && !query.trim() && results.length > FREE_VISIBLE;
-  const shown = gated ? results.slice(0, FREE_VISIBLE + TEASE) : results.slice(0, visible);
-  const lockedCount = gated ? results.length - FREE_VISIBLE : 0;
+     Free accounts see their free three open and a few blurred ones, then the
+     ask. A search still finds a trip by name — the card shows up, blurred —
+     so the catalogue is provable without being readable. */
+  const TEASE = 5;
+  const isFree = (t) => freeIds.has(t.id);
+  const freeHere = results.filter(isFree).length;
+  const gated = !member && results.length > freeHere;
+  /* Gated: the open three always lead, in the chosen order, then a few
+     blurred ones — otherwise "$ High" would show eight locked cards and
+     nothing to tap. Members get the plain sorted list. */
+  const shown = gated
+    ? [...results.filter(isFree), ...results.filter((t) => !isFree(t)).slice(0, TEASE)]
+    : results.slice(0, visible);
+  const lockedCount = gated ? results.length - freeHere : 0;
 
   const stretchPick = useMemo(
     () => priced.filter((t) => t.cost > budget * 1.15 && (vibe === "all" || t.vibes.includes(vibe))).sort((a, b) => a.cost - b.cost)[0],
@@ -432,7 +457,7 @@ export default function Sendoff() {
             ? `${results.length} ${results.length === 1 ? "send" : "sends"} matching "${query}"` +
               (overBudgetCount ? ` · ${overBudgetCount} above your budget` : "")
             : gated
-              ? `${FREE_VISIBLE} of ${results.length} sends within your budget shown — unlock the rest`
+              ? `${freeHere} of ${results.length} sends within your budget open — unlock the rest`
               : `${results.length} ${results.length === 1 ? "send" : "sends"} within your budget`}
         </div>
         {durationRelaxed && tripDays && (
@@ -453,8 +478,8 @@ export default function Sendoff() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 20 }}>
           {shown.map((t, i) => (
             <TripCard key={t.id} trip={t} i={i} mode={modeLabel(t, originCoords)}
-              over={t.cost > budget * 1.15} locked={gated && i >= FREE_VISIBLE}
-              onOpen={gated && i >= FREE_VISIBLE ? () => setShowPlus(true) : setDetail} />
+              over={t.cost > budget * 1.15} locked={gated && !isFree(t)}
+              onOpen={gated && !isFree(t) ? () => setShowPlus(true) : setDetail} />
           ))}
         </div>
         {/* Free accounts get the ask at the end of the blur, with nothing dead
