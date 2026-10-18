@@ -54,7 +54,7 @@ export function miles(lat1, lon1, lat2, lon2) {
 /* A drive under 40 miles is minutes, not "0 hr": Miami to Miami Beach is a
    half-hour across the causeway, not a flight. Town speeds, rounded to 5. */
 const driveLabel = (mi) => (mi < 40
-  ? `${Math.max(15, Math.round((mi / 35) * 60 / 5) * 5)} min drive`
+  ? `${Math.max(30, Math.round((mi / 30) * 60 / 5) * 5)} min drive`   // never under 30: city traffic is real
   : `${Math.max(1, Math.round(mi / 62))} hr drive`);
 
 export function modeLabel(t, oc) {
