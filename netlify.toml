@@ -38,6 +38,11 @@
   to = "/privacy.html"
   status = 200
 
+[[redirects]]
+  from = "/giveaway"
+  to = "/giveaway.html"
+  status = 200
+
 # The app holds its views in React state, not the URL, so any other path is
 # still the app. Existing files (assets, /thanks.html, the icons) are served
 # before this rule ever applies.

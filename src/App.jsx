@@ -7,7 +7,7 @@ import { priceAll } from "./data/pricing.js";
 import { WORLD_CITIES } from "./data/cities.js";
 import { getCheapest } from "./utils/cheapest.js";
 import CheapestRail from "./components/browse/CheapestRail.jsx";
-import { fmt, miles, modeLabel, sendRequest, setCurrency, personalFee } from "./data/config.js";
+import { fmt, miles, modeLabel, sendRequest, setCurrency, personalFee, bigSendFee } from "./data/config.js";
 import { useAccount } from "./lib/account.js";
 import { User } from "lucide-react";
 
@@ -379,7 +379,7 @@ export default function Sendoff() {
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["spin", "SPIN-SEND 🎡"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
+        {[["trips", "THE TRIPS"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["spin", "SPIN-SEND 🎡"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
           <button key={id} onClick={() => setView(id)} className="sendoff-tab"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13,
               padding: "9px 16px", borderRadius: 999,
@@ -422,7 +422,7 @@ export default function Sendoff() {
             onPick={(t, meta) => { setWheelPick(meta?.bonus ? { id: t.id, bonus: meta.bonus } : null); setDetail(t); }} />
         )}
         {view === "custom" && <CustomSendoff origin={origin} plan={acct.membership?.plan || "free"} />}
-        {view === "big" && <BigSend origin={origin} />}
+        {view === "big" && <BigSend origin={origin} plan={acct.membership?.plan || "free"} />}
         {view === "community" && <Community origin={origin} />}
         {view === "about" && <About setView={setView} />}
         {view === "founders" && <Founders acct={acct} onJoin={() => setShowPlus(true)} />}
@@ -588,7 +588,7 @@ export default function Sendoff() {
               🎉 Rolling 8+ deep?
             </div>
             <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 3, opacity: 0.8 }}>
-              The Big Send — we run the whole group trip. $20/person. →
+              The Big Send — we run the whole group trip. ${bigSendFee(acct.membership?.plan)}/person{member ? "" : " · $15 with Sendoff+, $10 for Founders"}. →
             </div>
           </m.button>
         </div>

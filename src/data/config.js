@@ -260,6 +260,10 @@ export function shareText(t, origin, oc, friends, dates) {
 export const PERSONAL_FEE = { founder: 5, plus: 7, free: 10 };
 export const personalFee = (plan) => PERSONAL_FEE[plan] ?? PERSONAL_FEE.free;
 
+/* The Big Send planning fee, per person, by the applicant's membership. */
+export const BIG_SEND_FEE = { founder: 10, plus: 15, free: 20 };
+export const bigSendFee = (plan) => BIG_SEND_FEE[plan] ?? BIG_SEND_FEE.free;
+
 export const CUSTOM_CONTACT_EMAIL = "support@sendofftrips.com";
 export const INSTAGRAM_HANDLE = "sendoff.trips";
 export const INSTAGRAM_URL = "https://www.instagram.com/sendoff.trips/";

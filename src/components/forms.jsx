@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { T } from "../theme.js";
-import { fmt, sendRequest, CUSTOM_CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, personalFee } from "../data/config.js";
+import { fmt, sendRequest, CUSTOM_CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, personalFee, bigSendFee } from "../data/config.js";
 
 /* ---------- YOUR PERSONAL SENDOFF (custom trip service) ---------- */
 export function CustomSendoff({ origin, plan = "free" }) {
@@ -139,7 +139,8 @@ export function CustomSendoff({ origin, plan = "free" }) {
 }
 
 /* ---------- THE BIG SEND (group trips, 8+) ---------- */
-export function BigSend({ origin }) {
+export function BigSend({ origin, plan = "free" }) {
+  const fee = bigSendFee(plan);
   const [f, setF] = useState({ name: "", contact: "", from: origin, dates: "", budget: "", people: "12", dream: "" });
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -162,7 +163,7 @@ export function BigSend({ origin }) {
   ].join("\n");
   const submit = async () => {
     setSending(true);
-    const ok = await sendRequest("THE BIG SEND Request ($20/person)", {
+    const ok = await sendRequest(`THE BIG SEND Request ($${fee}/person · ${plan})`, {
       name: f.name, contact: f.contact, leaving_from: f.from, dates: f.dates || "flexible",
       budget_per_person: f.budget, group_size: f.people,
       planning_fee_total: "$" + (headcount * 20), the_dream: f.dream,
@@ -233,12 +234,12 @@ export function BigSend({ origin }) {
               {sending ? "Sending…" : "Request The Big Send →"}
             </button>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 20 }}>
-              $20 <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.6 }}>per person</span>
+              ${fee} <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.6 }}>per person{plan === "founder" ? " · Founders price" : plan === "plus" ? " · Sendoff+ price" : ""}</span>
             </div>
           </div>
           {headcount >= 8 && (
             <div style={{ fontSize: 13, fontWeight: 700, marginTop: 10, color: T.cobalt }}>
-              {headcount} people → {fmt(headcount * 20)} total planning fee (split: $20 each)
+              {headcount} people → {fmt(headcount * fee)} total planning fee (split: ${fee} each){plan === "free" ? " · Sendoff+ members $15, Founders $10" : ""}
             </div>
           )}
           <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 10 }}>

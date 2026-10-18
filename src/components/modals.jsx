@@ -12,6 +12,9 @@ import StayBlock from "./StayBlock.jsx";
 import { BudgetBar } from "./core.jsx";
 import FlightPrices from "./FlightPrices.jsx";
 
+/* Launch-week giveaway window, Nov 1–8 2026 (any time zone's Nov 8 counts). */
+const GIVEAWAY_OPEN = (() => { const d = new Date().toISOString().slice(0, 10); return d >= "2026-11-01" && d <= "2026-11-08"; })();
+
 /* "2026-10" -> "October". Fare months come from the nightly pull. */
 function monthLabel(ym) {
   const m = /^(\d{4})-(\d{2})$/.exec(String(ym));
@@ -238,6 +241,15 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
           <div style={{ fontSize: 14, fontWeight: 600, opacity: 0.85, marginTop: 4 }}>
             Every trip, every deal, the day it lands.
           </div>
+          {/* Launch-week giveaway, Nov 1–8: everyone who joins is entered.
+              Rules (and the free way to enter) live at /giveaway. */}
+          {GIVEAWAY_OPEN && (
+            <a href="/giveaway" target="_blank" rel="noopener noreferrer"
+              style={{ display: "block", marginTop: 12, background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
+                borderRadius: 12, padding: "9px 12px", fontSize: 13, fontWeight: 800, textDecoration: "none", lineHeight: 1.35 }}>
+              🎁 Launch week: join Sendoff+ by Nov 8 and you're in the draw for a send for two. Rules →
+            </a>
+          )}
         </div>
         <div style={{ padding: "18px 22px 24px" }}>
           {PLUS_PERKS.map(([e, title, sub]) => (
