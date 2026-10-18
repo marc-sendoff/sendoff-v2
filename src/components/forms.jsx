@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { T } from "../theme.js";
-import { fmt, sendRequest, CUSTOM_CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../data/config.js";
+import { fmt, sendRequest, CUSTOM_CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL, personalFee } from "../data/config.js";
 
 /* ---------- YOUR PERSONAL SENDOFF (custom trip service) ---------- */
-export function CustomSendoff({ origin }) {
+export function CustomSendoff({ origin, plan = "free" }) {
+  const fee = personalFee(plan);
   const [f, setF] = useState({ name: "", contact: "", from: origin, dates: "", budget: "", people: "4", dream: "" });
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
@@ -25,7 +26,7 @@ export function CustomSendoff({ origin }) {
   ].join("\n");
   const submit = async () => {
     setSending(true);
-    const ok = await sendRequest("Personal Sendoff Request ($10)", {
+    const ok = await sendRequest(`Personal Sendoff Request ($${fee} · ${plan})`, {
       name: f.name, contact: f.contact, leaving_from: f.from, dates: f.dates || "flexible",
       budget_per_person: f.budget, crew_size: f.people, the_dream: f.dream,
     });
@@ -95,11 +96,14 @@ export function CustomSendoff({ origin }) {
               {sending ? "Sending…" : "Request my Sendoff →"}
             </button>
             <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 20 }}>
-              $10 <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.6 }}>service fee</span>
+              ${fee} <span style={{ fontSize: 12, fontWeight: 700, opacity: 0.6 }}>
+                {plan === "founder" ? "Founders price" : plan === "plus" ? "Sendoff+ price" : "service fee"}
+              </span>
             </div>
           </div>
           <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 10 }}>
             No payment now — we confirm your trip is doable first, then you pay and we build. Custom made by the Sendoff team.
+            {plan === "free" && " Sendoff+ members pay $7, Founders $5."}
           </div>
         </div>
       ) : (

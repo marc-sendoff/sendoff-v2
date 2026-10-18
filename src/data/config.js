@@ -255,6 +255,11 @@ export function shareText(t, origin, oc, friends, dates) {
   ].join("\n");
 }
 
+/* Personal Sendoff fee by membership: Founders $5, Plus $7, everyone else
+   $10. Quoted on the form and in the request email; nothing is charged online. */
+export const PERSONAL_FEE = { founder: 5, plus: 7, free: 10 };
+export const personalFee = (plan) => PERSONAL_FEE[plan] ?? PERSONAL_FEE.free;
+
 export const CUSTOM_CONTACT_EMAIL = "support@sendofftrips.com";
 export const INSTAGRAM_HANDLE = "sendoff.trips";
 export const INSTAGRAM_URL = "https://www.instagram.com/sendoff.trips/";

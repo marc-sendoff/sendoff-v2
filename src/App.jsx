@@ -7,7 +7,7 @@ import { priceAll } from "./data/pricing.js";
 import { WORLD_CITIES } from "./data/cities.js";
 import { getCheapest } from "./utils/cheapest.js";
 import CheapestRail from "./components/browse/CheapestRail.jsx";
-import { fmt, miles, modeLabel, sendRequest, setCurrency } from "./data/config.js";
+import { fmt, miles, modeLabel, sendRequest, setCurrency, personalFee } from "./data/config.js";
 import { useAccount } from "./lib/account.js";
 import { User } from "lucide-react";
 
@@ -421,7 +421,7 @@ export default function Sendoff() {
           <SpinSend trips={results} origin={origin} friends={friends} budget={budget}
             onPick={(t, meta) => { setWheelPick(meta?.bonus ? { id: t.id, bonus: meta.bonus } : null); setDetail(t); }} />
         )}
-        {view === "custom" && <CustomSendoff origin={origin} />}
+        {view === "custom" && <CustomSendoff origin={origin} plan={acct.membership?.plan || "free"} />}
         {view === "big" && <BigSend origin={origin} />}
         {view === "community" && <Community origin={origin} />}
         {view === "about" && <About setView={setView} />}
@@ -577,7 +577,7 @@ export default function Sendoff() {
               ✨ Can't find your send?
             </div>
             <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 3, opacity: 0.8 }}>
-              We'll build your trip custom — $10. →
+              We'll build your trip custom — ${personalFee(acct.membership?.plan)}{member ? "" : " · $7 with Sendoff+, $5 for Founders"}. →
             </div>
           </m.button>
           <m.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING}
