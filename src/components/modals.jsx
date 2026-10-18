@@ -182,7 +182,7 @@ export function SignInModal({ acct, origin, onClose }) {
           <a href="/giveaway" target="_blank" rel="noopener noreferrer"
             style={{ display: "block", margin: "0 0 12px", background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
               borderRadius: 12, padding: "9px 12px", fontSize: 13, fontWeight: 800, textDecoration: "none", lineHeight: 1.35 }}>
-            🎁 Launch week: sign up by Nov 8 and you're in the draw for a send for two. Rules →
+            🎁 The Launch Giveaway: sign up by Nov 8 and you're in the draw for a send for two. Rules →
           </a>
         )}
         {mode === "login"
@@ -254,7 +254,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
             <a href="/giveaway" target="_blank" rel="noopener noreferrer"
               style={{ display: "block", marginTop: 12, background: T.sun, color: T.ink, border: `2px solid ${T.ink}`,
                 borderRadius: 12, padding: "9px 12px", fontSize: 13, fontWeight: 800, textDecoration: "none", lineHeight: 1.35 }}>
-              🎁 Launch week: every account made by Nov 8 is in the draw for a send for two. Rules →
+              🎁 The Launch Giveaway: every account made by Nov 8 is in the draw for a send for two. Rules →
             </a>
           )}
         </div>

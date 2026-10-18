@@ -3,38 +3,85 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Launch-week giveaway — Sendoff</title>
-<meta name="description" content="Sign up for Sendoff in launch week, Nov 1–8 — free or Plus — and you're in the draw for a send for two. Official rules." />
+<title>The Launch Giveaway — Sendoff</title>
+<meta name="description" content="Sign up for Sendoff in launch week, Nov 1–8 — free or Plus — and you're in the draw to win a send for two. Official rules." />
+<meta property="og:title" content="The Launch Giveaway — win a send for two" />
+<meta property="og:description" content="Sign up for Sendoff Nov 1–8, free or Plus, and you're in the draw. One winner, two people, up to $200 each." />
+<meta property="og:image" content="https://sendofftrips.com/og-image.jpg" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:wght@400;600;700&display=swap" />
 <style>
-  html,body{margin:0;background:#F4F1E8;color:#1B1D2A;font-family:'Instrument Sans',system-ui,sans-serif}
-  main{max-width:640px;margin:0 auto;padding:40px 20px 64px;line-height:1.6}
-  h1,h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.5px}
-  h1{font-size:34px;margin:18px 0 6px} h2{font-size:20px;margin:30px 0 8px}
-  p,li{font-size:16px;font-weight:500} .meta{font-size:13px;font-weight:700;opacity:.6}
-  a{color:#2547F0;font-weight:700} .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;text-decoration:none;color:#1B1D2A}
-  .card{background:#fff;border:2px solid #1B1D2A;border-radius:18px;box-shadow:6px 6px 0 #1B1D2A;padding:20px 22px;margin:22px 0}
-  .card .big{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:26px;line-height:1.15;margin:0 0 8px}
-  .pill{display:inline-block;background:#FFC838;border:2px solid #1B1D2A;border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
-  .btn{display:inline-block;background:#2547F0;color:#fff;border:2px solid #1B1D2A;border-radius:12px;padding:12px 20px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:16px;text-decoration:none;box-shadow:4px 4px 0 #1B1D2A}
-  .foot{margin-top:40px;padding-top:18px;border-top:2px solid #1B1D2A;font-size:13px;font-weight:600;opacity:.7}
+  :root{--paper:#F4F1E8;--ink:#1B1D2A;--cobalt:#2547F0;--sun:#FFC838;--poppy:#FF5A3C;--white:#fff}
+  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:'Instrument Sans',system-ui,sans-serif;overflow-x:hidden}
+  .disp{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.6px}
+  canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+
+  /* hero */
+  .hero{background:var(--ink);color:var(--paper);padding:28px 20px 44px;position:relative;overflow:hidden}
+  .hero .in{max-width:640px;margin:0 auto;position:relative;z-index:2}
+  .brand{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--paper);font-size:20px}
+  .pill{display:inline-block;background:var(--poppy);color:#fff;border:2px solid var(--ink);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-top:26px;box-shadow:3px 3px 0 var(--sun)}
+  h1{font-size:clamp(44px,11vw,76px);line-height:.98;margin:16px 0 0}
+  h1 .y{color:var(--sun)} h1 .b{color:#7A8DFF}
+  .lede{font-size:clamp(17px,4.4vw,21px);font-weight:600;line-height:1.45;margin:18px 0 0;max-width:520px;opacity:.92}
+  .cta{display:inline-block;margin-top:24px;background:var(--sun);color:var(--ink);border:2px solid var(--ink);border-radius:14px;padding:15px 24px;font-size:17px;text-decoration:none;box-shadow:5px 5px 0 var(--cobalt);transition:transform .12s}
+  .cta:active{transform:translate(2px,2px)}
+  .when{font-size:13px;font-weight:700;opacity:.7;margin-top:14px}
+  .plane{position:absolute;right:-60px;bottom:-80px;width:340px;height:auto;opacity:.12;z-index:1}
+
+  /* prize strip */
+  .strip{max-width:640px;margin:-22px auto 0;padding:0 20px;position:relative;z-index:3}
+  .prize{background:var(--white);border:2px solid var(--ink);border-radius:20px;box-shadow:6px 6px 0 var(--ink);padding:18px 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
+  .prize b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(22px,6vw,30px);letter-spacing:-.5px}
+  .prize span{font-size:11.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;opacity:.6}
+  .prize .mid{border-left:2px solid #E3DFD2;border-right:2px solid #E3DFD2}
+
+  /* body */
+  main{max-width:640px;margin:0 auto;padding:30px 20px 64px;line-height:1.6}
+  h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:22px;letter-spacing:-.4px;margin:30px 0 8px}
+  p,li{font-size:16px;font-weight:500} ul{padding-left:20px} li{margin:4px 0}
+  .steps{display:grid;gap:10px;margin-top:12px;padding:0;list-style:none}
+  .steps li{background:var(--white);border:2px solid var(--ink);border-radius:14px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;box-shadow:3px 3px 0 var(--ink)}
+  .steps .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-family:'Bricolage Grotesque',sans-serif;font-weight:800}
+  .note{background:var(--sun);border:2px solid var(--ink);border-radius:12px;padding:10px 14px;font-weight:700;font-size:14px;margin-top:14px}
+  a{color:var(--cobalt);font-weight:700}
+  .foot{margin-top:40px;padding-top:18px;border-top:2px solid var(--ink);font-size:13px;font-weight:600;opacity:.7}
+  @media (prefers-reduced-motion: reduce){canvas#confetti{display:none}}
 </style>
 </head>
 <body>
-<main>
-  <a class="brand" href="/">Sendoff ✈️</a>
-  <span class="pill" style="margin-left:10px">Launch week · Nov 1–8</span>
-  <h1>Win a send for two.</h1>
-  <p class="meta">Official rules · last updated October 18, 2026</p>
+<canvas id="confetti" aria-hidden="true"></canvas>
 
-  <div class="card">
-    <p class="big">Sign up for Sendoff between November 1 and November 8, 2026 — free or Sendoff+ — and you're in the draw.</p>
-    <p>One winner gets a Sendoff trip for themselves and a friend — up to <strong>$200 per person</strong> — picked from the site and booked by us. Winner drawn November 9.</p>
-    <a class="btn" href="/">Open Sendoff →</a>
+<header class="hero">
+  <svg class="plane" viewBox="0 0 90 84" aria-hidden="true"><path d="M 2 32 L 82 3 L 52 76 L 37 46 Z" fill="#F4F1E8"/></svg>
+  <div class="in">
+    <a class="brand disp" href="/">Sendoff ✈️</a>
+    <div><span class="pill">The Launch Giveaway · Nov 1–8</span></div>
+    <h1 class="disp">Win a <span class="y">send</span><br>for <span class="b">two.</span></h1>
+    <p class="lede">Sign up for Sendoff in launch week — free or Plus — and you're in the draw. One winner takes a friend on a Sendoff trip, on us.</p>
+    <a class="cta disp" href="/" id="cta">Sign up free → you're in</a>
+    <div class="when">Entries open Nov 1, close Nov 8 at midnight ET. Drawn Nov 9.</div>
   </div>
+</header>
+
+<div class="strip">
+  <div class="prize">
+    <div><b>2</b><span>people</span></div>
+    <div class="mid"><b>$200</b><span>each</span></div>
+    <div><b>Nov 9</b><span>the draw</span></div>
+  </div>
+</div>
+
+<main>
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><span class="n">1</span><div><b>Make a Sendoff account</b> between Nov 1 and Nov 8. Free is fine. That's your entry.</div></li>
+    <li><span class="n">2</span><div><b>Nov 9, we spin.</b> One name, picked at random. We'll share it on @sendoff.trips.</div></li>
+    <li><span class="n">3</span><div><b>You pick the send.</b> Any trip on the site that fits. You bring a friend. We pay the flights (or gas) and the stay, up to $200 each.</div></li>
+  </ol>
+  <div class="note">🎁 Joining Sendoff+ gets you the membership — it doesn't add entries. Free and Plus accounts have exactly the same chance.</div>
 
   <h2>The prize</h2>
   <ul>
@@ -44,35 +91,56 @@
     <li>No cash alternative. The prize isn't transferable, but you choose who comes with you.</li>
   </ul>
 
-  <h2>How to enter</h2>
+  <h2>Official rules</h2>
   <ul>
-    <li><strong>Create a Sendoff account</strong> at sendofftrips.com between 12:00 am on November 1 and 11:59 pm on November 8, 2026, US Eastern time. A free account is enough. One entry per person, one per email.</li>
-    <li>Joining Sendoff+ gets you the membership; it does not add entries. Free accounts and Plus accounts have exactly the same chance of winning.</li>
-    <li>No purchase is necessary to enter or win.</li>
-  </ul>
-
-  <h2>Who can enter</h2>
-  <ul>
-    <li>Anyone 18 or over with a US mailing address. Void where prohibited by law.</li>
-    <li>Anyone who works or has worked on Sendoff, and their immediate families, can't enter.</li>
-  </ul>
-
-  <h2>How the winner is chosen</h2>
-  <ul>
-    <li>Random draw from all valid entries on November 9, 2026. We may share the draw on @sendoff.trips, using entry numbers or first names only.</li>
-    <li>We email the winner the same day. If they don't reply within 5 days, we draw again.</li>
-    <li>The winner's first name and city may be announced on Instagram and on the site. We'll ask before using anything else.</li>
-  </ul>
-
-  <h2>The fine print</h2>
-  <ul>
-    <li>The approximate retail value of the prize is $400. The winner is responsible for any taxes.</li>
-    <li>Entries that don't meet these rules are void. If the winner turns out to be ineligible, we draw again.</li>
-    <li>This promotion is run by Sendoff (sendofftrips.com). It is in no way sponsored, endorsed, administered by, or associated with Instagram or Meta.</li>
+    <li><strong>Entry:</strong> create a Sendoff account at sendofftrips.com between 12:00 am on November 1 and 11:59 pm on November 8, 2026, US Eastern time. A free account is enough. One entry per person, one per email. No purchase is necessary to enter or win.</li>
+    <li><strong>Eligibility:</strong> anyone 18 or over with a US mailing address. Void where prohibited by law. Anyone who works or has worked on Sendoff, and their immediate families, can't enter.</li>
+    <li><strong>The draw:</strong> random, from all valid entries, on November 9, 2026. We may share the draw on @sendoff.trips using entry numbers or first names only. We email the winner the same day; no reply within 5 days and we draw again.</li>
+    <li><strong>Announcing:</strong> the winner's first name and city may be shared on Instagram and on the site. We'll ask before using anything else.</li>
+    <li><strong>Value and tax:</strong> the approximate retail value of the prize is $400. The winner is responsible for any taxes.</li>
+    <li><strong>Void entries:</strong> entries that don't meet these rules are void. If the winner turns out to be ineligible, we draw again.</li>
+    <li><strong>Sponsor:</strong> this promotion is run by Sendoff (sendofftrips.com). It is in no way sponsored, endorsed, administered by, or associated with Instagram or Meta.</li>
     <li>Questions: <a href="mailto:support@sendofftrips.com">support@sendofftrips.com</a>.</li>
   </ul>
 
   <div class="foot">Sendoff · sendofftrips.com · <a href="/terms">Terms</a> · <a href="/privacy">Privacy</a></div>
 </main>
+
+<script>
+/* Confetti in the brand colours: a burst on load, a smaller one on the button.
+   Plain canvas, no library, and it stays off when the phone asks for less motion. */
+(function () {
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var c = document.getElementById("confetti"), x = c.getContext("2d");
+  var W, H, parts = [], running = false, colors = ["#FFC838", "#2547F0", "#FF5A3C", "#F4F1E8", "#7A8DFF"];
+  function size() { W = c.width = innerWidth * devicePixelRatio; H = c.height = innerHeight * devicePixelRatio; }
+  size(); addEventListener("resize", size);
+  function burst(n, ox, oy, spread) {
+    for (var i = 0; i < n; i++) {
+      var a = -Math.PI / 2 + (Math.random() - 0.5) * spread, v = (9 + Math.random() * 14) * devicePixelRatio;
+      parts.push({ x: ox, y: oy, vx: Math.cos(a) * v, vy: Math.sin(a) * v, w: (6 + Math.random() * 8) * devicePixelRatio,
+        h: (10 + Math.random() * 10) * devicePixelRatio, r: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.3,
+        col: colors[(Math.random() * colors.length) | 0], life: 160 + Math.random() * 60 });
+    }
+    if (!running) { running = true; requestAnimationFrame(tick); }
+  }
+  function tick() {
+    x.clearRect(0, 0, W, H);
+    parts = parts.filter(function (p) { return p.life > 0 && p.y < H + 40; });
+    parts.forEach(function (p) {
+      p.vy += 0.35 * devicePixelRatio; p.vx *= 0.99; p.x += p.vx; p.y += p.vy; p.r += p.vr; p.life--;
+      x.save(); x.translate(p.x, p.y); x.rotate(p.r); x.globalAlpha = Math.min(1, p.life / 40);
+      x.fillStyle = p.col; x.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); x.restore();
+    });
+    if (parts.length) requestAnimationFrame(tick); else { running = false; x.clearRect(0, 0, W, H); }
+  }
+  setTimeout(function () { burst(140, W * 0.5, H * 0.55, 2.4); }, 250);
+  setTimeout(function () { burst(60, W * 0.15, H * 0.6, 1.4); burst(60, W * 0.85, H * 0.6, 1.4); }, 650);
+  document.getElementById("cta").addEventListener("click", function (e) {
+    var r = e.currentTarget.getBoundingClientRect();
+    burst(80, (r.left + r.width / 2) * devicePixelRatio, r.top * devicePixelRatio, 2);
+  });
+})();
+</script>
 </body>
 </html>
