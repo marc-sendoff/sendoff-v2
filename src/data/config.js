@@ -51,12 +51,19 @@ export function miles(lat1, lon1, lat2, lon2) {
   const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
+/* A drive under 40 miles is minutes, not "0 hr": Miami to Miami Beach is a
+   half-hour across the causeway, not a flight. Town speeds, rounded to 5. */
+const driveLabel = (mi) => (mi < 40
+  ? `${Math.max(15, Math.round((mi / 35) * 60 / 5) * 5)} min drive`
+  : `${Math.max(1, Math.round(mi / 62))} hr drive`);
+
 export function modeLabel(t, oc) {
   if (!oc) return t.driveOnly ? "road trip · split gas" : "flight";
   const mi = miles(oc[0], oc[1], t.lat, t.lon);
-  const driveH = Math.round(mi / 62);
+  const driveH = Math.max(1, Math.round(mi / 62));
   const flightH = Math.max(1, mi / 480 + 0.6).toFixed(1);
-  if (t.driveOnly) return `${driveH} hr drive · split gas`;
+  if (mi < 40) return driveLabel(mi);                       // you live there: no one flies 10 miles
+  if (t.driveOnly) return `${driveLabel(mi)} · split gas`;
   if (t.canDrive && driveH <= 16) return `${flightH} hr flight · or ${driveH} hr drive`;
   return `${flightH} hr flight`;
 }
