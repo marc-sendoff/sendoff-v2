@@ -9,15 +9,16 @@ const SORTS = [
   { id: "close", title: "Near" },
 ];
 
-/* Live all-in ranking, only offered when data for this origin exists —
-   the tab appearing IS the signal that live prices are in. */
-const LIVE_SORT = { id: "cheaplive", title: "Live ⚡" };
+/* There used to be a fifth "Live" sort here from the days when cards showed
+   the August snapshot and only this ranking used real fares. Every card now
+   prices from the live fare where one exists, so "$ Low" is that ranking —
+   with the drive trips included. One less button to explain. */
 
 /* Search + sort v3 — shadcn Input for the query, Kokonut SmoothTab (its
    published sliding-pill toolbar) replaces the <select>: all four sort
    choices visible, one spring, no dropdown. */
-export function SearchSortBar({ query, setQuery, sortBy, setSortBy, liveSort }) {
-  const items = liveSort ? [...SORTS, LIVE_SORT] : SORTS;
+export function SearchSortBar({ query, setQuery, sortBy, setSortBy }) {
+  const items = SORTS;
   return (
     <div className="sendoff-v3 mb-3.5 flex flex-wrap items-center gap-2.5">
       <div className="relative min-w-[240px] flex-1 basis-[240px]">
@@ -36,7 +37,7 @@ export function SearchSortBar({ query, setQuery, sortBy, setSortBy, liveSort }) 
         value={sortBy}
         onChange={setSortBy}
         activeColor="bg-primary"
-        className={`w-full flex-none rounded-full border-2 border-border bg-card sm:w-auto ${liveSort ? "sm:min-w-[540px]" : "sm:min-w-[420px]"}`} />
+        className="w-full flex-none rounded-full border-2 border-border bg-card sm:w-auto sm:min-w-[420px]" />
     </div>
   );
 }

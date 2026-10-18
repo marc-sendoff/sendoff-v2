@@ -426,7 +426,7 @@ export default function Sendoff() {
       <section style={{ maxWidth: 960, margin: "0 auto", padding: "18px 20px" }}>
         {/* one sort control instead of four wrapping buttons — calmer, and it
             fits next to the search on a phone (v3: published SmoothTab pills) */}
-        <SearchSortBar query={query} setQuery={setQuery} sortBy={sortBy} setSortBy={setSortBy} liveSort={Boolean(cheapest)} />
+        <SearchSortBar query={query} setQuery={setQuery} sortBy={sortBy} setSortBy={setSortBy} />
         <div style={{ fontSize: 13, fontWeight: 700, opacity: 0.6, marginBottom: 16 }}>
           {query.trim()
             ? `${results.length} ${results.length === 1 ? "send" : "sends"} matching "${query}"` +
