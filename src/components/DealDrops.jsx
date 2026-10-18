@@ -68,7 +68,7 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
           {hidden} more deals live right now
         </div>
         <div style={{ fontSize: 12.5, fontWeight: 600, opacity: 0.75, marginTop: 3 }}>
-          Members get texted the moment fares from {origin} drop. $3.99/mo.
+          Members see every drop from {origin} the moment it lands. $4.99/mo.
         </div>
         <div style={{ marginTop: 10, background: T.sun, color: T.onAccent, borderRadius: 10, padding: "8px 12px",
           fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13, display: "inline-block" }}>

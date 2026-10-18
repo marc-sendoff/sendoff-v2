@@ -8,8 +8,12 @@ import { json } from "../lib/tp.mjs";
 
 /* A yearly subscription that is live takes a Founders seat if any are left;
    a Founder keeps the badge for life, whatever happens to the subscription. */
-async function withFounder(uid, fields) {
-  if (fields.plan === "plus" && fields.interval === "year") {
+async function withFounder(uid, fields, { fresh = false } = {}) {
+  /* Only a fresh purchase (checkout completed) can claim a seat. Every later
+     subscription event (renewal, update, cancel) keeps whatever the row has,
+     so a seat that was removed by hand stays removed instead of coming back
+     the next time Stripe pings. */
+  if (fresh && fields.plan === "plus" && fields.interval === "year") {
     const seat = await claimFounderSeat(uid);
     if (seat) return { ...fields, plan: "founder", founder_number: seat };
   }
@@ -44,7 +48,7 @@ export default async (req) => {
       if (session.mode === "subscription" && session.subscription) {
         const sub = await s.subscriptions.retrieve(session.subscription);
         const uid = session.metadata?.user_id || (await userIdFor(s, sub));
-        if (uid) await setMembership(uid, await withFounder(uid, membershipFromSubscription(sub)));
+        if (uid) await setMembership(uid, await withFounder(uid, membershipFromSubscription(sub), { fresh: true }));
       }
     } else if (event.type.startsWith("customer.subscription.")) {
       const sub = event.data.object;

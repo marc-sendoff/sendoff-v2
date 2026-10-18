@@ -23,6 +23,7 @@ import WelcomeSplash from "./components/WelcomeSplash.jsx";
 import InstallNudge from "./components/InstallNudge.jsx";
 import ReferralCard from "./components/ReferralCard.jsx";
 import Waitlist from "./components/Waitlist.jsx";
+import Footer from "./components/Footer.jsx";
 import { hasLaunched, currentStage } from "./data/rollout.js";
 
 /* Load the brand fonts from the app itself, so every build renders
@@ -83,7 +84,9 @@ export default function Sendoff() {
   const [friends, setFriends] = useState(3);
   const [vibe, setVibe] = useState("all");
   const [query, setQuery] = useState("");
-  const [sortBy, setSortBy] = useState("high");
+  /* "Best match" first: a $500 visitor should not open on the three most
+     expensive trips in their budget. */
+  const [sortBy, setSortBy] = useState("best");
   const [visible, setVisible] = useState(6);
   const [view, setView] = useState("trips");
   /* Nov 1 onwards the app IS the site (see main.jsx). It changes two things in
@@ -310,9 +313,11 @@ export default function Sendoff() {
            every extra row pushes content down on every view. Horizontal padding
            carries the saving; vertical padding is held so the tap target keeps
            its height. !important because these buttons carry inline styles. */
-        @media (max-width: 480px) {
-          .sendoff-tabs { gap: 6px !important; padding-left: 12px !important; padding-right: 12px !important; }
-          .sendoff-tab { font-size: 11.5px !important; padding: 10px 10px !important; letter-spacing: -0.2px; }
+        @media (max-width: 640px) {
+          .sendoff-tabs { gap: 6px !important; padding-left: 12px !important; padding-right: 12px !important;
+            flex-wrap: nowrap !important; overflow-x: auto; -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x proximity; scroll-padding-left: 12px; }
+          .sendoff-tab { font-size: 11.5px !important; padding: 10px 12px !important; letter-spacing: -0.2px; flex-shrink: 0; scroll-snap-align: start; }
         }
       `}</style>
 
@@ -343,6 +348,8 @@ export default function Sendoff() {
 
       {/* tabs */}
       <nav className="sendoff-tabs" style={{ maxWidth: 960, margin: "0 auto", padding: "0 20px", display: "flex", gap: 8, flexWrap: "wrap" }}>
+        {/* On phones this row scrolls sideways (see the @media rule above)
+            instead of wrapping to three rows above every view. */}
         {/* The Founders Club tab is out for the December v1 — the club is
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
@@ -548,6 +555,8 @@ export default function Sendoff() {
       {/* your referral link — renders only when the gate service knows this browser */}
       <ReferralCard />
       </>)}
+
+      <Footer />
 
       <Suspense fallback={null}>
       {detail && <Detail trip={detail} origin={origin} originCoords={originCoords} friends={friends + 1} dates={dates}

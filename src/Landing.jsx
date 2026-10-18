@@ -289,6 +289,13 @@ export default function Landing() {
               fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, opacity: 0.85 }}>
               Go while you're young. ✈️
             </div>
+
+            <div style={{ textAlign: "center", marginTop: 22, fontSize: 12.5, fontWeight: 600, opacity: 0.6,
+              display: "flex", justifyContent: "center", gap: 16, flexWrap: "wrap" }}>
+              <a href="mailto:support@sendofftrips.com" style={{ color: "inherit" }}>support@sendofftrips.com</a>
+              <a href="/terms" style={{ color: "inherit" }}>Terms</a>
+              <a href="/privacy" style={{ color: "inherit" }}>Privacy</a>
+            </div>
           </div>
         </main>
       </MotionConfig>

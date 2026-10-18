@@ -40,7 +40,11 @@ const encode = (data) =>
     .join("&");
 
 export default function Waitlist({ origin, launched = false, city }) {
-  const [f, setF] = useState({ name: "", email: "", city: city || origin || "" });
+  /* Before launch the box is for everyone, so the city they are browsing
+     from is a fine guess. After launch it is for people whose city is NOT
+     open, so a pre-filled open city would be wrong: blank unless the origin
+     picker handed us a closed one. */
+  const [f, setF] = useState({ name: "", email: "", city: city || (launched ? "" : origin) || "" });
   /* A closed city picked in the origin slot scrolls down to here and fills
      itself in, so nobody retypes the city they just told us. */
   React.useEffect(() => { if (city) setF((prev) => ({ ...prev, city })); }, [city]);
@@ -125,7 +129,7 @@ export default function Waitlist({ origin, launched = false, city }) {
 
           <label style={labelStyle} htmlFor="wl-city">YOUR CITY</label>
           <input id="wl-city" name="city" required autoComplete="address-level2" list="waitlist-cities"
-            placeholder="Miami" value={f.city} onChange={set("city")} style={inputStyle} />
+            placeholder={launched ? "Your city" : "Miami"} value={f.city} onChange={set("city")} style={inputStyle} />
           <datalist id="waitlist-cities">
             {cityNames.map((c) => <option key={c} value={c} />)}
           </datalist>

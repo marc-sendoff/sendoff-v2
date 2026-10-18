@@ -246,7 +246,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
               <div>
                 <div style={{ fontWeight: 800, fontSize: 14.5 }}>{title}</div>
                 <div style={{ fontSize: 12.5, fontWeight: 600, opacity: 0.65 }}>
-                  {title === "Instant deal alerts" ? `Texted the second a cheap flight leaves ${origin}` : sub}
+                  {title === "Deal drops" ? `Every drop from ${origin}, the day the fare lands` : sub}
                 </div>
               </div>
             </div>
@@ -386,7 +386,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
           {/* which price system produced this number: the one honest line */}
           <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.62, margin: "-4px 0 10px", lineHeight: 1.45 }}>
             {trip.priceSource === "live"
-              ? `✈️ Flights are a live fare from ${origin}${trip.fareMonth ? ` for ${monthLabel(trip.fareMonth)}` : ""}, refreshed nightly`
+              ? `✈️ Flights are a live fare from ${origin}${trip.fareMonth ? ` for ${monthLabel(trip.fareMonth)}` : ""}, refreshed a few times a day`
               : "Estimate: no live fare for this route from your city yet"}
             {friends > 1 ? ` · stay split ${friends} ways` : " · solo stay"}
           </div>
@@ -447,7 +447,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
               style={{ width: "100%", textAlign: "left", background: T.ink, color: T.paper, border: `2px solid ${T.ink}`,
                 borderRadius: 12, padding: "10px 13px", fontSize: 13.5, fontWeight: 700, marginBottom: 10, cursor: "pointer",
                 fontFamily: "'Instrument Sans', sans-serif" }}>
-              🔒 Sendoff+ members get price-drop alerts on this trip + exclusive fare deals · $3.99/mo →
+              🔒 Sendoff+ unlocks every send in your budget, plus the deal drops · $4.99/mo →
             </button>
           )}
           <SectionLabel>Book it — searches pre-filled for your crew</SectionLabel>

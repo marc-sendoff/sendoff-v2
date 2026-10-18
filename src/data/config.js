@@ -31,13 +31,17 @@ export const DEALS = [
   { tripId: "lisbon", price: 398, was: 780, expires: "36 hrs", note: "Cheapest Europe fare this year" },
   { tripId: "tulum", price: 164, was: 340, expires: "4 days", note: "Beat the spring break surge" },
 ];
+/* What Sendoff+ actually does today — nothing on this list is a promise the
+   site can't keep. Texts, partner codes and "first month free" were here once
+   and none of them exist; a perk that isn't real is a refund waiting to
+   happen. "Deal drops" gets its origin filled in by the Plus modal. */
 export const PLUS_PERKS = [
-  ["🔔", "Instant deal alerts", "Texted the second a cheap flight leaves YOUR airport"],
-  ["🔥", "Weekly exclusive drops", "Trips + fares that never hit the free feed"],
-  ["📉", "Price-drop tracking", "Save a trip, we watch the price for you"],
-  ["🎟️", "Member discount codes", "Partner deals on hostels, tours + gear"],
-  ["👑", "Early access", "First dibs on organized group trips"],
-  ["🎓", "Student deal", "College email? First month free"],
+  ["🔓", "Every send unlocked", "All of them in your budget, not just the first few"],
+  ["🔥", "Deal drops", "Every drop from your city, the day the fare lands"],
+  ["⚡", "Live fares", "Real round-trip prices, refreshed a few times a day"],
+  ["📱", "On every device", "Plus lives on your account: phone, laptop, same email"],
+  ["🎓", "Student deal", "College email? 5% off, every renewal"],
+  ["✦", "Founders seats", "Go yearly and you're one of the first ten"],
 ];
 
 /* ---------- geo helpers ---------- */

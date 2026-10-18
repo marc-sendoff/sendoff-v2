@@ -26,6 +26,18 @@
   to = "/thanks.html"
   status = 200
 
+# Terms and Privacy are plain HTML in public/ (the footer links to them), served
+# at clean paths the same way.
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
 # The app holds its views in React state, not the URL, so any other path is
 # still the app. Existing files (assets, /thanks.html, the icons) are served
 # before this rule ever applies.

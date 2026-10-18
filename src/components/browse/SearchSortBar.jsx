@@ -3,15 +3,15 @@ import { Input } from "@/components/ui/input";
 import SmoothTab from "@/components/kokonutui/smooth-tab";
 
 const SORTS = [
-  { id: "best", title: "Best match" },
-  { id: "low", title: "$ Low → High" },
-  { id: "high", title: "$ High → Low" },
-  { id: "close", title: "Closest" },
+  { id: "best", title: "Best" },
+  { id: "low", title: "$ Low" },
+  { id: "high", title: "$ High" },
+  { id: "close", title: "Near" },
 ];
 
 /* Live all-in ranking, only offered when data for this origin exists —
    the tab appearing IS the signal that live prices are in. */
-const LIVE_SORT = { id: "cheaplive", title: "⚡ Live prices" };
+const LIVE_SORT = { id: "cheaplive", title: "Live ⚡" };
 
 /* Search + sort v3 — shadcn Input for the query, Kokonut SmoothTab (its
    published sliding-pill toolbar) replaces the <select>: all four sort
