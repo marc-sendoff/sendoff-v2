@@ -39,7 +39,7 @@ export const PLUS_PERKS = [
   ["🔓", "Every send unlocked", "All of them in your budget, not just the first few"],
   ["🔥", "Deal drops", "Every drop from your city, the day the fare lands"],
   ["⚡", "Live fares", "Real round-trip prices, refreshed a few times a day"],
-  ["📱", "On every device", "Plus lives on your account: phone, laptop, same email"],
+  ["🎡", "Spin-Send", "The wheel picks your trip; book it and bank Send Points"],
   ["🎓", "Student deal", "College email? 5% off, every renewal"],
   ["✦", "Founders seats", "Go yearly and you're one of the first ten"],
 ];

@@ -393,7 +393,31 @@ export default function Sendoff() {
       </nav>
 
       <Suspense fallback={lazyFallback}>
-        {view === "spin" && (
+        {/* Spin-Send is a Plus feature: free visitors get the pitch and the
+            unlock, members get the wheel. */}
+        {view === "spin" && !member && (
+          <section style={{ maxWidth: 560, margin: "0 auto", padding: "34px 20px 10px", textAlign: "center" }}>
+            <div style={{ fontSize: 64, lineHeight: 1 }}>🎡</div>
+            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
+              fontSize: "clamp(26px, 6vw, 36px)", letterSpacing: "-0.6px", marginTop: 14 }}>
+              Spin-Send is a Sendoff<span style={{ color: T.cobalt }}>+</span> thing.
+            </div>
+            <p style={{ fontSize: 15.5, fontWeight: 600, opacity: 0.75, lineHeight: 1.55, margin: "12px auto 0", maxWidth: 420 }}>
+              A wheel of every send you can actually afford from {origin}. Where it stops is where you go —
+              and booking the trip it picks banks you Send Points. Members only.
+            </p>
+            <m.button onClick={() => setShowPlus(true)} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} transition={SPRING}
+              style={{ marginTop: 22, background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
+                borderRadius: 14, boxShadow: `4px 4px 0 ${T.shadow}`, padding: "14px 24px",
+                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, cursor: "pointer" }}>
+              Unlock with Sendoff+ · $4.99/mo →
+            </m.button>
+            <div style={{ fontSize: 12.5, fontWeight: 700, opacity: 0.55, marginTop: 12 }}>
+              Got a code? It's in the same popup.
+            </div>
+          </section>
+        )}
+        {view === "spin" && member && (
           <SpinSend trips={results} origin={origin} friends={friends} budget={budget}
             onPick={(t, meta) => { setWheelPick(meta?.bonus ? { id: t.id, bonus: meta.bonus } : null); setDetail(t); }} />
         )}
