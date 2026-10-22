@@ -10,8 +10,16 @@ export default async (req) => {
   if (req.method !== "POST") return json({ ok: false, error: "POST only" }, 405);
   const user = await userFromRequest(req);
   if (!user) return json({ ok: false, error: "sign in first" }, 401);
-  let plan = "month";
-  try { plan = String((await req.json())?.plan ?? "month"); } catch { /* default */ }
+  let plan = "month", back = "/";
+  try {
+    const body = await req.json();
+    plan = String(body?.plan ?? "month");
+    /* Where to send them after paying: the page they bought from (so /preview
+       stays on /preview and /?launch=1 keeps its switch), never another site. */
+    const b = String(body?.back ?? "/");
+    if (b.startsWith("/") && !b.startsWith("//")) back = b;
+  } catch { /* defaults */ }
+  const join = back.includes("?") ? "&" : "?";
   const price = PRICES[plan];
   if (!price) return json({ ok: false, error: "plan not available yet" }, 503);
 
@@ -31,8 +39,8 @@ export default async (req) => {
     ...(student ? { discounts: [{ coupon: STUDENT_COUPON }] } : { allow_promotion_codes: true }),
     subscription_data: { metadata: { user_id: user.id } },
     metadata: { user_id: user.id },
-    success_url: `${SITE}/preview?checkout=success`,
-    cancel_url: `${SITE}/preview?checkout=cancel`,
+    success_url: `${SITE}${back}${join}checkout=success`,
+    cancel_url: `${SITE}${back}${join}checkout=cancel`,
   });
   return json({ ok: true, url: session.url, student: Boolean(student) });
 };

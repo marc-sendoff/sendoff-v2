@@ -209,7 +209,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
     try {
       const r = await fetch("/api/checkout", {
         method: "POST", headers: { "Content-Type": "application/json", ...acct.authHeaders() },
-        body: JSON.stringify({ plan: plan === "yr" ? "year" : "month" }),
+        body: JSON.stringify({ plan: plan === "yr" ? "year" : "month", back: window.location.pathname + window.location.search }),
       });
       const j = await r.json().catch(() => ({}));
       if (r.ok && j.url) { window.location.assign(j.url); return; }

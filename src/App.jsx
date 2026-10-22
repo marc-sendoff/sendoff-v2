@@ -140,6 +140,28 @@ export default function Sendoff() {
      old browser-only member flag is gone on purpose: Plus lives on accounts. */
   const acct = useAccount();
   const member = acct.isMember;
+
+  /* Back from Stripe with ?checkout=success. Stripe's "they paid" message can
+     land a second or two after the redirect, so the first load may still say
+     free. Re-check every 2 s for up to 40 s, say so on screen, and tidy the
+     URL once Plus is confirmed (or when we give up). */
+  const [confirming, setConfirming] = useState(() => new URLSearchParams(window.location.search).get("checkout") === "success");
+  React.useEffect(() => {
+    if (!confirming) return;
+    if (member) {
+      setConfirming(false);
+      const u = new URL(window.location.href); u.searchParams.delete("checkout");
+      window.history.replaceState({}, "", u.pathname + u.search + u.hash);
+      return;
+    }
+    let tries = 0;
+    const id = setInterval(() => {
+      tries += 1;
+      acct.refresh();
+      if (tries >= 20) { clearInterval(id); setConfirming(false); }
+    }, 2000);
+    return () => clearInterval(id);
+  }, [confirming, member, acct.refresh]);
   const [showAccount, setShowAccount] = useState(false);
   const [opened, setOpened] = useState(() => readStore("sendoff_opened", 0));
   const doneTrips = useMemo(() => acct.done.map((t) => t.trip_id), [acct.done]);
@@ -348,6 +370,13 @@ export default function Sendoff() {
 
       {/* one-per-session launch splash — overlays everything, never gates the app's render */}
       <WelcomeSplash />
+      {confirming && !member && (
+        <div role="status" style={{ position: "fixed", top: 12, left: "50%", transform: "translateX(-50%)", zIndex: 200,
+          background: T.ink, color: T.paper, border: `2px solid ${T.sun}`, borderRadius: 999, padding: "10px 18px",
+          fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: 14, boxShadow: `4px 4px 0 ${T.shadow}` }}>
+          Confirming your payment with Stripe… a few seconds.
+        </div>
+      )}
       <InstallNudge />
 
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "18px 20px", maxWidth: 960, margin: "0 auto" }}>
