@@ -49,7 +49,11 @@ export function useAccount() {
 
   const signIn = useCallback(async (email, name = "", city = "") => {
     if (!supabase) throw new Error("Accounts aren't switched on yet.");
-    const redirect = `${window.location.origin}${window.location.pathname}`;
+    /* Send the link back to the exact page they started on — including the
+       query string. Before launch that's /?launch=1 or /preview; dropping the
+       query landed people on the signup page, which can't finish a sign-in,
+       so the link looked "expired". */
+    const redirect = `${window.location.origin}${window.location.pathname}${window.location.search}`;
     const data = {};
     if (name.trim()) data.name = name.trim();
     if (city.trim()) data.city = city.trim();

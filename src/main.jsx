@@ -28,7 +28,10 @@ if ("serviceWorker" in navigator && import.meta.env.PROD) {
 const Sendoff = lazy(() => import("./App.jsx"));
 const PREVIEW = window.location.pathname.replace(/\/+$/, "") === "/preview";
 const LAUNCHED = hasLaunched();
-const SHOW_APP = PREVIEW || LAUNCHED;
+/* A sign-in link lands with Supabase's tokens (or error) in the URL hash.
+   Whatever page it arrives on, only the app can finish that, so show it. */
+const AUTH_RETURN = /(access_token|refresh_token|error_code)=/.test(window.location.hash);
+const SHOW_APP = PREVIEW || LAUNCHED || AUTH_RETURN;
 
 /* Keep /preview, and any early look at the launched site, out of search
    results. Once launch day has actually passed, the site indexes normally. */
