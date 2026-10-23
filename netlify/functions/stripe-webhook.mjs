@@ -51,7 +51,15 @@ export default async (req) => {
         if (uid) await setMembership(uid, await withFounder(uid, membershipFromSubscription(sub), { fresh: true }));
       }
     } else if (event.type.startsWith("customer.subscription.")) {
-      const sub = event.data.object;
+      /* Never trust the snapshot inside the event: Stripe retries failed
+         deliveries later and out of order, so a stale "active" can arrive
+         after the cancellation already landed (it did, on 2026-10-22). Ask
+         Stripe for the subscription as it is right now; if it's gone, it's
+         cancelled. */
+      const snapshot = event.data.object;
+      let sub;
+      try { sub = await s.subscriptions.retrieve(snapshot.id); }
+      catch { sub = { ...snapshot, status: "canceled" }; }
       const uid = await userIdFor(s, sub);
       if (uid) await setMembership(uid, await withFounder(uid, membershipFromSubscription(sub)));
     }
