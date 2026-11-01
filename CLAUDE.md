@@ -15,9 +15,12 @@ Tagline: "Go while you're young."
 
 ## The most important thing to know
 
-**The app is the site.** There is no gate any more. `sendofftrips.com` serves the
-React app in `src/` directly, built by `npm run build` into `dist/` and deployed by
-Netlify. Anything you wire into the app is what visitors see.
+**The app is the site — since launch day, November 1 2026.** `src/main.jsx`
+renders the app once `hasLaunched()` (src/data/rollout.js) says launch day has
+passed, and the signup page (`src/Landing.jsx`) before that. The origin picker is
+gated by stage (Florida → US Nov 15 → world Dec 10) in `src/data/rollout.js`;
+all destinations are always visible. Built by `npm run build` into `dist/`,
+deployed by Netlify on every push to `main`.
 
 This is a change from the pre-October setup, where an email gate stood in front of
 everything. If you find notes, issues, or old commits that say "the gate is what
@@ -123,9 +126,12 @@ money"). Emoji are part of the current visual language.
    `VITE_CLARITY_ID`) belong in the committed `.env.production`.
 4. **Test mobile first (375px width).** Traffic comes from Instagram.
 5. **Keep `npm run build` green.** Netlify deploys what it builds.
-6. **v1 scope is frozen**: no logins, no payments, no Founders Club, no cities
-   beyond Miami. December v1 = this site + ~15 Miami sends with real prices and
-   affiliate book links.
+6. **Accounts, payments and Founders Club are live** (since Oct 2026): sign-in
+   by email link (Supabase), Sendoff+ at $4.99/mo or $40/yr through Stripe
+   (live keys in Netlify, webhook at /api/stripe-webhook), the first ten yearly
+   buyers become Founders. Free visitors get three fixed trips; the rest are
+   blurred. Spin-Send is Plus-only. Don't reintroduce the old "v1 is frozen"
+   framing from before the relaunch.
 
 ## Integrations (pointers, not secrets)
 
@@ -140,17 +146,20 @@ money"). Emoji are part of the current visual language.
   Sendoff, Big Send and Community forms. **Unconfirmed whether Marc owns this
   account.** If he doesn't, those submissions are going to someone else; move them
   to Netlify Forms the same way the waitlist works.
-- **Travelpayouts**: marker `561612` (`AFF.travelpayouts`) + partner short-links in
-  `PARTNER`, both in `src/data/config.js`.
+- **Travelpayouts**: marker `763771` (`AFF.travelpayouts`; `561612` was a never-used
+  placeholder) + partner short-links in `PARTNER`, both in `src/data/config.js`.
+  Live fares: `netlify/functions/pull-fares.mjs` runs hourly, one origin city per
+  run, into Netlify Blobs; `/api/cheapest` and `/api/fare` read them.
+- **Accounts**: Supabase project `sendoff` (tables `profiles`, `memberships`,
+  `user_trips`, schema in `supabase/schema.sql`). **Payments**: Stripe live;
+  prices/coupon/webhook ids live in Netlify env. **Email**: Resend; new signups
+  land there via `netlify/functions/submission-created.mjs`.
 - **Instagram**: `@sendoff.trips`. **Contact**: `support@sendofftrips.com`.
 - **Domain**: sendofftrips.com at Porkbun, pointed at Netlify.
 
 ## Known issues / open decisions
 
-- **Sendoff+ paywall is a dead end.** The app still hides ~123 trips behind a
-  membership, and the unlock path checked a server endpoint that no longer exists,
-  so nobody can ever unlock it. Either drop the gating for v1 or wire a real
-  payment — it can't stay as-is past launch.
-- `CheapestRail` shows a hardcoded "prices from Aug 30" snapshot date.
-- Membership state is localStorage-only.
-- Trip photography is still destination stock, not real sends.
+- Trip photography is still destination stock, not real sends (the community
+  wall has Marc's own).
+- Live fares cover 12 origin cities; everywhere else shows the curated estimate
+  with an "est." tag. Widen the pull before the US stage opens on Nov 15.
