@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
    (transform-only), and the motion contract is IDENTICAL to v2 (layout glide
    on filter changes, per-row stagger, y-lift hover). Data, props, and the
    badge rule are unchanged. */
-export const TripCardV3 = React.forwardRef(function TripCardV3({ trip, i, mode, over, onOpen, locked = false }, ref) {
+export const TripCardV3 = React.forwardRef(function TripCardV3({ trip, i, mode, over, onOpen, onShare, locked = false }, ref) {
   const badge = trip.cheapest
     ? { text: "CHEAPEST SEND", cls: "bg-foreground text-secondary" }
     : trip.cost >= 1200 ? { text: "STRETCH GOAL", cls: "bg-destructive text-white" } : null;
@@ -56,8 +56,21 @@ export const TripCardV3 = React.forwardRef(function TripCardV3({ trip, i, mode, 
         <div className="flex flex-1 flex-col gap-1 px-4 pt-3.5 pb-4" style={veil}>
           <div className="font-display text-xl font-extrabold leading-[1.12] tracking-[-0.3px]">{trip.name}</div>
           <div className="text-[13px] font-bold text-primary">{trip.tag}</div>
-          <div className="mt-auto pt-1.5 text-[12.5px] font-semibold opacity-[0.68]">
-            {trip.days} {trip.days === 1 ? "day" : "days"} · {mode}
+          <div className="mt-auto flex items-end justify-between gap-2 pt-1.5">
+            <div className="text-[12.5px] font-semibold opacity-[0.68]">
+              {trip.days} {trip.days === 1 ? "day" : "days"} · {mode}
+            </div>
+            {/* "send it to the group chat" — a span, not a button, because the
+                whole card is already a button. Stops the click so the trip
+                sheet doesn't open; locked cards don't get one. */}
+            {onShare && !locked && (
+              <span role="button" tabIndex={0} aria-label={`Share ${trip.name}`}
+                onClick={(e) => { e.stopPropagation(); onShare(trip); }}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); e.stopPropagation(); onShare(trip); } }}
+                className="shrink-0 rounded-full border-2 border-border bg-secondary px-2.5 py-1 text-[11px] font-extrabold leading-none shadow-[2px_2px_0_var(--border)] active:translate-x-px active:translate-y-px">
+                Send 💬
+              </span>
+            )}
           </div>
           {over && (
             <div className="text-xs font-extrabold text-destructive">↑ above your current budget</div>

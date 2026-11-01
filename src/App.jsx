@@ -3,6 +3,7 @@ import { LazyMotion, MotionConfig, m } from "motion/react";
 const loadMotionFeatures = () => import("./motion-features.js").then((mod) => mod.default);
 import { T, VIBES, SH, SPRING, applyTheme, DEFAULT_THEME } from "./theme.js";
 import { CITIES, TRIPS, AIRPORTS } from "./data/trips.js";
+import { shareText, giveawayOpen } from "./data/config.js";
 import { priceAll } from "./data/pricing.js";
 import { WORLD_CITIES } from "./data/cities.js";
 import { getCheapest } from "./utils/cheapest.js";
@@ -326,6 +327,34 @@ export default function Sendoff() {
      so the catalogue is provable without being readable. */
   const TEASE = 5;
   const isFree = (t) => freeIds.has(t.id);
+
+  /* "Send 💬" on a card: the group-chat text (with the trip's link) goes to the
+     phone's share sheet, or the clipboard on desktop. The toast says which. */
+  const [shareNote, setShareNote] = useState("");
+  const shareTrip = async (t) => {
+    const text = shareText(t, origin, originCoords, friends + 1, dates);
+    if (window.gtag) window.gtag("event", "share", { method: navigator.share ? "native" : "copy", item_id: t.id });
+    try {
+      if (navigator.share) { await navigator.share({ text }); return; }
+      await navigator.clipboard.writeText(text);
+      setShareNote("Copied — paste it in the group chat");
+    } catch (e) {
+      if (e && e.name === "AbortError") return; // they closed the share sheet
+      setShareNote("Couldn't share that one");
+    }
+    setTimeout(() => setShareNote(""), 2400);
+  };
+
+  /* A shared link lands on its trip. Free trips open; the rest open the
+     paywall, the same as tapping a locked card. */
+  React.useEffect(() => {
+    const id = new URLSearchParams(window.location.search).get("trip");
+    if (!id) return;
+    const t = TRIPS.find((x) => x.id === id);
+    if (!t) return;
+    if (!member && !isFree(t)) setShowPlus(true); else setDetail(t);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const freeHere = results.filter(isFree).length;
   const gated = !member && results.length > freeHere;
   /* Gated: the open three always lead, in the chosen order, then a few
@@ -378,6 +407,18 @@ export default function Sendoff() {
         </div>
       )}
       <InstallNudge />
+
+      {/* Launch week: everyone who isn't signed in sees the giveaway and the
+          one tap that enters them. Gone the day after it closes. */}
+      {giveawayOpen() && !acct.user && (
+        <button onClick={() => setShowAccount("signup")}
+          style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 8,
+            background: T.sun, color: T.ink, border: "none", borderBottom: `2px solid ${T.ink}`, padding: "11px 16px",
+            fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 14, lineHeight: 1.3, cursor: "pointer", textAlign: "center" }}>
+          <span aria-hidden="true">🎁</span>
+          <span>Launch week: make a free account, win a send for two <span style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>Sign up →</span></span>
+        </button>
+      )}
 
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "18px 20px", maxWidth: 960, margin: "0 auto" }}>
         <Logo />
@@ -531,7 +572,7 @@ export default function Sendoff() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 20 }}>
           {shown.map((t, i) => (
             <TripCard key={t.id} trip={t} i={i} mode={modeLabel(t, originCoords)}
-              over={t.cost > budget * 1.15} locked={gated && !isFree(t)}
+              over={t.cost > budget * 1.15} locked={gated && !isFree(t)} onShare={shareTrip}
               onOpen={gated && !isFree(t) ? () => setShowPlus(true) : setDetail} />
           ))}
         </div>
@@ -642,7 +683,14 @@ export default function Sendoff() {
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
-      {showAccount && <SignInModal acct={acct} origin={origin} onClose={() => setShowAccount(false)} />}
+      {showAccount && <SignInModal acct={acct} origin={origin} initialMode={showAccount === "signup" ? "signup" : "login"} onClose={() => setShowAccount(false)} />}
+      {shareNote && (
+        <div role="status" style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", zIndex: 300,
+          background: T.ink, color: T.paper, border: `2px solid ${T.sun}`, borderRadius: 999, padding: "10px 18px",
+          fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: 14, whiteSpace: "nowrap", boxShadow: `4px 4px 0 ${T.shadow}` }}>
+          {shareNote}
+        </div>
+      )}
       {showProfile && acct.user && (
         <ProfileModal acct={acct} opened={opened} origin={origin} themeName={themeName} onTheme={pickTheme}
           onClose={() => setShowProfile(false)}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { m } from "motion/react";
 import { T, R, SH, SPRING } from "../theme.js";
 import { TRIPS } from "../data/trips.js";
-import { PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown } from "../data/config.js";
+import { PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown, giveawayOpen } from "../data/config.js";
 import { senderSince } from "../lib/account.js";
 import { THEMES } from "../theme.js";
 import { useFounders, SeatCounter } from "./Founders.jsx";
@@ -13,7 +13,7 @@ import { BudgetBar } from "./core.jsx";
 import FlightPrices from "./FlightPrices.jsx";
 
 /* Launch-week giveaway window, Nov 1–8 2026 (any time zone's Nov 8 counts). */
-const GIVEAWAY_OPEN = (() => { const d = new Date().toISOString().slice(0, 10); return d >= "2026-11-01" && d <= "2026-11-08"; })();
+const GIVEAWAY_OPEN = giveawayOpen();
 
 /* "2026-10" -> "October". Fare months come from the nightly pull. */
 function monthLabel(ym) {
@@ -160,8 +160,8 @@ function SignInBlock({ acct, mode = "login", origin = "", title, sub }) {
   );
 }
 
-export function SignInModal({ acct, origin, onClose }) {
-  const [mode, setMode] = useState("login");
+export function SignInModal({ acct, origin, onClose, initialMode = "login" }) {
+  const [mode, setMode] = useState(initialMode);
   return (
     <ModalShell onClose={onClose} maxWidth={380}>
       <div style={{ padding: "22px 22px 26px" }}>

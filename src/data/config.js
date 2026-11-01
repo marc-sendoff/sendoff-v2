@@ -235,6 +235,11 @@ export function bookLinks(t, origin, oc, friends, dates) {
   return links;
 }
 
+/* The Launch Giveaway: accounts made in launch week are in the draw. One
+   place for the dates so the top bar, the Plus modal and sign-up agree. */
+export const GIVEAWAY = { from: "2026-11-01", to: "2026-11-08" };
+export const giveawayOpen = (now = new Date()) => { const d = now.toISOString().slice(0, 10); return d >= GIVEAWAY.from && d <= GIVEAWAY.to; };
+
 /* Group-chat share text */
 export function shareText(t, origin, oc, friends, dates) {
   const dstr = (d) => new Date(d + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric" });
@@ -252,6 +257,7 @@ export function shareText(t, origin, oc, friends, dates) {
     `The move: ${t.plan[0].replace(/^Day 1 — /, "")}`,
     ``,
     `Reply 🔥 if you're in. Planned on Sendoff ✈️`,
+    `https://sendofftrips.com/?trip=${t.id}`,
   ].join("\n");
 }
 
