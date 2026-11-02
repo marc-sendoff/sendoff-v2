@@ -388,8 +388,8 @@ export default function Sendoff() {
         /* The tab row: the pills, on one line. The open one is filled ink and
            carries a small yellow bar underneath, like the headline underlines.
            On phones the row scrolls sideways instead of wrapping. */
-        .sendoff-tabs { display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
-          scroll-snap-type: x proximity; padding-bottom: 12px; }
+        .sendoff-tabs { display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch;
+          scroll-snap-type: x proximity; padding: 2px 20px 22px; }
         .sendoff-tab { position: relative; flex-shrink: 0; scroll-snap-align: start; cursor: pointer; white-space: nowrap;
           font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 12.5px; letter-spacing: -0.1px;
           padding: 8px 13px; border-radius: 999px; border: 2px solid ${T.ink}; background: ${T.white}; color: ${T.ink}; }
@@ -447,7 +447,7 @@ export default function Sendoff() {
       </header>
 
       {/* tabs */}
-      <nav className="sendoff-tabs" aria-label="Sections" style={{ maxWidth: 960, margin: "0 auto", padding: "0 20px" }}>
+      <nav className="sendoff-tabs" aria-label="Sections" style={{ maxWidth: 960, margin: "0 auto" }}>
         {/* The Founders Club tab is out for the December v1 — the club is
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
