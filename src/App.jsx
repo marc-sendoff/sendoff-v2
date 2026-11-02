@@ -385,22 +385,20 @@ export default function Sendoff() {
         }
         ::-webkit-scrollbar { display: none; }
         button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid ${T.cobalt}; outline-offset: 2px; }
-        /* The tab row: plain bold words on one rule, the open one carries the
-           same yellow underline the headline uses. One line everywhere — on
-           phones the row scrolls sideways instead of wrapping. */
-        .sendoff-tabs { display: flex; gap: 26px; border-bottom: 2px solid ${T.ink}; flex-wrap: nowrap;
-          overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
-        .sendoff-tab { position: relative; flex-shrink: 0; scroll-snap-align: start; background: transparent; border: none;
-          padding: 8px 2px 12px; margin-bottom: -2px; cursor: pointer; white-space: nowrap;
-          font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: -0.2px;
-          color: #5b5d6a; transition: color .15s; }
-        .sendoff-tab:hover { color: ${T.ink}; }
-        .sendoff-tab[aria-current="page"] { color: ${T.ink}; }
-        .sendoff-tab[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0;
-          height: 6px; background: ${T.sun}; border-top: 2px solid ${T.ink}; }
+        /* The tab row: the pills, on one line. The open one is filled ink and
+           carries a small yellow bar underneath, like the headline underlines.
+           On phones the row scrolls sideways instead of wrapping. */
+        .sendoff-tabs { display: flex; gap: 8px; flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
+          scroll-snap-type: x proximity; padding-bottom: 12px; }
+        .sendoff-tab { position: relative; flex-shrink: 0; scroll-snap-align: start; cursor: pointer; white-space: nowrap;
+          font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 12.5px; letter-spacing: -0.1px;
+          padding: 8px 13px; border-radius: 999px; border: 2px solid ${T.ink}; background: ${T.white}; color: ${T.ink}; }
+        .sendoff-tab[aria-current="page"] { background: ${T.ink}; color: ${T.paper}; }
+        .sendoff-tab[aria-current="page"]::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: -11px;
+          height: 5px; background: ${T.sun}; border: 2px solid ${T.ink}; border-radius: 3px; }
         @media (max-width: 640px) {
-          .sendoff-tabs { gap: 18px; padding-left: 16px !important; padding-right: 16px !important; scroll-padding-left: 16px; }
-          .sendoff-tab { font-size: 14px; padding-bottom: 11px; }
+          .sendoff-tabs { gap: 6px; padding-left: 12px !important; padding-right: 12px !important; scroll-padding-left: 12px; }
+          .sendoff-tab { font-size: 11.5px; padding: 9px 12px; }
         }
       `}</style>
 
@@ -449,12 +447,12 @@ export default function Sendoff() {
       </header>
 
       {/* tabs */}
-      <nav className="sendoff-tabs" aria-label="Sections" style={{ maxWidth: 960, margin: "4px auto 0", padding: "0 20px" }}>
+      <nav className="sendoff-tabs" aria-label="Sections" style={{ maxWidth: 960, margin: "0 auto", padding: "0 20px" }}>
         {/* The Founders Club tab is out for the December v1 — the club is
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "The trips"], ["custom", "Personal Sendoff"], ["big", "The Big Send"], ["spin", "Spin-Send"], ["community", "Community"], ["founders", "Founders"], ["about", "Our story"]].map(([id, label]) => (
+        {[["trips", "THE TRIPS"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["spin", "SPIN-SEND 🎡"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
           <button key={id} onClick={() => setView(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
             {label}
           </button>
