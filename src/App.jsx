@@ -385,15 +385,22 @@ export default function Sendoff() {
         }
         ::-webkit-scrollbar { display: none; }
         button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid ${T.cobalt}; outline-offset: 2px; }
-        /* Phones: tighten the tab pills so six of them wrap onto fewer rows —
-           every extra row pushes content down on every view. Horizontal padding
-           carries the saving; vertical padding is held so the tap target keeps
-           its height. !important because these buttons carry inline styles. */
+        /* The tab row: plain bold words on one rule, the open one carries the
+           same yellow underline the headline uses. One line everywhere — on
+           phones the row scrolls sideways instead of wrapping. */
+        .sendoff-tabs { display: flex; gap: 26px; border-bottom: 2px solid ${T.ink}; flex-wrap: nowrap;
+          overflow-x: auto; -webkit-overflow-scrolling: touch; scroll-snap-type: x proximity; }
+        .sendoff-tab { position: relative; flex-shrink: 0; scroll-snap-align: start; background: transparent; border: none;
+          padding: 8px 2px 12px; margin-bottom: -2px; cursor: pointer; white-space: nowrap;
+          font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: -0.2px;
+          color: #5b5d6a; transition: color .15s; }
+        .sendoff-tab:hover { color: ${T.ink}; }
+        .sendoff-tab[aria-current="page"] { color: ${T.ink}; }
+        .sendoff-tab[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+          height: 6px; background: ${T.sun}; border-top: 2px solid ${T.ink}; }
         @media (max-width: 640px) {
-          .sendoff-tabs { gap: 6px !important; padding-left: 12px !important; padding-right: 12px !important;
-            flex-wrap: nowrap !important; overflow-x: auto; -webkit-overflow-scrolling: touch;
-            scroll-snap-type: x proximity; scroll-padding-left: 12px; }
-          .sendoff-tab { font-size: 11.5px !important; padding: 10px 12px !important; letter-spacing: -0.2px; flex-shrink: 0; scroll-snap-align: start; }
+          .sendoff-tabs { gap: 18px; padding-left: 16px !important; padding-right: 16px !important; scroll-padding-left: 16px; }
+          .sendoff-tab { font-size: 14px; padding-bottom: 11px; }
         }
       `}</style>
 
@@ -442,21 +449,13 @@ export default function Sendoff() {
       </header>
 
       {/* tabs */}
-      <nav className="sendoff-tabs" style={{ maxWidth: 960, margin: "0 auto", padding: "0 20px", display: "flex", gap: 8, flexWrap: "wrap" }}>
-        {/* On phones this row scrolls sideways (see the @media rule above)
-            instead of wrapping to three rows above every view. */}
+      <nav className="sendoff-tabs" aria-label="Sections" style={{ maxWidth: 960, margin: "4px auto 0", padding: "0 20px" }}>
         {/* The Founders Club tab is out for the December v1 — the club is
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["spin", "SPIN-SEND 🎡"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
-          <button key={id} onClick={() => setView(id)} className="sendoff-tab"
-            style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 13,
-              padding: "9px 16px", borderRadius: 999,
-              border: `2px solid ${T.ink}`,
-              background: view === id ? T.ink : T.white,
-              color: view === id ? T.paper : T.ink,
-              cursor: "pointer", whiteSpace: "nowrap" }}>
+        {[["trips", "The trips"], ["custom", "Personal Sendoff"], ["big", "The Big Send"], ["spin", "Spin-Send"], ["community", "Community"], ["founders", "Founders"], ["about", "Our story"]].map(([id, label]) => (
+          <button key={id} onClick={() => setView(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
             {label}
           </button>
         ))}
