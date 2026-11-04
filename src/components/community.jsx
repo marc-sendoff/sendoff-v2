@@ -8,10 +8,18 @@ import { sendRequest, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../data/config.js"
    photo: paste any image link. Leave "" for a placeholder tile.
    ============================================================ */
 export const COMMUNITY_POSTS = [
+  /* Marc's three are spread out between friends' sends so the wall reads as a
+     community, not one person's album. Prices are per person. */
   { photo: "wall/smoky-mountains.jpg", name: "Marc", trip: "Great Smoky Mountains", spent: "$180 · 2 days", handle: "",
     caption: "The founders' trip. The one that started Sendoff." },
+  { photo: "wall/tallahassee-halloween.jpg", name: "Josh, Mikey, Brady & Dom", trip: "Tallahassee", spent: "$112 · Halloween weekend", handle: "",
+    caption: "The state capital: Congress by day, a party by night." },
+  { photo: "wall/nassau-atlantis.jpg", name: "Enzo", trip: "Nassau, Bahamas", spent: "$450", handle: "",
+    caption: "Atlantis lit up behind him, sand still warm at midnight." },
   { photo: "wall/montreal-notre-dame.jpg", name: "Marc", trip: "Montreal", spent: "$375 · 3 days", handle: "",
     caption: "Notre-Dame, the Old Port, and a lot of walking." },
+  { photo: "wall/puglia-ape.jpg", name: "Meshi & Noah", trip: "Puglia, Italy", spent: "$854", handle: "",
+    caption: "Morning espresso on the back of a Piaggio Ape. Puglia does mornings right." },
   { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "$266 · 3 days", handle: "",
     caption: "Broadway at night. Live band in every bar, no cover anywhere." },
 ];
