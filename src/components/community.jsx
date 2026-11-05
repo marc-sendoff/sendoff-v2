@@ -20,6 +20,8 @@ export const COMMUNITY_POSTS = [
     caption: "Notre-Dame, the Old Port, and a lot of walking." },
   { photo: "wall/puglia-ape.jpg", name: "Meshi & Noah", trip: "Puglia, Italy", spent: "$854 · 3 days", handle: "@meshijay · @noahmunitz",
     caption: "Morning espresso on the back of a Piaggio Ape. Puglia does mornings right." },
+  { photo: "wall/tbilisi-narikala.jpg", name: "Vince", trip: "Tbilisi, Georgia", spent: "$1,084", handle: "@vincent_flaminio",
+    caption: "Tbilisi from the hill above the Old Town, the cathedral glowing across the river." },
   { photo: "wall/nashville-broadway.jpg", name: "Marc", trip: "Nashville", spent: "$266 · 3 days", handle: "@marc_3ttling",
     caption: "Broadway at night. Live band in every bar, no cover anywhere." },
 ];
