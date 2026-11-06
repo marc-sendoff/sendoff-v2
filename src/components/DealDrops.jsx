@@ -25,8 +25,9 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
     fetch(`/api/deals?origin=${c}`)
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => {
-        if (!on || !j?.ok || !j.deals?.length) return;
-        setLive(j.deals.map((d) => ({
+        if (!on || !j?.ok) return;
+        /* An honest empty list beats the old sample deals: no drops = say so. */
+        setLive((j.deals ?? []).map((d) => ({
           tripId: d.tripId, price: d.price, was: d.typical, live: true,
           expires: `${monthLabel(d.month)} departures`,
           note: `Lowest of ${d.n} fares seen on this route`,
@@ -84,10 +85,27 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
           flexDirection: "column", justifyContent: "center" }}>
         <div style={{ fontSize: 20 }}>✅</div>
         <div style={{ fontWeight: 800, fontSize: 14, marginTop: 6 }}>Alerts ON for {origin}</div>
-        <div style={{ fontSize: 12, fontWeight: 600, opacity: 0.65, marginTop: 2 }}>You'll get texted when fares drop.</div>
+        <div style={{ fontSize: 12, fontWeight: 600, opacity: 0.65, marginTop: 2 }}>Watch a send and we email you when its fare drops.</div>
       </div>
     </div>
   );
+
+  /* Live answer, nothing on sale: say so instead of showing stale samples. */
+  if (live && deals.length === 0) {
+    return (
+      <section className="sendoff-v3 mx-auto mt-2.5 max-w-[960px] px-5">
+        <div className="flex items-baseline gap-2.5 font-display text-[22px] font-extrabold tracking-[-0.5px] text-foreground">
+          DEAL DROPS 🔥
+          <Badge className="rounded-full bg-foreground px-2.5 py-[3px] text-xs font-extrabold text-secondary">SENDOFF+</Badge>
+        </div>
+        <div style={{ marginTop: 10, background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "12px 16px",
+          fontFamily: "'Instrument Sans', sans-serif", fontSize: 13.5, fontWeight: 600 }}>
+          No drops from {origin} right now. Fares refresh every hour; a drop is a fare well under what this route usually costs.
+          {member ? " Watch a send and we email you the moment one lands." : " Sendoff+ members get an email the moment one lands."}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="sendoff-v3 mx-auto mt-2.5 max-w-[960px] px-5">

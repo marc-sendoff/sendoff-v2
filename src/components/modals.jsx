@@ -341,7 +341,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
 
 /* ---------- detail + share ---------- */
 
-export function Detail({ trip, origin, originCoords, friends, dates, member, isDone, onMarkDone, onJoin, onClose, wheelBonus = 0, onBook }) {
+export function Detail({ trip, origin, originCoords, friends, dates, member, isDone, onMarkDone, onJoin, onClose, wheelBonus = 0, onBook, watching = false, onWatch }) {
   const adj = originBreakdown(trip, originCoords, friends);
   const links = bookLinks(trip, origin, originCoords, friends, dates);
   const [shared, setShared] = useState(false);
@@ -515,6 +515,20 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
           <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 6, textAlign: "center" }}>
             {isDone ? "Logged to your profile." : "Mark it done and it lands in your profile."}
           </div>
+          {/* Watch the fare (Plus). Drive-only sends have no fare to watch. */}
+          {!trip.driveOnly && onWatch && (
+            <>
+              <m.button onClick={() => onWatch(trip)} whileTap={{ scale: 0.98 }} transition={SPRING}
+                style={{ width: "100%", marginTop: 10, background: watching ? T.sun : T.white,
+                  color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 14, boxShadow: SH.card, padding: "13px",
+                  fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer" }}>
+                {watching ? "🔔 Watching this send" : member ? "🔔 Watch this send" : "🔔 Watch this send · Sendoff+"}
+              </m.button>
+              <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 6, textAlign: "center" }}>
+                {watching ? "We email you when the fare from " + origin + " drops. Tap to stop." : "One email when the fare from " + origin + " drops 10% or more. No spam."}
+              </div>
+            </>
+          )}
         </div>
       </m.div>
     </m.div>
@@ -524,7 +538,18 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
 /* ---------- free account: just a name + email ---------- */
 /* ---------- the profile card ---------- */
 export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeName, onTheme }) {
-  const { user, profile, membership, isMember, done, saved, spent } = acct;
+  const { user, profile, membership, isMember, done, saved, watching, spent } = acct;
+  /* Current live fares for the watched sends, one /api/cheapest call per home base. */
+  const [fares, setFares] = useState({});
+  useEffect(() => {
+    const codes = [...new Set((watching ?? []).map((w) => w.origin).filter(Boolean))];
+    let on = true;
+    codes.forEach((c) => fetch(`/api/cheapest?origin=${c}&crew=1`).then((r) => (r.ok ? r.json() : null)).then((j) => {
+      if (!on || !j?.results) return;
+      setFares((f) => ({ ...f, [c]: Object.fromEntries(j.results.map((r) => [r.tripId, r.farePerPerson])) }));
+    }).catch(() => {}));
+    return () => { on = false; };
+  }, [(watching ?? []).map((w) => w.origin).join(",")]);
   const [name, setName] = useState(profile?.name || "");
   useEffect(() => { setName(profile?.name || ""); }, [profile?.name]);
   const since = senderSince(profile, user);
@@ -574,6 +599,32 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeNa
           <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
             style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink, lineHeight: 1 }}>×</m.button>
         </div>
+
+        {/* watched sends (Plus) */}
+        {watching?.length > 0 && (
+          <div style={{ marginTop: 16, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "12px 14px", background: T.white }}>
+            <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.2, color: T.cobalt, textTransform: "uppercase" }}>🔔 Watching</div>
+            {watching.map((w) => {
+              const t = TRIPS.find((x) => x.id === w.trip_id); if (!t) return null;
+              const now = fares[w.origin]?.[w.trip_id];
+              return (
+                <div key={w.trip_id} style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{t.name}</div>
+                    <div style={{ fontSize: 12, fontWeight: 700, opacity: 0.65 }}>
+                      {w.origin ? `from ${w.origin} · ` : ""}{now ? `${fmt(now)} round trip now` : "waiting for the next fare refresh"}
+                      {w.base_price && now && now < w.base_price ? ` · was ${fmt(w.base_price)}` : ""}
+                    </div>
+                  </div>
+                  <button onClick={() => acct.removeTrip(w.trip_id)} title="Stop watching"
+                    style={{ background: "transparent", border: `2px solid ${T.ink}`, borderRadius: 999, padding: "6px 10px",
+                      fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 12, cursor: "pointer", color: T.ink }}>Stop</button>
+                </div>
+              );
+            })}
+            <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 10 }}>One email per send when its fare drops 10% or more.</div>
+          </div>
+        )}
 
         {/* membership */}
         {isMember ? (

@@ -81,8 +81,10 @@ export function useAccount() {
     if (!supabase || !user) return;
     const row = { user_id: user.id, trip_id: tripId, status, ...extra };
     if (status === "done" && !row.done_at) row.done_at = new Date().toISOString().slice(0, 10);
-    const { data: saved } = await supabase.from("user_trips").upsert(row).select().maybeSingle();
+    const { data: saved, error } = await supabase.from("user_trips").upsert(row).select().maybeSingle();
+    if (error) { console.error("setTrip:", error.message); return false; }
     if (saved) setData((d) => ({ ...d, trips: [...d.trips.filter((t) => t.trip_id !== tripId), saved] }));
+    return !!saved;
   }, [user?.id]);
 
   const removeTrip = useCallback(async (tripId) => {
@@ -97,12 +99,14 @@ export function useAccount() {
 
   const done = useMemo(() => data.trips.filter((t) => t.status === "done"), [data.trips]);
   const saved = useMemo(() => data.trips.filter((t) => t.status === "saved"), [data.trips]);
+  /* Plus: sends being watched for a fare drop (netlify/functions/fare-alerts.mjs emails them). */
+  const watching = useMemo(() => data.trips.filter((t) => t.status === "watching"), [data.trips]);
   const spent = useMemo(() => done.reduce((s, t) => s + (Number(t.spent) || 0), 0), [done]);
 
   return {
     enabled: Boolean(supabase), ready, user, session,
     profile: data.profile, membership: data.membership, isMember,
-    trips: data.trips, done, saved, spent,
+    trips: data.trips, done, saved, watching, spent,
     signIn, signOut, saveProfile, setTrip, removeTrip, refresh, authHeaders,
   };
 }

@@ -43,9 +43,13 @@ create trigger on_auth_user_created after insert on auth.users
 create table if not exists public.user_trips (
   user_id     uuid not null references auth.users(id) on delete cascade,
   trip_id     text not null,
-  status      text not null check (status in ('saved', 'done')),
+  status      text not null check (status in ('saved', 'done', 'watching')),
   spent       integer,                       -- dollars, optional, per person
   done_at     date,
+  origin        text,                        -- watching: IATA of the home base, e.g. MIA
+  base_price    integer,                     -- watching: fare the drop is measured against
+  last_price    integer,                     -- watching: last fare the alerts job saw
+  last_alert_at timestamptz,                 -- watching: one email per route per ~20h
   created_at  timestamptz not null default now(),
   primary key (user_id, trip_id)
 );

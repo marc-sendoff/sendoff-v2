@@ -328,6 +328,22 @@ export default function Sendoff() {
   const TEASE = 5;
   const isFree = (t) => freeIds.has(t.id);
 
+  /* Watch a send (Plus): saves it with the home base and today's live fare as
+     the baseline; the hourly fare-alerts job emails when it drops. Free
+     visitors get the Plus pitch. Tap again to stop watching. */
+  const [watchNote, setWatchNote] = useState("");
+  const toggleWatch = async (t) => {
+    if (!member) { setDetail(null); setShowPlus(true); return; }
+    const already = acct.watching.some((w) => w.trip_id === t.id);
+    if (already) { await acct.removeTrip(t.id); setWatchNote(`Stopped watching ${t.name.split(",")[0]}`); }
+    else {
+      const ok = await acct.setTrip(t.id, "watching", { origin: AIRPORTS[origin] || null, base_price: liveRows.get(t.id)?.farePerPerson ?? null });
+      setWatchNote(ok ? `Watching ${t.name.split(",")[0]} — we'll email you when the fare drops` : "Couldn't save that — try again in a minute");
+    }
+    if (window.gtag) window.gtag("event", already ? "unwatch_trip" : "watch_trip", { item_id: t.id });
+    setTimeout(() => setWatchNote(""), 3000);
+  };
+
   /* "Send 💬" on a card: the group-chat text (with the trip's link) goes to the
      phone's share sheet, or the clipboard on desktop. The toast says which. */
   const [shareNote, setShareNote] = useState("");
@@ -677,10 +693,18 @@ export default function Sendoff() {
       <Suspense fallback={null}>
       {detail && <Detail trip={detail} origin={origin} originCoords={originCoords} friends={friends + 1} dates={dates}
         member={member} isDone={doneTrips.includes(detail.id)} onMarkDone={markDone}
+        watching={acct.watching.some((w) => w.trip_id === detail.id)} onWatch={toggleWatch}
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
       {showAccount && <SignInModal acct={acct} origin={origin} initialMode={showAccount === "signup" ? "signup" : "login"} onClose={() => setShowAccount(false)} />}
+      {watchNote && (
+        <div role="status" style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", zIndex: 300,
+          background: T.ink, color: T.paper, border: `2px solid ${T.sun}`, borderRadius: 999, padding: "10px 18px",
+          fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: 14, maxWidth: "90vw", textAlign: "center", boxShadow: `4px 4px 0 ${T.shadow}` }}>
+          🔔 {watchNote}
+        </div>
+      )}
       {shareNote && (
         <div role="status" style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", zIndex: 300,
           background: T.ink, color: T.paper, border: `2px solid ${T.sun}`, borderRadius: 999, padding: "10px 18px",
