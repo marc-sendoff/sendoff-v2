@@ -3,7 +3,7 @@ import { m } from "motion/react";
 import { T, SH, SPRING } from "../theme.js";
 import { TRIPS } from "../data/trips.js";
 import { fmt } from "../data/config.js";
-import { D2R, STARS3, CONTINENT_LABELS, COUNTRY_PINS } from "../data/mapdata.js";
+import { D2R, STARS3, CONTINENT_LABELS, COUNTRY_PINS, MAJOR_CITIES } from "../data/mapdata.js";
 
 /* Stylized continent outlines shown only for the instant before the accurate
    coastline data loads (or if both mirrors are unreachable). */
@@ -236,13 +236,43 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
           ctx.fillText(name, p[0], p[1]);
         }
       } else {
-        ctx.font = "800 9px 'Instrument Sans', sans-serif";
+        /* Country names grow with the zoom; a label is skipped when it would
+           sit on top of one already drawn, so the dense corners stay legible. */
+        const placed = [];
+        const clear = (x, y, w, h) => !placed.some((q) => Math.abs(q.x - x) < (q.w + w) / 2 && Math.abs(q.y - y) < (q.h + h) / 2);
+        const cf = Math.min(13, 8 + z * 1.1);
+        ctx.font = `800 ${cf}px 'Instrument Sans', sans-serif`;
         for (const [name, la, lo] of COUNTRY_PINS) {
           const p = project(la, lo); if (!p) continue;
-          ctx.lineWidth = 2.4; ctx.strokeStyle = "rgba(244,241,232,0.85)";
+          const w = ctx.measureText(name).width + 6;
+          if (!clear(p[0], p[1], w, cf + 4)) continue;
+          placed.push({ x: p[0], y: p[1], w, h: cf + 4 });
+          ctx.lineWidth = 2.6; ctx.strokeStyle = "rgba(244,241,232,0.85)";
           ctx.strokeText(name, p[0], p[1]);
           ctx.fillStyle = "rgba(27,29,42,0.9)";
           ctx.fillText(name, p[0], p[1]);
+        }
+        /* Major cities once there's room: a small dot and a quiet label,
+           never where a trip pin or its label is about to go. */
+        if (z >= 3.5) {
+          const pins = [];
+          for (const t of trips) { const q = project(t.lat, t.lon); if (q) pins.push(q); }
+          if (oc) { const q = project(oc[0], oc[1]); if (q) pins.push(q); }
+          const sf = Math.min(11, 7 + z * 0.6);
+          ctx.font = `700 ${sf}px 'Instrument Sans', sans-serif`;
+          for (const [name, la, lo, tier] of MAJOR_CITIES) {
+            if (tier === 2 && z < 5.5) continue;
+            const p = project(la, lo); if (!p) continue;
+            if (pins.some((q) => Math.abs(q[0] - p[0]) < 26 && Math.abs(q[1] - p[1]) < 18)) continue;
+            const w = ctx.measureText(name).width + 6;
+            if (!clear(p[0], p[1] - 8, w, sf + 4)) continue;
+            placed.push({ x: p[0], y: p[1] - 8, w, h: sf + 4 });
+            ctx.beginPath(); ctx.arc(p[0], p[1], 2.2, 0, 6.283);
+            ctx.fillStyle = "rgba(244,241,232,0.95)"; ctx.fill();
+            ctx.lineWidth = 2.2; ctx.strokeStyle = "rgba(19,27,84,0.7)";
+            ctx.strokeText(name, p[0], p[1] - 8);
+            ctx.fillStyle = "rgba(244,241,232,0.95)"; ctx.fillText(name, p[0], p[1] - 8);
+          }
         }
       }
 

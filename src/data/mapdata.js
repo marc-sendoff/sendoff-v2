@@ -26,11 +26,65 @@ export const CONTINENT_LABELS = [
   ["AFRICA", 3, 20], ["ASIA", 46, 90], ["OCEANIA", -25, 134],
 ];
 export const COUNTRY_PINS = [
+  /* [name, lat, lon] at a readable centroid. Shown once the globe is zoomed
+     past the whole-world view; bigger countries first so they win overlaps. */
   ["USA",39,-98],["CANADA",58,-100],["MEXICO",23,-102],["BRAZIL",-10,-52],["ARGENTINA",-35,-65],
-  ["PERU",-10,-75],["COLOMBIA",4,-73],["CHILE",-38,-71],["UK",53,-2],["FRANCE",47,2],["SPAIN",40,-4],
-  ["GERMANY",51,10],["ITALY",43,12],["GREECE",39,22],["TURKEY",39,35],["EGYPT",26,30],["MOROCCO",32,-6],
-  ["NIGERIA",9,8],["KENYA",0,38],["SOUTH AFRICA",-29,24],["INDIA",22,79],["CHINA",35,103],["JAPAN",36,138],
-  ["THAILAND",15,101],["VIETNAM",16,106],["INDONESIA",-2,118],["AUSTRALIA",-25,134],["NEW ZEALAND",-42,172],
+  ["PERU",-10,-75],["COLOMBIA",4,-73],["CHILE",-38,-71],["BOLIVIA",-17,-65],["VENEZUELA",7,-66],["ECUADOR",-1.5,-78],
+  ["URUGUAY",-33,-56],["PARAGUAY",-23,-58],["GUATEMALA",15.5,-90.5],["HONDURAS",14.8,-86.5],["NICARAGUA",12.9,-85],
+  ["COSTA RICA",10,-84],["PANAMA",8.5,-80],["CUBA",22,-79.5],["DOM. REP.",19,-70.5],["JAMAICA",18.1,-77.3],["BAHAMAS",24.5,-76],
+  ["PUERTO RICO",18.2,-66.5],["BELIZE",17.2,-88.7],["GREENLAND",72,-40],["ICELAND",65,-18],
+  ["UK",53,-2],["IRELAND",53.3,-8],["FRANCE",47,2],["SPAIN",40,-4],["PORTUGAL",39.5,-8],["GERMANY",51,10],["ITALY",43,12],
+  ["GREECE",39,22],["TURKEY",39,35],["NORWAY",62,9],["SWEDEN",62,15],["FINLAND",64,26],["DENMARK",56,10],
+  ["NETHERLANDS",52.3,5.5],["BELGIUM",50.6,4.5],["SWITZERLAND",46.8,8.2],["AUSTRIA",47.5,14.5],["POLAND",52,19],
+  ["CZECHIA",49.8,15.5],["HUNGARY",47.2,19.5],["ROMANIA",45.9,25],["BULGARIA",42.7,25],["SERBIA",44,21],["CROATIA",45.3,16],
+  ["UKRAINE",49,32],["RUSSIA",60,95],["GEORGIA",42,43.5],["MOROCCO",32,-6],["ALGERIA",28,2],["TUNISIA",34,9],["EGYPT",26,30],
+  ["LIBYA",27,17],["SENEGAL",14.5,-14.5],["GHANA",8,-1],["NIGERIA",9,8],["ETHIOPIA",9,39],["KENYA",0,38],["TANZANIA",-6.5,35],
+  ["UGANDA",1.5,32.5],["RWANDA",-2,30],["DR CONGO",-3,23],["ANGOLA",-12,17.5],["NAMIBIA",-22,17],["BOTSWANA",-22,24],
+  ["ZAMBIA",-14,27.5],["ZIMBABWE",-19,30],["MOZAMBIQUE",-18,35.5],["MADAGASCAR",-19,47],["SOUTH AFRICA",-29,24],
+  ["SAUDI ARABIA",24,45],["UAE",24,54],["OMAN",21,57],["JORDAN",31,36.5],["ISRAEL",31.4,35],["IRAN",32,54],["IRAQ",33,44],
+  ["PAKISTAN",30,69],["INDIA",22,79],["NEPAL",28.3,84],["SRI LANKA",7.5,80.7],["BANGLADESH",23.7,90.3],["KAZAKHSTAN",48,67],
+  ["UZBEKISTAN",41.5,64],["MONGOLIA",46.5,104],["CHINA",35,103],["JAPAN",36,138],["SOUTH KOREA",36.5,128],["TAIWAN",23.7,121],
+  ["THAILAND",15,101],["VIETNAM",16,106],["CAMBODIA",12.5,105],["LAOS",18.5,104],["MYANMAR",20,96],["MALAYSIA",4,102],
+  ["SINGAPORE",1.3,103.8],["INDONESIA",-2,118],["PHILIPPINES",12,122],["AUSTRALIA",-25,134],["NEW ZEALAND",-42,172],
+  ["PAPUA N.G.",-6.5,145],["FIJI",-17.8,178],
+];
+
+/* Major cities, for the close-up views. Tier 1 shows at 3.5x, tier 2 at 5.5x.
+   US cities are heavier here on purpose: that's where the sends start. */
+export const MAJOR_CITIES = [
+  /* tier 1 */
+  ["New York",40.71,-74.01,1],["Los Angeles",34.05,-118.24,1],["Chicago",41.88,-87.63,1],["Houston",29.76,-95.37,1],["Miami",25.76,-80.19,1],
+  ["Atlanta",33.75,-84.39,1],["Dallas",32.78,-96.8,1],["Denver",39.74,-104.99,1],["Seattle",47.61,-122.33,1],["San Francisco",37.77,-122.42,1],
+  ["Las Vegas",36.17,-115.14,1],["Phoenix",33.45,-112.07,1],["Washington DC",38.9,-77.04,1],["Boston",42.36,-71.06,1],["Nashville",36.16,-86.78,1],
+  ["New Orleans",29.95,-90.07,1],["Orlando",28.54,-81.38,1],["Tampa",27.95,-82.46,1],["Jacksonville",30.33,-81.66,1],["Minneapolis",44.98,-93.27,1],
+  ["Toronto",43.65,-79.38,1],["Vancouver",49.28,-123.12,1],["Montreal",45.5,-73.57,1],["Mexico City",19.43,-99.13,1],["Cancún",21.16,-86.85,1],
+  ["Havana",23.11,-82.37,1],["San Juan",18.47,-66.11,1],["Panama City",8.98,-79.52,1],["Bogotá",4.71,-74.07,1],["Lima",-12.05,-77.04,1],
+  ["Rio de Janeiro",-22.91,-43.17,1],["São Paulo",-23.55,-46.63,1],["Buenos Aires",-34.6,-58.38,1],["Santiago",-33.45,-70.67,1],
+  ["London",51.51,-0.13,1],["Paris",48.86,2.35,1],["Madrid",40.42,-3.7,1],["Barcelona",41.39,2.17,1],["Lisbon",38.72,-9.14,1],["Rome",41.9,12.5,1],
+  ["Berlin",52.52,13.41,1],["Amsterdam",52.37,4.9,1],["Dublin",53.35,-6.26,1],["Athens",37.98,23.73,1],["Istanbul",41.01,28.98,1],
+  ["Copenhagen",55.68,12.57,1],["Stockholm",59.33,18.07,1],["Reykjavik",64.15,-21.94,1],["Prague",50.08,14.44,1],["Vienna",48.21,16.37,1],
+  ["Cairo",30.04,31.24,1],["Marrakech",31.63,-7.99,1],["Lagos",6.52,3.38,1],["Nairobi",-1.29,36.82,1],["Cape Town",-33.92,18.42,1],
+  ["Dubai",25.2,55.27,1],["Mumbai",19.08,72.88,1],["Delhi",28.61,77.21,1],["Bangkok",13.76,100.5,1],["Singapore",1.35,103.82,1],
+  ["Tokyo",35.68,139.69,1],["Seoul",37.57,126.98,1],["Shanghai",31.23,121.47,1],["Beijing",39.9,116.4,1],["Hong Kong",22.32,114.17,1],
+  ["Bali",-8.41,115.19,1],["Manila",14.6,120.98,1],["Sydney",-33.87,151.21,1],["Melbourne",-37.81,144.96,1],["Auckland",-36.85,174.76,1],
+  /* tier 2 */
+  ["Pensacola",30.42,-87.22,2],["Tallahassee",30.44,-84.28,2],["Gainesville",29.65,-82.32,2],["Fort Lauderdale",26.12,-80.14,2],["Key West",24.55,-81.78,2],
+  ["Savannah",32.08,-81.09,2],["Charleston",32.78,-79.93,2],["Charlotte",35.23,-80.84,2],["Raleigh",35.78,-78.64,2],["Asheville",35.6,-82.55,2],
+  ["Birmingham",33.52,-86.8,2],["Memphis",35.15,-90.05,2],["Louisville",38.25,-85.76,2],["Cincinnati",39.1,-84.51,2],["St. Louis",38.63,-90.2,2],
+  ["Kansas City",39.1,-94.58,2],["Austin",30.27,-97.74,2],["San Antonio",29.42,-98.49,2],["Oklahoma City",35.47,-97.52,2],["Salt Lake City",40.76,-111.89,2],
+  ["Portland",45.52,-122.68,2],["San Diego",32.72,-117.16,2],["Sacramento",38.58,-121.49,2],["Philadelphia",39.95,-75.17,2],["Pittsburgh",40.44,-79.99,2],
+  ["Detroit",42.33,-83.05,2],["Cleveland",41.5,-81.69,2],["Milwaukee",43.04,-87.91,2],["Richmond",37.54,-77.44,2],["Baltimore",39.29,-76.61,2],
+  ["Honolulu",21.31,-157.86,2],["Anchorage",61.22,-149.9,2],["Calgary",51.05,-114.07,2],["Quebec City",46.81,-71.21,2],["Guadalajara",20.67,-103.35,2],
+  ["Tulum",20.21,-87.47,2],["San José",9.93,-84.08,2],["Cartagena",10.39,-75.51,2],["Medellín",6.24,-75.58,2],["Quito",-0.18,-78.47,2],["Cusco",-13.53,-71.97,2],
+  ["Edinburgh",55.95,-3.19,2],["Manchester",53.48,-2.24,2],["Porto",41.15,-8.61,2],["Seville",37.39,-5.99,2],["Nice",43.7,7.27,2],["Lyon",45.76,4.84,2],
+  ["Milan",45.46,9.19,2],["Florence",43.77,11.26,2],["Naples",40.85,14.27,2],["Venice",45.44,12.33,2],["Munich",48.14,11.58,2],["Hamburg",53.55,9.99,2],
+  ["Brussels",50.85,4.35,2],["Zurich",47.38,8.54,2],["Budapest",47.5,19.04,2],["Kraków",50.06,19.94,2],["Warsaw",52.23,21.01,2],["Oslo",59.91,10.75,2],
+  ["Helsinki",60.17,24.94,2],["Split",43.51,16.44,2],["Dubrovnik",42.65,18.09,2],["Santorini",36.39,25.46,2],["Tbilisi",41.72,44.79,2],
+  ["Tel Aviv",32.08,34.78,2],["Amman",31.95,35.93,2],["Doha",25.29,51.53,2],["Muscat",23.59,58.41,2],["Zanzibar",-6.16,39.19,2],["Accra",5.6,-0.19,2],
+  ["Addis Ababa",9.03,38.74,2],["Johannesburg",-26.2,28.04,2],["Goa",15.3,74.08,2],["Kathmandu",27.72,85.32,2],["Colombo",6.93,79.85,2],
+  ["Chiang Mai",18.79,98.98,2],["Phuket",7.88,98.39,2],["Hanoi",21.03,105.85,2],["Ho Chi Minh City",10.82,106.63,2],["Kuala Lumpur",3.14,101.69,2],
+  ["Jakarta",-6.21,106.85,2],["Osaka",34.69,135.5,2],["Kyoto",35.01,135.77,2],["Taipei",25.03,121.57,2],["Busan",35.18,129.08,2],
+  ["Brisbane",-27.47,153.03,2],["Perth",-31.95,115.86,2],["Queenstown",-45.03,168.66,2],["Nadi",-17.78,177.44,2],
 ];
 
 /* --- build an icosphere once: vertices + faces + which faces are land --- */
