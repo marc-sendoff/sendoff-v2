@@ -1,3 +1,4 @@
+import { Logo } from "./core.jsx";
 import React from "react";
 import { T } from "../theme.js";
 import { INSTAGRAM_URL, INSTAGRAM_HANDLE, CUSTOM_CONTACT_EMAIL as CONTACT_EMAIL } from "../data/config.js";
@@ -18,9 +19,7 @@ export default function Footer() {
     <footer style={{ maxWidth: 960, margin: "40px auto 0", padding: "26px 20px calc(96px + env(safe-area-inset-bottom))",
       borderTop: `2px solid ${T.ink}`, color: T.ink, fontFamily: "'Instrument Sans', sans-serif" }}>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "12px 22px", alignItems: "center", fontSize: 14, fontWeight: 600 }}>
-        <span style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, marginRight: "auto" }}>
-          Sendoff ✈️
-        </span>
+        <span style={{ marginRight: "auto", display: "flex" }}><Logo /></span>
         <a href={`mailto:${CONTACT_EMAIL}`} style={link}>{CONTACT_EMAIL}</a>
         <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" style={link}>@{INSTAGRAM_HANDLE}</a>
         <a href="/terms" style={link}>Terms</a>
