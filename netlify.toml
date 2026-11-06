@@ -45,6 +45,11 @@
 
 # The giveaway draw: the spin wheel, unlisted (noindex), recorded on Nov 9.
 [[redirects]]
+  from = "/credits"
+  to = "/credits.html"
+  status = 200
+
+[[redirects]]
   from = "/draw"
   to = "/draw.html"
   status = 200

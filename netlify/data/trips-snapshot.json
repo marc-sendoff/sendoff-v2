@@ -4037,5 +4037,190 @@
   "fly": "RAR",
   "ground": 360,
   "stay": 140
+ },
+ {
+  "id": "providencecanyon",
+  "name": "Providence Canyon, GA",
+  "tag": "Georgia's Little Grand Canyon",
+  "cost": 95,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 80,
+  "stay": 35
+ },
+ {
+  "id": "fortpickens",
+  "name": "Fort Pickens",
+  "tag": "Camp on the sand, fort at sunset",
+  "cost": 60,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "beach",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 50,
+  "stay": 20
+ },
+ {
+  "id": "blackwater",
+  "name": "Blackwater River",
+  "tag": "Tube the whitest sandbars in the South",
+  "cost": 70,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 60,
+  "stay": 25
+ },
+ {
+  "id": "flcaverns",
+  "name": "Florida Caverns",
+  "tag": "The only cave tour in Florida",
+  "cost": 90,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 30
+ },
+ {
+  "id": "stjoseph",
+  "name": "Cape San Blas",
+  "tag": "Dunes, dark skies, no crowds",
+  "cost": 95,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 80,
+  "stay": 35
+ },
+ {
+  "id": "torreya",
+  "name": "Torreya State Park",
+  "tag": "Florida's only real hike",
+  "cost": 75,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 65,
+  "stay": 25
+ },
+ {
+  "id": "cheaha",
+  "name": "Cheaha Mountain",
+  "tag": "The top of Alabama",
+  "cost": 110,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 95,
+  "stay": 40
+ },
+ {
+  "id": "dauphin",
+  "name": "Dauphin Island",
+  "tag": "A ferry, a fort and an empty beach",
+  "cost": 120,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 100,
+  "stay": 40
+ },
+ {
+  "id": "ichetucknee",
+  "name": "Ichetucknee Springs",
+  "tag": "72° water, tube for three hours",
+  "cost": 90,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 75,
+  "stay": 30
+ },
+ {
+  "id": "ocalanf",
+  "name": "Ocala National Forest",
+  "tag": "Juniper Springs canoe run",
+  "cost": 85,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 70,
+  "stay": 30
+ },
+ {
+  "id": "okefenokee",
+  "name": "Okefenokee Swamp",
+  "tag": "Canoe camping on a platform",
+  "cost": 120,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 100,
+  "stay": 40
+ },
+ {
+  "id": "bigcypress",
+  "name": "Big Cypress",
+  "tag": "The Everglades' wilder sibling",
+  "cost": 80,
+  "days": 2,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 70,
+  "stay": 30
+ },
+ {
+  "id": "cloudland",
+  "name": "Cloudland Canyon, GA",
+  "tag": "Waterfalls at the top of Georgia",
+  "cost": 150,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "driveOnly": true,
+  "ground": 125,
+  "stay": 55
  }
 ]

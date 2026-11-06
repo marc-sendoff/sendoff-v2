@@ -24,6 +24,7 @@ export default function Footer() {
         <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" style={link}>@{INSTAGRAM_HANDLE}</a>
         <a href="/terms" style={link}>Terms</a>
         <a href="/privacy" style={link}>Privacy</a>
+        <a href="/credits" style={link}>Photo credits</a>
       </div>
       <div style={{ marginTop: 14, fontSize: 12.5, fontWeight: 600, opacity: 0.6, lineHeight: 1.5 }}>
         Prices are per person and come from real fares and researched costs; booking happens on the airline, hotel or

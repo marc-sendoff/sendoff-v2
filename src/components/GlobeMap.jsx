@@ -27,6 +27,7 @@ const FALLBACK_LAND = [
   [[9,80],[6,81],[8,80]],
 ];
 
+const MAX_ZOOM = 8; /* was 3: Florida is a thumbnail at 3, 8 shows the Panhandle parks apart */
 export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, vibe, done, onOpen }) {
   const canvasRef = React.useRef(null);
   const wrapRef = React.useRef(null);
@@ -323,7 +324,7 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
     if (pinch.current && e.touches && e.touches.length === 2) {
       const [a, b] = e.touches;
       const d = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY);
-      const z = Math.max(1, Math.min(3, +(pinch.current.z0 * d / pinch.current.d0).toFixed(2)));
+      const z = Math.max(1, Math.min(MAX_ZOOM, +(pinch.current.z0 * d / pinch.current.d0).toFixed(2)));
       setZoom(z);
       e.preventDefault();
       return;
@@ -394,7 +395,13 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
         style={{ position: "relative", background: "#05070F", border: `2px solid ${T.ink}`,
           borderRadius: 20, boxShadow: SH.big, overflow: "hidden", lineHeight: 0 }}>
         <div style={{ position: "absolute", top: 12, right: 12, zIndex: 5, display: "flex", flexDirection: "column", gap: 10 }}>
-          <m.button whileTap={{ scale: 0.92 }} transition={SPRING} onClick={() => setZoom((z) => Math.min(3, +(z + 0.5).toFixed(1)))} style={btn} title="Zoom in" aria-label="Zoom in">+</m.button>
+          <m.button whileTap={{ scale: 0.92 }} transition={SPRING} onClick={() => {
+            /* zooming in past the whole-world view recentres on the home
+               base, otherwise you land on open ocean and have to drag */
+            const oc = propsRef.current.originCoords;
+            if (oc && zoomRef.current >= 1.5) { rot.current.lon = oc[1]; rot.current.lat = oc[0]; }
+            setZoom((z) => Math.min(MAX_ZOOM, +(z + (z >= 3 ? 1 : 0.5)).toFixed(1)));
+          }} style={btn} title="Zoom in" aria-label="Zoom in">+</m.button>
           <m.button whileTap={{ scale: 0.92 }} transition={SPRING} onClick={() => setZoom((z) => Math.max(1, +(z - 0.5).toFixed(1)))} style={btn} title="Zoom out" aria-label="Zoom out">−</m.button>
           <m.button whileTap={{ scale: 0.92 }} transition={SPRING} onClick={() => { setZoom(1); rot.current.lat = 15; }} style={{ ...btn, fontSize: 20 }} title="Reset" aria-label="Reset view">⤾</m.button>
         </div>

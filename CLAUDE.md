@@ -58,7 +58,7 @@ copy, never the React tree. Submissions land in Netlify → Forms → `waitlist`
 - `App.jsx` — main `Sendoff` component, tab/view state, brand fonts, lazy wiring
 - `theme.js` — tokens `T`, `PALETTE`, `VIBES`, budget/crew constants, plus the
   shared surface recipe (`R`, `SH`, `surface`, `SPRING`)
-- `data/trips.js` — `TRIPS` (**281 trips**), re-exports `CITIES`, `AIRPORTS`
+- `data/trips.js` — `TRIPS` (**294 trips**), re-exports `CITIES`, `AIRPORTS`
 - `data/cities.js` — `CITIES`, `AIRPORTS`, `WORLD_CITIES`
 - `data/config.js` — monetization + integrations and helpers (`fmt`, `miles`,
   `bookLinks`, `sendRequest`, `setCurrency`)
@@ -156,6 +156,11 @@ money"). Emoji are part of the current visual language.
   land there via `netlify/functions/submission-created.mjs`.
 - **Instagram**: `@sendoff.trips`. **Contact**: `support@sendofftrips.com`.
 - **Domain**: sendofftrips.com at Porkbun, pointed at Netlify.
+
+- Destination photos for the 13 park/camping trips added Nov 6 2026 come from
+  Wikimedia Commons (public domain / CC BY / CC BY-SA); each is credited on
+  `public/credits.html` (/credits, linked from the footer). Any new stock photo
+  from Commons must be added there too.
 
 ## Known issues / open decisions
 
