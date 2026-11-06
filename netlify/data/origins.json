@@ -20,6 +20,26 @@
   "country": "US"
  },
  {
+  "code": "FLL",
+  "city": "Fort Lauderdale",
+  "country": "US"
+ },
+ {
+  "code": "PNS",
+  "city": "Pensacola",
+  "country": "US"
+ },
+ {
+  "code": "RSW",
+  "city": "Fort Myers",
+  "country": "US"
+ },
+ {
+  "code": "PBI",
+  "city": "West Palm Beach",
+  "country": "US"
+ },
+ {
   "code": "ATL",
   "city": "Atlanta",
   "country": "US"
@@ -27,6 +47,16 @@
  {
   "code": "NYC",
   "city": "New York",
+  "country": "US"
+ },
+ {
+  "code": "DFW",
+  "city": "Dallas",
+  "country": "US"
+ },
+ {
+  "code": "LAX",
+  "city": "Los Angeles",
   "country": "US"
  },
  {
@@ -60,11 +90,6 @@
   "country": "US"
  },
  {
-  "code": "DFW",
-  "city": "Dallas",
-  "country": "US"
- },
- {
   "code": "HOU",
   "city": "Houston",
   "country": "US"
@@ -87,11 +112,6 @@
  {
   "code": "LAS",
   "city": "Las Vegas",
-  "country": "US"
- },
- {
-  "code": "LAX",
-  "city": "Los Angeles",
   "country": "US"
  },
  {
@@ -200,28 +220,8 @@
   "country": "US"
  },
  {
-  "code": "FLL",
-  "city": "Fort Lauderdale",
-  "country": "US"
- },
- {
-  "code": "PBI",
-  "city": "West Palm Beach",
-  "country": "US"
- },
- {
-  "code": "RSW",
-  "city": "Fort Myers",
-  "country": "US"
- },
- {
   "code": "SRQ",
   "city": "Sarasota",
-  "country": "US"
- },
- {
-  "code": "PNS",
-  "city": "Pensacola",
   "country": "US"
  },
  {
@@ -1044,7 +1044,7 @@
  },
  {
   "code": "IGU",
-  "city": "Foz do Iguaçu, Brazil",
+  "city": "Foz do Igua\u00e7u, Brazil",
   "country": "BR",
   "intl": true
  },
@@ -1128,7 +1128,7 @@
  },
  {
   "code": "SLZ",
-  "city": "São Luis, Brazil",
+  "city": "S\u00e3o Luis, Brazil",
   "country": "BR",
   "intl": true
  },
@@ -1932,7 +1932,7 @@
  },
  {
   "code": "CUR",
-  "city": "Curacao, Curaçao",
+  "city": "Curacao, Cura\u00e7ao",
   "country": "CW",
   "intl": true
  },
@@ -2580,7 +2580,7 @@
  },
  {
   "code": "FAE",
-  "city": "Sorvágur, Faroe Islands",
+  "city": "Sorv\u00e1gur, Faroe Islands",
   "country": "FO",
   "intl": true
  },
@@ -5256,13 +5256,13 @@
  },
  {
   "code": "RUN",
-  "city": "Saint-Denis, Réunion",
+  "city": "Saint-Denis, R\u00e9union",
   "country": "RE",
   "intl": true
  },
  {
   "code": "ZSE",
-  "city": "St Pierre de la Reunion, Réunion",
+  "city": "St Pierre de la Reunion, R\u00e9union",
   "country": "RE",
   "intl": true
  },
@@ -5736,7 +5736,7 @@
  },
  {
   "code": "SCR",
-  "city": "Sälen, Sweden",
+  "city": "S\u00e4len, Sweden",
   "country": "SE",
   "intl": true
  },
@@ -5820,7 +5820,7 @@
  },
  {
   "code": "TMS",
-  "city": "Sao Tome Island, São Tomé and Príncipe",
+  "city": "Sao Tome Island, S\u00e3o Tom\u00e9 and Pr\u00edncipe",
   "country": "ST",
   "intl": true
  },
