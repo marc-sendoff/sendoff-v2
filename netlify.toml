@@ -43,6 +43,12 @@
   to = "/giveaway.html"
   status = 200
 
+# The giveaway draw: the spin wheel, unlisted (noindex), recorded on Nov 9.
+[[redirects]]
+  from = "/draw"
+  to = "/draw.html"
+  status = 200
+
 # The app holds its views in React state, not the URL, so any other path is
 # still the app. Existing files (assets, /thanks.html, the icons) are served
 # before this rule ever applies.
