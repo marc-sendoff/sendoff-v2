@@ -43,19 +43,30 @@ create trigger on_auth_user_created after insert on auth.users
 create table if not exists public.user_trips (
   user_id     uuid not null references auth.users(id) on delete cascade,
   trip_id     text not null,
-  status      text not null check (status in ('saved', 'done', 'watching')),
+  status      text not null check (status in ('saved', 'done')),
   spent       integer,                       -- dollars, optional, per person
   done_at     date,
-  origin        text,                        -- watching: IATA of the home base, e.g. MIA
-  base_price    integer,                     -- watching: fare the drop is measured against
-  last_price    integer,                     -- watching: last fare the alerts job saw
-  last_alert_at timestamptz,                 -- watching: one email per route per ~20h
   created_at  timestamptz not null default now(),
   primary key (user_id, trip_id)
 );
 alter table public.user_trips enable row level security;
 drop policy if exists "trips: owner all" on public.user_trips;
 create policy "trips: owner all" on public.user_trips for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
+
+-- ---------- watches (Plus): sends watched for a fare drop; fare-alerts.mjs emails ----------
+create table if not exists public.watches (
+  user_id       uuid not null references auth.users(id) on delete cascade,
+  trip_id       text not null,
+  origin        text,            -- IATA of the home base when watched, e.g. MIA
+  base_price    integer,         -- fare the drop is measured against
+  last_price    integer,         -- last fare the alerts job saw
+  last_alert_at timestamptz,     -- throttle: one email per route per ~20h
+  created_at    timestamptz not null default now(),
+  primary key (user_id, trip_id)
+);
+alter table public.watches enable row level security;
+drop policy if exists "watches: owner all" on public.watches;
+create policy "watches: owner all" on public.watches for all using (auth.uid() = user_id) with check (auth.uid() = user_id);
 
 -- ---------- memberships: read by the owner, written only by the server ----------
 create table if not exists public.memberships (

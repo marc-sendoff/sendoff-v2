@@ -335,9 +335,9 @@ export default function Sendoff() {
   const toggleWatch = async (t) => {
     if (!member) { setDetail(null); setShowPlus(true); return; }
     const already = acct.watching.some((w) => w.trip_id === t.id);
-    if (already) { await acct.removeTrip(t.id); setWatchNote(`Stopped watching ${t.name.split(",")[0]}`); }
+    if (already) { await acct.removeWatch(t.id); setWatchNote(`Stopped watching ${t.name.split(",")[0]}`); }
     else {
-      const ok = await acct.setTrip(t.id, "watching", { origin: AIRPORTS[origin] || null, base_price: liveRows.get(t.id)?.farePerPerson ?? null });
+      const ok = await acct.addWatch(t.id, { origin: AIRPORTS[origin] || null, base_price: liveRows.get(t.id)?.farePerPerson ?? null });
       setWatchNote(ok ? `Watching ${t.name.split(",")[0]} — we'll email you when the fare drops` : "Couldn't save that — try again in a minute");
     }
     if (window.gtag) window.gtag("event", already ? "unwatch_trip" : "watch_trip", { item_id: t.id });

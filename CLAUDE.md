@@ -157,12 +157,12 @@ money"). Emoji are part of the current visual language.
 - **Instagram**: `@sendoff.trips`. **Contact**: `support@sendofftrips.com`.
 - **Domain**: sendofftrips.com at Porkbun, pointed at Netlify.
 
-- **Fare alerts (Plus)**: "Watch this send" on the trip sheet writes a
-  `user_trips` row with status `watching` (+ origin/base_price). The scheduled
+- **Fare alerts (Plus)**: "Watch this send" on the trip sheet writes a row in
+  `public.watches` (own table, so a send can be done AND watched). The scheduled
   `netlify/functions/fare-alerts.mjs` (ten past every hour) emails via Resend
   when a watched fare drops 10%+ and keeps `typical/<ORIGIN>` in Blobs, which
   `/api/deals` (`deals.mjs`) uses for real Deal Drops (20%+ under typical after
-  6 refreshes). Migration: `supabase/migrations/2026-11-06-watching.sql`.
+  6 refreshes). Migrations: `supabase/migrations/2026-11-07-watches.sql` (supersedes 2026-11-06-watching).
 - Destination photos for the 13 park/camping trips added Nov 6 2026 come from
   Wikimedia Commons (public domain / CC BY / CC BY-SA); each is credited on
   `public/credits.html` (/credits, linked from the footer). Any new stock photo

@@ -616,7 +616,7 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeNa
                       {w.base_price && now && now < w.base_price ? ` · was ${fmt(w.base_price)}` : ""}
                     </div>
                   </div>
-                  <button onClick={() => acct.removeTrip(w.trip_id)} title="Stop watching"
+                  <button onClick={() => acct.removeWatch(w.trip_id)} title="Stop watching"
                     style={{ background: "transparent", border: `2px solid ${T.ink}`, borderRadius: 999, padding: "6px 10px",
                       fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 12, cursor: "pointer", color: T.ink }}>Stop</button>
                 </div>

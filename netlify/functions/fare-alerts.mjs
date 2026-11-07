@@ -1,7 +1,7 @@
 /* Fare alerts for watched sends (Sendoff+). Runs ten past every hour, after
    pull-fares has refreshed an origin.
 
-   For every user_trips row with status 'watching': read the latest fare for
+   For every row in public.watches: read the latest fare for
    home base → trip airport. First time it's seen, that fare becomes the
    baseline. When the fare is 10%+ under the baseline (and no email in the
    last 20h) the watcher gets one email and the baseline resets to the new
@@ -44,7 +44,7 @@ async function updateTypical(store, origin, doc) {
 export default async () => {
   const store = getStore("fares");
   const db = admin();
-  const { data: rows, error } = await db.from("user_trips").select("user_id, trip_id, origin, base_price, last_price, last_alert_at").eq("status", "watching");
+  const { data: rows, error } = await db.from("watches").select("user_id, trip_id, origin, base_price, last_price, last_alert_at");
   if (error) { console.error("fare-alerts:", error.message); return new Response("db error", { status: 500 }); }
 
   const origins = [...new Set((rows ?? []).map((r) => r.origin).filter(Boolean))];
@@ -97,7 +97,7 @@ export default async () => {
     } else if (price > r.base_price) {
       patch.base_price = Math.round(r.base_price * 0.7 + price * 0.3);  // drift up slowly
     }
-    await db.from("user_trips").update(patch).eq("user_id", r.user_id).eq("trip_id", r.trip_id);
+    await db.from("watches").update(patch).eq("user_id", r.user_id).eq("trip_id", r.trip_id);
   }
   const out = { watching: rows?.length ?? 0, origins: origins.length, baselined, emailed };
   console.log(JSON.stringify(out));

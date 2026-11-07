@@ -28,12 +28,13 @@ export function useAccount() {
 
   const refresh = useCallback(async () => {
     if (!supabase || !user) { setData(EMPTY); return; }
-    const [p, mem, t] = await Promise.all([
+    const [p, mem, t, w] = await Promise.all([
       supabase.from("profiles").select("*").eq("id", user.id).maybeSingle(),
       supabase.from("memberships").select("*").eq("user_id", user.id).maybeSingle(),
       supabase.from("user_trips").select("*").eq("user_id", user.id),
+      supabase.from("watches").select("*").eq("user_id", user.id),
     ]);
-    setData({ profile: p.data ?? null, membership: mem.data ?? null, trips: t.data ?? [] });
+    setData({ profile: p.data ?? null, membership: mem.data ?? null, trips: t.data ?? [], watches: w.data ?? [] });
   }, [user?.id]);
 
   useEffect(() => { refresh(); }, [refresh]);
@@ -100,14 +101,26 @@ export function useAccount() {
   const done = useMemo(() => data.trips.filter((t) => t.status === "done"), [data.trips]);
   const saved = useMemo(() => data.trips.filter((t) => t.status === "saved"), [data.trips]);
   /* Plus: sends being watched for a fare drop (netlify/functions/fare-alerts.mjs emails them). */
-  const watching = useMemo(() => data.trips.filter((t) => t.status === "watching"), [data.trips]);
+  const watching = data.watches ?? [];
+  const addWatch = useCallback(async (tripId, extra = {}) => {
+    if (!supabase || !user) return false;
+    const { data: row, error } = await supabase.from("watches").upsert({ user_id: user.id, trip_id: tripId, ...extra }).select().maybeSingle();
+    if (error) { console.error("addWatch:", error.message); return false; }
+    if (row) setData((d) => ({ ...d, watches: [...(d.watches ?? []).filter((w) => w.trip_id !== tripId), row] }));
+    return !!row;
+  }, [user?.id]);
+  const removeWatch = useCallback(async (tripId) => {
+    if (!supabase || !user) return;
+    await supabase.from("watches").delete().eq("user_id", user.id).eq("trip_id", tripId);
+    setData((d) => ({ ...d, watches: (d.watches ?? []).filter((w) => w.trip_id !== tripId) }));
+  }, [user?.id]);
   const spent = useMemo(() => done.reduce((s, t) => s + (Number(t.spent) || 0), 0), [done]);
 
   return {
     enabled: Boolean(supabase), ready, user, session,
     profile: data.profile, membership: data.membership, isMember,
     trips: data.trips, done, saved, watching, spent,
-    signIn, signOut, saveProfile, setTrip, removeTrip, refresh, authHeaders,
+    signIn, signOut, saveProfile, setTrip, removeTrip, addWatch, removeWatch, refresh, authHeaders,
   };
 }
 

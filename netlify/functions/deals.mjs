@@ -33,7 +33,7 @@ export default async (req) => {
     }
     deals.sort((a, b) => a.price / a.typical - b.price / b.typical);
   }
-  return json({ ok: true, origin, updatedAt: fares?.updatedAt ?? null, deals: deals.slice(0, MAX) }, 200, { "Cache-Control": "public, max-age=600" });
+  return json({ ok: true, origin, updatedAt: fares?.updatedAt ?? null, typicalAt: typical?.updatedAt ?? null, routesTracked: Object.keys(typical?.dests ?? {}).length, deals: deals.slice(0, MAX) }, 200, { "Cache-Control": "public, max-age=600" });
 };
 
 export const config = { path: "/api/deals" };
