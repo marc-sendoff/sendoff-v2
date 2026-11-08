@@ -361,6 +361,13 @@ export default function Sendoff() {
     setTimeout(() => setShareNote(""), 2400);
   };
 
+  /* ?v=founders (or any tab id) opens that tab on arrival, for links in emails and posts. */
+  React.useEffect(() => {
+    const v = new URLSearchParams(window.location.search).get("v");
+    if (["trips", "custom", "big", "spin", "community", "founders", "about"].includes(v)) setView(v);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   /* A shared link lands on its trip. Free trips open; the rest open the
      paywall, the same as tapping a locked card. */
   React.useEffect(() => {
