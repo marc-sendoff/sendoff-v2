@@ -41,40 +41,47 @@ async function updateTypical(store, origin, doc) {
   return cur;
 }
 
-export default async () => {
+/* The whole run, shared by the schedule and the manual /api/alerts-run. Every
+   step is caught and reported so one bad row never kills the rest, and the
+   summary is kept in Blobs (alerts/last) so /api/deals can show it. */
+export async function run() {
   const store = getStore("fares");
+  const errors = [];
   const db = admin();
   const { data: rows, error } = await db.from("watches").select("user_id, trip_id, origin, base_price, last_price, last_alert_at");
-  if (error) { console.error("fare-alerts:", error.message); return new Response("db error", { status: 500 }); }
+  if (error) { errors.push("db: " + error.message); }
 
   const origins = [...new Set((rows ?? []).map((r) => r.origin).filter(Boolean))];
   const docs = {};
   for (const o of origins) {
     docs[o] = await store.get(`fares/${o}`, { type: "json" }).catch(() => null);
-    if (docs[o]) await updateTypical(store, o, docs[o]);
+    if (docs[o]) await updateTypical(store, o, docs[o]).catch((e) => errors.push(`typical ${o}: ${e.message}`));
   }
   /* typical also needs updating for origins nobody is watching yet, so deals work everywhere */
-  for (const o of ["MIA", "MCO", "TPA", "JAX", "FLL", "PNS", "RSW", "ATL", "NYC", "ORD", "DFW", "LAX"]) {
+  for (const o of ["MIA", "MCO", "TPA", "JAX", "FLL", "PNS", "RSW", "PBI", "ATL", "NYC", "ORD", "DFW", "LAX"]) {
     if (docs[o] !== undefined) continue;
     const d = await store.get(`fares/${o}`, { type: "json" }).catch(() => null);
-    if (d) await updateTypical(store, o, d);
+    if (d) await updateTypical(store, o, d).catch((e) => errors.push(`typical ${o}: ${e.message}`));
   }
 
   const now = Date.now();
   let emailed = 0, baselined = 0;
-  for (const r of rows ?? []) {
+  for (const r of rows ?? []) try {
     const trip = BY_ID.get(r.trip_id); const doc = docs[r.origin];
-    if (!trip?.fly || !doc?.fares) continue;
+    if (!trip?.fly) { errors.push(`${r.trip_id}: no airport`); continue; }
+    if (!doc?.fares) { errors.push(`${r.trip_id}: no fares for ${r.origin}`); continue; }
     const f = doc.fares[String(trip.fly).toUpperCase()];
-    if (!f?.price) continue;
+    if (!f?.price) { errors.push(`${r.trip_id}: no fare ${r.origin}→${trip.fly}`); continue; }
     const price = f.price;
     const patch = { last_price: price };
     if (!r.base_price) { patch.base_price = price; baselined++; }
     else if (price <= r.base_price * DROP) {
       const recent = r.last_alert_at && now - Date.parse(r.last_alert_at) < THROTTLE_MS;
       if (!recent) {
-        const { data: u } = await db.auth.admin.getUserById(r.user_id);
+        const { data: u, error: ue } = await db.auth.admin.getUserById(r.user_id);
         const email = u?.user?.email;
+        if (ue) errors.push(`${r.trip_id}: user lookup ${ue.message}`);
+        if (!email) errors.push(`${r.trip_id}: no email for user`);
         if (email) {
           const { data: prof } = await db.from("profiles").select("name").eq("id", r.user_id).maybeSingle();
           const first = String(prof?.name || "").trim().split(/\s+/)[0];
@@ -92,15 +99,23 @@ export default async () => {
           const ok = await sendEmail({ to: email, subject: `${name} just dropped to $${price} from ${r.origin}`, html,
             text: `${name} is $${price} round trip from ${r.origin} right now (was $${r.base_price}). ${href}` });
           if (ok) { emailed++; patch.last_alert_at = new Date().toISOString(); patch.base_price = price; }
+          else errors.push(`${r.trip_id}: resend refused the email`);
         }
       }
     } else if (price > r.base_price) {
       patch.base_price = Math.round(r.base_price * 0.7 + price * 0.3);  // drift up slowly
     }
-    await db.from("watches").update(patch).eq("user_id", r.user_id).eq("trip_id", r.trip_id);
-  }
-  const out = { watching: rows?.length ?? 0, origins: origins.length, baselined, emailed };
+    const { error: upErr } = await db.from("watches").update(patch).eq("user_id", r.user_id).eq("trip_id", r.trip_id);
+    if (upErr) errors.push(`${r.trip_id}: update ${upErr.message}`);
+  } catch (e) { errors.push(`${r.trip_id}: ${e.message}`); }
+  const out = { at: new Date().toISOString(), watching: rows?.length ?? 0, origins: origins.length, baselined, emailed, errors };
+  await store.setJSON("alerts/last", out).catch(() => {});
   console.log(JSON.stringify(out));
+  return out;
+}
+
+export default async () => {
+  const out = await run().catch((e) => ({ at: new Date().toISOString(), crashed: e.message }));
   return new Response(JSON.stringify(out), { headers: { "Content-Type": "application/json" } });
 };
 
