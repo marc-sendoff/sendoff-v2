@@ -66,10 +66,10 @@ export default function Founders({ acct, onJoin }) {
             Take a seat today and we put <span style={{ color: T.cobalt }}>${FOUNDERS_OFFER.amount}</span> toward your first send.
           </div>
           <div style={{ fontSize: 14.5, fontWeight: 600, lineHeight: 1.5, marginTop: 8 }}>
-            Go solo and it's $200 on your trip. Bring a friend and it's $100 each. On top of the seat, the box and the look.
+            Go solo and it's $150 on your trip. Bring a friend and it's $75 each. On top of the seat, the box and the look.
           </div>
           <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.7, lineHeight: 1.5, marginTop: 10 }}>
-            Yearly Sendoff+ bought Nov 8 2026 before 11:59 pm ET, while seats last. One per account. Covers flights (or gas) and the stay on any trip on the site, booked through the site's links, travel within 90 days. No cash alternative.
+            Yearly Sendoff+ bought Nov 8 2026 before 11:59 pm ET (before Monday), while seats last. One per account. Covers flights (or gas) and the stay on any trip on the site, booked through the site's links, travel within 90 days. No cash alternative.
           </div>
         </div>
       )}
@@ -84,7 +84,7 @@ export default function Founders({ acct, onJoin }) {
           style={{ width: "100%", marginTop: 24, background: T.cobalt, color: T.onCobalt, border: `2px solid ${T.ink}`,
             borderRadius: R.card, boxShadow: SH.card, padding: "16px", fontFamily: "'Bricolage Grotesque', sans-serif",
             fontWeight: 800, fontSize: 17, cursor: "pointer" }}>
-          {data?.left === 0 ? "Get Sendoff+ yearly · $40" : foundersOfferOpen() ? "Take a seat · $40 a year · $200 toward your send →" : "Take a seat · $40 a year →"}
+          {data?.left === 0 ? "Get Sendoff+ yearly · $40" : foundersOfferOpen() ? "Take a seat · $40 a year · $150 toward your send →" : "Take a seat · $40 a year →"}
         </m.button>
       )}
 
