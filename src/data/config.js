@@ -238,8 +238,15 @@ export function bookLinks(t, origin, oc, friends, dates) {
 
 /* The Launch Giveaway: accounts made in launch week are in the draw. One
    place for the dates so the top bar, the Plus modal and sign-up agree. */
-export const GIVEAWAY = { from: "2026-11-01", to: "2026-11-08" };
+export const GIVEAWAY = { from: "2026-11-01", to: "2026-11-07" };   // closed Nov 8 12:00 am ET, drawn Nov 8 (#12 Meshi)
 export const giveawayOpen = (now = new Date()) => { const d = now.toISOString().slice(0, 10); return d >= GIVEAWAY.from && d <= GIVEAWAY.to; };
+
+/* Founders 24-hour offer (Nov 8 2026): take a Founders seat before 11:59 pm ET
+   and Sendoff puts $200 toward your first send — solo, or $100 each for you
+   and a friend. One per account, booked through the site, travel within 90
+   days, while the seats last. */
+export const FOUNDERS_OFFER = { until: "2026-11-09T04:59:59Z", amount: 200 };
+export const foundersOfferOpen = (now = new Date()) => now.getTime() < Date.parse(FOUNDERS_OFFER.until);
 
 /* Group-chat share text */
 export function shareText(t, origin, oc, friends, dates) {

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { m } from "motion/react";
 import { T, R, SH, SPRING } from "../theme.js";
 import { TRIPS } from "../data/trips.js";
-import { PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown, giveawayOpen } from "../data/config.js";
+import { PLUS_PERKS, fmt, modeLabel, bookLinks, shareText, sendRequest, originBreakdown, giveawayOpen, foundersOfferOpen } from "../data/config.js";
 import { senderSince } from "../lib/account.js";
 import { THEMES } from "../theme.js";
 import { useFounders, SeatCounter } from "./Founders.jsx";
@@ -285,7 +285,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
           {founders && founders.left > 0 && (
             <div style={{ marginTop: 10, fontSize: 12.5, fontWeight: 700, opacity: 0.8, display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
               <SeatCounter data={founders} />
-              <span>Go yearly and you're a Founder: numbered seat, spring box, your own look.</span>
+              <span>Go yearly and you're a Founder: numbered seat, spring box, your own look.{foundersOfferOpen() ? " Today only: $200 toward your first send." : ""}</span>
             </div>
           )}
           {!user ? (

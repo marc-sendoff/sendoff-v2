@@ -3,7 +3,7 @@ import { LazyMotion, MotionConfig, m } from "motion/react";
 const loadMotionFeatures = () => import("./motion-features.js").then((mod) => mod.default);
 import { T, VIBES, SH, SPRING, applyTheme, DEFAULT_THEME } from "./theme.js";
 import { CITIES, TRIPS, AIRPORTS } from "./data/trips.js";
-import { shareText, giveawayOpen } from "./data/config.js";
+import { shareText, giveawayOpen, foundersOfferOpen } from "./data/config.js";
 import { priceAll } from "./data/pricing.js";
 import { WORLD_CITIES } from "./data/cities.js";
 import { getCheapest } from "./utils/cheapest.js";
@@ -431,6 +431,15 @@ export default function Sendoff() {
 
       {/* Launch week: everyone who isn't signed in sees the giveaway and the
           one tap that enters them. Gone the day after it closes. */}
+      {!giveawayOpen() && foundersOfferOpen() && acct.membership?.plan !== "founder" && (
+        <button onClick={() => setView("founders")}
+          style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 8,
+            background: T.sun, color: T.ink, border: "none", borderBottom: `2px solid ${T.ink}`, padding: "11px 16px",
+            fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 14, lineHeight: 1.3, cursor: "pointer", textAlign: "center" }}>
+          <span aria-hidden="true">⏳</span>
+          <span>Today only: a Founders seat gets $200 toward your first send <span style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>See it →</span></span>
+        </button>
+      )}
       {giveawayOpen() && !acct.user && (
         <button onClick={() => setShowAccount("signup")}
           style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 8,
