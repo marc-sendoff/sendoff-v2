@@ -483,8 +483,8 @@ export default function Sendoff() {
             </button>
           ) : (
             <button onClick={() => setShowAccount("login")}
-              style={{ background: "transparent", border: "none", cursor: "pointer", color: T.ink, fontFamily: "'Instrument Sans', sans-serif",
-                fontWeight: 700, fontSize: 14, textDecoration: "underline", textUnderlineOffset: 3, padding: "8px 4px" }}>
+              style={{ background: T.white, color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 999, padding: "10px 18px", cursor: "pointer",
+                boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14, whiteSpace: "nowrap" }}>
               Log in
             </button>
           )}
@@ -559,12 +559,13 @@ export default function Sendoff() {
                   boxShadow: `4px 4px 0 ${T.shadow}`, cursor: "pointer", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, whiteSpace: "nowrap" }}>
                 Sign up free →
               </m.button>
-              <button onClick={() => setShowPlus(true)}
-                style={{ background: "transparent", border: "none", cursor: "pointer", color: T.cobalt, fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 14, padding: 0 }}>
-                or get Sendoff+
-              </button>
+              <m.button onClick={() => setShowPlus(true)} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} transition={SPRING}
+                style={{ background: T.cobalt, color: T.white, border: `2px solid ${T.ink}`, borderRadius: 999, padding: "13px 22px",
+                  boxShadow: `4px 4px 0 ${T.shadow}`, cursor: "pointer", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, whiteSpace: "nowrap" }}>
+                Get Sendoff+
+              </m.button>
             </div>
-            <div style={{ marginTop: 8, fontSize: 12.5, fontWeight: 600, opacity: 0.7 }}>Free account: 2 more trips open in every category.</div>
+            <div style={{ marginTop: 10, fontSize: 12.5, fontWeight: 600, opacity: 0.7 }}>Free account: 2 more trips open in every category. Sendoff+: all of them, $4.99 a month.</div>
           </div>
         )}
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
