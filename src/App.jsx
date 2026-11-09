@@ -10,7 +10,6 @@ import { getCheapest } from "./utils/cheapest.js";
 import CheapestRail from "./components/browse/CheapestRail.jsx";
 import { fmt, miles, modeLabel, sendRequest, setCurrency, personalFee, bigSendFee } from "./data/config.js";
 import { useAccount } from "./lib/account.js";
-import { User } from "lucide-react";
 
 /* Display currency per origin: world origins carry theirs; the curated US
    list is USD. Rates come from /api/rates (USD base, refreshed nightly). */
@@ -471,32 +470,24 @@ export default function Sendoff() {
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "18px 20px", maxWidth: 960, margin: "0 auto" }}>
         <Logo />
         <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0 }}>
-          {!acct.user && (
-            <button onClick={() => setShowAccount("signup")} title="Sign up free"
-              style={{ fontSize: 15, fontWeight: 800, background: T.sun, color: T.ink,
-                border: `2px solid ${T.ink}`, borderRadius: 999, padding: "12px 20px", cursor: "pointer",
-                boxShadow: `4px 4px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
-              SIGN UP FREE
-            </button>
-          )}
-          <button onClick={() => (member ? setShowProfile(true) : setShowPlus(true))}
-            style={{ fontSize: acct.user ? 14 : 12.5, fontWeight: 800, background: member ? T.ink : T.cobalt, color: member ? T.sun : T.white,
-              border: `2px solid ${T.ink}`, borderRadius: 999, padding: acct.user ? "10px 18px" : "9px 14px", cursor: "pointer",
-              boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
-            {member ? "✦ SENDOFF+" : "GET SENDOFF+"}
-          </button>
-          {/* signed in: your initial, opens the profile card. Signed out: a
-              plain "Sign up free" — the old person icon was invisible to new
-              visitors (Meshi and Vince both couldn't find where to sign up). */}
+          {/* Calm header (Option B, Nov 9): logo and one small word. The sign-up
+              button lives under the headline as the answer to the question;
+              Sendoff+ is pitched in the list, the locked banner and the bottom bar. */}
           {acct.user ? (
             <button onClick={() => setShowProfile(true)} title="Your profile"
-              style={{ width: 42, height: 42, borderRadius: "50%", background: T.sun,
+              style={{ width: 42, height: 42, borderRadius: "50%", background: member ? T.ink : T.sun, color: member ? T.sun : T.ink,
                 border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer",
-                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink,
+                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
                 display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
               {((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase()}
             </button>
-          ) : null}
+          ) : (
+            <button onClick={() => setShowAccount("login")}
+              style={{ background: "transparent", border: "none", cursor: "pointer", color: T.ink, fontFamily: "'Instrument Sans', sans-serif",
+                fontWeight: 700, fontSize: 14, textDecoration: "underline", textUnderlineOffset: 3, padding: "8px 4px" }}>
+              Log in
+            </button>
+          )}
         </div>
       </header>
 
@@ -560,6 +551,22 @@ export default function Sendoff() {
             goBigSend={() => { setView("big"); window.scrollTo({ top: 0, behavior: "smooth" }); }} />.
           Where can we go?
         </div>
+        {!acct.user && (
+          <div style={{ marginTop: 18 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
+              <m.button onClick={() => setShowAccount("signup")} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} transition={SPRING}
+                style={{ background: T.sun, color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 999, padding: "13px 22px",
+                  boxShadow: `4px 4px 0 ${T.shadow}`, cursor: "pointer", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, whiteSpace: "nowrap" }}>
+                Sign up free →
+              </m.button>
+              <button onClick={() => setShowPlus(true)}
+                style={{ background: "transparent", border: "none", cursor: "pointer", color: T.cobalt, fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 14, padding: 0 }}>
+                or get Sendoff+
+              </button>
+            </div>
+            <div style={{ marginTop: 8, fontSize: 12.5, fontWeight: 600, opacity: 0.7 }}>Free account: 2 more trips open in every category.</div>
+          </div>
+        )}
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
           fontSize: "clamp(19px, 4vw, 26px)", marginTop: 16, letterSpacing: "-0.3px" }}>
           Leaving <DateSlot value={dateOut} min={today} placeholder="pick a date" onChange={setOut} /> → back{" "}
