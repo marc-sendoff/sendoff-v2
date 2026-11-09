@@ -1,5 +1,5 @@
-/* Fare alerts for watched sends (Sendoff+). Runs ten past every hour, after
-   pull-fares has refreshed an origin.
+/* Fare alerts for watched sends (Sendoff+). Runs ten minutes after each fare
+   pull (:10 and :40), once that origin's fares are written.
 
    For every row in public.watches: read the latest fare for
    home base → trip airport. First time it's seen, that fare becomes the
@@ -119,4 +119,4 @@ export default async () => {
   return new Response(JSON.stringify(out), { headers: { "Content-Type": "application/json" } });
 };
 
-export const config = { schedule: "10 * * * *" };
+export const config = { schedule: "10,40 * * * *" };   // ten minutes after each fare pull

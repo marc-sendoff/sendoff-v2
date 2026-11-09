@@ -148,8 +148,8 @@ money"). Emoji are part of the current visual language.
   to Netlify Forms the same way the waitlist works.
 - **Travelpayouts**: marker `763771` (`AFF.travelpayouts`; `561612` was a never-used
   placeholder) + partner short-links in `PARTNER`, both in `src/data/config.js`.
-  Live fares: `netlify/functions/pull-fares.mjs` runs hourly, one origin city per
-  run, into Netlify Blobs; `/api/cheapest` and `/api/fare` read them.
+  Live fares: `netlify/functions/pull-fares.mjs` runs every 30 minutes, one origin city per
+  run (each of the 12 refreshes every 6 hours), into Netlify Blobs; `/api/cheapest` and `/api/fare` read them.
 - **Accounts**: Supabase project `sendoff` (tables `profiles`, `memberships`,
   `user_trips`, schema in `supabase/schema.sql`). **Payments**: Stripe live;
   prices/coupon/webhook ids live in Netlify env. **Email**: Resend; new signups
@@ -159,7 +159,7 @@ money"). Emoji are part of the current visual language.
 
 - **Fare alerts (Plus)**: "Watch this send" on the trip sheet writes a row in
   `public.watches` (own table, so a send can be done AND watched). The scheduled
-  `netlify/functions/fare-alerts.mjs` (ten past every hour) emails via Resend
+  `netlify/functions/fare-alerts.mjs` (:10 and :40, after each pull) emails via Resend
   when a watched fare drops 10%+ and keeps `typical/<ORIGIN>` in Blobs, which
   `/api/deals` (`deals.mjs`) uses for real Deal Drops (20%+ under typical after
   6 refreshes). Migrations: `supabase/migrations/2026-11-07-watches.sql` (supersedes 2026-11-06-watching).
