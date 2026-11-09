@@ -466,15 +466,25 @@ export default function Sendoff() {
               boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
             {member ? "✦ SENDOFF+" : "GET SENDOFF+"}
           </button>
-          {/* signed in: your initial, opens the profile card. Signed out: a plus, opens sign-in. */}
-          <button onClick={() => (acct.user ? setShowProfile(true) : setShowAccount(true))}
-            title={acct.user ? "Your profile" : "Sign in"}
-            style={{ width: 42, height: 42, borderRadius: "50%", background: acct.user ? T.sun : T.white,
-              border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer",
-              fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink,
-              display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-            {acct.user ? ((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase() : <User size={20} strokeWidth={2.6} aria-label="Sign in" />}
-          </button>
+          {/* signed in: your initial, opens the profile card. Signed out: a
+              plain "Sign up free" — the old person icon was invisible to new
+              visitors (Meshi and Vince both couldn't find where to sign up). */}
+          {acct.user ? (
+            <button onClick={() => setShowProfile(true)} title="Your profile"
+              style={{ width: 42, height: 42, borderRadius: "50%", background: T.sun,
+                border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer",
+                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16, color: T.ink,
+                display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+              {((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase()}
+            </button>
+          ) : (
+            <button onClick={() => setShowAccount("signup")} title="Sign up free"
+              style={{ fontSize: 14, fontWeight: 800, background: T.sun, color: T.ink,
+                border: `2px solid ${T.ink}`, borderRadius: 999, padding: "10px 18px", cursor: "pointer",
+                boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
+              SIGN UP FREE
+            </button>
+          )}
         </div>
       </header>
 
@@ -600,9 +610,29 @@ export default function Sendoff() {
             removed instantly — calmer, and immune to stuck-exit edge cases. */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 260px), 1fr))", gap: 20 }}>
           {shown.map((t, i) => (
-            <TripCard key={t.id} trip={t} i={i} mode={modeLabel(t, originCoords)}
-              over={t.cost > budget * 1.15} locked={gated && !isFree(t)} onShare={shareTrip}
-              onOpen={gated && !isFree(t) ? () => setShowPlus(true) : setDetail} />
+            <React.Fragment key={t.id}>
+              <TripCard trip={t} i={i} mode={modeLabel(t, originCoords)}
+                over={t.cost > budget * 1.15} locked={gated && !isFree(t)} onShare={shareTrip}
+                onOpen={gated && !isFree(t) ? () => setShowPlus(true) : setDetail} />
+              {/* No account yet: the ask sits right where the free trips end,
+                  before the blur, so nobody has to hunt for "sign up". */}
+              {!acct.user && i === Math.min(freeHere, shown.length) - 1 && (
+                <m.button onClick={() => setShowAccount("signup")} whileHover={{ y: -4 }} whileTap={{ scale: 0.98 }} transition={SPRING}
+                  style={{ textAlign: "left", background: T.sun, color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 16,
+                    boxShadow: `4px 4px 0 ${T.shadow}`, padding: "22px 20px", cursor: "pointer", display: "flex", flexDirection: "column", justifyContent: "center", gap: 8 }}>
+                  <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 24, lineHeight: 1.1 }}>
+                    Make a free account.
+                  </div>
+                  <div style={{ fontSize: 14, fontWeight: 600, lineHeight: 1.45, opacity: 0.85 }}>
+                    Save trips, mark the ones you've done, get on the wall. One email, no password.
+                  </div>
+                  <div style={{ marginTop: 6, alignSelf: "flex-start", background: T.ink, color: T.paper, borderRadius: 999, padding: "10px 16px",
+                    fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14 }}>
+                    Sign up free →
+                  </div>
+                </m.button>
+              )}
+            </React.Fragment>
           ))}
         </div>
         {/* Free accounts get the ask at the end of the blur, with nothing dead
@@ -713,7 +743,7 @@ export default function Sendoff() {
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
-      {showAccount && <SignInModal acct={acct} origin={origin} initialMode={showAccount === "signup" ? "signup" : "login"} onClose={() => setShowAccount(false)} />}
+      {showAccount && <SignInModal acct={acct} origin={origin} initialMode={showAccount === "login" ? "login" : "signup"} onClose={() => setShowAccount(false)} />}
       {watchNote && (
         <div role="status" style={{ position: "fixed", bottom: 24, left: "50%", transform: "translateX(-50%)", zIndex: 300,
           background: T.ink, color: T.paper, border: `2px solid ${T.sun}`, borderRadius: 999, padding: "10px 18px",
