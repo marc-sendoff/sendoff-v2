@@ -590,11 +590,6 @@ export default function Sendoff() {
           hasn't opened yet. */}
       {!launched && <Waitlist origin={origin} />}
 
-      <DealDrops origin={origin} member={member} onOpenTrip={setDetail} onJoin={() => setShowPlus(true)} />
-
-      {/* cheapest actual sends — hidden entirely until data exists for this origin */}
-      <CheapestRail data={cheapest} origin={origin} crew={friends + 1} onOpenTrip={setDetail} />
-
       {/* vibe rail: one calm line that scrolls sideways on phones instead of stacking */}
       <div style={{ maxWidth: 960, margin: "18px auto 6px", padding: "0 20px", display: "flex", gap: 8,
         overflowX: "auto", WebkitOverflowScrolling: "touch", scrollSnapType: "x proximity", scrollPaddingLeft: 20 }}>
@@ -711,6 +706,12 @@ export default function Sendoff() {
           </div>
         )}
       </section>
+
+      {/* Below the trips, not above them: on a phone these two pushed the first
+          card two screens down. Deal Drops renders nothing when there are no drops. */}
+      <DealDrops origin={origin} member={member} onOpenTrip={setDetail} onJoin={() => setShowPlus(true)} />
+      <CheapestRail data={cheapest} origin={origin} crew={friends + 1} onOpenTrip={setDetail} />
+
 
       <Suspense fallback={lazyFallback}>
         <GlobeMap trips={priced} origin={origin} originCoords={originCoords} budget={budget} vibe={vibe} done={doneTrips}

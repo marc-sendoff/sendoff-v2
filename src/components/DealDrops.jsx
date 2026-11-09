@@ -90,22 +90,9 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
     </div>
   );
 
-  /* Live answer, nothing on sale: say so instead of showing stale samples. */
-  if (live && deals.length === 0) {
-    return (
-      <section className="sendoff-v3 mx-auto mt-2.5 max-w-[960px] px-5">
-        <div className="flex items-baseline gap-2.5 font-display text-[22px] font-extrabold tracking-[-0.5px] text-foreground">
-          DEAL DROPS 🔥
-          <Badge className="rounded-full bg-foreground px-2.5 py-[3px] text-xs font-extrabold text-secondary">SENDOFF+</Badge>
-        </div>
-        <div style={{ marginTop: 10, background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "12px 16px",
-          fontFamily: "'Instrument Sans', sans-serif", fontSize: 13.5, fontWeight: 600 }}>
-          No drops from {origin} right now. Fares refresh every hour; a drop is a fare well under what this route usually costs.
-          {member ? " Watch a send and we email you the moment one lands." : " Sendoff+ members get an email the moment one lands."}
-        </div>
-      </section>
-    );
-  }
+  /* Live answer, nothing on sale: show nothing. An empty box under the
+     trips is worse than no box; the strip appears the day a real drop lands. */
+  if (live && deals.length === 0) return null;
 
   return (
     <section className="sendoff-v3 mx-auto mt-2.5 max-w-[960px] px-5">
