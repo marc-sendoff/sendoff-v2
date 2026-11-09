@@ -254,7 +254,10 @@ export default function Sendoff() {
      vibe and search unlocked a different five — most of the catalogue for
      anyone patient. Sort and search still work; they just reorder a grid
      where the same three are open and the rest are blurred. */
-  const FREE_COUNT = 3;
+  /* Visitors get the 3 best-value trips open. A free account adds the 2 best
+     in every category on top (nature, party, music…), so making an account
+     is worth something before anyone pays. Same picks whatever the sort. */
+  const FREE_COUNT = 3, FREE_PER_VIBE = 2;
   const freeIds = useMemo(() => {
     const dist = (t) => (originCoords ? miles(originCoords[0], originCoords[1], t.lat, t.lon) : 0);
     const pool = priced.filter((t) => {
@@ -263,8 +266,16 @@ export default function Sendoff() {
       return true;
     });
     pool.sort((a, b) => (a.cost + dist(a) * 0.06) - (b.cost + dist(b) * 0.06));
-    return new Set(pool.slice(0, FREE_COUNT).map((t) => t.id));
-  }, [priced, budget, originCoords]);
+    const ids = new Set(pool.slice(0, FREE_COUNT).map((t) => t.id));
+    if (acct.user) {
+      for (const v of VIBES) {
+        if (v.id === "all") continue;
+        let n = 0;
+        for (const t of pool) { if (n >= FREE_PER_VIBE) break; if (!ids.has(t.id) && t.vibes.includes(v.id)) { ids.add(t.id); n++; } }
+      }
+    }
+    return ids;
+  }, [priced, budget, originCoords, acct.user]);
 
   const { results, durationRelaxed } = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -460,9 +471,17 @@ export default function Sendoff() {
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "18px 20px", maxWidth: 960, margin: "0 auto" }}>
         <Logo />
         <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0 }}>
+          {!acct.user && (
+            <button onClick={() => setShowAccount("signup")} title="Sign up free"
+              style={{ fontSize: 15, fontWeight: 800, background: T.sun, color: T.ink,
+                border: `2px solid ${T.ink}`, borderRadius: 999, padding: "12px 20px", cursor: "pointer",
+                boxShadow: `4px 4px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
+              SIGN UP FREE
+            </button>
+          )}
           <button onClick={() => (member ? setShowProfile(true) : setShowPlus(true))}
-            style={{ fontSize: 14, fontWeight: 800, background: member ? T.ink : T.cobalt, color: member ? T.sun : T.white,
-              border: `2px solid ${T.ink}`, borderRadius: 999, padding: "10px 18px", cursor: "pointer",
+            style={{ fontSize: acct.user ? 14 : 12.5, fontWeight: 800, background: member ? T.ink : T.cobalt, color: member ? T.sun : T.white,
+              border: `2px solid ${T.ink}`, borderRadius: 999, padding: acct.user ? "10px 18px" : "9px 14px", cursor: "pointer",
               boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
             {member ? "✦ SENDOFF+" : "GET SENDOFF+"}
           </button>
@@ -477,14 +496,7 @@ export default function Sendoff() {
                 display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
               {((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase()}
             </button>
-          ) : (
-            <button onClick={() => setShowAccount("signup")} title="Sign up free"
-              style={{ fontSize: 14, fontWeight: 800, background: T.sun, color: T.ink,
-                border: `2px solid ${T.ink}`, borderRadius: 999, padding: "10px 18px", cursor: "pointer",
-                boxShadow: `3px 3px 0 ${T.shadow}`, fontFamily: "'Bricolage Grotesque', sans-serif", whiteSpace: "nowrap" }}>
-              SIGN UP FREE
-            </button>
-          )}
+          ) : null}
         </div>
       </header>
 
@@ -624,7 +636,7 @@ export default function Sendoff() {
                     Make a free account.
                   </div>
                   <div style={{ fontSize: 14, fontWeight: 600, lineHeight: 1.45, opacity: 0.85 }}>
-                    Save trips, mark the ones you've done, get on the wall. One email, no password.
+                    Unlocks 2 more trips in every category, plus saving trips and the wall. One email, no password.
                   </div>
                   <div style={{ marginTop: 6, alignSelf: "flex-start", background: T.ink, color: T.paper, borderRadius: 999, padding: "10px 16px",
                     fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14 }}>
@@ -644,7 +656,7 @@ export default function Sendoff() {
               {lockedCount} more {lockedCount === 1 ? "send" : "sends"} in your budget 🔒
             </div>
             <div style={{ fontWeight: 700, fontSize: 14, marginTop: 5 }}>
-              Sendoff+ opens every trip, plus deal drops the day fares land.
+              {acct.user ? "Sendoff+ opens every trip, plus deal drops the day fares land." : "A free account opens 2 more in every category. Sendoff+ opens all of them."}
             </div>
             <m.button onClick={() => setShowPlus(true)} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }}
               transition={SPRING}

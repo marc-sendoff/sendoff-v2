@@ -129,8 +129,8 @@ money"). Emoji are part of the current visual language.
 6. **Accounts, payments and Founders Club are live** (since Oct 2026): sign-in
    by email link (Supabase), Sendoff+ at $4.99/mo or $40/yr through Stripe
    (live keys in Netlify, webhook at /api/stripe-webhook), the first ten yearly
-   buyers become Founders. Free visitors get three fixed trips; the rest are
-   blurred. Spin-Send is Plus-only. Don't reintroduce the old "v1 is frozen"
+   buyers become Founders. Free visitors get three fixed trips; a free account adds the two
+   best in every category; the rest are blurred. Spin-Send is Plus-only. Don't reintroduce the old "v1 is frozen"
    framing from before the relaunch.
 
 ## Integrations (pointers, not secrets)

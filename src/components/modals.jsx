@@ -187,7 +187,7 @@ export function SignInModal({ acct, origin, onClose, initialMode = "login" }) {
         )}
         {mode === "login"
           ? <SignInBlock key="login" acct={acct} mode="login" title="Welcome back." sub="Pop your email in and we'll send you a link." />
-          : <SignInBlock key="signup" acct={acct} mode="signup" origin={origin} title="New here?" sub="Free. Your city, your crew and the sends you've done, saved on every device." />}
+          : <SignInBlock key="signup" acct={acct} mode="signup" origin={origin} title="New here?" sub="Free. Unlocks 2 more trips in every category, saves your city, your crew and the sends you've done, on every device." />}
       </div>
     </ModalShell>
   );
