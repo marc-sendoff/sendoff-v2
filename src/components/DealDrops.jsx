@@ -38,7 +38,10 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin, showEmpt
   }, [origin]);
 
   const deals = (live ?? DEALS).filter((d) => TRIPS.some((x) => x.id === d.tripId));
-  const shown = deals;
+  /* Non-members always see cards behind the blur: the live drops when there
+     are any, otherwise placeholders. Blurred, so no number is ever read as real. */
+  const liveEmpty = live && deals.length === 0;
+  const shown = (!member && liveEmpty) ? DEALS.filter((d) => TRIPS.some((x) => x.id === d.tripId)) : deals;
   const hidden = Math.max(deals.length - 1, 0);
 
   const items = shown.map((d) => {
@@ -90,8 +93,9 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin, showEmpt
     </div>
   );
 
-  /* Live answer, nothing on sale: say so on the Deals tab, show nothing elsewhere. */
-  if (live && deals.length === 0) {
+  /* Live answer, nothing on sale: members get a plain note on the Deals tab
+     (nothing elsewhere); non-members fall through to the blurred teaser below. */
+  if (live && deals.length === 0 && member) {
     if (!showEmpty) return null;
     return (
       <section className="sendoff-v3 mx-auto mt-5 max-w-[960px] px-5">
@@ -128,7 +132,7 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin, showEmpt
               boxShadow: `5px 5px 0 ${T.cobalt}`, fontFamily: "'Instrument Sans', sans-serif" }}>
               <span style={{ display: "block", fontSize: 26 }}>🔒</span>
               <span style={{ display: "block", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18, marginTop: 6 }}>
-                {deals.length} {deals.length === 1 ? "drop" : "drops"} live from {origin}
+                {liveEmpty ? `Deal drops from ${origin}` : `${deals.length} ${deals.length === 1 ? "drop" : "drops"} live from ${origin}`}
               </span>
               <span style={{ display: "block", fontSize: 13, fontWeight: 600, opacity: 0.8, marginTop: 4 }}>Members see every drop the moment it lands, and get the email.</span>
               <span style={{ display: "inline-block", marginTop: 12, background: T.sun, color: T.ink, borderRadius: 10, padding: "9px 14px",
