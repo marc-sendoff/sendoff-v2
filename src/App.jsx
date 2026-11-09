@@ -551,8 +551,17 @@ export default function Sendoff() {
             goBigSend={() => { setView("big"); window.scrollTo({ top: 0, behavior: "smooth" }); }} />.
           Where can we go?
         </div>
+        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
+          fontSize: "clamp(19px, 4vw, 26px)", marginTop: 16, letterSpacing: "-0.3px" }}>
+          Leaving <DateSlot value={dateOut} min={today} placeholder="pick a date" onChange={setOut} /> → back{" "}
+          <DateSlot value={dateBack} min={dateOut || today} placeholder="pick a date" onChange={setDateBack} />
+          {tripDays && <span style={{ fontSize: "0.7em", opacity: 0.55, marginLeft: 10 }}>({tripDays} days)</span>}
+        </div>
+        <p style={{ marginTop: 14, fontSize: 15, fontWeight: 600, opacity: 0.7, maxWidth: 560 }}>
+          Endless sends for the window between "just graduated" and "real life" — and for anyone with a travel ambition. Prices are per person, hacks included, new trips dropping constantly. Your city, dates + crew carry into every booking link.
+        </p>
         {!acct.user && (
-          <div style={{ marginTop: 18 }}>
+          <div style={{ marginTop: 20 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
               <m.button onClick={() => setShowAccount("signup")} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} transition={SPRING}
                 style={{ background: T.sun, color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 999, padding: "13px 22px",
@@ -568,15 +577,6 @@ export default function Sendoff() {
             <div style={{ marginTop: 10, fontSize: 12.5, fontWeight: 600, opacity: 0.7 }}>Free account: 2 more trips open in every category. Sendoff+: all of them, $4.99 a month.</div>
           </div>
         )}
-        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
-          fontSize: "clamp(19px, 4vw, 26px)", marginTop: 16, letterSpacing: "-0.3px" }}>
-          Leaving <DateSlot value={dateOut} min={today} placeholder="pick a date" onChange={setOut} /> → back{" "}
-          <DateSlot value={dateBack} min={dateOut || today} placeholder="pick a date" onChange={setDateBack} />
-          {tripDays && <span style={{ fontSize: "0.7em", opacity: 0.55, marginLeft: 10 }}>({tripDays} days)</span>}
-        </div>
-        <p style={{ marginTop: 14, fontSize: 15, fontWeight: 600, opacity: 0.7, maxWidth: 560 }}>
-          Endless sends for the window between "just graduated" and "real life" — and for anyone with a travel ambition. Prices are per person, hacks included, new trips dropping constantly. Your city, dates + crew carry into every booking link.
-        </p>
         {localCurrency !== "USD" && (
           <p style={{ marginTop: 6, fontSize: 13, fontWeight: 600, opacity: 0.55, maxWidth: 560 }}>
             Prices shown in {localCurrency}, converted from USD at today's rate. Booking sites charge in their own currency.
