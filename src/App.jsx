@@ -374,7 +374,7 @@ export default function Sendoff() {
   /* ?v=founders (or any tab id) opens that tab on arrival, for links in emails and posts. */
   React.useEffect(() => {
     const v = new URLSearchParams(window.location.search).get("v");
-    if (["trips", "custom", "big", "spin", "community", "founders", "about"].includes(v)) setView(v);
+    if (["trips", "deals", "custom", "big", "spin", "community", "founders", "about"].includes(v)) setView(v);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -497,7 +497,7 @@ export default function Sendoff() {
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["custom", "PERSONAL SENDOFF ✨"], ["big", "THE BIG SEND 🎉"], ["spin", "SPIN-SEND 🎡"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
+        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["spin", "SPIN-SEND 🎡"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
           <button key={id} onClick={() => setView(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
             {label}
           </button>
@@ -533,6 +533,22 @@ export default function Sendoff() {
           <SpinSend trips={results} origin={origin} friends={friends} budget={budget}
             onPick={(t, meta) => { setWheelPick(meta?.bonus ? { id: t.id, bonus: meta.bonus } : null); setDetail(t); }} />
         )}
+        {/* Deals: live drops for Plus (free visitors get one teaser and the
+            unlock), then the cheapest live fares from your city for everyone. */}
+        {view === "deals" && (<>
+          <section style={{ maxWidth: 960, margin: "0 auto", padding: "26px 20px 0" }}>
+            <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.cobalt, textTransform: "uppercase" }}>Deals from {origin}</div>
+            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: "clamp(26px, 6vw, 40px)", lineHeight: 1.15, letterSpacing: "-0.6px", marginTop: 8 }}>
+              Fares that just <span style={{ color: T.cobalt, borderBottom: `5px solid ${T.sun}` }}>dropped.</span>
+            </div>
+            <p style={{ marginTop: 10, fontSize: 15, fontWeight: 600, opacity: 0.7, maxWidth: 560 }}>
+              Live fares refresh every hour. A drop is a fare well under what that route usually costs from {origin}.
+              {member ? " Watch any send and we email you the moment it drops." : " Sendoff+ sees every drop and gets the email."}
+            </p>
+          </section>
+          <DealDrops origin={origin} member={member} onOpenTrip={setDetail} onJoin={() => setShowPlus(true)} showEmpty />
+          <CheapestRail data={cheapest} origin={origin} crew={friends + 1} onOpenTrip={setDetail} />
+        </>)}
         {view === "custom" && <CustomSendoff origin={origin} plan={acct.membership?.plan || "free"} />}
         {view === "big" && <BigSend origin={origin} plan={acct.membership?.plan || "free"} />}
         {view === "community" && <Community origin={origin} />}
@@ -706,11 +722,6 @@ export default function Sendoff() {
           </div>
         )}
       </section>
-
-      {/* Below the trips, not above them: on a phone these two pushed the first
-          card two screens down. Deal Drops renders nothing when there are no drops. */}
-      <DealDrops origin={origin} member={member} onOpenTrip={setDetail} onJoin={() => setShowPlus(true)} />
-      <CheapestRail data={cheapest} origin={origin} crew={friends + 1} onOpenTrip={setDetail} />
 
 
       <Suspense fallback={lazyFallback}>

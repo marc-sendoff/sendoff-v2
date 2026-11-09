@@ -14,7 +14,7 @@ const monthLabel = (ym) => MONTHS[Number(String(ym).slice(5, 7)) - 1] ?? "";
    DATA: live deals from /api/deals for this origin (routes priced well under
    their own typical fare in the nightly pull). Until the pull covers an
    origin, the sample deals in config.js stand in, exactly as before. */
-export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
+export default function DealDrops({ origin, member, onOpenTrip, onJoin, showEmpty = false }) {
   const code = AIRPORTS[origin] || origin.slice(0, 3).toUpperCase();
   const [live, setLive] = React.useState(null);
   React.useEffect(() => {
@@ -90,9 +90,23 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin }) {
     </div>
   );
 
-  /* Live answer, nothing on sale: show nothing. An empty box under the
-     trips is worse than no box; the strip appears the day a real drop lands. */
-  if (live && deals.length === 0) return null;
+  /* Live answer, nothing on sale: say so on the Deals tab, show nothing elsewhere. */
+  if (live && deals.length === 0) {
+    if (!showEmpty) return null;
+    return (
+      <section className="sendoff-v3 mx-auto mt-5 max-w-[960px] px-5">
+        <div className="flex items-baseline gap-2.5 font-display text-[22px] font-extrabold tracking-[-0.5px] text-foreground">
+          DEAL DROPS 🔥
+          <Badge className="rounded-full bg-foreground px-2.5 py-[3px] text-xs font-extrabold text-secondary">SENDOFF+</Badge>
+        </div>
+        <div style={{ marginTop: 10, background: T.white, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "14px 16px",
+          fontFamily: "'Instrument Sans', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.5 }}>
+          No drops from {origin} right now. The next fare refresh is within the hour; a drop shows up here the moment a route goes well under its usual price.
+          {member ? " Watch a send from the trips tab and we email you when it drops." : " Sendoff+ members get the email the moment it happens."}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="sendoff-v3 mx-auto mt-2.5 max-w-[960px] px-5">
