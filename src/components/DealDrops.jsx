@@ -38,7 +38,7 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin, showEmpt
   }, [origin]);
 
   const deals = (live ?? DEALS).filter((d) => TRIPS.some((x) => x.id === d.tripId));
-  const shown = member ? deals : deals.slice(0, 1);
+  const shown = deals;
   const hidden = Math.max(deals.length - 1, 0);
 
   const items = shown.map((d) => {
@@ -103,6 +103,38 @@ export default function DealDrops({ origin, member, onOpenTrip, onJoin, showEmpt
           fontFamily: "'Instrument Sans', sans-serif", fontSize: 14, fontWeight: 600, lineHeight: 1.5 }}>
           No drops from {origin} right now. The next fare refresh is within the hour; a drop shows up here the moment a route goes well under its usual price.
           {member ? " Watch a send from the trips tab and we email you when it drops." : " Sendoff+ members get the email the moment it happens."}
+        </div>
+      </section>
+    );
+  }
+
+  /* Not a member: the drops are there but blurred, with the unlock on top,
+     the same treatment as locked trip cards. */
+  if (!member) {
+    return (
+      <section className="sendoff-v3 mx-auto mt-2.5 max-w-[960px] px-5">
+        <div className="flex items-baseline gap-2.5 font-display text-[22px] font-extrabold tracking-[-0.5px] text-foreground">
+          DEAL DROPS 🔥
+          <Badge className="rounded-full bg-foreground px-2.5 py-[3px] text-xs font-extrabold text-secondary">SENDOFF+</Badge>
+        </div>
+        <div style={{ position: "relative", marginTop: 10 }}>
+          <div style={{ filter: "blur(8px)", pointerEvents: "none", userSelect: "none" }} aria-hidden="true">
+            <ExperienceSection title={null} items={items} onSelect={() => {}}
+              cardClassName="rounded-2xl border-2 border-border shadow-[4px_4px_0_var(--border)]" />
+          </div>
+          <button onClick={onJoin} type="button"
+            style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "transparent", border: "none", cursor: "pointer" }}>
+            <span style={{ background: T.ink, color: T.paper, border: `2px solid ${T.ink}`, borderRadius: 18, padding: "18px 22px", maxWidth: 340, textAlign: "center",
+              boxShadow: `5px 5px 0 ${T.cobalt}`, fontFamily: "'Instrument Sans', sans-serif" }}>
+              <span style={{ display: "block", fontSize: 26 }}>🔒</span>
+              <span style={{ display: "block", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 18, marginTop: 6 }}>
+                {deals.length} {deals.length === 1 ? "drop" : "drops"} live from {origin}
+              </span>
+              <span style={{ display: "block", fontSize: 13, fontWeight: 600, opacity: 0.8, marginTop: 4 }}>Members see every drop the moment it lands, and get the email.</span>
+              <span style={{ display: "inline-block", marginTop: 12, background: T.sun, color: T.ink, borderRadius: 10, padding: "9px 14px",
+                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14 }}>Unlock Sendoff+ · $4.99/mo →</span>
+            </span>
+          </button>
         </div>
       </section>
     );
