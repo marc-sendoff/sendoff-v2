@@ -573,8 +573,8 @@ export default function Sendoff() {
           <DateSlot value={dateBack} min={dateOut || today} placeholder="pick a date" onChange={setDateBack} />
           {tripDays && <span style={{ fontSize: "0.7em", opacity: 0.55, marginLeft: 10 }}>({tripDays} days)</span>}
         </div>
-        <p style={{ marginTop: 14, fontSize: 15, fontWeight: 600, opacity: 0.7, maxWidth: 560 }}>
-          Endless sends for the window between "just graduated" and "real life" — and for anyone with a travel ambition. Prices are per person, hacks included, new trips dropping constantly. Your city, dates + crew carry into every booking link.
+        <p style={{ marginTop: 12, fontSize: 14.5, fontWeight: 600, opacity: 0.7, maxWidth: 560 }}>
+          Real prices, per person, with the links to book. Your city, dates and crew carry into every one.
         </p>
         {!acct.user && (
           <div style={{ marginTop: 20 }}>
@@ -728,33 +728,6 @@ export default function Sendoff() {
         <GlobeMap trips={priced} origin={origin} originCoords={originCoords} budget={budget} vibe={vibe} done={doneTrips}
           onOpen={setDetail} />
       </Suspense>
-      {/* services promo — deliberately small; the trips are the main event */}
-      <section style={{ maxWidth: 960, margin: "26px auto 0", padding: "0 20px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 260px), 1fr))", gap: 14 }}>
-          <m.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING} onClick={() => { setView("custom"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            style={{ textAlign: "left", background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 16,
-              boxShadow: `4px 4px 0 ${T.shadow}`, padding: "14px 16px", cursor: "pointer", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
-            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16 }}>
-              ✨ Can't find your send?
-            </div>
-            <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 3, opacity: 0.8 }}>
-              We'll build your trip custom — ${personalFee(acct.membership?.plan)}{member ? "" : " · $7 with Sendoff+, $5 for Founders"}. →
-            </div>
-          </m.button>
-          <m.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} transition={SPRING}
-            onClick={() => { setView("big"); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            style={{ textAlign: "left", background: T.white, border: `2px solid ${T.ink}`, borderRadius: 16,
-              boxShadow: `4px 4px 0 ${T.shadow}`, padding: "14px 16px", cursor: "pointer", fontFamily: "'Instrument Sans', sans-serif", color: T.ink }}>
-            <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16 }}>
-              🎉 Rolling 8+ deep?
-            </div>
-            <div style={{ fontSize: 12.5, fontWeight: 600, marginTop: 3, opacity: 0.8 }}>
-              The Big Send — we run the whole group trip. ${bigSendFee(acct.membership?.plan)}/person{member ? "" : " · $15 with Sendoff+, $10 for Founders"}. →
-            </div>
-          </m.button>
-        </div>
-      </section>
-
       {/* Launched: the ask sits here, under the trips, and only while there are
           still cities to open. From Dec 10 everything is open and the sign-in
           on the account takes over from the list. */}
