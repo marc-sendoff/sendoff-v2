@@ -205,10 +205,10 @@ export function DateSlot({ value, min, placeholder, onChange }) {
 }
 
 /* The Sendoff logo — runway lifting into a paper plane */
-export function Logo() {
+export function Logo({ hat = false }) {
   return (
     <svg viewBox="0 0 640 175" preserveAspectRatio="xMinYMid meet"
-      style={{ height: "clamp(28px, 8vw, 42px)", width: "auto", maxWidth: "55vw", display: "block", flexShrink: 1 }}
+      style={{ height: "clamp(28px, 8vw, 42px)", width: "auto", maxWidth: "55vw", display: "block", flexShrink: 1, overflow: "visible" }}
       aria-label="Sendoff">
       <text x="16" y="122" fontFamily="'Bricolage Grotesque','Arial Black','Helvetica Neue',sans-serif"
         fontWeight="800" letterSpacing="-3" fontSize="92" fill={T.ink}>SENDOFF</text>
@@ -217,6 +217,17 @@ export function Logo() {
       <g transform="translate(508,38) rotate(-24)">
         <path d="M 2 32 L 82 3 L 52 76 L 37 46 Z" fill={T.cobalt} stroke={T.ink} strokeWidth="5" strokeLinejoin="round" />
         <path d="M 2 32 L 82 3 L 40 40 Z" fill="#4A66F6" stroke={T.ink} strokeWidth="5" strokeLinejoin="round" />
+        {/* Holiday season: a Santa hat on the nose. Lives in the plane's frame
+            so it tilts with it. */}
+        {hat && (
+          <g transform="translate(74,10) rotate(22) scale(1.9)">
+            <path d="M -13 1 L 9 -3 L 17 -34 Q 4 -20 -6 -14 Z" fill="#E3342F" stroke={T.ink} strokeWidth="3.4" strokeLinejoin="round" />
+            <path d="M 2 -8 Q 9 -18 13 -28" fill="none" stroke="#B5201C" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
+            <path d="M -15 3 L 11 -2" stroke={T.ink} strokeWidth="9" strokeLinecap="round" />
+            <path d="M -15 3 L 11 -2" stroke="#fff" strokeWidth="5.5" strokeLinecap="round" />
+            <circle cx="18" cy="-36" r="5" fill="#fff" stroke={T.ink} strokeWidth="2.6" />
+          </g>
+        )}
       </g>
     </svg>
   );

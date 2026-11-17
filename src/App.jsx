@@ -3,7 +3,8 @@ import { LazyMotion, MotionConfig, m } from "motion/react";
 const loadMotionFeatures = () => import("./motion-features.js").then((mod) => mod.default);
 import { T, VIBES, SH, SPRING, applyTheme, DEFAULT_THEME } from "./theme.js";
 import { CITIES, TRIPS, AIRPORTS } from "./data/trips.js";
-import { shareText, giveawayOpen, foundersOfferOpen } from "./data/config.js";
+import { shareText, giveawayOpen, foundersOfferOpen, holidayOn } from "./data/config.js";
+import { Snow, Lights } from "./components/Holiday.jsx";
 import { priceAll } from "./data/pricing.js";
 import { WORLD_CITIES } from "./data/cities.js";
 import { getCheapest } from "./utils/cheapest.js";
@@ -140,6 +141,7 @@ export default function Sendoff() {
      old browser-only member flag is gone on purpose: Plus lives on accounts. */
   const acct = useAccount();
   const member = acct.isMember;
+  const holiday = holidayOn();
 
   /* Back from Stripe with ?checkout=success. Stripe's "they paid" message can
      land a second or two after the redirect, so the first load may still say
@@ -445,6 +447,8 @@ export default function Sendoff() {
         </div>
       )}
       <InstallNudge />
+      {holiday && <Snow />}
+      {holiday && <Lights />}
 
       {/* Launch week: everyone who isn't signed in sees the giveaway and the
           one tap that enters them. Gone the day after it closes. */}
@@ -468,7 +472,7 @@ export default function Sendoff() {
       )}
 
       <header style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, flexWrap: "wrap", padding: "18px 20px", maxWidth: 960, margin: "0 auto" }}>
-        <Logo />
+        <Logo hat={holiday} />
         <div style={{ display: "flex", gap: 8, alignItems: "center", flexShrink: 0 }}>
           {/* Calm header (Option B, Nov 9): logo and one small word. The sign-up
               button lives under the headline as the answer to the question;
@@ -726,7 +730,8 @@ export default function Sendoff() {
 
       <Suspense fallback={lazyFallback}>
         <GlobeMap trips={priced} origin={origin} originCoords={originCoords} budget={budget} vibe={vibe} done={doneTrips}
-          onOpen={setDetail} />
+          locked={member ? null : (t) => !isFree(t)}
+          onOpen={(t) => (!member && !isFree(t) ? setShowPlus(true) : setDetail(t))} />
       </Suspense>
       {/* Launched: the ask sits here, under the trips, and only while there are
           still cities to open. From Dec 10 everything is open and the sign-in

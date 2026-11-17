@@ -28,7 +28,7 @@ const FALLBACK_LAND = [
 ];
 
 const MAX_ZOOM = 8; /* was 3: Florida is a thumbnail at 3, 8 shows the Panhandle parks apart */
-export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, vibe, done, onOpen }) {
+export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, vibe, done, locked, onOpen }) {
   const canvasRef = React.useRef(null);
   const wrapRef = React.useRef(null);
   /* the canvas spin is not a motion component, so honor reduced-motion here:
@@ -58,9 +58,9 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
     return () => { alive = false; };
   }, []);
   const zoomRef = React.useRef(1);
-  const propsRef = React.useRef({ budget, vibe, origin, originCoords, done });
+  const propsRef = React.useRef({ budget, vibe, origin, originCoords, done, locked });
   React.useEffect(() => { zoomRef.current = zoom; }, [zoom]);
-  React.useEffect(() => { propsRef.current = { budget, vibe, origin, originCoords, done }; }, [budget, vibe, origin, originCoords, done]);
+  React.useEffect(() => { propsRef.current = { budget, vibe, origin, originCoords, done, locked }; }, [budget, vibe, origin, originCoords, done, locked]);
 
   React.useEffect(() => {
     const canvas = canvasRef.current;
@@ -221,7 +221,7 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
         return [cx + r[0] * R, cy - r[1] * R];
       };
 
-      const { budget: bd, vibe: vb, origin: og, originCoords: oc, done: dn } = propsRef.current;
+      const { budget: bd, vibe: vb, origin: og, originCoords: oc, done: dn, locked: lk } = propsRef.current;
       const z = zoomRef.current;
 
       /* labels */
@@ -309,7 +309,10 @@ export default function GlobeMap({ trips = TRIPS, origin, originCoords, budget, 
           if (z >= 2 && ok) {
             ctx.font = "800 9px 'Instrument Sans', sans-serif";
             ctx.lineWidth = 2.6; ctx.strokeStyle = "#14162A";
-            const label = t.name.split(",")[0] + " " + fmt(t.cost);
+            /* Locked (free wall): the name shows, the price doesn't — the map
+               was handing out every fare the list keeps behind Sendoff+. */
+            const isLocked = lk && lk(t);
+            const label = t.name.split(",")[0] + (isLocked ? " 🔒" : " " + fmt(t.cost));
             ctx.strokeText(label, p[0], p[1] - 11);
             ctx.fillStyle = "#fff"; ctx.fillText(label, p[0], p[1] - 11);
           }

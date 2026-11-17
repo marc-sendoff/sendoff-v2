@@ -245,6 +245,14 @@ export const giveawayOpen = (now = new Date()) => { const d = now.toISOString().
    and Sendoff puts $150 toward your first send — solo, or $75 each for you
    and a friend. One per account, booked through the site, travel within 90
    days, while the seats last. */
+/* Holiday season: snow, string lights and a hat on the plane. `?holiday=0`
+   turns it off for a look at the plain site, `?holiday=1` previews it. */
+export const HOLIDAY = { from: "2026-11-17", to: "2026-12-31" };
+export const holidayOn = (now = new Date()) => {
+  const q = typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("holiday") : null;
+  if (q === "0") return false; if (q === "1") return true;
+  const d = now.toISOString().slice(0, 10); return d >= HOLIDAY.from && d <= HOLIDAY.to;
+};
 export const FOUNDERS_OFFER = { until: "2026-11-09T04:59:59Z", amount: 150 };
 export const foundersOfferOpen = (now = new Date()) => now.getTime() < Date.parse(FOUNDERS_OFFER.until);
 
