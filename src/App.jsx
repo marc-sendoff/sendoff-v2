@@ -428,6 +428,8 @@ export default function Sendoff() {
         .sendoff-tab { position: relative; flex-shrink: 0; scroll-snap-align: start; cursor: pointer; white-space: nowrap;
           font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; font-size: 12.5px; letter-spacing: -0.1px;
           padding: 8px 13px; border-radius: 999px; border: 2px solid ${T.ink}; background: ${T.white}; color: ${T.ink}; }
+        .holiday-tree { display: none; position: absolute; right: 8px; top: 14px; width: 250px; height: auto; pointer-events: none; }
+        @media (min-width: 900px) { .holiday-tree { display: block; } }
         .sendoff-tab[aria-current="page"] { background: ${T.ink}; color: ${T.paper}; }
         .sendoff-tab[aria-current="page"]::after { content: ""; position: absolute; left: 10px; right: 10px; bottom: -11px;
           height: 5px; background: ${T.sun}; border: 2px solid ${T.ink}; border-radius: 3px; }
@@ -561,7 +563,10 @@ export default function Sendoff() {
       </Suspense>
 
       {view === "trips" && (<>
-      <section style={{ maxWidth: 960, margin: "0 auto", padding: "26px 20px 8px" }}>
+      <section style={{ maxWidth: 960, margin: "0 auto", padding: "26px 20px 8px", position: "relative" }}>
+        {/* Holiday season: the tree with the Sendoff present sits in the empty
+            space right of the headline on wide screens; phones have no room. */}
+        {holiday && <img className="holiday-tree" src="/brand/holiday-tree.png" alt="" aria-hidden="true" />}
         <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800,
           fontSize: "clamp(27px, 6vw, 44px)", lineHeight: 1.32, letterSpacing: "-0.5px", maxWidth: 760 }}>
           I'm in <OriginSlot origin={origin} setOrigin={setOrigin} open={openSlot} setOpen={setOpenSlot}
