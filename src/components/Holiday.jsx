@@ -62,52 +62,53 @@ export function Lights() {
   );
 }
 
-/* A tree with presents for the headline corner. The ornaments are the lights:
-   each blinks on its own timer. */
-export function HolidayTree({ width = 230 }) {
-  const lights = [
-    [400,210,"#FF5A3C"],[500,190,"#2547F0"],[330,330,"#2547F0"],[470,330,"#FFC838"],[580,320,"#FF5A3C"],
-    [260,450,"#FFC838"],[380,440,"#FF5A3C"],[520,455,"#2547F0"],[650,440,"#FFC838"],[450,110,"#FF5A3C"],[430,290,"#FF5A3C"],[560,420,"#F2E8FF"],
-  ];
+/* A fireplace with stockings for the headline corner. The flames flicker
+   and a few sparks drift up. Sized to stay inside the headline band. */
+export function Fireplace({ width = 230 }) {
+  const bricks = [];
+  for (let r = 0; r < 9; r++) for (let c = 0; c < 6; c++) {
+    const off = r % 2 ? 40 : 0; const x = 60 + c * 80 + off, y = 100 + r * 40;
+    if (x + 76 > 60 && x < 540) bricks.push(<rect key={r + "-" + c} x={Math.max(60, x)} y={y} width={Math.min(76, 540 - Math.max(60, x))} height="34" rx="3" fill="#C4553A" />);
+  }
+  const Stocking = ({ x, color = "#E3342F", letter }) => (
+    <g transform={`translate(${x},88)`}>
+      <path d="M -26 0 L 26 0 L 26 70 Q 26 92 46 100 L 64 108 Q 80 116 72 132 Q 64 146 44 142 L -8 128 Q -26 122 -26 100 Z" fill={color} stroke={T.ink} strokeWidth="6" strokeLinejoin="round" />
+      <rect x="-32" y="-6" width="64" height="30" rx="8" fill="#fff" stroke={T.ink} strokeWidth="6" />
+      {letter && <text x="0" y="72" textAnchor="middle" fontFamily="'Bricolage Grotesque',sans-serif" fontWeight="800" fontSize="30" fill="#fff">{letter}</text>}
+    </g>
+  );
   return (
-    <svg className="holiday-tree" viewBox="150 0 600 720" width={width} aria-hidden="true" style={{ overflow: "visible" }}>
-      <style>{`@keyframes sendoff-blink{0%,100%{opacity:1;filter:drop-shadow(0 0 6px currentColor)}50%{opacity:.35;filter:none}}
-        .hl{animation:sendoff-blink 1.4s ease-in-out infinite}`}</style>
-      <ellipse cx="450" cy="690" rx="300" ry="30" fill="#fff" stroke={T.ink} strokeWidth="6" />
-      <rect x="420" y="490" width="60" height="80" rx="8" fill="#8B5A2B" stroke={T.ink} strokeWidth="7" />
-      <path d="M 450 60 L 300 270 L 600 270 Z" fill="#2BA84A" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
-      <path d="M 450 150 L 240 380 L 660 380 Z" fill="#2BA84A" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
-      <path d="M 450 250 L 180 500 L 720 500 Z" fill="#2BA84A" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
-      <path d="M 450 250 L 180 500 L 450 500 Z" fill="#1E8A3C" opacity="0.5" />
-      <path d="M 450 150 L 240 380 L 450 380 Z" fill="#1E8A3C" opacity="0.5" />
-      <path d="M 450 60 L 300 270 L 450 270 Z" fill="#1E8A3C" opacity="0.5" />
-      <path d="M 330 250 Q 450 300 570 245" fill="none" stroke={T.sun} strokeWidth="10" strokeLinecap="round" />
-      <path d="M 270 360 Q 450 420 630 355" fill="none" stroke={T.sun} strokeWidth="10" strokeLinecap="round" />
-      <path d="M 215 480 Q 450 540 690 470" fill="none" stroke={T.sun} strokeWidth="10" strokeLinecap="round" />
-      {lights.map(([x, y, c], i) => (
-        <circle key={i} className="hl" cx={x} cy={y} r="15" fill={c} stroke={T.ink} strokeWidth="5"
-          style={{ color: c, animationDelay: `${(i * 0.23) % 1.4}s`, animationDuration: `${1.1 + (i % 4) * 0.25}s` }} />
+    <svg className="holiday-tree" viewBox="40 40 520 440" width={width} aria-hidden="true" style={{ overflow: "visible" }}>
+      <style>{`@keyframes sendoff-flame{0%,100%{transform:scaleY(1) scaleX(1)}30%{transform:scaleY(1.12) scaleX(.94) translateX(4px)}60%{transform:scaleY(.94) scaleX(1.06) translateX(-4px)}}
+        @keyframes sendoff-glow{0%,100%{opacity:.55}50%{opacity:.85}}
+        @keyframes sendoff-spark{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(-120px);opacity:0}}
+        .fl{transform-origin:300px 420px;animation:sendoff-flame 1.1s ease-in-out infinite}
+        .fl2{animation-duration:.8s;animation-delay:-.3s}.fl3{animation-duration:1.4s;animation-delay:-.6s}
+        .gl{animation:sendoff-glow 1.3s ease-in-out infinite}
+        .sp{animation:sendoff-spark 1.6s linear infinite}`}</style>
+      {/* body and mantel */}
+      <rect x="60" y="96" width="480" height="380" fill="#B5462A" stroke={T.ink} strokeWidth="7" />
+      {bricks}
+      <rect x="40" y="56" width="520" height="44" rx="8" fill="#fff" stroke={T.ink} strokeWidth="7" />
+      {/* firebox */}
+      <path d="M 160 440 L 160 220 Q 160 160 220 160 L 380 160 Q 440 160 440 220 L 440 440 Z" fill="#14162A" stroke={T.ink} strokeWidth="7" />
+      <ellipse className="gl" cx="300" cy="400" rx="120" ry="70" fill="#FF8A3C" opacity="0.6" />
+      {/* logs */}
+      <rect x="200" y="404" width="200" height="30" rx="15" fill="#7A4A26" stroke={T.ink} strokeWidth="6" transform="rotate(-8 300 419)" />
+      <rect x="200" y="404" width="200" height="30" rx="15" fill="#8B5A2B" stroke={T.ink} strokeWidth="6" transform="rotate(8 300 419)" />
+      {/* flames */}
+      <path className="fl" d="M 300 250 Q 360 300 350 370 Q 345 410 300 420 Q 255 410 250 370 Q 240 300 300 250 Z" fill="#FF5A3C" stroke={T.ink} strokeWidth="6" strokeLinejoin="round" />
+      <path className="fl fl2" d="M 300 300 Q 340 335 335 380 Q 330 410 300 418 Q 270 410 265 380 Q 260 335 300 300 Z" fill={T.sun} />
+      <path className="fl fl3" d="M 300 345 Q 320 365 318 390 Q 315 410 300 414 Q 285 410 282 390 Q 280 365 300 345 Z" fill="#FFF3B0" />
+      {/* sparks */}
+      {[[270, 0], [330, 0.5], [300, 1.0]].map(([x, d], i) => (
+        <circle key={i} className="sp" cx={x} cy="300" r="5" fill={T.sun} style={{ animationDelay: `${d}s` }} />
       ))}
-      <path d="M 450 18 L 466 58 L 508 60 L 475 86 L 487 128 L 450 104 L 413 128 L 425 86 L 392 60 L 434 58 Z" fill={T.sun} stroke={T.ink} strokeWidth="7" strokeLinejoin="round" />
-      {/* presents */}
-      <g transform="translate(205,585)">
-        <rect x="0" y="20" width="130" height="95" rx="12" fill={T.cobalt} stroke={T.ink} strokeWidth="7" />
-        <rect x="53" y="20" width="24" height="95" fill={T.sun} stroke={T.ink} strokeWidth="5" />
-        <rect x="0" y="52" width="130" height="22" fill={T.sun} stroke={T.ink} strokeWidth="5" />
-        <circle cx="65" cy="20" r="13" fill={T.sun} stroke={T.ink} strokeWidth="6" />
-      </g>
-      <g transform="translate(360,600)">
-        <rect x="0" y="20" width="150" height="85" rx="12" fill="#fff" stroke={T.ink} strokeWidth="7" />
-        <rect x="63" y="20" width="24" height="85" fill="#E3342F" stroke={T.ink} strokeWidth="5" />
-        <rect x="0" y="48" width="150" height="22" fill="#E3342F" stroke={T.ink} strokeWidth="5" />
-        <circle cx="75" cy="20" r="13" fill="#E3342F" stroke={T.ink} strokeWidth="6" />
-      </g>
-      <g transform="translate(540,590)">
-        <rect x="0" y="20" width="120" height="95" rx="12" fill={T.sun} stroke={T.ink} strokeWidth="7" />
-        <rect x="48" y="20" width="24" height="95" fill="#FF5A3C" stroke={T.ink} strokeWidth="5" />
-        <rect x="0" y="55" width="120" height="22" fill="#FF5A3C" stroke={T.ink} strokeWidth="5" />
-        <circle cx="60" cy="20" r="13" fill="#FF5A3C" stroke={T.ink} strokeWidth="6" />
-      </g>
+      {/* stockings on the mantel */}
+      <Stocking x={120} letter="S" />
+      <Stocking x={300} color={T.cobalt} />
+      <Stocking x={480} color="#2BA84A" />
+      <rect x="150" y="440" width="300" height="36" fill="#14162A" stroke={T.ink} strokeWidth="7" />
     </svg>
   );
 }
