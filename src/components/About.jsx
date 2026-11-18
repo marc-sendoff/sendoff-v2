@@ -1,4 +1,5 @@
 import React from "react";
+import { currentStage } from "../data/rollout.js";
 import { m } from "motion/react";
 import { T, R, SH, SPRING } from "../theme.js";
 import { CUSTOM_CONTACT_EMAIL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "../data/config.js";
@@ -61,8 +62,9 @@ export default function About({ setView }) {
             didn't work out.
           </p>
           <p style={{ margin: 0 }}>
-            Sendoff launched November 1, 2026, in Florida. The rest of the US opens November 15 and
-            everywhere else December 10.{" "}
+            {currentStage() === "world"
+              ? "Sendoff launched November 1, 2026, in Florida, opened across the US on November 15, and everywhere else on December 10."
+              : "Sendoff launched November 1, 2026, in Florida and opened across the rest of the US on November 15. Everywhere else opens December 10."}{" "}
             <strong style={{ color: T.cobalt }}>Go while you're young.</strong>
           </p>
         </div>
