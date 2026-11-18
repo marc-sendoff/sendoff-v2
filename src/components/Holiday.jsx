@@ -61,3 +61,53 @@ export function Lights() {
     </div>
   );
 }
+
+/* A tree with presents for the headline corner. The ornaments are the lights:
+   each blinks on its own timer. */
+export function HolidayTree({ width = 230 }) {
+  const lights = [
+    [400,210,"#FF5A3C"],[500,190,"#2547F0"],[330,330,"#2547F0"],[470,330,"#FFC838"],[580,320,"#FF5A3C"],
+    [260,450,"#FFC838"],[380,440,"#FF5A3C"],[520,455,"#2547F0"],[650,440,"#FFC838"],[450,110,"#FF5A3C"],[430,290,"#FF5A3C"],[560,420,"#F2E8FF"],
+  ];
+  return (
+    <svg className="holiday-tree" viewBox="150 0 600 720" width={width} aria-hidden="true" style={{ overflow: "visible" }}>
+      <style>{`@keyframes sendoff-blink{0%,100%{opacity:1;filter:drop-shadow(0 0 6px currentColor)}50%{opacity:.35;filter:none}}
+        .hl{animation:sendoff-blink 1.4s ease-in-out infinite}`}</style>
+      <ellipse cx="450" cy="690" rx="300" ry="30" fill="#fff" stroke={T.ink} strokeWidth="6" />
+      <rect x="420" y="490" width="60" height="80" rx="8" fill="#8B5A2B" stroke={T.ink} strokeWidth="7" />
+      <path d="M 450 60 L 300 270 L 600 270 Z" fill="#2BA84A" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
+      <path d="M 450 150 L 240 380 L 660 380 Z" fill="#2BA84A" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
+      <path d="M 450 250 L 180 500 L 720 500 Z" fill="#2BA84A" stroke={T.ink} strokeWidth="8" strokeLinejoin="round" />
+      <path d="M 450 250 L 180 500 L 450 500 Z" fill="#1E8A3C" opacity="0.5" />
+      <path d="M 450 150 L 240 380 L 450 380 Z" fill="#1E8A3C" opacity="0.5" />
+      <path d="M 450 60 L 300 270 L 450 270 Z" fill="#1E8A3C" opacity="0.5" />
+      <path d="M 330 250 Q 450 300 570 245" fill="none" stroke={T.sun} strokeWidth="10" strokeLinecap="round" />
+      <path d="M 270 360 Q 450 420 630 355" fill="none" stroke={T.sun} strokeWidth="10" strokeLinecap="round" />
+      <path d="M 215 480 Q 450 540 690 470" fill="none" stroke={T.sun} strokeWidth="10" strokeLinecap="round" />
+      {lights.map(([x, y, c], i) => (
+        <circle key={i} className="hl" cx={x} cy={y} r="15" fill={c} stroke={T.ink} strokeWidth="5"
+          style={{ color: c, animationDelay: `${(i * 0.23) % 1.4}s`, animationDuration: `${1.1 + (i % 4) * 0.25}s` }} />
+      ))}
+      <path d="M 450 18 L 466 58 L 508 60 L 475 86 L 487 128 L 450 104 L 413 128 L 425 86 L 392 60 L 434 58 Z" fill={T.sun} stroke={T.ink} strokeWidth="7" strokeLinejoin="round" />
+      {/* presents */}
+      <g transform="translate(205,585)">
+        <rect x="0" y="20" width="130" height="95" rx="12" fill={T.cobalt} stroke={T.ink} strokeWidth="7" />
+        <rect x="53" y="20" width="24" height="95" fill={T.sun} stroke={T.ink} strokeWidth="5" />
+        <rect x="0" y="52" width="130" height="22" fill={T.sun} stroke={T.ink} strokeWidth="5" />
+        <circle cx="65" cy="20" r="13" fill={T.sun} stroke={T.ink} strokeWidth="6" />
+      </g>
+      <g transform="translate(360,600)">
+        <rect x="0" y="20" width="150" height="85" rx="12" fill="#fff" stroke={T.ink} strokeWidth="7" />
+        <rect x="63" y="20" width="24" height="85" fill="#E3342F" stroke={T.ink} strokeWidth="5" />
+        <rect x="0" y="48" width="150" height="22" fill="#E3342F" stroke={T.ink} strokeWidth="5" />
+        <circle cx="75" cy="20" r="13" fill="#E3342F" stroke={T.ink} strokeWidth="6" />
+      </g>
+      <g transform="translate(540,590)">
+        <rect x="0" y="20" width="120" height="95" rx="12" fill={T.sun} stroke={T.ink} strokeWidth="7" />
+        <rect x="48" y="20" width="24" height="95" fill="#FF5A3C" stroke={T.ink} strokeWidth="5" />
+        <rect x="0" y="55" width="120" height="22" fill="#FF5A3C" stroke={T.ink} strokeWidth="5" />
+        <circle cx="60" cy="20" r="13" fill="#FF5A3C" stroke={T.ink} strokeWidth="6" />
+      </g>
+    </svg>
+  );
+}
