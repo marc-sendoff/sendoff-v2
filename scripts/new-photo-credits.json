@@ -1,0 +1,418 @@
+[
+ {
+  "id": "virginiabeach",
+  "name": "Virginia Beach",
+  "file": "File:Virginia Beach Boardwalk - October 9, 2022.jpg",
+  "author": "Greyfiveys",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Virginia_Beach_Boardwalk_-_October_9,_2022.jpg"
+ },
+ {
+  "id": "salem",
+  "name": "Salem, MA",
+  "file": "File:Salem Witch House II.jpg",
+  "author": "SalemPuritan",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Salem_Witch_House_II.jpg"
+ },
+ {
+  "id": "richmond",
+  "name": "Richmond, VA",
+  "file": "File:Falls of the James, Downtown Richmond, Virginia, 2008.JPG",
+  "author": "Morgan Riley",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Falls_of_the_James,_Downtown_Richmond,_Virginia,_2008.JPG"
+ },
+ {
+  "id": "raleigh",
+  "name": "Raleigh\u2013Durham",
+  "file": "File:Raleigh, North Carolina skyline -- 27 September 2014 (panoramio.com).jpg",
+  "author": "James Willamor",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Raleigh,_North_Carolina_skyline_--_27_September_2014_(panoramio.com).jpg"
+ },
+ {
+  "id": "charlotte",
+  "name": "Charlotte, NC",
+  "file": "File:Uptown Charlotte 2018 taking by DJI Phantom 4 pro - Perspective Corrected Edit.jpg",
+  "author": "Precisionviews; edits (perspective correction and colour correction) made by Cmao20 (talk). Derivative file of File:Uptown Charlotte 2018 taking by DJI Phantom 4 pro.jpg",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Uptown_Charlotte_2018_taking_by_DJI_Phantom_4_pro_-_Perspective_Corrected_Edit.jpg"
+ },
+ {
+  "id": "wrightsville",
+  "name": "Wilmington + Wrightsville Beach",
+  "file": "File:Wrightsville Beach, North Carolina (January 2023) 6.jpg",
+  "author": "DiscoA340",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Wrightsville_Beach,_North_Carolina_(January_2023)_6.jpg"
+ },
+ {
+  "id": "hiltonhead",
+  "name": "Hilton Head",
+  "file": "File:Hilton Head Harbor (3926567515).jpg",
+  "author": "fw_gadget",
+  "license": "CC BY-SA 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Hilton_Head_Harbor_(3926567515).jpg"
+ },
+ {
+  "id": "tybee",
+  "name": "Tybee Island",
+  "file": "File:Tybee-island-lighthouse-se-ga1.jpg",
+  "author": "Brian Stansberry",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Tybee-island-lighthouse-se-ga1.jpg"
+ },
+ {
+  "id": "birmingham",
+  "name": "Birmingham, AL",
+  "file": "File:Birmingham, Alabama skyline.jpg",
+  "author": "Quintin Soloviev",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Birmingham,_Alabama_skyline.jpg"
+ },
+ {
+  "id": "baltimore",
+  "name": "Baltimore",
+  "file": "File:Baltimore Inner Harbor Skyline Night Panorama.jpg",
+  "author": "Joe Ravi",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Baltimore_Inner_Harbor_Skyline_Night_Panorama.jpg"
+ },
+ {
+  "id": "annapolis",
+  "name": "Annapolis",
+  "file": "File:Annapolis Harbor alongside Dock Street by Don Ramey Logan.jpg",
+  "author": "Don Ramey Logan",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Annapolis_Harbor_alongside_Dock_Street_by_Don_Ramey_Logan.jpg"
+ },
+ {
+  "id": "oceancity",
+  "name": "Ocean City, MD",
+  "file": "File:Boardwalk of Ocean City, Maryland.jpg",
+  "author": "David",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Boardwalk_of_Ocean_City,_Maryland.jpg"
+ },
+ {
+  "id": "asburypark",
+  "name": "Asbury Park",
+  "file": "File:Old Howard Johnson's Asbury Park NJ1.jpg",
+  "author": "Acroterion",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Old_Howard_Johnson%27s_Asbury_Park_NJ1.jpg"
+ },
+ {
+  "id": "atlanticcity",
+  "name": "Atlantic City",
+  "file": "File:The beach and boardwalk in Atlantic City.jpg",
+  "author": "Bruce Emmerling",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:The_beach_and_boardwalk_in_Atlantic_City.jpg"
+ },
+ {
+  "id": "hudsonvalley",
+  "name": "Hudson Valley",
+  "file": "File:Bear Mountain Bridge, Hudson River.jpg",
+  "author": "Fran Trudeau from Wappingers Falls, NY, USA",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Bear_Mountain_Bridge,_Hudson_River.jpg"
+ },
+ {
+  "id": "lakeplacid",
+  "name": "Lake Placid + Adirondacks",
+  "file": "File:Lakeplacid.jpg",
+  "author": "Aaron danielg at English Wikipedia",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Lakeplacid.jpg"
+ },
+ {
+  "id": "burlington",
+  "name": "Burlington, VT",
+  "file": "File:Church Street Marketplace Burlington Vermont looking north from Main Street.jpg",
+  "author": "Beyond My Ken",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Church_Street_Marketplace_Burlington_Vermont_looking_north_from_Main_Street.jpg"
+ },
+ {
+  "id": "portlandme",
+  "name": "Portland, Maine",
+  "file": "File:Old Port (Portland, Maine) - IMG 8081.JPG",
+  "author": "Daderot",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Old_Port_(Portland,_Maine)_-_IMG_8081.JPG"
+ },
+ {
+  "id": "providence",
+  "name": "Providence, RI",
+  "file": "File:Providence Rhode Island skyline 2017.jpg",
+  "author": "Kenneth C. Zirkel",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Providence_Rhode_Island_skyline_2017.jpg"
+ },
+ {
+  "id": "marthasvineyard",
+  "name": "Martha's Vineyard",
+  "file": "File:Waterfront, Oak Bluffs, Martha's Vineyard.jpg",
+  "author": "Beyond My Ken",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Waterfront,_Oak_Bluffs,_Martha%27s_Vineyard.jpg"
+ },
+ {
+  "id": "poconos",
+  "name": "Poconos",
+  "file": "File:Bushkill Falls, Pennsylvania (14953778802).jpg",
+  "author": "Anthony Quintano from Hillsborough, NJ, United States",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Bushkill_Falls,_Pennsylvania_(14953778802).jpg"
+ },
+ {
+  "id": "gettysburg",
+  "name": "Gettysburg + Lancaster",
+  "file": "File:72nd Pennsylvania Infantry, Gettysburg National Military Park.jpg",
+  "author": "LeapingLion",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:72nd_Pennsylvania_Infantry,_Gettysburg_National_Military_Park.jpg"
+ },
+ {
+  "id": "columbus",
+  "name": "Columbus, OH",
+  "file": "File:Downtown Columbus from Scioto Greenway 1.jpg",
+  "author": "Sixflashphoto",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Downtown_Columbus_from_Scioto_Greenway_1.jpg"
+ },
+ {
+  "id": "cincinnati",
+  "name": "Cincinnati",
+  "file": "File:John A Roebling Suspension Bridge Cincinnati September 2026.jpg",
+  "author": "King of Hearts",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:John_A_Roebling_Suspension_Bridge_Cincinnati_September_2026.jpg"
+ },
+ {
+  "id": "detroit",
+  "name": "Detroit",
+  "file": "File:Skyline of Detroit, Michigan from S 2014-12-07.jpg",
+  "author": "Crisco 1492",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Skyline_of_Detroit,_Michigan_from_S_2014-12-07.jpg"
+ },
+ {
+  "id": "milwaukee",
+  "name": "Milwaukee",
+  "file": "File:Milwaukee lakefront, April 2018.jpg",
+  "author": "The ed17",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Milwaukee_lakefront,_April_2018.jpg"
+ },
+ {
+  "id": "minneapolis",
+  "name": "Minneapolis",
+  "file": "File:Minneapolis Skyline and Stone Arch (15809540302).jpg",
+  "author": "Tony Webster from Portland, Oregon, United States",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Minneapolis_Skyline_and_Stone_Arch_(15809540302).jpg"
+ },
+ {
+  "id": "madison",
+  "name": "Madison, WI",
+  "file": "File:Downtown Madison WI, Lake Monona Dec04 IMG 2933.jpg",
+  "author": "",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Downtown_Madison_WI,_Lake_Monona_Dec04_IMG_2933.jpg"
+ },
+ {
+  "id": "lexington",
+  "name": "Lexington, KY",
+  "file": "File:A horse farm in Lexington, Kentucky.jpg",
+  "author": "TheLexingtonTimes",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:A_horse_farm_in_Lexington,_Kentucky.jpg"
+ },
+ {
+  "id": "knoxville",
+  "name": "Knoxville",
+  "file": "File:The Sunsphere - Knoxville, Tennessee - March 8, 2014.jpg",
+  "author": "David Ratledge",
+  "license": "CC BY 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:The_Sunsphere_-_Knoxville,_Tennessee_-_March_8,_2014.jpg"
+ },
+ {
+  "id": "tulsa",
+  "name": "Tulsa",
+  "file": "File:Tulsa Skyline from 2nd Street, Tulsa, OK - 53703379367.jpg",
+  "author": "w_lemay",
+  "license": "CC BY-SA 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Tulsa_Skyline_from_2nd_Street,_Tulsa,_OK_-_53703379367.jpg"
+ },
+ {
+  "id": "dallas",
+  "name": "Dallas\u2013Fort Worth",
+  "file": "File:View of Dallas from Reunion Tower August 2015 13.jpg",
+  "author": "Michael Barera",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:View_of_Dallas_from_Reunion_Tower_August_2015_13.jpg"
+ },
+ {
+  "id": "houston",
+  "name": "Houston",
+  "file": "File:Buildings-city-houston-skyline-1870617.jpg",
+  "author": "Jason Villanueva",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Buildings-city-houston-skyline-1870617.jpg"
+ },
+ {
+  "id": "albuquerque",
+  "name": "Albuquerque",
+  "file": "File:Deb Haaland being interviewed by KOAT 7 News at the Albuquerque International Balloon Fiesta.jpg",
+  "author": "Deb Haaland",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Deb_Haaland_being_interviewed_by_KOAT_7_News_at_the_Albuquerque_International_Balloon_Fiesta.jpg"
+ },
+ {
+  "id": "tucson",
+  "name": "Tucson + Saguaro",
+  "file": "File:Saguaro National Park - Flickr - Joe Parks.jpg",
+  "author": "Joe Parks from Berkeley, CA",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Saguaro_National_Park_-_Flickr_-_Joe_Parks.jpg"
+ },
+ {
+  "id": "phoenix",
+  "name": "Phoenix + Scottsdale",
+  "file": "File:Camelback Mountain 2.jpg",
+  "author": "Dru Bloomfield from Scottsdale, Arizona, USA",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Camelback_Mountain_2.jpg"
+ },
+ {
+  "id": "saltlake",
+  "name": "Salt Lake City",
+  "file": "File:Salt Lake City skyline (2020) from Ensign Peak.jpg",
+  "author": "Iansmh98",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Salt_Lake_City_skyline_(2020)_from_Ensign_Peak.jpg"
+ },
+ {
+  "id": "boise",
+  "name": "Boise",
+  "file": "File:Downtown Boise 2013.jpg",
+  "author": "Lordchadwick79",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Downtown_Boise_2013.jpg"
+ },
+ {
+  "id": "anchorage",
+  "name": "Anchorage",
+  "file": "File:Anchorage Skyline in Winter - Hotel Captain Cook - Anchorage Alaska.jpg",
+  "author": "Will Buckner",
+  "license": "CC BY 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Anchorage_Skyline_in_Winter_-_Hotel_Captain_Cook_-_Anchorage_Alaska.jpg"
+ },
+ {
+  "id": "kauai",
+  "name": "Kauai",
+  "file": "File:Na Pali Coast - Kauai.jpg",
+  "author": "Unknown",
+  "license": "Public domain",
+  "url": "https://commons.wikimedia.org/wiki/File:Na_Pali_Coast_-_Kauai.jpg"
+ },
+ {
+  "id": "palmsprings",
+  "name": "Palm Springs",
+  "file": "File:Desert Springs, CA 2013 (14836826438).jpg",
+  "author": "inkknife_2000 (7.5 million views +)",
+  "license": "CC BY-SA 2.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Desert_Springs,_CA_2013_(14836826438).jpg"
+ },
+ {
+  "id": "santabarbara",
+  "name": "Santa Barbara",
+  "file": "File:Beach and Stearns Wharf.jpg",
+  "author": "Photograph by Mike Peel (www.mikepeel.net).",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Beach_and_Stearns_Wharf.jpg"
+ },
+ {
+  "id": "napa",
+  "name": "Napa + Sonoma",
+  "file": "File:Vineyards of Napa Valley panorama.jpg",
+  "author": "Brocken Inaglory",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Vineyards_of_Napa_Valley_panorama.jpg"
+ },
+ {
+  "id": "bend",
+  "name": "Bend, Oregon",
+  "file": "File:Deschutes River Trail to Benham Falls, Oregon (2014) - 11.JPG",
+  "author": "Another Believer",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Deschutes_River_Trail_to_Benham_Falls,_Oregon_(2014)_-_11.JPG"
+ },
+ {
+  "id": "coeurdalene",
+  "name": "Coeur d'Alene + Spokane",
+  "file": "File:2008-1018-022-CoeurdAlene-Pan1.JPG",
+  "author": "Bobak Ha'Eri",
+  "license": "CC BY 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:2008-1018-022-CoeurdAlene-Pan1.JPG"
+ },
+ {
+  "id": "mobile",
+  "name": "Mobile, AL",
+  "file": "File:View of Downtown Mobile from Fort Conde 20160712 1.jpg",
+  "author": "DXR",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:View_of_Downtown_Mobile_from_Fort_Conde_20160712_1.jpg"
+ },
+ {
+  "id": "jacksonville",
+  "name": "Jacksonville Beach",
+  "file": "File:Fishing Pier, Jacksonville Beach (Florida).jpg",
+  "author": "Olga Ernst",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Fishing_Pier,_Jacksonville_Beach_(Florida).jpg"
+ },
+ {
+  "id": "fortlauderdale",
+  "name": "Fort Lauderdale",
+  "file": "File:Fort Lauderdale Beach Blvd.jpg",
+  "author": "U+1F360",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Fort_Lauderdale_Beach_Blvd.jpg"
+ },
+ {
+  "id": "naples",
+  "name": "Naples + Marco Island",
+  "file": "File:Naples - Sunset at pier.jpg",
+  "author": "P. Hughes",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Naples_-_Sunset_at_pier.jpg"
+ },
+ {
+  "id": "daytona",
+  "name": "Daytona Beach",
+  "file": "File:Daytona Beach Pier under01.jpg",
+  "author": "Ebyabe",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Daytona_Beach_Pier_under01.jpg"
+ },
+ {
+  "id": "littlerock",
+  "name": "Little Rock",
+  "file": "File:Little Rock pano.jpg",
+  "author": "Daniel Schwen",
+  "license": "CC BY-SA 4.0",
+  "url": "https://commons.wikimedia.org/wiki/File:Little_Rock_pano.jpg"
+ },
+ {
+  "id": "biloxi",
+  "name": "Biloxi + Gulf Coast",
+  "file": "File:BiloxiLightHouseandVisitorsCenter.jpg",
+  "author": "Woodlot",
+  "license": "CC BY-SA 3.0",
+  "url": "https://commons.wikimedia.org/wiki/File:BiloxiLightHouseandVisitorsCenter.jpg"
+ }
+]
