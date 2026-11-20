@@ -4222,5 +4222,735 @@
   "driveOnly": true,
   "ground": 125,
   "stay": 55
+ },
+ {
+  "id": "virginiabeach",
+  "name": "Virginia Beach",
+  "tag": "Three miles of boardwalk, zero plans",
+  "cost": 290,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "ORF",
+  "ground": 160,
+  "stay": 75
+ },
+ {
+  "id": "salem",
+  "name": "Salem, MA",
+  "tag": "Witch trials, weird shops, a very good October",
+  "cost": 260,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "BOS",
+  "ground": 145,
+  "stay": 65
+ },
+ {
+  "id": "richmond",
+  "name": "Richmond, VA",
+  "tag": "Murals, the James, and a $4 beer",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "music",
+   "party"
+  ],
+  "fly": "RIC",
+  "ground": 165,
+  "stay": 75
+ },
+ {
+  "id": "raleigh",
+  "name": "Raleigh + Durham",
+  "tag": "Two college towns, one cheap weekend",
+  "cost": 280,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "party",
+   "music"
+  ],
+  "fly": "RDU",
+  "ground": 155,
+  "stay": 70
+ },
+ {
+  "id": "charlotte",
+  "name": "Charlotte",
+  "tag": "Skyline brunch, NASCAR, cheap flights",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "party",
+   "culture"
+  ],
+  "fly": "CLT",
+  "ground": 165,
+  "stay": 75
+ },
+ {
+  "id": "wrightsville",
+  "name": "Wilmington + Wrightsville Beach",
+  "tag": "Riverwalk by day, surf at night",
+  "cost": 310,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "ILM",
+  "ground": 170,
+  "stay": 80
+ },
+ {
+  "id": "hiltonhead",
+  "name": "Hilton Head",
+  "tag": "Bike to the beach, golf if you must",
+  "cost": 360,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "SAV",
+  "ground": 200,
+  "stay": 90
+ },
+ {
+  "id": "tybee",
+  "name": "Tybee Island",
+  "tag": "Savannah's beach, 20 minutes out",
+  "cost": 280,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "SAV",
+  "ground": 155,
+  "stay": 70
+ },
+ {
+  "id": "birmingham",
+  "name": "Birmingham, AL",
+  "tag": "The civil rights trail, then the food",
+  "cost": 230,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "music"
+  ],
+  "fly": "BHM",
+  "ground": 125,
+  "stay": 60
+ },
+ {
+  "id": "baltimore",
+  "name": "Baltimore",
+  "tag": "Crab, the harbor, and Fells Point at night",
+  "cost": 320,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "party"
+  ],
+  "fly": "BWI",
+  "ground": 175,
+  "stay": 80
+ },
+ {
+  "id": "annapolis",
+  "name": "Annapolis",
+  "tag": "Sailboats, oysters, a 1700s main street",
+  "cost": 260,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "beach"
+  ],
+  "fly": "BWI",
+  "ground": 145,
+  "stay": 65
+ },
+ {
+  "id": "oceancity",
+  "name": "Ocean City, MD",
+  "tag": "Ten miles of boardwalk, Thrasher's fries",
+  "cost": 280,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "SBY",
+  "ground": 155,
+  "stay": 70
+ },
+ {
+  "id": "asburypark",
+  "name": "Asbury Park",
+  "tag": "Springsteen's boardwalk, back and better",
+  "cost": 270,
+  "days": 2,
+  "vibes": [
+   "music",
+   "beach",
+   "party"
+  ],
+  "fly": "EWR",
+  "ground": 150,
+  "stay": 70
+ },
+ {
+  "id": "atlanticcity",
+  "name": "Atlantic City",
+  "tag": "The boardwalk, the casinos, the cheap room",
+  "cost": 240,
+  "days": 2,
+  "vibes": [
+   "party",
+   "beach"
+  ],
+  "fly": "ACY",
+  "ground": 130,
+  "stay": 60
+ },
+ {
+  "id": "hudsonvalley",
+  "name": "Hudson Valley",
+  "tag": "Trains, trails and farm dinners",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "culture",
+   "road"
+  ],
+  "fly": "ALB",
+  "ground": 185,
+  "stay": 85
+ },
+ {
+  "id": "lakeplacid",
+  "name": "Lake Placid",
+  "tag": "Olympic town, High Peaks, a lake to jump in",
+  "cost": 330,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "ALB",
+  "ground": 180,
+  "stay": 85
+ },
+ {
+  "id": "burlington",
+  "name": "Burlington, VT",
+  "tag": "Lake Champlain, Church Street, maple everything",
+  "cost": 320,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "nature"
+  ],
+  "fly": "BTV",
+  "ground": 175,
+  "stay": 80
+ },
+ {
+  "id": "portlandme",
+  "name": "Portland, Maine",
+  "tag": "Lobster rolls and lighthouses",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "beach",
+   "nature"
+  ],
+  "fly": "PWM",
+  "ground": 185,
+  "stay": 85
+ },
+ {
+  "id": "providence",
+  "name": "Providence, RI",
+  "tag": "Small city, big food, river on fire",
+  "cost": 250,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "party"
+  ],
+  "fly": "PVD",
+  "ground": 135,
+  "stay": 65
+ },
+ {
+  "id": "marthasvineyard",
+  "name": "Martha's Vineyard",
+  "tag": "Ferry over, bikes out, gingerbread houses",
+  "cost": 420,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "BOS",
+  "ground": 230,
+  "stay": 105
+ },
+ {
+  "id": "poconos",
+  "name": "The Poconos",
+  "tag": "Waterfalls, a lake, and a cabin with the crew",
+  "cost": 260,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "road"
+  ],
+  "fly": "ABE",
+  "ground": 145,
+  "stay": 65
+ },
+ {
+  "id": "gettysburg",
+  "name": "Gettysburg + Lancaster",
+  "tag": "Battlefield at dawn, farm stands by noon",
+  "cost": 220,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "MDT",
+  "ground": 120,
+  "stay": 55
+ },
+ {
+  "id": "columbus",
+  "name": "Columbus, OH",
+  "tag": "Short North, Buckeye Saturdays, cheap everything",
+  "cost": 270,
+  "days": 3,
+  "vibes": [
+   "party",
+   "culture"
+  ],
+  "fly": "CMH",
+  "ground": 150,
+  "stay": 70
+ },
+ {
+  "id": "cincinnati",
+  "name": "Cincinnati",
+  "tag": "Chili, the Reds, and a riverside skyline",
+  "cost": 250,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "party"
+  ],
+  "fly": "CVG",
+  "ground": 135,
+  "stay": 65
+ },
+ {
+  "id": "detroit",
+  "name": "Detroit",
+  "tag": "Motown, murals, a comeback you can feel",
+  "cost": 290,
+  "days": 3,
+  "vibes": [
+   "music",
+   "culture"
+  ],
+  "fly": "DTW",
+  "ground": 160,
+  "stay": 75
+ },
+ {
+  "id": "milwaukee",
+  "name": "Milwaukee",
+  "tag": "Beer, brats, and a lakefront that surprises",
+  "cost": 240,
+  "days": 2,
+  "vibes": [
+   "party",
+   "culture"
+  ],
+  "fly": "MKE",
+  "ground": 130,
+  "stay": 60
+ },
+ {
+  "id": "minneapolis",
+  "name": "Minneapolis",
+  "tag": "Lakes in the city, Prince's house, the First Avenue stage",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "music",
+   "culture",
+   "nature"
+  ],
+  "fly": "MSP",
+  "ground": 165,
+  "stay": 75
+ },
+ {
+  "id": "madison",
+  "name": "Madison, WI",
+  "tag": "Two lakes, one capitol, a Badger Saturday",
+  "cost": 230,
+  "days": 2,
+  "vibes": [
+   "party",
+   "nature"
+  ],
+  "fly": "MSN",
+  "ground": 125,
+  "stay": 60
+ },
+ {
+  "id": "lexington",
+  "name": "Lexington, KY",
+  "tag": "Bourbon country and horse farms",
+  "cost": 310,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "LEX",
+  "ground": 170,
+  "stay": 80
+ },
+ {
+  "id": "knoxville",
+  "name": "Knoxville",
+  "tag": "Smokies gateway with a real downtown",
+  "cost": 280,
+  "days": 3,
+  "vibes": [
+   "music",
+   "nature"
+  ],
+  "fly": "TYS",
+  "ground": 155,
+  "stay": 70
+ },
+ {
+  "id": "tulsa",
+  "name": "Tulsa",
+  "tag": "Art deco, Route 66, Gathering Place",
+  "cost": 240,
+  "days": 2,
+  "vibes": [
+   "music",
+   "culture"
+  ],
+  "fly": "TUL",
+  "ground": 130,
+  "stay": 60
+ },
+ {
+  "id": "dallas",
+  "name": "Dallas + Fort Worth",
+  "tag": "Deep Ellum nights, Stockyards days",
+  "cost": 320,
+  "days": 3,
+  "vibes": [
+   "party",
+   "culture"
+  ],
+  "fly": "DFW",
+  "ground": 175,
+  "stay": 80
+ },
+ {
+  "id": "houston",
+  "name": "Houston",
+  "tag": "Space Center, the best food city nobody talks about",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "culture"
+  ],
+  "fly": "IAH",
+  "ground": 165,
+  "stay": 75
+ },
+ {
+  "id": "albuquerque",
+  "name": "Albuquerque",
+  "tag": "Balloons at dawn, Sandia at sunset",
+  "cost": 310,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "nature"
+  ],
+  "fly": "ABQ",
+  "ground": 170,
+  "stay": 80
+ },
+ {
+  "id": "tucson",
+  "name": "Tucson + Saguaro NP",
+  "tag": "Cactus forests and the best Mexican food in the US",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "culture"
+  ],
+  "fly": "TUS",
+  "ground": 165,
+  "stay": 75
+ },
+ {
+  "id": "phoenix",
+  "name": "Phoenix + Scottsdale",
+  "tag": "Pool days, Camelback at dawn, Old Town at night",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "party",
+   "nature"
+  ],
+  "fly": "PHX",
+  "ground": 185,
+  "stay": 85
+ },
+ {
+  "id": "saltlake",
+  "name": "Salt Lake City",
+  "tag": "Five ski resorts in 40 minutes",
+  "cost": 360,
+  "days": 3,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "SLC",
+  "ground": 200,
+  "stay": 90
+ },
+ {
+  "id": "boise",
+  "name": "Boise",
+  "tag": "River floats, foothills, a surprising downtown",
+  "cost": 300,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "party"
+  ],
+  "fly": "BOI",
+  "ground": 165,
+  "stay": 75
+ },
+ {
+  "id": "anchorage",
+  "name": "Anchorage",
+  "tag": "Glaciers, moose, and 20 hours of daylight",
+  "cost": 620,
+  "days": 4,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "ANC",
+  "ground": 340,
+  "stay": 155
+ },
+ {
+  "id": "kauai",
+  "name": "Kauai",
+  "tag": "The Na Pali coast and not much else, perfect",
+  "cost": 980,
+  "days": 5,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "LIH",
+  "ground": 540,
+  "stay": 245
+ },
+ {
+  "id": "palmsprings",
+  "name": "Palm Springs",
+  "tag": "Pool, mid-century, Joshua Tree an hour out",
+  "cost": 380,
+  "days": 3,
+  "vibes": [
+   "party",
+   "nature"
+  ],
+  "fly": "PSP",
+  "ground": 210,
+  "stay": 95
+ },
+ {
+  "id": "santabarbara",
+  "name": "Santa Barbara",
+  "tag": "The American Riviera on a budget",
+  "cost": 400,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "culture"
+  ],
+  "fly": "SBA",
+  "ground": 220,
+  "stay": 100
+ },
+ {
+  "id": "napa",
+  "name": "Napa + Sonoma",
+  "tag": "Wine country without the wine-country bill",
+  "cost": 420,
+  "days": 3,
+  "vibes": [
+   "culture",
+   "road"
+  ],
+  "fly": "SFO",
+  "ground": 230,
+  "stay": 105
+ },
+ {
+  "id": "bend",
+  "name": "Bend, Oregon",
+  "tag": "Breweries, the Deschutes, Smith Rock",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "nature",
+   "party"
+  ],
+  "fly": "RDM",
+  "ground": 185,
+  "stay": 85
+ },
+ {
+  "id": "coeurdalene",
+  "name": "Coeur d'Alene + Spokane",
+  "tag": "A lake you'll think about for a year",
+  "cost": 320,
+  "days": 3,
+  "vibes": [
+   "nature"
+  ],
+  "fly": "GEG",
+  "ground": 175,
+  "stay": 80
+ },
+ {
+  "id": "mobile",
+  "name": "Mobile, AL",
+  "tag": "The original Mardi Gras, oysters, moss",
+  "cost": 220,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "party"
+  ],
+  "fly": "MOB",
+  "ground": 120,
+  "stay": 55
+ },
+ {
+  "id": "biloxi",
+  "name": "Biloxi + Gulf Coast",
+  "tag": "Casinos on the sand, shrimp off the boat",
+  "cost": 260,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "GPT",
+  "ground": 145,
+  "stay": 65
+ },
+ {
+  "id": "jacksonville",
+  "name": "Jacksonville Beach",
+  "tag": "Florida's quiet surf town",
+  "cost": 180,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "JAX",
+  "ground": 100,
+  "stay": 45
+ },
+ {
+  "id": "fortlauderdale",
+  "name": "Fort Lauderdale",
+  "tag": "The canals, the beach, the Las Olas bar crawl",
+  "cost": 320,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "FLL",
+  "ground": 175,
+  "stay": 80
+ },
+ {
+  "id": "naples",
+  "name": "Naples + Marco Island",
+  "tag": "The pier sunset and the shelling beaches",
+  "cost": 340,
+  "days": 3,
+  "vibes": [
+   "beach",
+   "nature"
+  ],
+  "fly": "RSW",
+  "ground": 185,
+  "stay": 85
+ },
+ {
+  "id": "daytona",
+  "name": "Daytona Beach",
+  "tag": "Drive on the sand, race on the oval",
+  "cost": 200,
+  "days": 2,
+  "vibes": [
+   "beach",
+   "party"
+  ],
+  "fly": "DAB",
+  "ground": 110,
+  "stay": 50
+ },
+ {
+  "id": "littlerock",
+  "name": "Little Rock",
+  "tag": "River trails, the Clinton library, Hot Springs an hour out",
+  "cost": 230,
+  "days": 2,
+  "vibes": [
+   "culture",
+   "nature"
+  ],
+  "fly": "LIT",
+  "ground": 125,
+  "stay": 60
  }
 ]
