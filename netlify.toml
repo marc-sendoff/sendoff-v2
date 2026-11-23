@@ -21,6 +21,12 @@
 
 # The waitlist form redirects here after a successful post. Serving the file
 # at the clean /thanks path (200, not 301) keeps the URL the form promised.
+# Send invites: sendofftrips.com/s/<code> is the app, which reads the code.
+[[redirects]]
+  from = "/s/*"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
   from = "/thanks"
   to = "/thanks.html"

@@ -67,6 +67,8 @@ const modalsImport = () => import("./components/modals.jsx");
 const PlusModal = lazy(() => modalsImport().then((m) => ({ default: m.PlusModal })));
 const SignInModal = lazy(() => modalsImport().then((m) => ({ default: m.SignInModal })));
 const Founders = lazy(() => import("./components/Founders.jsx"));
+const Social = lazy(() => import("./components/Social.jsx"));
+const InvitePage = lazy(() => import("./components/InvitePage.jsx"));
 const Detail = lazy(() => modalsImport().then((m) => ({ default: m.Detail })));
 const ProfileModal = lazy(() => modalsImport().then((m) => ({ default: m.ProfileModal })));
 
@@ -128,7 +130,10 @@ export default function Sendoff() {
      expensive trips in their budget. */
   const [sortBy, setSortBy] = useState("best");
   const [visible, setVisible] = useState(6);
-  const [view, setView] = useState("trips");
+  const [view, setView] = useState(() => (/^\/s\/[a-z0-9-]+$/i.test(window.location.pathname) ? "invite" : "trips"));
+  const inviteCode = /^\/s\/([a-z0-9-]+)$/i.exec(window.location.pathname)?.[1]?.toLowerCase() || null;
+  const [planTrip, setPlanTrip] = useState(null);
+  const leaveInvite = (v = "trips") => { if (window.location.pathname.startsWith("/s/")) window.history.replaceState({}, "", "/"); setView(v); window.scrollTo({ top: 0 }); };
   /* Nov 1 onwards the app IS the site (see main.jsx). It changes two things in
      here: where the signup list sits, and that a closed city has somewhere to
      go — picking one scrolls down to the list with the city filled in. */
@@ -415,7 +420,7 @@ export default function Sendoff() {
   /* ?v=founders (or any tab id) opens that tab on arrival, for links in emails and posts. */
   React.useEffect(() => {
     const v = new URLSearchParams(window.location.search).get("v");
-    if (["trips", "deals", "custom", "big", "spin", "community", "founders", "about"].includes(v)) setView(v);
+    if (["trips", "deals", "custom", "big", "spin", "social", "community", "founders", "about"].includes(v)) setView(v);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -542,8 +547,8 @@ export default function Sendoff() {
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
-          <button key={id} onClick={() => setView(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
+        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["social", "SOCIAL 👥"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
+          <button key={id} onClick={() => leaveInvite(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
             {label}
           </button>
         ))}
@@ -607,6 +612,9 @@ export default function Sendoff() {
         {view === "community" && <Community origin={origin} />}
         {view === "about" && <About setView={setView} />}
         {view === "founders" && <Founders acct={acct} onJoin={() => setShowPlus(true)} />}
+        {view === "social" && <Social acct={acct} origin={origin} planTrip={planTrip} onPlanned={() => setPlanTrip(null)}
+          onSignUp={() => setShowAccount("signup")} onOpenTrip={setDetail} />}
+        {view === "invite" && inviteCode && <InvitePage code={inviteCode} acct={acct} onOpenTrip={setDetail} onHome={() => leaveInvite("social")} />}
       </Suspense>
 
       {view === "trips" && (<>
@@ -803,6 +811,7 @@ export default function Sendoff() {
         member={member} isDone={doneTrips.includes(detail.id)} onMarkDone={markDone}
         watching={acct.watching.some((w) => w.trip_id === detail.id)} onWatch={toggleWatch}
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
+        onInvite={(t) => { setDetail(null); if (!acct.user) { setShowAccount("signup"); return; } setPlanTrip(t); leaveInvite("social"); }}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
       {showAccount && <SignInModal acct={acct} origin={origin} initialMode={showAccount === "login" ? "login" : "signup"} onClose={() => setShowAccount(false)} />}

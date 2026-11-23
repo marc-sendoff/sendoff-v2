@@ -341,7 +341,7 @@ export function PlusModal({ origin, acct, onClose, onUnlocked }) {
 
 /* ---------- detail + share ---------- */
 
-export function Detail({ trip, origin, originCoords, friends, dates, member, isDone, onMarkDone, onJoin, onClose, wheelBonus = 0, onBook, watching = false, onWatch }) {
+export function Detail({ trip, origin, originCoords, friends, dates, member, isDone, onMarkDone, onJoin, onClose, wheelBonus = 0, onBook, watching = false, onWatch, onInvite }) {
   const adj = originBreakdown(trip, originCoords, friends);
   const links = bookLinks(trip, origin, originCoords, friends, dates);
   const [shared, setShared] = useState(false);
@@ -515,6 +515,19 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
           <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 6, textAlign: "center" }}>
             {isDone ? "Logged to your profile." : "Mark it done and it lands in your profile."}
           </div>
+          {/* Social: plan this send and invite the crew by link. */}
+          {onInvite && (
+            <>
+              <m.button onClick={() => onInvite(trip)} whileTap={{ scale: 0.98 }} transition={SPRING}
+                style={{ width: "100%", marginTop: 10, background: T.sun, color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 14,
+                  boxShadow: SH.card, padding: "13px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 15, cursor: "pointer" }}>
+                👥 Invite the crew
+              </m.button>
+              <div style={{ fontSize: 11.5, fontWeight: 600, opacity: 0.55, marginTop: 6, textAlign: "center" }}>
+                Pick dates, get one link. They tap "I'm in", you get a countdown and a group chat.
+              </div>
+            </>
+          )}
           {/* Watch the fare (Plus). Drive-only sends have no fare to watch. */}
           {!trip.driveOnly && onWatch && (
             <>
