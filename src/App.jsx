@@ -523,6 +523,14 @@ export default function Sendoff() {
           {/* Calm header (Option B, Nov 9): logo and one small word. The sign-up
               button lives under the headline as the answer to the question;
               Sendoff+ is pitched in the list, the locked banner and the bottom bar. */}
+          {/* Sends with the crew live up here with the profile (Nov 23): it's
+              yours, not a section of the catalogue. Logged out it opens the pitch. */}
+          <button onClick={() => leaveInvite("social")} title="Your sends" aria-label="Your sends" aria-current={view === "social" ? "page" : undefined}
+            style={{ height: 42, padding: "0 14px", borderRadius: 999, background: view === "social" ? T.ink : T.white, color: view === "social" ? T.paper : T.ink,
+              border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer", display: "flex", alignItems: "center", gap: 7,
+              fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14, whiteSpace: "nowrap" }}>
+            <span aria-hidden="true" style={{ fontSize: 17, lineHeight: 1 }}>👥</span><span>Sends</span>
+          </button>
           {acct.user ? (
             <button onClick={() => setShowProfile(true)} title="Your profile"
               style={{ width: 42, height: 42, borderRadius: "50%", background: member ? T.ink : T.sun, color: member ? T.sun : T.ink,
@@ -547,7 +555,7 @@ export default function Sendoff() {
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["social", "SOCIAL 👥"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
+        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
           <button key={id} onClick={() => leaveInvite(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
             {label}
           </button>
