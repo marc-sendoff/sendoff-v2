@@ -23,17 +23,18 @@ export default function InvitePage({ code, acct, onOpenTrip, onHome }) {
     load();
   }, [code]);
   const answer = async (status) => {
-    if (data.me) { setBusy(true); const d = await rsvp(code, { status }); setBusy(false); if (d.ok) load(); return; }
+    if (data.me) { setBusy(true); const d = await rsvp(code, { status }); if (d.ok) await load(); setBusy(false); return; }
     if (acct.user && !ask) {
-      setBusy(true); const d = await rsvp(code, { status, name: acct.profile?.name || acct.user.email.split("@")[0], contact: acct.user.email }); setBusy(false);
-      if (d.ok) load(); return;
+      setBusy(true); const d = await rsvp(code, { status, name: acct.profile?.name || acct.user.email.split("@")[0], contact: acct.user.email });
+      if (d.ok) await load(); setBusy(false); return;
     }
     setAsk(status);
   };
   const submit = async (e) => {
     e.preventDefault(); if (!name.trim()) return;
-    setBusy(true); const d = await rsvp(code, { status: ask, name: name.trim(), contact: contact.trim() }); setBusy(false);
-    if (d.ok) { setAsk(null); load(); } else setErr(d.error || "Try again");
+    setBusy(true); const d = await rsvp(code, { status: ask, name: name.trim(), contact: contact.trim() });
+    if (d.ok) { await load(); setAsk(null); } else setErr(d.error || "Try again");
+    setBusy(false);
   };
   const wrap = { maxWidth: 560, margin: "0 auto", padding: "18px 20px 60px" };
   if (err) return <section style={{ ...wrap, textAlign: "center" }}><div style={{ fontSize: 48 }}>🤷</div><div style={{ fontFamily: F, fontWeight: 800, fontSize: 24, marginTop: 10 }}>That send isn't here.</div><div style={{ fontSize: 14, fontWeight: 600, opacity: 0.7, marginTop: 6 }}>The link may be old, or it was deleted.</div><button onClick={onHome} style={{ marginTop: 18, background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 14, padding: "12px 18px", fontFamily: F, fontWeight: 800, cursor: "pointer" }}>See the trips →</button></section>;
