@@ -1,4 +1,4 @@
-import React, { useState, useMemo, Suspense, lazy } from "react";
+import React, { useState, useMemo, useEffect, Suspense, lazy } from "react";
 import { LazyMotion, MotionConfig, m } from "motion/react";
 const loadMotionFeatures = () => import("./motion-features.js").then((mod) => mod.default);
 import { T, VIBES, SH, SPRING, applyTheme, DEFAULT_THEME } from "./theme.js";
@@ -78,6 +78,45 @@ const lazyFallback = (
 );
 
 /* ---------- main app ---------- */
+
+/* "Can't decide on a send?" — Spin-Send lost its tab (Nov 23); it now shows up
+   as a corner card once you've scrolled a little way into the trips. Dismiss
+   sticks for the visit. Sits above the locked bar when that's showing. */
+function SpinNudge({ gated, onSpin }) {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    if (sessionStorage.getItem("spinNudge") === "x") return;
+    const on = () => { if (window.scrollY > 520) { setShow(true); window.removeEventListener("scroll", on); } };
+    window.addEventListener("scroll", on, { passive: true }); on();
+    return () => window.removeEventListener("scroll", on);
+  }, []);
+  if (!show) return null;
+  const close = () => { sessionStorage.setItem("spinNudge", "x"); setShow(false); };
+  return (
+    <m.div initial={{ opacity: 0, y: 24, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={SPRING}
+      role="dialog" aria-label="Can't decide on a send?"
+      style={{ position: "fixed", right: 14, bottom: gated ? 92 : 22, zIndex: 60, width: 250,
+        background: T.paper, color: T.ink, border: `2px solid ${T.ink}`, borderRadius: 18,
+        boxShadow: `5px 5px 0 ${T.shadow}`, padding: "14px 14px 12px", fontFamily: "'Instrument Sans', sans-serif" }}>
+      <button onClick={close} aria-label="Dismiss" style={{ position: "absolute", top: 6, right: 8, background: "transparent", border: "none",
+        fontSize: 18, fontWeight: 800, cursor: "pointer", color: T.ink, opacity: 0.6, lineHeight: 1 }}>×</button>
+      <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+        <span style={{ fontSize: 30, lineHeight: 1 }}>🎡</span>
+        <div style={{ fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 17, lineHeight: 1.15, letterSpacing: "-0.3px" }}>
+          Can't decide on a send?
+        </div>
+      </div>
+      <div style={{ fontSize: 12.5, fontWeight: 600, opacity: 0.72, marginTop: 8, lineHeight: 1.4 }}>
+        Spin the wheel. Where it lands is where you go.
+      </div>
+      <m.button onClick={onSpin} whileTap={{ scale: 0.97 }} transition={SPRING}
+        style={{ marginTop: 10, width: "100%", background: T.sun, color: T.onAccent, border: `2px solid ${T.ink}`, borderRadius: 12,
+          boxShadow: `3px 3px 0 ${T.shadow}`, padding: "10px 12px", fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>
+        Spin one →
+      </m.button>
+    </m.div>
+  );
+}
 
 export default function Sendoff() {
   const [origin, setOrigin] = useState("Miami");
@@ -503,7 +542,7 @@ export default function Sendoff() {
             frozen, and its seats were an approval flow on a server we no
             longer run. FoundersClub.jsx stays in the tree, unreferenced, so
             bringing it back is one entry in this list plus one line below. */}
-        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["spin", "SPIN-SEND 🎡"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
+        {[["trips", "THE TRIPS"], ["deals", "DEALS 🔥"], ["custom", "PERSONAL ✨"], ["big", "BIG SEND 🎉"], ["community", "COMMUNITY 📸"], ["founders", "FOUNDERS ✦"], ["about", "OUR STORY"]].map(([id, label]) => (
           <button key={id} onClick={() => setView(id)} className="sendoff-tab" aria-current={view === id ? "page" : undefined}>
             {label}
           </button>
@@ -513,6 +552,14 @@ export default function Sendoff() {
       <Suspense fallback={lazyFallback}>
         {/* Spin-Send is a Plus feature: free visitors get the pitch and the
             unlock, members get the wheel. */}
+        {view === "spin" && (
+          <div style={{ maxWidth: 960, margin: "0 auto", padding: "14px 20px 0" }}>
+            <button onClick={() => setView("trips")} style={{ background: "transparent", border: "none", cursor: "pointer",
+              fontFamily: "'Instrument Sans', sans-serif", fontWeight: 800, fontSize: 14, color: T.ink, opacity: 0.75, padding: 0 }}>
+              ← Back to the trips
+            </button>
+          </div>
+        )}
         {view === "spin" && !member && (
           <section style={{ maxWidth: 560, margin: "0 auto", padding: "34px 20px 10px", textAlign: "center" }}>
             <div style={{ fontSize: 64, lineHeight: 1 }}>🎡</div>
@@ -783,6 +830,9 @@ export default function Sendoff() {
       {/* Sticky ask: keeps the upgrade one tap away so scroll depth stops
           deciding whether anyone ever sees it. Free accounts on the trips tab
           only, and it steps aside while a modal is open. */}
+      {view === "trips" && !detail && !showPlus && !showProfile && !showAccount && (
+        <SpinNudge gated={gated} onSpin={() => { setView("spin"); window.scrollTo({ top: 0, behavior: "smooth" }); }} />
+      )}
       {gated && view === "trips" && !detail && !showPlus && !showProfile && !showAccount && (
         <div style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 50,
           background: T.ink, color: T.paper, borderTop: `2px solid ${T.sun}`,
