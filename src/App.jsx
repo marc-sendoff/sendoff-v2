@@ -523,21 +523,17 @@ export default function Sendoff() {
           {/* Calm header (Option B, Nov 9): logo and one small word. The sign-up
               button lives under the headline as the answer to the question;
               Sendoff+ is pitched in the list, the locked banner and the bottom bar. */}
-          {/* Sends with the crew live up here with the profile (Nov 23): it's
-              yours, not a section of the catalogue. Logged out it opens the pitch. */}
-          <button onClick={() => leaveInvite("social")} title="Your sends" aria-label="Your sends" aria-current={view === "social" ? "page" : undefined}
-            style={{ height: 42, padding: "0 14px", borderRadius: 999, background: view === "social" ? T.ink : T.white, color: view === "social" ? T.paper : T.ink,
-              border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer", display: "flex", alignItems: "center", gap: 7,
-              fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14, whiteSpace: "nowrap" }}>
-            <span aria-hidden="true" style={{ fontSize: 17, lineHeight: 1 }}>👥</span><span>Sends</span>
-          </button>
           {acct.user ? (
-            <button onClick={() => setShowProfile(true)} title="Your profile"
-              style={{ width: 42, height: 42, borderRadius: "50%", background: member ? T.ink : T.sun, color: member ? T.sun : T.ink,
+            <button onClick={() => setShowProfile(true)} title="My profile"
+              style={{ height: 42, padding: "0 14px 0 4px", borderRadius: 999, background: T.white, color: T.ink,
                 border: `2px solid ${T.ink}`, boxShadow: `3px 3px 0 ${T.shadow}`, cursor: "pointer",
-                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 16,
-                display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-              {((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase()}
+                fontFamily: "'Bricolage Grotesque', sans-serif", fontWeight: 800, fontSize: 14,
+                display: "flex", alignItems: "center", gap: 8, flexShrink: 0, whiteSpace: "nowrap" }}>
+              <span style={{ width: 30, height: 30, borderRadius: "50%", background: member ? T.ink : T.sun, color: member ? T.sun : T.ink,
+                display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14 }}>
+                {((acct.profile?.name || acct.user.email || "✦").trim()[0] || "✦").toUpperCase()}
+              </span>
+              My profile
             </button>
           ) : (
             <button onClick={() => setShowAccount("login")}
@@ -622,7 +618,8 @@ export default function Sendoff() {
         {view === "founders" && <Founders acct={acct} onJoin={() => setShowPlus(true)} />}
         {view === "social" && <Social acct={acct} origin={origin} planTrip={planTrip} onPlanned={() => setPlanTrip(null)}
           onSignUp={() => setShowAccount("signup")} onOpenTrip={setDetail} />}
-        {view === "invite" && inviteCode && <InvitePage code={inviteCode} acct={acct} onOpenTrip={setDetail} onHome={() => leaveInvite("social")} />}
+        {/* view "social" still exists for ?v=social links; the button for it is the profile. */}
+        {view === "invite" && inviteCode && <InvitePage code={inviteCode} acct={acct} onOpenTrip={setDetail} onHome={() => { leaveInvite("trips"); if (acct.user) setShowProfile(true); else setShowAccount("signup"); }} />}
       </Suspense>
 
       {view === "trips" && (<>
@@ -819,7 +816,7 @@ export default function Sendoff() {
         member={member} isDone={doneTrips.includes(detail.id)} onMarkDone={markDone}
         watching={acct.watching.some((w) => w.trip_id === detail.id)} onWatch={toggleWatch}
         wheelBonus={wheelPick && wheelPick.id === detail.id ? wheelPick.bonus : 0} onBook={claimWheelBonus}
-        onInvite={(t) => { setDetail(null); if (!acct.user) { setShowAccount("signup"); return; } setPlanTrip(t); leaveInvite("social"); }}
+        onInvite={(t) => { setDetail(null); if (!acct.user) { setShowAccount("signup"); return; } setPlanTrip(t); setShowProfile(true); }}
         onJoin={() => { setDetail(null); setShowPlus(true); }} onClose={() => { setDetail(null); setWheelPick(null); }} />}
       {showPlus && <PlusModal origin={origin} acct={acct} onUnlocked={onUnlocked} onClose={() => setShowPlus(false)} />}
       {showAccount && <SignInModal acct={acct} origin={origin} initialMode={showAccount === "login" ? "login" : "signup"} onClose={() => setShowAccount(false)} />}
@@ -839,6 +836,7 @@ export default function Sendoff() {
       )}
       {showProfile && acct.user && (
         <ProfileModal acct={acct} opened={opened} origin={origin} themeName={themeName} onTheme={pickTheme}
+          planTrip={planTrip} onPlanned={() => setPlanTrip(null)} onOpenTrip={setDetail}
           onClose={() => setShowProfile(false)}
           onGetPlus={() => { setShowProfile(false); setShowPlus(true); }} />
       )}

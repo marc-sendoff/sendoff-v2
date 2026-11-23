@@ -199,7 +199,7 @@ export function PlanSend({ trips, origin, preset, onDone, onCancel }) {
 }
 
 /* the Social tab */
-export default function Social({ acct, origin, planTrip, onPlanned, onSignUp, onOpenTrip }) {
+export default function Social({ acct, origin, planTrip, onPlanned, onSignUp, onOpenTrip, embedded = false }) {
   const [sends, setSends] = useState(null);
   const [planning, setPlanning] = useState(!!planTrip);
   const [made, setMade] = useState(null);
@@ -221,12 +221,16 @@ export default function Social({ acct, origin, planTrip, onPlanned, onSignUp, on
     );
   }
   return (
-    <section style={wrap}>
+    <section style={embedded ? { marginTop: 16 } : wrap}>
+      {embedded ? (
+        <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.2, color: T.cobalt, textTransform: "uppercase" }}>👥 Your sends</div>
+      ) : (<>
       <div style={{ fontSize: 11.5, fontWeight: 800, letterSpacing: 1.4, color: T.cobalt, textTransform: "uppercase" }}>Social</div>
       <div style={{ fontFamily: F, fontWeight: 800, fontSize: "clamp(26px, 6vw, 40px)", lineHeight: 1.1, letterSpacing: "-0.6px", marginTop: 6 }}>
         Your <span style={{ color: T.cobalt, borderBottom: `5px solid ${T.sun}` }}>sends.</span>
       </div>
       <div style={{ fontSize: 14.5, fontWeight: 600, opacity: 0.72, marginTop: 8, lineHeight: 1.5 }}>One link per trip. Friends tap once, you get the countdown and the chat.</div>
+      </>)}
       {made && (
         <div style={{ marginTop: 16, background: T.sun, border: `2px solid ${T.ink}`, borderRadius: 16, boxShadow: SH.card, padding: "14px 16px" }}>
           <div style={{ fontFamily: F, fontWeight: 800, fontSize: 18 }}>Your link is live 🎉</div>
@@ -243,7 +247,7 @@ export default function Social({ acct, origin, planTrip, onPlanned, onSignUp, on
             onDone={(d) => { setPlanning(false); setMade(d); onPlanned && onPlanned(); refresh(); }} />
         </div>
       ) : (
-        <m.button whileTap={{ scale: 0.97 }} transition={SPRING} onClick={() => setPlanning(true)} style={{ ...btn(T.sun), width: "100%", marginTop: 16, padding: 14, fontSize: 16 }}>+ Plan a send</m.button>
+        <m.button whileTap={{ scale: 0.97 }} transition={SPRING} onClick={() => setPlanning(true)} style={{ ...btn(T.sun), width: "100%", marginTop: embedded ? 10 : 16, padding: embedded ? 12 : 14, fontSize: embedded ? 15 : 16 }}>+ Plan a send</m.button>
       )}
       <div style={{ display: "grid", gap: 16, marginTop: 20 }}>
         {sends === null && <div style={{ fontSize: 13.5, fontWeight: 600, opacity: 0.6 }}>Loading your sends…</div>}

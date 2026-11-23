@@ -7,6 +7,7 @@ import { senderSince } from "../lib/account.js";
 import { THEMES } from "../theme.js";
 import { useFounders, SeatCounter } from "./Founders.jsx";
 import LiveFare from "./LiveFare.jsx";
+import Social from "./Social.jsx";
 import { AIRPORTS } from "../data/trips.js";
 import StayBlock from "./StayBlock.jsx";
 import { BudgetBar } from "./core.jsx";
@@ -550,7 +551,7 @@ export function Detail({ trip, origin, originCoords, friends, dates, member, isD
 
 /* ---------- free account: just a name + email ---------- */
 /* ---------- the profile card ---------- */
-export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeName, onTheme }) {
+export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeName, onTheme, planTrip, onPlanned, onOpenTrip }) {
   const { user, profile, membership, isMember, done, saved, watching, spent } = acct;
   /* Current live fares for the watched sends, one /api/cheapest call per home base. */
   const [fares, setFares] = useState({});
@@ -612,6 +613,10 @@ export function ProfileModal({ acct, opened, origin, onClose, onGetPlus, themeNa
           <m.button onClick={onClose} whileTap={{ scale: 0.9 }} transition={SPRING} aria-label="Close"
             style={{ background: "transparent", border: "none", fontSize: 22, cursor: "pointer", color: T.ink, lineHeight: 1 }}>×</m.button>
         </div>
+
+        {/* your sends: plan one, invite by link, countdown, chat */}
+        <Social acct={acct} origin={origin} planTrip={planTrip} onPlanned={onPlanned} embedded
+          onOpenTrip={(t) => { onClose(); onOpenTrip && onOpenTrip(t); }} />
 
         {/* watched sends (Plus) */}
         {watching?.length > 0 && (
